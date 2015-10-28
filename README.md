@@ -2,15 +2,26 @@
 ----
 
 ### 목차 
-1. iOS SDK v3.0.5
+1. iOS SDK v3.0.6
 2. SDK 설치 방법
 3. Class Reference
 4. Update history
  
-#### cauly iOS SDK v3.0.5
+#### cauly iOS SDK v3.0.6
 1. Release note
-	- iOS8 대응 
+	- 버그 및 기능 개선
 2. 주의 사항
+	- iOS9 ATS(App Transport Security)
+		- 애플은 iOS9에서 ATS(App Transport Security)라는 기능을 제공합니다. 기기에서 ATS 활성화 시 암호화된 HTTPS 방식만 허용됩니다.
+		HTTPS 방식을 적용하지 않을 경우 애플 보안 기준을 충족하지 않는다는 이유로 광고가 차단될 수 있습니다
+		- 모든 광고가 HTTPS 방식으로 호출되지 않으므로, info.plist 파일에 아래소스를 적용하여 사용 부탁 드립니다
+		```
+		<key>NSAppTransportSecurity</key>
+		<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		</dict>
+		```
 	- P/E광고 설정 관련
 		- 앱 마다 P/E광고 허용 여부를 설정 할 수 있으며, P/E광고 노출을 원하는 경우 ‘cauly홈페이지>>APP관리’에서 ‘ON’ 으로 설정하면 됩니다.
 			- Cauly 홈페이지 >> app 관리 >> 수익구분 : 배너CPM >> ON
@@ -35,7 +46,7 @@
 	- BASE SDK : iOS 7.0 이상
 		- iOS Deployment Target iOS : 4.3 이상
 5.	SDK 구성
-	- cauly SDK v3.0.5
+	- cauly SDK v3.0.6
 		- 헤더 파일
 			- CaulyInterstitialAd.h – Interstitial 광고 클래스 헤더
 			- Cauly.h            – Cauly 정의, 델리게이트 헤더
@@ -180,7 +191,7 @@ Code	|Message|	설명
 iOS cauly SDK 설치 방법 끝
 
 #### cauly SDK 설치 관련하여 문의 사항은 고객센터 1544-8867
-	또는 cauly@futurestream.co.kr 로 문의 주시면 빠르게 응대해 드리도록 하겠습니다
+	또는 cauly@fsn.co.kr 로 문의 주시면 빠르게 응대해 드리도록 하겠습니다
 
 #### Class Reference
 Callback API|
