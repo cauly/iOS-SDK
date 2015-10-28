@@ -1,0 +1,400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5362EF1A151248D40090503C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5362EF19151248D40090503C /* UIKit.framework */; };
+		5362EF1C151248D40090503C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5362EF1B151248D40090503C /* Foundation.framework */; };
+		5362EF1E151248D40090503C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5362EF1D151248D40090503C /* CoreGraphics.framework */; };
+		5362EF24151248D40090503C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5362EF22151248D40090503C /* InfoPlist.strings */; };
+		5362EF26151248D40090503C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5362EF25151248D40090503C /* main.m */; };
+		5362EF2A151248D40090503C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5362EF29151248D40090503C /* AppDelegate.m */; };
+		53C98FD61529F95000DF0A37 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C98FD41529F95000DF0A37 /* RootViewController.m */; };
+		53C98FD71529F95000DF0A37 /* RootViewController~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53C98FD51529F95000DF0A37 /* RootViewController~iPad.xib */; };
+		53C98FD91529FB0E00DF0A37 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53C98FD81529FB0E00DF0A37 /* RootViewController.xib */; };
+		EC9012281630F30C001FD63A /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9012271630F30C001FD63A /* EventKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EC90122A1630F311001FD63A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9012291630F311001FD63A /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EC90122C1630F31D001FD63A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC90122B1630F31C001FD63A /* CFNetwork.framework */; };
+		EC90122E1630F323001FD63A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC90122D1630F323001FD63A /* CoreLocation.framework */; };
+		EC9012301630F327001FD63A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC90122F1630F327001FD63A /* MapKit.framework */; };
+		EC9012321630F32C001FD63A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9012311630F32C001FD63A /* MediaPlayer.framework */; };
+		EC9012341630F33C001FD63A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9012331630F33C001FD63A /* SystemConfiguration.framework */; };
+		EC9012361630F34F001FD63A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9012351630F34F001FD63A /* QuartzCore.framework */; };
+		EC984EE8179D0499001BD9AD /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC984EE7179D0499001BD9AD /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		ECC0728F179FC7E800EA5AB1 /* cauly_default_banner_ipad_large.png in Resources */ = {isa = PBXBuildFile; fileRef = ECC0728B179FC7E800EA5AB1 /* cauly_default_banner_ipad_large.png */; };
+		ECC07290179FC7E800EA5AB1 /* cauly_default_banner_ipad_small.png in Resources */ = {isa = PBXBuildFile; fileRef = ECC0728C179FC7E800EA5AB1 /* cauly_default_banner_ipad_small.png */; };
+		ECC07291179FC7E800EA5AB1 /* cauly_default_banner_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = ECC0728D179FC7E800EA5AB1 /* cauly_default_banner_iphone.png */; };
+		EF1C347A1B99962E00B68CFE /* libCaulyAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1C34791B99962E00B68CFE /* libCaulyAds.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5362EF15151248D40090503C /* CaulySample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaulySample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5362EF19151248D40090503C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5362EF1B151248D40090503C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5362EF1D151248D40090503C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5362EF21151248D40090503C /* CaulySample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CaulySample-Info.plist"; sourceTree = "<group>"; };
+		5362EF23151248D40090503C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5362EF25151248D40090503C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5362EF27151248D40090503C /* CaulySample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CaulySample-Prefix.pch"; sourceTree = "<group>"; };
+		5362EF28151248D40090503C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5362EF29151248D40090503C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		53C98FD31529F95000DF0A37 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		53C98FD41529F95000DF0A37 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		53C98FD51529F95000DF0A37 /* RootViewController~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "RootViewController~iPad.xib"; sourceTree = "<group>"; };
+		53C98FD81529FB0E00DF0A37 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		7322D3861B82003C0005A2E0 /* project.pbxproj */ = {isa = PBXFileReference; lastKnownFileType = text.pbxproject; name = project.pbxproj; path = CaulySample.xcodeproj/project.pbxproj; sourceTree = "<group>"; };
+		EC9012271630F30C001FD63A /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		EC9012291630F311001FD63A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		EC90122B1630F31C001FD63A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EC90122D1630F323001FD63A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EC90122F1630F327001FD63A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EC9012311630F32C001FD63A /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		EC9012331630F33C001FD63A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EC9012351630F34F001FD63A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EC984EE7179D0499001BD9AD /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		ECC07286179FC7E800EA5AB1 /* Cauly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cauly.h; sourceTree = "<group>"; };
+		ECC07287179FC7E800EA5AB1 /* CaulyAdSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyAdSetting.h; sourceTree = "<group>"; };
+		ECC07288179FC7E800EA5AB1 /* CaulyAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyAdView.h; sourceTree = "<group>"; };
+		ECC07289179FC7E800EA5AB1 /* CaulyInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyInterstitialAd.h; sourceTree = "<group>"; };
+		ECC0728B179FC7E800EA5AB1 /* cauly_default_banner_ipad_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cauly_default_banner_ipad_large.png; sourceTree = "<group>"; };
+		ECC0728C179FC7E800EA5AB1 /* cauly_default_banner_ipad_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cauly_default_banner_ipad_small.png; sourceTree = "<group>"; };
+		ECC0728D179FC7E800EA5AB1 /* cauly_default_banner_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cauly_default_banner_iphone.png; sourceTree = "<group>"; };
+		EF1C34791B99962E00B68CFE /* libCaulyAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCaulyAds.a; path = "../../../../../../sdk/iOS_SDK/ios_sdk_v.3.0.6/cauly iOS_SDK_3.0.6/CaulyLib/libCaulyAds.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5362EF12151248D40090503C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC984EE8179D0499001BD9AD /* AdSupport.framework in Frameworks */,
+				EC9012361630F34F001FD63A /* QuartzCore.framework in Frameworks */,
+				EC9012341630F33C001FD63A /* SystemConfiguration.framework in Frameworks */,
+				EC9012321630F32C001FD63A /* MediaPlayer.framework in Frameworks */,
+				EC9012301630F327001FD63A /* MapKit.framework in Frameworks */,
+				EC90122E1630F323001FD63A /* CoreLocation.framework in Frameworks */,
+				EF1C347A1B99962E00B68CFE /* libCaulyAds.a in Frameworks */,
+				EC90122C1630F31D001FD63A /* CFNetwork.framework in Frameworks */,
+				EC90122A1630F311001FD63A /* MessageUI.framework in Frameworks */,
+				EC9012281630F30C001FD63A /* EventKit.framework in Frameworks */,
+				5362EF1A151248D40090503C /* UIKit.framework in Frameworks */,
+				5362EF1C151248D40090503C /* Foundation.framework in Frameworks */,
+				5362EF1E151248D40090503C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5362EF0A151248D40090503C = {
+			isa = PBXGroup;
+			children = (
+				EC984EE7179D0499001BD9AD /* AdSupport.framework */,
+				EC9012351630F34F001FD63A /* QuartzCore.framework */,
+				EC9012331630F33C001FD63A /* SystemConfiguration.framework */,
+				EC9012311630F32C001FD63A /* MediaPlayer.framework */,
+				EC90122F1630F327001FD63A /* MapKit.framework */,
+				EC90122D1630F323001FD63A /* CoreLocation.framework */,
+				EC90122B1630F31C001FD63A /* CFNetwork.framework */,
+				EC9012291630F311001FD63A /* MessageUI.framework */,
+				EC9012271630F30C001FD63A /* EventKit.framework */,
+				5362EF1F151248D40090503C /* CaulySample */,
+				5362EF18151248D40090503C /* Frameworks */,
+				5362EF16151248D40090503C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5362EF16151248D40090503C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5362EF15151248D40090503C /* CaulySample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5362EF18151248D40090503C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7322D3861B82003C0005A2E0 /* project.pbxproj */,
+				5362EF19151248D40090503C /* UIKit.framework */,
+				5362EF1B151248D40090503C /* Foundation.framework */,
+				5362EF1D151248D40090503C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5362EF1F151248D40090503C /* CaulySample */ = {
+			isa = PBXGroup;
+			children = (
+				5362EF28151248D40090503C /* AppDelegate.h */,
+				5362EF29151248D40090503C /* AppDelegate.m */,
+				5362EF20151248D40090503C /* Supporting Files */,
+				53C98FD31529F95000DF0A37 /* RootViewController.h */,
+				53C98FD41529F95000DF0A37 /* RootViewController.m */,
+				53C98FD51529F95000DF0A37 /* RootViewController~iPad.xib */,
+				53C98FD81529FB0E00DF0A37 /* RootViewController.xib */,
+			);
+			path = CaulySample;
+			sourceTree = "<group>";
+		};
+		5362EF20151248D40090503C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ECC07285179FC7E800EA5AB1 /* CaulyLib */,
+				5362EF21151248D40090503C /* CaulySample-Info.plist */,
+				5362EF22151248D40090503C /* InfoPlist.strings */,
+				5362EF25151248D40090503C /* main.m */,
+				5362EF27151248D40090503C /* CaulySample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ECC07285179FC7E800EA5AB1 /* CaulyLib */ = {
+			isa = PBXGroup;
+			children = (
+				ECC07286179FC7E800EA5AB1 /* Cauly.h */,
+				ECC07287179FC7E800EA5AB1 /* CaulyAdSetting.h */,
+				ECC07288179FC7E800EA5AB1 /* CaulyAdView.h */,
+				ECC07289179FC7E800EA5AB1 /* CaulyInterstitialAd.h */,
+				ECC0728A179FC7E800EA5AB1 /* DefaultImages */,
+			);
+			name = CaulyLib;
+			path = ../../CaulyLib;
+			sourceTree = "<group>";
+		};
+		ECC0728A179FC7E800EA5AB1 /* DefaultImages */ = {
+			isa = PBXGroup;
+			children = (
+				ECC0728B179FC7E800EA5AB1 /* cauly_default_banner_ipad_large.png */,
+				ECC0728C179FC7E800EA5AB1 /* cauly_default_banner_ipad_small.png */,
+				ECC0728D179FC7E800EA5AB1 /* cauly_default_banner_iphone.png */,
+				EF1C34791B99962E00B68CFE /* libCaulyAds.a */,
+			);
+			path = DefaultImages;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5362EF14151248D40090503C /* CaulySample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5362EF41151248D40090503C /* Build configuration list for PBXNativeTarget "CaulySample" */;
+			buildPhases = (
+				5362EF11151248D40090503C /* Sources */,
+				5362EF12151248D40090503C /* Frameworks */,
+				5362EF13151248D40090503C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CaulySample;
+			productName = CaulySample;
+			productReference = 5362EF15151248D40090503C /* CaulySample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5362EF0C151248D40090503C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				TargetAttributes = {
+					5362EF14151248D40090503C = {
+						DevelopmentTeam = 55644VM79V;
+					};
+				};
+			};
+			buildConfigurationList = 5362EF0F151248D40090503C /* Build configuration list for PBXProject "CaulySample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5362EF0A151248D40090503C;
+			productRefGroup = 5362EF16151248D40090503C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5362EF14151248D40090503C /* CaulySample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5362EF13151248D40090503C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5362EF24151248D40090503C /* InfoPlist.strings in Resources */,
+				53C98FD71529F95000DF0A37 /* RootViewController~iPad.xib in Resources */,
+				53C98FD91529FB0E00DF0A37 /* RootViewController.xib in Resources */,
+				ECC0728F179FC7E800EA5AB1 /* cauly_default_banner_ipad_large.png in Resources */,
+				ECC07290179FC7E800EA5AB1 /* cauly_default_banner_ipad_small.png in Resources */,
+				ECC07291179FC7E800EA5AB1 /* cauly_default_banner_iphone.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5362EF11151248D40090503C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5362EF26151248D40090503C /* main.m in Sources */,
+				5362EF2A151248D40090503C /* AppDelegate.m in Sources */,
+				53C98FD61529F95000DF0A37 /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5362EF22151248D40090503C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5362EF23151248D40090503C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5362EF3F151248D40090503C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos6.1;
+			};
+			name = Debug;
+		};
+		5362EF40151248D40090503C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos6.1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5362EF42151248D40090503C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CaulySample/CaulySample-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				INFOPLIST_FILE = "CaulySample/CaulySample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../[권장] library ( armv7 , armv7s )\"",
+					"\"$(SRCROOT)/../CaulyLib\"",
+					/Users/fsn/Desktop/cauly,
+					iOS_SDK_3.0.6/CaulyLib,
+					/Users/woo/Dropbox/sdk/iOS_SDK/ios_sdk_v.3.0.6/cauly,
+					iOS_SDK_3.0.6/CaulyLib,
+				);
+				OTHER_LDFLAGS = "-weak-lSystem";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5362EF43151248D40090503C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CaulySample/CaulySample-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				INFOPLIST_FILE = "CaulySample/CaulySample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../[권장] library ( armv7 , armv7s )\"",
+					"\"$(SRCROOT)/../CaulyLib\"",
+					/Users/fsn/Desktop/cauly,
+					iOS_SDK_3.0.6/CaulyLib,
+					/Users/woo/Dropbox/sdk/iOS_SDK/ios_sdk_v.3.0.6/cauly,
+					iOS_SDK_3.0.6/CaulyLib,
+				);
+				OTHER_LDFLAGS = "-weak-lSystem";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5362EF0F151248D40090503C /* Build configuration list for PBXProject "CaulySample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5362EF3F151248D40090503C /* Debug */,
+				5362EF40151248D40090503C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5362EF41151248D40090503C /* Build configuration list for PBXNativeTarget "CaulySample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5362EF42151248D40090503C /* Debug */,
+				5362EF43151248D40090503C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5362EF0C151248D40090503C /* Project object */;
+}
