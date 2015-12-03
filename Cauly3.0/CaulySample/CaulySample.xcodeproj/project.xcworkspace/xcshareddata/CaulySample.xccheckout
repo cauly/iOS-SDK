@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>70A2EC78-EFBA-4C22-91CC-B3614C7E0847</string>
+	<key>IDESourceControlProjectName</key>
+	<string>.</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4468ffb7-3ccd-48b9-9643-4fa1fda34a18++9104</key>
+		<string>svn://svn.fsndev.com/ios_blackdragon/trunk/src/CaulySample/CaulySample.xcodeproj</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>.</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4468ffb7-3ccd-48b9-9643-4fa1fda34a18++9104</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>4468ffb7-3ccd-48b9-9643-4fa1fda34a18++9104</key>
+		<string>svn://svn.fsndev.com/ios_blackdragon</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn://svn.fsndev.com/ios_blackdragon/trunk/src/CaulySample/CaulySample.xcodeproj/.</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4468ffb7-3ccd-48b9-9643-4fa1fda34a18++9104</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4468ffb7-3ccd-48b9-9643-4fa1fda34a18++9104</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CaulySample.xcodeproj</string>
+		</dict>
+	</array>
+</dict>
+</plist>
