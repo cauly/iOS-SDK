@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "NativeAdViewViewController.h"
-
+#import "TestBannerViewController.h"
 
 @interface ViewController (Private)
 @end
@@ -43,12 +43,20 @@
     
     
     _adView = [[CaulyAdView alloc] initWithParentViewController:self];
-    [self.view addSubview:_adView];
+    [_bannerView addSubview:_adView];
     
 }
 
+-(void) viewWillAppear:(BOOL)animated{
+    if(_adView){
+        [_adView startBannerAdRequest];
+    }
+}
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
+    if(_adView){
+        [_adView stopAdRequest];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -195,7 +203,8 @@
     }
     
     _adView = [[CaulyAdView alloc] initWithParentViewController:self];
-    [self.view addSubview:_adView];
+    _adView.delegate = self;
+    [_bannerView addSubview:_adView];
     [_adView startBannerAdRequest];
 }
 
@@ -219,7 +228,7 @@
     
     _nativeAd = [[CaulyNativeAd alloc] initWithParentViewController:self];
     _nativeAd.delegate = self;
-    [_nativeAd startNativeAdRequest:2 nativeAdComponentType:CaulyNativeAdComponentType_IconImage imageSize:nil];
+    [_nativeAd startNativeAdRequest:2 nativeAdComponentType:CaulyNativeAdComponentType_IconImage imageSize:@""];
     
 }
 

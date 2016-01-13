@@ -26,11 +26,13 @@
 - (IBAction)interstitialAdRequest:(id)sender;
 - (IBAction)nativeAdRequest:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *bannerView;
+
+@property (assign, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @property (strong, nonatomic) CaulyAdView * adView;
-@property (strong) CaulyNativeAd * nativeAd;
-@property CaulyInterstitialAd * interstitialAd;
+@property (strong, nonatomic) CaulyNativeAd * nativeAd;
+@property (strong) CaulyInterstitialAd * interstitialAd;
 
 @end
 

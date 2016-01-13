@@ -11,12 +11,12 @@
 
 @interface NativeAdViewViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *mainTitle;
-@property (weak, nonatomic) IBOutlet UILabel *subTitle;
-@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *icon;
-@property (weak, nonatomic) IBOutlet UIImageView *image;
-@property (weak, nonatomic) IBOutlet UITextView *jsonStringTextView;
+@property (assign, nonatomic) IBOutlet UILabel *mainTitle;
+@property (assign, nonatomic) IBOutlet UILabel *subTitle;
+@property (assign, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (assign, nonatomic) IBOutlet UIImageView *icon;
+@property (assign, nonatomic) IBOutlet UIImageView *image;
+@property (assign, nonatomic) IBOutlet UITextView *jsonStringTextView;
 @property (nonatomic) NSString* link;
 @property (assign) CaulyNativeAd* nativeAd;
 @property (assign) CaulyNativeAdItem* nativeAdItem;

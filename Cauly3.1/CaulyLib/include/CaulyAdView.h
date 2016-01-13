@@ -42,7 +42,7 @@
 @property (nonatomic, weak) UIViewController * parentController;
 @property (nonatomic) BOOL showPreExpandableAd;
 
-@property (nonatomic, strong) id<CaulyAdViewDelegate> delegate;
+@property (nonatomic, weak) id<CaulyAdViewDelegate> delegate;
 @property (nonatomic, strong) CaulyAdSetting * localSetting;
 @property (nonatomic, strong) NSObject * data;
 

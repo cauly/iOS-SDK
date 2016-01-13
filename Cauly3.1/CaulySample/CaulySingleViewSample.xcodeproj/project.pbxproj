@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2805A3B61BD616470034C247 /* NativeAdViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2805A3B41BD616470034C247 /* NativeAdViewViewController.m */; };
 		2805A3B71BD616470034C247 /* NativeAdViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2805A3B51BD616470034C247 /* NativeAdViewViewController.xib */; };
+		281D0BCB1C313A7B00508F2E /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D0BCA1C313A7B00508F2E /* NavigationViewController.m */; };
+		281D0CB01C31481700508F2E /* libCauly-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 281D0CAE1C31481700508F2E /* libCauly-universal.a */; };
 		284902EC1C0307D80047639A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2874319E1BA001B400273275 /* CoreLocation.framework */; };
 		286FF7191BB52D8B00BFF8A8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286FF7181BB52D8B00BFF8A8 /* AVFoundation.framework */; };
 		286FF71D1BB52DCC00BFF8A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286FF71C1BB52DCC00BFF8A8 /* UIKit.framework */; };
@@ -28,7 +30,7 @@
 		287431A71BA001CF00273275 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287431A61BA001CF00273275 /* AdSupport.framework */; };
 		287431A91BA001D600273275 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287431A81BA001D600273275 /* Foundation.framework */; };
 		287431AB1BA001DC00273275 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287431AA1BA001DC00273275 /* Accelerate.framework */; };
-		28D3F7271C0FEBD80067856D /* libCauly-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D3F7231C0FE96F0067856D /* libCauly-universal.a */; };
+		288CDA951C311B4F00515B85 /* TestBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 288CDA931C311B4F00515B85 /* TestBannerViewController.m */; };
 		28FA6CE41BB53111006B6320 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FA6CE31BB53111006B6320 /* CoreMedia.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,16 @@
 		2805A3B31BD616470034C247 /* NativeAdViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NativeAdViewViewController.h; path = View/NativeAdViewViewController.h; sourceTree = "<group>"; };
 		2805A3B41BD616470034C247 /* NativeAdViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NativeAdViewViewController.m; path = View/NativeAdViewViewController.m; sourceTree = "<group>"; };
 		2805A3B51BD616470034C247 /* NativeAdViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NativeAdViewViewController.xib; path = View/NativeAdViewViewController.xib; sourceTree = "<group>"; };
+		281D0BC91C313A7B00508F2E /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		281D0BCA1C313A7B00508F2E /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		281D0CA81C31481700508F2E /* Cauly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cauly.h; sourceTree = "<group>"; };
+		281D0CA91C31481700508F2E /* CaulyAdSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyAdSetting.h; sourceTree = "<group>"; };
+		281D0CAA1C31481700508F2E /* CaulyAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyAdView.h; sourceTree = "<group>"; };
+		281D0CAB1C31481700508F2E /* CaulyInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyInterstitialAd.h; sourceTree = "<group>"; };
+		281D0CAC1C31481700508F2E /* CaulyNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyNativeAd.h; sourceTree = "<group>"; };
+		281D0CAD1C31481700508F2E /* CaulyNativeAdItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyNativeAdItem.h; sourceTree = "<group>"; };
+		281D0CAE1C31481700508F2E /* libCauly-universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCauly-universal.a"; sourceTree = "<group>"; };
+		281D0CAF1C31481700508F2E /* libCauly.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCauly.a; sourceTree = "<group>"; };
 		284902EA1C0306000047639A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		286FF7181BB52D8B00BFF8A8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		286FF71A1BB52DAD00BFF8A8 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -73,13 +85,8 @@
 		287431A61BA001CF00273275 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		287431A81BA001D600273275 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		287431AA1BA001DC00273275 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		28D3F71D1C0FE96F0067856D /* Cauly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cauly.h; sourceTree = "<group>"; };
-		28D3F71E1C0FE96F0067856D /* CaulyAdSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyAdSetting.h; sourceTree = "<group>"; };
-		28D3F71F1C0FE96F0067856D /* CaulyAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyAdView.h; sourceTree = "<group>"; };
-		28D3F7201C0FE96F0067856D /* CaulyInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyInterstitialAd.h; sourceTree = "<group>"; };
-		28D3F7211C0FE96F0067856D /* CaulyNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyNativeAd.h; sourceTree = "<group>"; };
-		28D3F7221C0FE96F0067856D /* CaulyNativeAdItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyNativeAdItem.h; sourceTree = "<group>"; };
-		28D3F7231C0FE96F0067856D /* libCauly-universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCauly-universal.a"; sourceTree = "<group>"; };
+		288CDA921C311B4F00515B85 /* TestBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBannerViewController.h; sourceTree = "<group>"; };
+		288CDA931C311B4F00515B85 /* TestBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestBannerViewController.m; sourceTree = "<group>"; };
 		28FA6CE31BB53111006B6320 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -88,7 +95,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28D3F7271C0FEBD80067856D /* libCauly-universal.a in Frameworks */,
 				284902EC1C0307D80047639A /* CoreLocation.framework in Frameworks */,
 				28FA6CE41BB53111006B6320 /* CoreMedia.framework in Frameworks */,
 				286FF71D1BB52DCC00BFF8A8 /* UIKit.framework in Frameworks */,
@@ -101,6 +107,7 @@
 				287431A11BA001BA00273275 /* MediaPlayer.framework in Frameworks */,
 				2874319D1BA001AE00273275 /* EventKit.framework in Frameworks */,
 				2874319B1BA001A700273275 /* MessageUI.framework in Frameworks */,
+				281D0CB01C31481700508F2E /* libCauly-universal.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,7 +121,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2874315C1BA0014F00273275 = {
+		281D0BCC1C313CB500508F2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				284902EA1C0306000047639A /* MapKit.framework */,
@@ -131,10 +138,42 @@
 				2874319E1BA001B400273275 /* CoreLocation.framework */,
 				2874319C1BA001AE00273275 /* EventKit.framework */,
 				2874319A1BA001A700273275 /* MessageUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		281D0CA61C31481700508F2E /* CaulyLib */ = {
+			isa = PBXGroup;
+			children = (
+				281D0CA71C31481700508F2E /* include */,
+				281D0CAE1C31481700508F2E /* libCauly-universal.a */,
+				281D0CAF1C31481700508F2E /* libCauly.a */,
+			);
+			name = CaulyLib;
+			path = ../CaulyLib;
+			sourceTree = "<group>";
+		};
+		281D0CA71C31481700508F2E /* include */ = {
+			isa = PBXGroup;
+			children = (
+				281D0CA81C31481700508F2E /* Cauly.h */,
+				281D0CA91C31481700508F2E /* CaulyAdSetting.h */,
+				281D0CAA1C31481700508F2E /* CaulyAdView.h */,
+				281D0CAB1C31481700508F2E /* CaulyInterstitialAd.h */,
+				281D0CAC1C31481700508F2E /* CaulyNativeAd.h */,
+				281D0CAD1C31481700508F2E /* CaulyNativeAdItem.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		2874315C1BA0014F00273275 = {
+			isa = PBXGroup;
+			children = (
+				281D0CA61C31481700508F2E /* CaulyLib */,
 				287431671BA0014F00273275 /* CaulySingleViewSample */,
 				287431841BA0014F00273275 /* CaulySingleViewSampleTests */,
+				281D0BCC1C313CB500508F2E /* Frameworks */,
 				287431661BA0014F00273275 /* Products */,
-				28D3F71B1C0FE96F0067856D /* CaulyLib */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,15 +189,15 @@
 		287431671BA0014F00273275 /* CaulySingleViewSample */ = {
 			isa = PBXGroup;
 			children = (
-				28BA140D1BCF878B004DE2CE /* View */,
 				2874316C1BA0014F00273275 /* AppDelegate.h */,
 				2874316D1BA0014F00273275 /* AppDelegate.m */,
-				287431721BA0014F00273275 /* ViewController.h */,
-				287431731BA0014F00273275 /* ViewController.m */,
-				287431751BA0014F00273275 /* Main.storyboard */,
+				2874316F1BA0014F00273275 /* CaulySingleViewSample.xcdatamodeld */,
 				287431781BA0014F00273275 /* Images.xcassets */,
 				2874317A1BA0014F00273275 /* LaunchScreen.xib */,
-				2874316F1BA0014F00273275 /* CaulySingleViewSample.xcdatamodeld */,
+				287431751BA0014F00273275 /* Main.storyboard */,
+				287431721BA0014F00273275 /* ViewController.h */,
+				287431731BA0014F00273275 /* ViewController.m */,
+				28BA140D1BCF878B004DE2CE /* View */,
 				287431681BA0014F00273275 /* Supporting Files */,
 			);
 			path = CaulySingleViewSample;
@@ -193,34 +232,15 @@
 		28BA140D1BCF878B004DE2CE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				281D0BC91C313A7B00508F2E /* NavigationViewController.h */,
+				281D0BCA1C313A7B00508F2E /* NavigationViewController.m */,
+				288CDA921C311B4F00515B85 /* TestBannerViewController.h */,
+				288CDA931C311B4F00515B85 /* TestBannerViewController.m */,
 				2805A3B31BD616470034C247 /* NativeAdViewViewController.h */,
 				2805A3B41BD616470034C247 /* NativeAdViewViewController.m */,
 				2805A3B51BD616470034C247 /* NativeAdViewViewController.xib */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		28D3F71B1C0FE96F0067856D /* CaulyLib */ = {
-			isa = PBXGroup;
-			children = (
-				28D3F71C1C0FE96F0067856D /* include */,
-				28D3F7231C0FE96F0067856D /* libCauly-universal.a */,
-			);
-			name = CaulyLib;
-			path = ../CaulyLib;
-			sourceTree = "<group>";
-		};
-		28D3F71C1C0FE96F0067856D /* include */ = {
-			isa = PBXGroup;
-			children = (
-				28D3F71D1C0FE96F0067856D /* Cauly.h */,
-				28D3F71E1C0FE96F0067856D /* CaulyAdSetting.h */,
-				28D3F71F1C0FE96F0067856D /* CaulyAdView.h */,
-				28D3F7201C0FE96F0067856D /* CaulyInterstitialAd.h */,
-				28D3F7211C0FE96F0067856D /* CaulyNativeAd.h */,
-				28D3F7221C0FE96F0067856D /* CaulyNativeAdItem.h */,
-			);
-			path = include;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,8 +352,10 @@
 			files = (
 				2805A3B61BD616470034C247 /* NativeAdViewViewController.m in Sources */,
 				287431711BA0014F00273275 /* CaulySingleViewSample.xcdatamodeld in Sources */,
+				281D0BCB1C313A7B00508F2E /* NavigationViewController.m in Sources */,
 				2874316E1BA0014F00273275 /* AppDelegate.m in Sources */,
 				287431741BA0014F00273275 /* ViewController.m in Sources */,
+				288CDA951C311B4F00515B85 /* TestBannerViewController.m in Sources */,
 				2874316B1BA0014F00273275 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,13 +485,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULE_DEBUGGING = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"_CAULY_DEV_SO_CUSTOM_=vbcu0917",
-					"_CUSTOM_=1",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = CaulySingleViewSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -482,7 +504,9 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neilkwon.CaulySampleRenew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_STYLE = all;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -490,7 +514,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULE_DEBUGGING = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CaulySingleViewSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
@@ -504,7 +532,9 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.neilkwon.CaulySampleRenew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_STYLE = all;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};

@@ -42,7 +42,7 @@
 - (void)stopAdRequest;
 
 @property (nonatomic, weak) UIViewController * parentController;
-@property (nonatomic, strong) id<CaulyNativeAdDelegate> delegate;
+@property (nonatomic, weak) id<CaulyNativeAdDelegate> delegate;
 @property (nonatomic, strong) CaulyAdSetting * localSetting;
 @property (nonatomic, strong) NSObject * data;
 

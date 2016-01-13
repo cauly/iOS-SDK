@@ -41,7 +41,7 @@
 - (void)show;
 - (void)close;
 
-@property (nonatomic, assign) id<CaulyInterstitialAdDelegate> delegate;
+@property (nonatomic, weak) id<CaulyInterstitialAdDelegate> delegate;
 @property (nonatomic, strong) CaulyAdSetting * localSetting;
 @property (nonatomic, weak) UIViewController * parentController;
 @property (nonatomic, readonly) NSString * errorMsg;
