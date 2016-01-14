@@ -1,4 +1,7 @@
 # Update history
+- 2016-01-13
+	- TBXML Duplicate Symbol 에러 제거
+	- Header의 Delegate의 property reference type을 weak으로 변경
 
 - 2015-10-19
 	- V3.1.0
