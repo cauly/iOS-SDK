@@ -93,8 +93,6 @@ Table Of Content
 	- QuartzCore.framework
 	- SystemConfiguration.framework
 	- MediaPlayer.framework
-	- Mapkit.framework
-	- CoreLocation.framework
 	- CFNetwork.framework
 	- MessageUI.framework // ‘Optional’ recommended
 	- EventKit.framework     //  ‘Optional’ recommended
