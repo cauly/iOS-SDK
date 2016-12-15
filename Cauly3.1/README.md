@@ -41,6 +41,21 @@
  	</dict>
 		
 	```
+- 2017년 1월 이후 ATS 
+	- 2017년 1월 이후 ATS를 활성화한 앱에 대해서만 앱스토어에 등록할 수 있도록한 애플 정책이 수립되었습니다. 따라서 기존 설정과 함께 추가적인 설정을 추가하여야 합니다.
+	
+	```xml
+	<key>NSAppTransportSecurity</key>
+    	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSAllowsArbitraryLoadsForMedia</key>
+		<true/>
+		<key>NSAllowsArbitraryLoadsInWebContent</key>
+		<true/>
+	</dict>
+	```
+
 - P/E광고 설정 관련
 	- 앱 마다 P/E광고 허용 여부를 설정 할 수 있으며, P/E광고 노출을 원하는 경우 ‘cauly홈페이지>>APP관리’에서 ‘ON’ 으로 설정하면 됩니다.
 		- Cauly 홈페이지 >> app 관리 >> 수익구분 : 배너CPM >> ON
