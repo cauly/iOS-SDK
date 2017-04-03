@@ -3,7 +3,7 @@
 
 목차 
 
-1. Cauly iOS SDK v3.1.0
+1. Cauly iOS SDK v3.1.2
 	- Release note
 	- 주의 사항
 	- 참고 사항
@@ -22,12 +22,9 @@
 	- 기타 API
 	- Properties
  
-## Cauly iOS SDK v3.1.0
+## Cauly iOS SDK v3.1.2
 ### Release note
-- iOS9 대응 
-- NativeAd 
-- 전면 Rich Video
-
+- ATS(App Transport Security) 관련 대응
 ### 주의 사항
 - iOS9 ATS(App Transport Security) 처리
 	- 애플은 iOS9에서 ATS(App Transport Security)라는 기능을 제공합니다. 기기에서 ATS 활성화 시 암호화된 HTTPS 방식만 허용됩니다. HTTPS 방식을 적용하지 않을 경우 애플 보안 기준을 충족하지 않는다는 이유로 광고가 차단될 수 있습니다.
@@ -41,7 +38,7 @@
  	</dict>
 		
 	```
-- 2017년 1월 이후 ATS 
+- 2017년 1월 이후 ATS (현재 무기한 보류중)
 	- 2017년 1월 이후 ATS를 활성화한 앱에 대해서만 앱스토어에 등록할 수 있도록한 애플 정책이 수립되었습니다. 따라서 기존 설정과 함께 추가적인 설정을 추가하여야 합니다.
 	
 	```xml
@@ -55,6 +52,7 @@
 		<true/>
 	</dict>
 	```
+	- 현재 보류 중이지만 언제든 Apple Store 정책에 따라 적용될 수 있습니다. ( 카울리 서버는 ATS 요구 사항을 충족하고 있습니다.)
 
 - P/E광고 설정 관련
 	- 앱 마다 P/E광고 허용 여부를 설정 할 수 있으며, P/E광고 노출을 원하는 경우 ‘cauly홈페이지>>APP관리’에서 ‘ON’ 으로 설정하면 됩니다.
