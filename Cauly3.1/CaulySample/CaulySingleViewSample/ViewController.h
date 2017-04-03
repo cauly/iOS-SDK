@@ -19,6 +19,7 @@
     
     BOOL orientaionLock;
     BOOL keyboardIsShown;
+    UITextField* currentResponder;
 }
 
 - (IBAction)orientationLockChanged:(id)sender;
@@ -27,6 +28,7 @@
 - (IBAction)nativeAdRequest:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIView *bannerView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bannerViewHeightConstraint;
 
 @property (assign, nonatomic) IBOutlet UIScrollView *scrollView;
 

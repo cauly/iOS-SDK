@@ -12,5 +12,6 @@
 @interface TestBannerViewController : UIViewController<CaulyAdViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *bannerView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bannerViewHeightConstraint;
 @property (nonatomic) CaulyAdView * adView;
 @end

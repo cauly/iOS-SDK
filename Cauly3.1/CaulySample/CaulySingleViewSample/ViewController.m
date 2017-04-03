@@ -15,6 +15,7 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -34,6 +35,10 @@
         adSetting.adSize                = CaulyAdSize_IPadSmall;       //  광고 크기
     }
     
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        [_bannerViewHeightConstraint setConstant:50.0f];
+    }
+    
     
     adSetting.gender                = CaulyGender_All;          //  성별 설정
     adSetting.age                   = CaulyAge_All;             //  나이 설정
@@ -44,19 +49,22 @@
     
     _adView = [[CaulyAdView alloc] initWithParentViewController:self];
     [_bannerView addSubview:_adView];
+
+    
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resignOnTap:)];
+    [singleTap setNumberOfTapsRequired:1];
+    [singleTap setNumberOfTouchesRequired:1];
+    [_scrollView addGestureRecognizer:singleTap];
+    
+    if (NSFoundationVersionNumber <= NSFoundationVersionNumber_iOS_8_4){
+    }
+    
+    [self registerForKeyboardNotifications];
     
 }
 
--(void) viewWillAppear:(BOOL)animated{
-    if(_adView){
-        [_adView startBannerAdRequest];
-    }
-}
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    if(_adView){
-        [_adView stopAdRequest];
-    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -91,16 +99,12 @@
 // 광고 정보 수신 성공
 - (void)didReceiveInterstitialAd:(CaulyInterstitialAd *)interstitialAd isChargeableAd:(BOOL)isChargeableAd {
     NSLog(@"didReceiveInterstitialAd");
-    
     [_interstitialAd show];
-    
 }
 
 // Interstitial 형태의 광고가 닫혔을 때
 - (void)didCloseInterstitialAd:(CaulyInterstitialAd *)interstitialAd {
     NSLog(@"didCloseInterstitialAd");
-    
-    
     _interstitialAd = nil;
 }
 
@@ -228,8 +232,83 @@
     
     _nativeAd = [[CaulyNativeAd alloc] initWithParentViewController:self];
     _nativeAd.delegate = self;
-    [_nativeAd startNativeAdRequest:2 nativeAdComponentType:CaulyNativeAdComponentType_IconImage imageSize:@""];
+    
+    // imageSize argument를 통해 다양한 사이즈를 사용하여 구성할 수 있습니다.
+    // 첫번째 argument는 요청할 nativa 광고의 갯수 eg) 1- 한개, 2- 두개
+
+//    [_nativeAd startNativeAdRequest:1 nativeAdComponentType:CaulyNativeAdComponentType_Icon imageSize:@"214x214"];
+    [_nativeAd startNativeAdRequest:2 nativeAdComponentType:CaulyNativeAdComponentType_Image imageSize:@"720x480"];
+//    [_nativeAd startNativeAdRequest:2 nativeAdComponentType:CaulyNativeAdComponentType_IconImage imageSize:@"480x720"];
+    
     
 }
+
+
+- (IBAction)showIsolated:(id)sender {
+    
+    
+    TestBannerViewController *areaSelectView = [[TestBannerViewController alloc] init];
+
+    [self presentViewController:areaSelectView animated:YES completion:nil];
+}
+
+
+
+- (void)resignOnTap:(id)iSender {
+    [currentResponder resignFirstResponder];
+}
+
+
+- (void)registerForKeyboardNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardWillShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification object:nil];
+    
+}
+
+// Called when the UIKeyboardDidShowNotification is sent.
+
+- (void)keyboardWasShown:(NSNotification*)aNotification
+{
+    NSDictionary* info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
+    _scrollView.contentInset = contentInsets;
+    _scrollView.scrollIndicatorInsets = contentInsets;
+    
+    // If active text field is hidden by keyboard, scroll it so it's visible
+    // Your app might not need or want this behavior.
+    CGRect aRect = self.view.frame;
+    aRect.size.height -= kbSize.height;
+    if (!CGRectContainsPoint(aRect, currentResponder.frame.origin) ) {
+        
+        CGRect scrollTo = currentResponder.frame;
+        scrollTo = CGRectMake(scrollTo.origin.x, scrollTo.origin.y - 30, scrollTo.size.width, scrollTo.size.height);
+        [self.scrollView scrollRectToVisible:scrollTo animated:NO];
+    }
+    
+}
+
+// Called when the UIKeyboardWillHideNotification is sent
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification
+{
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    _scrollView.contentInset = contentInsets;
+    _scrollView.scrollIndicatorInsets = contentInsets;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+
+
+
 
 @end

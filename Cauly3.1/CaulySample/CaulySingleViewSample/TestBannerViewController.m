@@ -24,10 +24,32 @@
     NSLog(@"viewWillDisappear");
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    CaulyAdSetting * adSetting = [CaulyAdSetting globalSetting];
+    [CaulyAdSetting setLogLevel:CaulyLogLevelAll];              //  Cauly Log 레벨
+    adSetting.appCode               = @"CAULY";                 //  Cauly AppCode
+    adSetting.animType              = CaulyAnimNone;            //  화면 전환 효과
+    adSetting.useGPSInfo            = NO;                       //  GPS 수집 허용여부
+    
+    adSetting.adSize                = CaulyAdSize_IPhone;       //  광고 크기
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        adSetting.adSize                = CaulyAdSize_IPadSmall;       //  광고 크기
+    }
+    
+    
+    adSetting.gender                = CaulyGender_All;          //  성별 설정
+    adSetting.age                   = CaulyAge_All;             //  나이 설정
+    adSetting.reloadTime            = CaulyReloadTime_120;       //  광고 갱신 시간
+    adSetting.useDynamicReloadTime  = YES;                      //  동적 광고 갱신 허용 여부
+    adSetting.closeOnLanding        = YES;                      // Landing 이동시 webview control lose 여부
+    
+    
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        [_bannerViewHeightConstraint setConstant:50.0f];
+    }
     
     _adView = [[CaulyAdView alloc] initWithParentViewController:self];
     _adView.delegate = self;
@@ -64,20 +86,20 @@
 }
 
 /*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
--(void) didMoveToParentViewController:(UIViewController *)parent{
-    if( parent == nil){
-        [_adView removeFromSuperview];
-        _adView = nil;
-    }
-    [super didMoveToParentViewController:parent];
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+- (IBAction)dismiss:(id)sender {
+    [_adView removeFromSuperview];
+    _adView = nil;
+
+    [self dismissViewControllerAnimated:NO completion:nil];
+
 }
 
 

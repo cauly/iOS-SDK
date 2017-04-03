@@ -502,7 +502,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.neilkwon.CaulySampleRenew;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fsn.cauly.CaulySampleRenew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_STYLE = all;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -530,7 +530,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.neilkwon.CaulySampleRenew;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fsn.cauly.CaulySampleRenew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_STYLE = all;
 				TARGETED_DEVICE_FAMILY = "1,2";
