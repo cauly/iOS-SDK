@@ -169,6 +169,8 @@
         [areaSelectView.descriptionLabel setText:nativeAdItem[@"description"]];
         areaSelectView.link = nativeAdItem[@"link"];
         
+        [areaSelectView.optOutButton setHidden:[nativeAdItem[@"opt"] isEqualToString:@"N"]];
+        
         [areaSelectView.jsonStringTextView setText:caulyNativeAd.nativeAdJSONString];
     }];
     

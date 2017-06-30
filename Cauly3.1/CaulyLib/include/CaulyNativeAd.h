@@ -39,7 +39,8 @@
 - (NSArray*) nativeAdItemList;
 - (void) sendInform:(CaulyNativeAdItem*) nativeAdItem;
 - (void) click:(CaulyNativeAdItem*) nativeAdItem;
-- (void)stopAdRequest;
+- (void) sendToOptOutLinkUrl :(CaulyNativeAdItem*) nativeAdItem;
+- (void) stopAdRequest;
 
 @property (nonatomic, weak) UIViewController * parentController;
 @property (nonatomic, weak) id<CaulyNativeAdDelegate> delegate;

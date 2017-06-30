@@ -17,6 +17,9 @@
 @property (assign, nonatomic) IBOutlet UIImageView *icon;
 @property (assign, nonatomic) IBOutlet UIImageView *image;
 @property (assign, nonatomic) IBOutlet UITextView *jsonStringTextView;
+@property (weak, nonatomic) IBOutlet UIButton *optOutButton;
+@property (weak, nonatomic) IBOutlet UIButton *closeButton;
+
 @property (nonatomic) NSString* link;
 @property (assign) CaulyNativeAd* nativeAd;
 @property (assign) CaulyNativeAdItem* nativeAdItem;

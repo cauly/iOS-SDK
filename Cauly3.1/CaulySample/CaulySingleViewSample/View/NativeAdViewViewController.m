@@ -41,6 +41,12 @@
         [self.presentingViewController dismissModalViewControllerAnimated:NO];
     }];
 }
+- (IBAction)closeButtonTouchUpInside:(id)sender {
+    [self.presentingViewController dismissModalViewControllerAnimated:NO];
+}
+- (IBAction)optOutButtonTouchUpInside:(id)sender {
+    [_nativeAd sendToOptOutLinkUrl:_nativeAdItem];
+}
 
 /*
  #pragma mark - Navigation
