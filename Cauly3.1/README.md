@@ -3,7 +3,7 @@
 
 목차 
 
-1. Cauly iOS SDK v3.1.2
+1. Cauly iOS SDK v3.1.3
 	- Release note
 	- 주의 사항
 	- 참고 사항
