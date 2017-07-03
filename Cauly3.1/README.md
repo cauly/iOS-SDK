@@ -295,6 +295,7 @@
         [areaSelectView.subTitle setText:nativeAdItem[@"subtitle"]];
         [areaSelectView.descriptionLabel setText:nativeAdItem[@"description"]];
         areaSelectView.link = nativeAdItem[@"link"];
+        [areaSelectView.optOutButton setHidden:[nativeAdItem[@"opt"] isEqualToString:@"N"]];
 
         [areaSelectView.jsonStringTextView setText:caulyNativeAd.nativeAdJSONString];
     }];
@@ -322,6 +323,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *icon;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UITextView *jsonStringTextView;
+@property (weak, nonatomic) IBOutlet UIButton *optOutButton;
+@property (weak, nonatomic) IBOutlet UIButton *closeButton;
+
 @property (nonatomic) NSString* link;
 @property (assign) CaulyNativeAd* nativeAd;
 @property (assign) CaulyNativeAdItem* nativeAdItem;
@@ -355,6 +359,17 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)closeButtonTouchUpInside:(id)sender {
+    [self.presentingViewController dismissModalViewControllerAnimated:NO];
+}
+
+// optOut 링크 처리
+- (IBAction)optOutButtonTouchUpInside:(id)sender {
+    [_nativeAd sendToOptOutLinkUrl:_nativeAdItem];
+}
+
+
 - (IBAction)didViewTouchUpInside:(id)sender {
     NSLog(@"Native ad Clicked");
 
