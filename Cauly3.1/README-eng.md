@@ -364,7 +364,7 @@ Table Of Content
 
 | Property | Description |
 | --- | --- |
-| appCode | Received code after registering the App. (Use ‘CAULY’ for a test)<br/> Other available test app codes: CAULY-RICHADTEST CAULY-PETEST, CAULY-3DTEST |
+| appCode | Received code after registering the App. (Use ‘CAULY’ for a test) |
 | animType | CaulyAnimCurlDown : Curl down animation<br/>CaulyAnimCurlup : Curl up animation<br/>CaulyAnimFadeOut : Old banner fades out and new banner fades in<br/>CaulyAnimFlipFromLeft : Flip animation from left<br/>CaulyAnimFlipFromRight : Flip animation from right<br/>CaulyAnimNone(Default) : No amination |
 | useGPSInfo | Decides usability of GPS information from Cauly’s SDK.<br/>YES or NO(default) |
 | adSize |	CaulyAdSize_IPhone : 320 x 50<br/>CaulyAdSize_IPadLarge : 728 x 90<br/>CaulyAdSize_IPadSmall : 468 x 60
