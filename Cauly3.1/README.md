@@ -391,7 +391,7 @@
 
 | 속성 | 설명 |
 | --- | --- |
-| appCode |	상품 등록 시 부여 받은 발급ID 입력<br/>Sample AppCode : CAULY, CAULY-RICHADTEST, CAULY-PETEST,<br/>CAULY-3DTEST, CAULY-VIDEOTEST |
+| appCode |	상품 등록 시 부여 받은 발급ID 입력 |
 | animType |	CaulyAnimCurlDown : 아래쪽으로 말려 내려가는 애니메이션<br/>CaulyAnimCurlup : 위쪽으로 말려 올라가는 애니메이션<br/>CaulyAnimFadeOut : 전에 있던 광고가 서서히 사라지는 효과<br/>CaulyAnimFlipFromLeft : 왼쪽에서 회전하는 애니메이션<br/>CaulyAnimFlipFromRight : 오른쪽에서 회전하는 애니메이션<br/>CaulyAnimNone(기본값) : 애니메이션 효과 없이 바로 광고 교체 |
 | useGPSInfo |	카울리 SDK에서 GPS정보를 얻어 갈지 설정 값을 리턴합니다.<br/>-	YES : 자동으로 현재 디바이스의 GPS정보를 얻어 감<br/>-	NO(기본값) : GPS정보를 얻어 가지 않도록 설정
 | adSize |	CaulyAdSize_IPhone : 320 x 48<br/>CaulyAdSize_IPadLarge : 728 x 90<br/>CaulyAdSize_IPadSmall : 468 x 60
