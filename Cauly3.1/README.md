@@ -3,7 +3,7 @@
 
 목차 
 
-1. Cauly iOS SDK v3.1.3
+1. Cauly iOS SDK v3.1.4
 	- Release note
 	- 주의 사항
 	- 참고 사항
@@ -22,9 +22,9 @@
 	- 기타 API
 	- Properties
  
-## Cauly iOS SDK v3.1.3
+## Cauly iOS SDK v3.1.4
 ### Release note
-- Optout 관련 버튼추가
+- 일부 버그 픽스
 ### 주의 사항
 - iOS9 ATS(App Transport Security) 처리
 	- 애플은 iOS9에서 ATS(App Transport Security)라는 기능을 제공합니다. 기기에서 ATS 활성화 시 암호화된 HTTPS 방식만 허용됩니다. HTTPS 방식을 적용하지 않을 경우 애플 보안 기준을 충족하지 않는다는 이유로 광고가 차단될 수 있습니다.
@@ -78,7 +78,7 @@
 - BASE SDK : iOS 7.0 이상
 - iOS Deployment Target iOS : 6.0 이상
 ### SDK 구성
-- cauly SDK v3.1.3
+- cauly SDK v3.1.4
 	- 헤더 파일
 
 		| Headers ||
