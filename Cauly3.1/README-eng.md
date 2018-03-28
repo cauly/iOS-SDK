@@ -3,7 +3,7 @@
 
 Table Of Content
 
-1. Cauly iOS SDK v3.1.0
+1. Cauly iOS SDK v3.1.4
 	- Release note
 	- Cautiousness
 	- Reference
@@ -23,12 +23,9 @@ Table Of Content
 	- Properties
 
 
-## Cauly iOS SDK v3.1.0
+## Cauly iOS SDK v3.1.4
 ### Release note
-- Support iOS 9.x
-- NativeAd Added
-- Full Rich video added
-
+- Optout buttons on banner / interstitial
 ### Cautiousness
 - iOS9 ATS(App Transport Security) 
 	- iOS 9 introduces a new privacy feature called App Transport Security (ATS) to enforce best practices in secure connections between an app and its back end. If ATS enabled, HTTPS is the only protocol granted to connect networks.
@@ -67,7 +64,7 @@ Table Of Content
 - iOS Deployment Target iOS : 6.0 or higher
 
 ###	SDK Components
-- Cauly SDK v3.1.0
+- Cauly SDK v3.1.4
 	
 	| Headers | |
 	| ----------- | --- |
