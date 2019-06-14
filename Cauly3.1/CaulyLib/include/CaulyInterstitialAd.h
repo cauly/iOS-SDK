@@ -36,6 +36,9 @@
 + (id)caulyAdWithController:(UIViewController *)controller;
 - (id)initWithParentViewController:(UIViewController *)controller;
 
+- (int)earnType;
+- (float)price;
+
 - (void)startInterstitialAdRequest;
 - (void)stopAdRequest;
 - (void)show;

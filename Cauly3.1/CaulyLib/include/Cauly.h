@@ -14,7 +14,7 @@
 
 #define TEST_APP_CODE			(@"CAULY")
 
-#define CAULY_SDK_VERSION		(@"3.1.4")
+#define CAULY_SDK_VERSION		(@"3.1.6")
 
 #define CAULY_ERR_SUCCESS		(0)
 #define CAULY_ERR_FAILED		(1)
