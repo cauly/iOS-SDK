@@ -3,7 +3,7 @@
 
 Table Of Content
 
-1. Cauly iOS SDK v3.1.4
+1. Cauly iOS SDK v3.1.0
 	- Release note
 	- Cautiousness
 	- Reference
@@ -23,9 +23,9 @@ Table Of Content
 	- Properties
 
 
-## Cauly iOS SDK v3.1.4
+## Cauly iOS SDK v3.1.0
 ### Release note
-- Optout buttons on banner / interstitial
+- Performance improvements and bug fix
 ### Cautiousness
 - iOS9 ATS(App Transport Security) 
 	- iOS 9 introduces a new privacy feature called App Transport Security (ATS) to enforce best practices in secure connections between an app and its back end. If ATS enabled, HTTPS is the only protocol granted to connect networks.
@@ -363,7 +363,7 @@ Table Of Content
 | --- | --- |
 | appCode | Received code after registering the App. (Use ‘CAULY’ for a test) |
 | animType | CaulyAnimCurlDown : Curl down animation<br/>CaulyAnimCurlup : Curl up animation<br/>CaulyAnimFadeOut : Old banner fades out and new banner fades in<br/>CaulyAnimFlipFromLeft : Flip animation from left<br/>CaulyAnimFlipFromRight : Flip animation from right<br/>CaulyAnimNone(Default) : No amination |
-| useGPSInfo | Decides usability of GPS information from Cauly’s SDK.<br/>YES or NO(default) |
+
 | adSize |	CaulyAdSize_IPhone : 320 x 50<br/>CaulyAdSize_IPadLarge : 728 x 90<br/>CaulyAdSize_IPadSmall : 468 x 60
 | reloadTime |	CaulyReloadTime_30(default) : 30 sec<br/>CaulyReloadTime_60 : 60 sec<br/>CaulyReloadTime_120 : 120 sec
 | useDynamicReloadTime |YES(default) : Reloading time could be set differently by Ads, thus higher profit would be expected.<br>NO : Rolls according to reloadTime set period |
