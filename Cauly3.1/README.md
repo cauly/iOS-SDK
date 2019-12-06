@@ -1,4 +1,4 @@
-![Valid XHTML](http://cauly044.fsnsys.com:10010/images/logo_cauly_main.png) iOS SDK 설치가이드
+iOS SDK 설치가이드
 =====================================================
 
 목차 
