@@ -64,7 +64,6 @@ iOS SDK 설치가이드(swift)
 		- “Build Phase” 탭 에서 Linked Libraries에 기존 라이브러리가 포함된 게 있다면 삭제 합니다.
 		- “Build Settings” 탭에서 “Library Search Paths” 검색하여 불필요한 경로 삭제 합니다.
 				원하는 경로가 제일 위로 가야 합니다.
-- 배너광고 최소 요청 주기 15 초 입니다.
 
 ### 권장 환경
 - Xcode 8.0 이상 권장
@@ -90,7 +89,7 @@ iOS SDK 설치가이드(swift)
 - Sample XCODE Swift Project 
 	
 ## SDK 설치 방법
-### 방법
+### 준비
 1. cauly를 적용할 project 내에 ‘CaulyLib’ 폴더 복사
 2. Framework 추가
 	- AVKit.framework
