@@ -87,7 +87,7 @@ iOS SDK 설치가이드(swift)
 		- libCauly-universal.a – Cauly 광고 라이브러리 파일(simulator/device 통합)
 		- libCauly.a – Cauly 광고 라이브러리 파일(device 전용)
 		
-- Sample XCODE Objective-C Project 
+- Sample XCODE Swift Project 
 	
 ## SDK 설치
 ### 방법
@@ -119,12 +119,12 @@ iOS SDK 설치가이드(swift)
   - Bridging-Header.h 파일을 생성하고 밑에 사진과 같이 해더파일을 생성해야합니다.
 	
 <p float="left">
-  <img src="Cauly3.1/images/hearder.png" width="800" hight="700" />
+  <img src="/Cauly3.1/Swift/images/hearder.png" width="800" hight="700" />
 </p>
 
   - Build Settings -> 검색바에서 -> Swift Compiler -> Objective-C Bridging Heaer 프로젝트명-Bridging-Header.h 등록
 <p float="left">
-  <img src="Cauly3.1/images/target.png" width="800" hight="1000"/>
+  <img src="/Cauly3.1/Swift/images/target.png" width="800" hight="1000"/>
 </p>
 
 ### 구현 
