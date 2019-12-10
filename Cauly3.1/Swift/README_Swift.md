@@ -89,7 +89,7 @@ iOS SDK 설치가이드(swift)
 		
 - Sample XCODE Swift Project 
 	
-## SDK 설치
+## SDK 설치 방법
 ### 방법
 1. cauly를 적용할 project 내에 ‘CaulyLib’ 폴더 복사
 2. Framework 추가
