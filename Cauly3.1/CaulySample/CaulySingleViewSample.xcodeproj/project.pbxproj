@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2805A3B61BD616470034C247 /* NativeAdViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2805A3B41BD616470034C247 /* NativeAdViewViewController.m */; };
 		2805A3B71BD616470034C247 /* NativeAdViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2805A3B51BD616470034C247 /* NativeAdViewViewController.xib */; };
-		281D0BCB1C313A7B00508F2E /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D0BCA1C313A7B00508F2E /* NavigationViewController.m */; };
 		281D0CB01C31481700508F2E /* libCauly-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 281D0CAE1C31481700508F2E /* libCauly-universal.a */; };
 		284902EC1C0307D80047639A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2874319E1BA001B400273275 /* CoreLocation.framework */; };
 		286FF7191BB52D8B00BFF8A8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286FF7181BB52D8B00BFF8A8 /* AVFoundation.framework */; };
@@ -48,8 +47,6 @@
 		2805A3B31BD616470034C247 /* NativeAdViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NativeAdViewViewController.h; path = View/NativeAdViewViewController.h; sourceTree = "<group>"; };
 		2805A3B41BD616470034C247 /* NativeAdViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NativeAdViewViewController.m; path = View/NativeAdViewViewController.m; sourceTree = "<group>"; };
 		2805A3B51BD616470034C247 /* NativeAdViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NativeAdViewViewController.xib; path = View/NativeAdViewViewController.xib; sourceTree = "<group>"; };
-		281D0BC91C313A7B00508F2E /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
-		281D0BCA1C313A7B00508F2E /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
 		281D0CA81C31481700508F2E /* Cauly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cauly.h; sourceTree = "<group>"; };
 		281D0CA91C31481700508F2E /* CaulyAdSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyAdSetting.h; sourceTree = "<group>"; };
 		281D0CAA1C31481700508F2E /* CaulyAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyAdView.h; sourceTree = "<group>"; };
@@ -232,8 +229,6 @@
 		28BA140D1BCF878B004DE2CE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				281D0BC91C313A7B00508F2E /* NavigationViewController.h */,
-				281D0BCA1C313A7B00508F2E /* NavigationViewController.m */,
 				288CDA921C311B4F00515B85 /* TestBannerViewController.h */,
 				288CDA931C311B4F00515B85 /* TestBannerViewController.m */,
 				2805A3B31BD616470034C247 /* NativeAdViewViewController.h */,
@@ -310,6 +305,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -352,7 +348,6 @@
 			files = (
 				2805A3B61BD616470034C247 /* NativeAdViewViewController.m in Sources */,
 				287431711BA0014F00273275 /* CaulySingleViewSample.xcdatamodeld in Sources */,
-				281D0BCB1C313A7B00508F2E /* NavigationViewController.m in Sources */,
 				2874316E1BA0014F00273275 /* AppDelegate.m in Sources */,
 				287431741BA0014F00273275 /* ViewController.m in Sources */,
 				288CDA951C311B4F00515B85 /* TestBannerViewController.m in Sources */,
