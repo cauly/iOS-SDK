@@ -32,7 +32,7 @@
     [CaulyAdSetting setLogLevel:CaulyLogLevelAll];              //  Cauly Log 레벨
     adSetting.appCode               = @"CAULY";                 //  Cauly AppCode
     adSetting.animType              = CaulyAnimNone;            //  화면 전환 효과
-    adSetting.useGPSInfo            = NO;                       //  GPS 수집 허용여부
+
     
     adSetting.adSize                = CaulyAdSize_IPhone;       //  광고 크기
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {

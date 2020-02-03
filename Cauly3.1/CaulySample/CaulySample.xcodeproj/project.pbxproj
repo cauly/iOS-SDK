@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2805A3B61BD616470034C247 /* NativeAdViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2805A3B41BD616470034C247 /* NativeAdViewViewController.m */; };
+		2805A3B71BD616470034C247 /* NativeAdViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2805A3B51BD616470034C247 /* NativeAdViewViewController.xib */; };
+		281D0BCB1C313A7B00508F2E /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D0BCA1C313A7B00508F2E /* NavigationViewController.m */; };
+		286FF7191BB52D8B00BFF8A8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286FF7181BB52D8B00BFF8A8 /* AVFoundation.framework */; };
+		286FF71D1BB52DCC00BFF8A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286FF71C1BB52DCC00BFF8A8 /* UIKit.framework */; };
+		2874316B1BA0014F00273275 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2874316A1BA0014F00273275 /* main.m */; };
+		2874316E1BA0014F00273275 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2874316D1BA0014F00273275 /* AppDelegate.m */; };
+		287431711BA0014F00273275 /* CaulySingleViewSample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2874316F1BA0014F00273275 /* CaulySingleViewSample.xcdatamodeld */; };
+		287431741BA0014F00273275 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 287431731BA0014F00273275 /* ViewController.m */; };
+		287431771BA0014F00273275 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287431751BA0014F00273275 /* Main.storyboard */; };
+		287431791BA0014F00273275 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287431781BA0014F00273275 /* Images.xcassets */; };
+		2874317C1BA0014F00273275 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2874317A1BA0014F00273275 /* LaunchScreen.xib */; };
+		287431881BA0014F00273275 /* CaulySingleViewSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 287431871BA0014F00273275 /* CaulySingleViewSampleTests.m */; };
+		2874319B1BA001A700273275 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2874319A1BA001A700273275 /* MessageUI.framework */; };
+		2874319D1BA001AE00273275 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2874319C1BA001AE00273275 /* EventKit.framework */; };
+		287431A11BA001BA00273275 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287431A01BA001BA00273275 /* MediaPlayer.framework */; };
+		287431A31BA001C200273275 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287431A21BA001C200273275 /* SystemConfiguration.framework */; };
+		287431A51BA001C900273275 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287431A41BA001C900273275 /* CFNetwork.framework */; };
+		287431A71BA001CF00273275 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287431A61BA001CF00273275 /* AdSupport.framework */; };
+		287431A91BA001D600273275 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287431A81BA001D600273275 /* Foundation.framework */; };
+		287431AB1BA001DC00273275 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287431AA1BA001DC00273275 /* Accelerate.framework */; };
+		288CDA951C311B4F00515B85 /* TestBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 288CDA931C311B4F00515B85 /* TestBannerViewController.m */; };
+		28FA6CE41BB53111006B6320 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FA6CE31BB53111006B6320 /* CoreMedia.framework */; };
+		2FC22DF5236BD5490070BD3D /* libCauly-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC22DF4236BD5030070BD3D /* libCauly-universal.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		287431821BA0014F00273275 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2874315D1BA0014F00273275 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 287431641BA0014F00273275;
+			remoteInfo = CaulySingleViewSample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2805A3B31BD616470034C247 /* NativeAdViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NativeAdViewViewController.h; path = View/NativeAdViewViewController.h; sourceTree = "<group>"; };
+		2805A3B41BD616470034C247 /* NativeAdViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NativeAdViewViewController.m; path = View/NativeAdViewViewController.m; sourceTree = "<group>"; };
+		2805A3B51BD616470034C247 /* NativeAdViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NativeAdViewViewController.xib; path = View/NativeAdViewViewController.xib; sourceTree = "<group>"; };
+		281D0BC91C313A7B00508F2E /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		281D0BCA1C313A7B00508F2E /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		284902EA1C0306000047639A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		286FF7181BB52D8B00BFF8A8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		286FF71A1BB52DAD00BFF8A8 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		286FF71C1BB52DCC00BFF8A8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		287431651BA0014F00273275 /* CaulySample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaulySample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		287431691BA0014F00273275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2874316A1BA0014F00273275 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2874316C1BA0014F00273275 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2874316D1BA0014F00273275 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		287431701BA0014F00273275 /* CaulySingleViewSample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CaulySingleViewSample.xcdatamodel; sourceTree = "<group>"; };
+		287431721BA0014F00273275 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		287431731BA0014F00273275 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		287431761BA0014F00273275 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		287431781BA0014F00273275 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2874317B1BA0014F00273275 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		287431811BA0014F00273275 /* CaulySample.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaulySample.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		287431861BA0014F00273275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		287431871BA0014F00273275 /* CaulySingleViewSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaulySingleViewSampleTests.m; sourceTree = "<group>"; };
+		2874319A1BA001A700273275 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		2874319C1BA001AE00273275 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		2874319E1BA001B400273275 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		287431A01BA001BA00273275 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		287431A21BA001C200273275 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		287431A41BA001C900273275 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		287431A61BA001CF00273275 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		287431A81BA001D600273275 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		287431AA1BA001DC00273275 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		288CDA881C30F53C00515B85 /* Cauly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cauly.h; sourceTree = "<group>"; };
+		288CDA891C30F53C00515B85 /* CaulyAdSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyAdSetting.h; sourceTree = "<group>"; };
+		288CDA8A1C30F53C00515B85 /* CaulyAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyAdView.h; sourceTree = "<group>"; };
+		288CDA8B1C30F53C00515B85 /* CaulyInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyInterstitialAd.h; sourceTree = "<group>"; };
+		288CDA8C1C30F53C00515B85 /* CaulyNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyNativeAd.h; sourceTree = "<group>"; };
+		288CDA8D1C30F53C00515B85 /* CaulyNativeAdItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyNativeAdItem.h; sourceTree = "<group>"; };
+		288CDA921C311B4F00515B85 /* TestBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBannerViewController.h; sourceTree = "<group>"; };
+		288CDA931C311B4F00515B85 /* TestBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestBannerViewController.m; sourceTree = "<group>"; };
+		28FA6CE31BB53111006B6320 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		2FC22DF4236BD5030070BD3D /* libCauly-universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCauly-universal.a"; path = "../../../Desktop/무제 폴더/libCauly-universal.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		287431621BA0014F00273275 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28FA6CE41BB53111006B6320 /* CoreMedia.framework in Frameworks */,
+				286FF71D1BB52DCC00BFF8A8 /* UIKit.framework in Frameworks */,
+				2FC22DF5236BD5490070BD3D /* libCauly-universal.a in Frameworks */,
+				286FF7191BB52D8B00BFF8A8 /* AVFoundation.framework in Frameworks */,
+				287431AB1BA001DC00273275 /* Accelerate.framework in Frameworks */,
+				287431A91BA001D600273275 /* Foundation.framework in Frameworks */,
+				287431A71BA001CF00273275 /* AdSupport.framework in Frameworks */,
+				287431A51BA001C900273275 /* CFNetwork.framework in Frameworks */,
+				287431A31BA001C200273275 /* SystemConfiguration.framework in Frameworks */,
+				287431A11BA001BA00273275 /* MediaPlayer.framework in Frameworks */,
+				2874319D1BA001AE00273275 /* EventKit.framework in Frameworks */,
+				2874319B1BA001A700273275 /* MessageUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2874317E1BA0014F00273275 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		281D0BCC1C313CB500508F2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FC22DF4236BD5030070BD3D /* libCauly-universal.a */,
+				284902EA1C0306000047639A /* MapKit.framework */,
+				28FA6CE31BB53111006B6320 /* CoreMedia.framework */,
+				286FF71C1BB52DCC00BFF8A8 /* UIKit.framework */,
+				286FF71A1BB52DAD00BFF8A8 /* CoreFoundation.framework */,
+				286FF7181BB52D8B00BFF8A8 /* AVFoundation.framework */,
+				287431AA1BA001DC00273275 /* Accelerate.framework */,
+				287431A81BA001D600273275 /* Foundation.framework */,
+				287431A61BA001CF00273275 /* AdSupport.framework */,
+				287431A41BA001C900273275 /* CFNetwork.framework */,
+				287431A21BA001C200273275 /* SystemConfiguration.framework */,
+				287431A01BA001BA00273275 /* MediaPlayer.framework */,
+				2874319E1BA001B400273275 /* CoreLocation.framework */,
+				2874319C1BA001AE00273275 /* EventKit.framework */,
+				2874319A1BA001A700273275 /* MessageUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2874315C1BA0014F00273275 = {
+			isa = PBXGroup;
+			children = (
+				281D0BCC1C313CB500508F2E /* Frameworks */,
+				287431671BA0014F00273275 /* CaulySingleViewSample */,
+				287431841BA0014F00273275 /* CaulySingleViewSampleTests */,
+				287431661BA0014F00273275 /* Products */,
+				288CDA871C30F53C00515B85 /* include */,
+			);
+			sourceTree = "<group>";
+		};
+		287431661BA0014F00273275 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				287431651BA0014F00273275 /* CaulySample.app */,
+				287431811BA0014F00273275 /* CaulySample.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		287431671BA0014F00273275 /* CaulySingleViewSample */ = {
+			isa = PBXGroup;
+			children = (
+				2874316C1BA0014F00273275 /* AppDelegate.h */,
+				2874316D1BA0014F00273275 /* AppDelegate.m */,
+				2874316F1BA0014F00273275 /* CaulySingleViewSample.xcdatamodeld */,
+				287431781BA0014F00273275 /* Images.xcassets */,
+				2874317A1BA0014F00273275 /* LaunchScreen.xib */,
+				287431751BA0014F00273275 /* Main.storyboard */,
+				287431721BA0014F00273275 /* ViewController.h */,
+				287431731BA0014F00273275 /* ViewController.m */,
+				28BA140D1BCF878B004DE2CE /* View */,
+				287431681BA0014F00273275 /* Supporting Files */,
+			);
+			path = CaulySingleViewSample;
+			sourceTree = "<group>";
+		};
+		287431681BA0014F00273275 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				287431691BA0014F00273275 /* Info.plist */,
+				2874316A1BA0014F00273275 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		287431841BA0014F00273275 /* CaulySingleViewSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				287431871BA0014F00273275 /* CaulySingleViewSampleTests.m */,
+				287431851BA0014F00273275 /* Supporting Files */,
+			);
+			path = CaulySingleViewSampleTests;
+			sourceTree = "<group>";
+		};
+		287431851BA0014F00273275 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				287431861BA0014F00273275 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		288CDA871C30F53C00515B85 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				288CDA881C30F53C00515B85 /* Cauly.h */,
+				288CDA891C30F53C00515B85 /* CaulyAdSetting.h */,
+				288CDA8A1C30F53C00515B85 /* CaulyAdView.h */,
+				288CDA8B1C30F53C00515B85 /* CaulyInterstitialAd.h */,
+				288CDA8C1C30F53C00515B85 /* CaulyNativeAd.h */,
+				288CDA8D1C30F53C00515B85 /* CaulyNativeAdItem.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		28BA140D1BCF878B004DE2CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				281D0BC91C313A7B00508F2E /* NavigationViewController.h */,
+				281D0BCA1C313A7B00508F2E /* NavigationViewController.m */,
+				288CDA921C311B4F00515B85 /* TestBannerViewController.h */,
+				288CDA931C311B4F00515B85 /* TestBannerViewController.m */,
+				2805A3B31BD616470034C247 /* NativeAdViewViewController.h */,
+				2805A3B41BD616470034C247 /* NativeAdViewViewController.m */,
+				2805A3B51BD616470034C247 /* NativeAdViewViewController.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		287431641BA0014F00273275 /* CaulySample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2874318B1BA0014F00273275 /* Build configuration list for PBXNativeTarget "CaulySample" */;
+			buildPhases = (
+				287431611BA0014F00273275 /* Sources */,
+				287431621BA0014F00273275 /* Frameworks */,
+				287431631BA0014F00273275 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CaulySample;
+			productName = CaulySingleViewSample;
+			productReference = 287431651BA0014F00273275 /* CaulySample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		287431801BA0014F00273275 /* CaulySampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2874318E1BA0014F00273275 /* Build configuration list for PBXNativeTarget "CaulySampleTests" */;
+			buildPhases = (
+				2874317D1BA0014F00273275 /* Sources */,
+				2874317E1BA0014F00273275 /* Frameworks */,
+				2874317F1BA0014F00273275 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				287431831BA0014F00273275 /* PBXTargetDependency */,
+			);
+			name = CaulySampleTests;
+			productName = CaulySingleViewSampleTests;
+			productReference = 287431811BA0014F00273275 /* CaulySample.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2874315D1BA0014F00273275 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Cauly;
+				TargetAttributes = {
+					287431641BA0014F00273275 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 55644VM79V;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+					287431801BA0014F00273275 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 287431641BA0014F00273275;
+					};
+				};
+			};
+			buildConfigurationList = 287431601BA0014F00273275 /* Build configuration list for PBXProject "CaulySample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = 2874315C1BA0014F00273275;
+			productRefGroup = 287431661BA0014F00273275 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				287431641BA0014F00273275 /* CaulySample */,
+				287431801BA0014F00273275 /* CaulySampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		287431631BA0014F00273275 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				287431771BA0014F00273275 /* Main.storyboard in Resources */,
+				2874317C1BA0014F00273275 /* LaunchScreen.xib in Resources */,
+				2805A3B71BD616470034C247 /* NativeAdViewViewController.xib in Resources */,
+				287431791BA0014F00273275 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2874317F1BA0014F00273275 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		287431611BA0014F00273275 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2805A3B61BD616470034C247 /* NativeAdViewViewController.m in Sources */,
+				287431711BA0014F00273275 /* CaulySingleViewSample.xcdatamodeld in Sources */,
+				281D0BCB1C313A7B00508F2E /* NavigationViewController.m in Sources */,
+				2874316E1BA0014F00273275 /* AppDelegate.m in Sources */,
+				287431741BA0014F00273275 /* ViewController.m in Sources */,
+				288CDA951C311B4F00515B85 /* TestBannerViewController.m in Sources */,
+				2874316B1BA0014F00273275 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2874317D1BA0014F00273275 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				287431881BA0014F00273275 /* CaulySingleViewSampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		287431831BA0014F00273275 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 287431641BA0014F00273275 /* CaulySample */;
+			targetProxy = 287431821BA0014F00273275 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		287431751BA0014F00273275 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				287431761BA0014F00273275 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2874317A1BA0014F00273275 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2874317B1BA0014F00273275 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		287431891BA0014F00273275 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2874318A1BA0014F00273275 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2874318C1BA0014F00273275 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULE_DEBUGGING = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 55644VM79V;
+				ENABLE_BITCODE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = CaulySingleViewSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fsn.cauly.CaulySampleRenew;
+				PRODUCT_NAME = CaulySample;
+				STRIP_STYLE = all;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		2874318D1BA0014F00273275 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULE_DEBUGGING = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 55644VM79V;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = CaulySingleViewSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fsn.cauly.CaulySampleRenew;
+				PRODUCT_NAME = CaulySample;
+				STRIP_STYLE = all;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		2874318F1BA0014F00273275 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CaulySingleViewSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "kr.co.futurestream.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = CaulySample;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CaulySample.app/CaulySample";
+			};
+			name = Debug;
+		};
+		287431901BA0014F00273275 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CaulySingleViewSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "kr.co.futurestream.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = CaulySample;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CaulySample.app/CaulySample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		287431601BA0014F00273275 /* Build configuration list for PBXProject "CaulySample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				287431891BA0014F00273275 /* Debug */,
+				2874318A1BA0014F00273275 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2874318B1BA0014F00273275 /* Build configuration list for PBXNativeTarget "CaulySample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2874318C1BA0014F00273275 /* Debug */,
+				2874318D1BA0014F00273275 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2874318E1BA0014F00273275 /* Build configuration list for PBXNativeTarget "CaulySampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2874318F1BA0014F00273275 /* Debug */,
+				287431901BA0014F00273275 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2874316F1BA0014F00273275 /* CaulySingleViewSample.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				287431701BA0014F00273275 /* CaulySingleViewSample.xcdatamodel */,
+			);
+			currentVersion = 287431701BA0014F00273275 /* CaulySingleViewSample.xcdatamodel */;
+			path = CaulySingleViewSample.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2874315D1BA0014F00273275 /* Project object */;
+}

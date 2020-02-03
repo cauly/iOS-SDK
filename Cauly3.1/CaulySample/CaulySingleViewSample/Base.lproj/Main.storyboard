@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GcB-Du-mW2">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GcB-Du-mW2">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +12,7 @@
             <objects>
                 <navigationController id="GcB-Du-mW2" customClass="NavigationViewController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZMy-50-cUx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -24,27 +21,27 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DDc-ny-xBB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-467" y="-643"/>
+            <point key="canvasLocation" x="-953" y="-773"/>
         </scene>
         <!--Isolated-->
         <scene sceneID="abp-Ig-1pz">
             <objects>
-                <viewController storyboardIdentifier="TestBannerViewController" id="ZYE-Mp-R49" customClass="TestBannerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TestBannerViewController" modalPresentationStyle="pageSheet" id="ZYE-Mp-R49" customClass="TestBannerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WaD-mh-lXH"/>
                         <viewControllerLayoutGuide type="bottom" id="EUh-kn-tcv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="A76-uS-7YU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w9h-1s-eBt">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                 <items>
                                     <navigationItem title="Title" id="i7a-ul-CeM">
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="yfV-fo-oiK">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="W2t-Be-YKh">
-                                                <rect key="frame" x="502" y="7" width="78" height="30"/>
+                                                <rect key="frame" x="281" y="13" width="78" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="78" id="WJI-qb-tfL"/>
@@ -59,7 +56,7 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="73H-qb-fcC">
-                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
+                                <rect key="frame" x="0.0" y="587" width="375" height="60"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="KkN-Li-RHP"/>
@@ -90,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VyF-gV-ZBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="211" y="101"/>
+            <point key="canvasLocation" x="92" y="210"/>
         </scene>
         <!--Main-->
         <scene sceneID="tne-QT-ifu">
@@ -115,7 +112,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="767"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LdQ-Hp-Fek">
-                                        <rect key="frame" x="243" y="147" width="115" height="29"/>
+                                        <rect key="frame" x="237.5" y="147" width="125" height="32"/>
                                         <segments>
                                             <segment title="Lock"/>
                                             <segment title="Unlock"/>
@@ -125,10 +122,10 @@
                                         </connections>
                                     </segmentedControl>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ihl-CG-FH4" userLabel="Btns">
-                                        <rect key="frame" x="8" y="210" width="584" height="198"/>
+                                        <rect key="frame" x="8" y="213" width="584" height="198"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWc-OS-xYc">
-                                                <rect key="frame" x="268" y="24" width="49" height="30"/>
+                                                <rect key="frame" x="267.5" y="24" width="49" height="30"/>
                                                 <state key="normal" title="Banner"/>
                                                 <connections>
                                                     <action selector="bannerAdRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NGu-9x-h0T"/>

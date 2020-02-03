@@ -28,7 +28,6 @@
     [CaulyAdSetting setLogLevel:CaulyLogLevelAll];              //  Cauly Log 레벨
     adSetting.appCode               = @"CAULY";                 //  Cauly AppCode
     adSetting.animType              = CaulyAnimNone;            //  화면 전환 효과
-    adSetting.useGPSInfo            = NO;                       //  GPS 수집 허용여부
     
     adSetting.adSize                = CaulyAdSize_IPhone;       //  광고 크기
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
@@ -145,8 +144,14 @@
     
     areaSelectView.nativeAd = nativeAd;
     
-    self.navigationController.modalPresentationStyle = UIModalPresentationCurrentContext;
-    [self presentModalViewController:areaSelectView animated:NO];
+    //self.navigationController.modalPresentationStyle = UIModalPresentationCurrentContext;
+    if (@available(iOS 13.0, *)) {
+       self.navigationController.modalPresentationStyle = UIModalPresentationAutomatic;
+    } else {
+       self.navigationController.modalPresentationStyle = UIModalPresentationCurrentContext;
+    }
+    //[self presentModalViewController:areaSelectView animated:NO];
+    
     areaSelectView.view.alpha = 0;
     [UIView animateWithDuration:0.5 animations:^{
         areaSelectView.view.alpha = 1;
@@ -239,7 +244,7 @@
     // 첫번째 argument는 요청할 nativa 광고의 갯수 eg) 1- 한개, 2- 두개
 
 //    [_nativeAd startNativeAdRequest:1 nativeAdComponentType:CaulyNativeAdComponentType_Icon imageSize:@"214x214"];
-    [_nativeAd startNativeAdRequest:2 nativeAdComponentType:CaulyNativeAdComponentType_Image imageSize:@"720x480"];
+    [_nativeAd startNativeAdRequest:2 nativeAdComponentType:CaulyNativeAdComponentType_Image imageSize:@"480x720"];
 //    [_nativeAd startNativeAdRequest:2 nativeAdComponentType:CaulyNativeAdComponentType_IconImage imageSize:@"480x720"];
     
     

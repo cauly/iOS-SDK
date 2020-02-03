@@ -31,7 +31,6 @@
 @property (nonatomic) CaulyReloadTime reloadTime;
 @property (nonatomic) CaulyAdSize adSize;
 @property (nonatomic) CaulyAnim animType;
-@property (nonatomic) BOOL useGPSInfo;
 @property (nonatomic) BOOL useDynamicReloadTime;
 @property (nonatomic) BOOL closeOnLanding;
 
