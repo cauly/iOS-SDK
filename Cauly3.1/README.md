@@ -54,11 +54,6 @@ iOS SDK 설치가이드
 	```
 	- 현재 보류 중이지만 언제든 Apple Store 정책에 따라 적용될 수 있습니다. ( 카울리 서버는 ATS 요구 사항을 충족하고 있습니다.)
 
-- P/E광고 설정 관련
-	- 앱 마다 P/E광고 허용 여부를 설정 할 수 있으며, P/E광고 노출을 원하는 경우 ‘cauly홈페이지>>APP관리’에서 ‘ON’ 으로 설정하면 됩니다.
-		- Cauly 홈페이지 >> app 관리 >> 수익구분 : 배너CPM >> ON
-	- P/E광고를 노출을 원하지 않는 ‘화면’ 또는 ‘adview객체’ 에서는 아래 API 설정값을 ‘FALSE’ 로 변경하시면 광고가 호출되지 않습니다.
-		- showPreExpandableAd:(BOOL)
 - BGM이 포함된 광고가 있을 수 있으니, APP에 BGM이 있는 경우 willShowLandingView API를 이용하여 일시 중지 해주세요, 그리고 광고 종료 후 didCloseLandingView API를 이용하여 BGM을 재 시작 하시면 됩니다.
 - 광고뷰가 화면에 보여지지 않는 경우에도 광고 요청을 할 수 있습니다. 광고 요청을 중단하고자 할 때 [CaulyAdView 객체 stopAdRequest]; 명령을 실행하여 광고 요청을 반드시 중지하기 바랍니다.
 - libCauly-universal.a 는 simulator와 device 통합된 파일 입니다. 
