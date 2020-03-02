@@ -26,8 +26,7 @@
     
     CaulyAdSetting * adSetting = [CaulyAdSetting globalSetting];
     [CaulyAdSetting setLogLevel:CaulyLogLevelAll];              //  Cauly Log 레벨
-    adSetting.appCode               = @"CAULY";                 //  Cauly AppCode
-    adSetting.animType              = CaulyAnimNone;            //  화면 전환 효과
+    adSetting.appCode               = @"TDldgvLb";                 //  Cauly AppCode
     
     adSetting.adSize                = CaulyAdSize_IPhone;       //  광고 크기
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
@@ -146,7 +145,7 @@
     
     //self.navigationController.modalPresentationStyle = UIModalPresentationCurrentContext;
     if (@available(iOS 13.0, *)) {
-       self.navigationController.modalPresentationStyle = UIModalPresentationAutomatic;
+       self.navigationController.modalPresentationStyle = UIModalPresentationOverFullScreen;
     } else {
        self.navigationController.modalPresentationStyle = UIModalPresentationCurrentContext;
     }

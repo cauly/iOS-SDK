@@ -26,22 +26,22 @@
         <!--Isolated-->
         <scene sceneID="abp-Ig-1pz">
             <objects>
-                <viewController storyboardIdentifier="TestBannerViewController" modalPresentationStyle="pageSheet" id="ZYE-Mp-R49" customClass="TestBannerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TestBannerViewController" id="ZYE-Mp-R49" customClass="TestBannerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WaD-mh-lXH"/>
                         <viewControllerLayoutGuide type="bottom" id="EUh-kn-tcv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="A76-uS-7YU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w9h-1s-eBt">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="i7a-ul-CeM">
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="yfV-fo-oiK">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="W2t-Be-YKh">
-                                                <rect key="frame" x="281" y="13" width="78" height="30"/>
+                                                <rect key="frame" x="281" y="7" width="78" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="78" id="WJI-qb-tfL"/>
@@ -56,7 +56,7 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="73H-qb-fcC">
-                                <rect key="frame" x="0.0" y="587" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="KkN-Li-RHP"/>
@@ -92,7 +92,7 @@
         <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xpt-AW-XbR"/>
                         <viewControllerLayoutGuide type="bottom" id="Lvr-L4-A14"/>
@@ -206,9 +206,7 @@
                                 </constraints>
                                 <state key="normal" title="isolated Banner"/>
                                 <connections>
-                                    <segue destination="ZYE-Mp-R49" kind="popoverPresentation" popoverAnchorView="3id-OI-BtQ" id="ZZo-uA-DhH">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="ZYE-Mp-R49" kind="presentation" modalPresentationStyle="fullScreen" id="ZZo-uA-DhH"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -223,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="211" y="-643"/>
+            <point key="canvasLocation" x="209.59999999999999" y="-643.17841079460277"/>
         </scene>
     </scenes>
 </document>
