@@ -26,7 +26,7 @@
     
     CaulyAdSetting * adSetting = [CaulyAdSetting globalSetting];
     [CaulyAdSetting setLogLevel:CaulyLogLevelAll];              //  Cauly Log 레벨
-    adSetting.appCode               = @"TDldgvLb";                 //  Cauly AppCode
+    adSetting.appCode               = @"CAULY";                 //  Cauly AppCode
     
     adSetting.adSize                = CaulyAdSize_IPhone;       //  광고 크기
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {

@@ -18,7 +18,7 @@ class FirstViewController: UIViewController, CaulyAdViewDelegate {
         // 상세 설정 항목들은 하단 표 참조, 설정되지 않은 항목들은 기본값으로 설정됩니다.
         let caulySetting = CaulyAdSetting.global();
         CaulyAdSetting.setLogLevel(CaulyLogLevelDebug)  //  Cauly Log 레벨
-        caulySetting?.appCode = "AppCode"               //  발급ID 입력
+        caulySetting?.appCode = "CAULY"               //  발급ID 입력
         caulySetting?.animType = CaulyAnimNone          //  화면 전환 효과
         
         caulySetting?.closeOnLanding=true               // app으로 이동할 때 webview popup창을 자동으로 닫아줍니다. 기본값은 false입니다.
