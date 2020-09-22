@@ -69,9 +69,9 @@ iOS SDK 설치가이드
 - 배너광고 최소 요청 주기 15 초 입니다.
 
 ### 권장 환경
-- Xcode 6.0 이상 권장
-- BASE SDK : iOS 7.0 이상
-- iOS Deployment Target iOS : 8.0 이상
+- Xcode 12.0 이상 권장
+- BASE SDK : iOS 9.0 이상
+- iOS Deployment Target iOS : 9.0 이상
 ### SDK 구성
 - cauly SDK v3.1.0
 	- 헤더 파일
