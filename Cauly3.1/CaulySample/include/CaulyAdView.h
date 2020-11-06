@@ -33,11 +33,15 @@
 @interface CaulyAdView : UIView
 
 + (id)caulyAdViewWithController:(UIViewController *)controller;
+
+- (id)init;
 - (id)initWithParentViewController:(UIViewController *)controller;
 
 - (void)startBannerAdRequest;
 - (void)stopAdRequest;
-- (void) didOrientationChanged:(UIInterfaceOrientation) orientation;
+- (void)didOrientationChanged:(UIInterfaceOrientation) orientation;
+
+- (void)showWithParentViewController:(UIViewController *)controller target:(UIView*)target;
 
 @property (nonatomic, weak) UIViewController * parentController;
 @property (nonatomic) BOOL showPreExpandableAd;

@@ -26,7 +26,7 @@
     
     CaulyAdSetting * adSetting = [CaulyAdSetting globalSetting];
     [CaulyAdSetting setLogLevel:CaulyLogLevelAll];              //  Cauly Log 레벨
-    adSetting.appCode               = @"CAULY";                 //  Cauly AppCode
+    adSetting.appCode               = @"ArdtT2FB";                 //  Cauly AppCode
     
     adSetting.adSize                = CaulyAdSize_IPhone;       //  광고 크기
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
@@ -45,8 +45,7 @@
     adSetting.closeOnLanding        = YES;                      // Landing 이동시 webview control lose 여부
     
     
-    _adView = [[CaulyAdView alloc] initWithParentViewController:self];
-    [_bannerView addSubview:_adView];
+    _adView = [[CaulyAdView alloc] init];
 
     
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resignOnTap:)];
@@ -75,6 +74,7 @@
 // 광고 정보 수신 성공
 - (void)didReceiveAd:(CaulyAdView *)adView isChargeableAd:(BOOL)isChargeableAd{
     NSLog(@"didReceiveAd");
+    [_adView showWithParentViewController:self target:_bannerView];
 }
 
 // 광고 정보 수신 실패
@@ -97,7 +97,7 @@
 // 광고 정보 수신 성공
 - (void)didReceiveInterstitialAd:(CaulyInterstitialAd *)interstitialAd isChargeableAd:(BOOL)isChargeableAd {
     NSLog(@"didReceiveInterstitialAd");
-    [_interstitialAd show];
+    [_interstitialAd showWithParentViewController:self];
 }
 
 // Interstitial 형태의 광고가 닫혔을 때
@@ -207,24 +207,24 @@
 
 - (IBAction)bannerAdRequest:(id)sender {
     
-    if(_adView){
-        [_adView removeFromSuperview];
-        _adView = nil;
+    if (_adView) {
+        [_adView removeFromSuperview];                                                  // 배너 광고 View 제거
+        _adView = nil;                                                                  // 배너 광고 객체 제거
     }
     
-    _adView = [[CaulyAdView alloc] initWithParentViewController:self];
-    _adView.delegate = self;
-    [_bannerView addSubview:_adView];
-    [_adView startBannerAdRequest];
+    _adView = [[CaulyAdView alloc] init];                                               // 배너 광고 객체 생성
+    _adView.delegate = self;                                                            // 배너 광고 delegate 설정
+    [_adView startBannerAdRequest];                                                     // 배너 광고 요청
 }
 
 - (IBAction)interstitialAdRequest:(id)sender {
     
-    if(_interstitialAd)
-        _interstitialAd = nil;
+    if (_interstitialAd) {
+        _interstitialAd = nil;                                                          // 전면 광고 객체 제거
+    }
     
-    _interstitialAd = [[CaulyInterstitialAd alloc] initWithParentViewController:self];  //  전면광고 객체 생성
-    _interstitialAd.delegate = self;                                                    //  전면 delegate 설정
+    _interstitialAd = [[CaulyInterstitialAd alloc] init];                               // 전면 광고 객체 생성
+    _interstitialAd.delegate = self;                                                    // 전면 광고 delegate 설정
     [_interstitialAd startInterstitialAdRequest];                                       //  전면광고 요청
     
     

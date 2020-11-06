@@ -37,7 +37,7 @@ typedef enum {
 
 // Native Ad Component type
 typedef enum {
-    CaulyNativeAdComponentType_None,        //No Image nor Icon
+    CaulyNativeAdComponentType_None,        // No Image nor Icon
     CaulyNativeAdComponentType_Icon,        // Icon Only
     CaulyNativeAdComponentType_Image,       // Image Only
     CaulyNativeAdComponentType_IconImage	// Icon and Image Both

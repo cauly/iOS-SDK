@@ -34,6 +34,8 @@
 
 @interface CaulyInterstitialAd : NSObject
 + (id)caulyAdWithController:(UIViewController *)controller;
+
+- (id)init;
 - (id)initWithParentViewController:(UIViewController *)controller;
 
 - (int)earnType;
@@ -41,7 +43,10 @@
 
 - (void)startInterstitialAdRequest;
 - (void)stopAdRequest;
+
 - (void)show;
+- (void)showWithParentViewController:(UIViewController *)controller;
+
 - (void)close;
 
 @property (nonatomic, weak) id<CaulyInterstitialAdDelegate> delegate;

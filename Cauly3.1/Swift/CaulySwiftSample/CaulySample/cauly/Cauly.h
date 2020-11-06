@@ -14,7 +14,7 @@
 
 #define TEST_APP_CODE			(@"CAULY")
 
-#define CAULY_SDK_VERSION		(@"3.1.11")
+#define CAULY_SDK_VERSION		(@"3.1.12")
 
 #define CAULY_ERR_SUCCESS		(0)
 #define CAULY_ERR_FAILED		(1)
@@ -37,7 +37,7 @@ typedef enum {
 
 // Native Ad Component type
 typedef enum {
-    CaulyNativeAdComponentType_None,        //No Image nor Icon
+    CaulyNativeAdComponentType_None,        // No Image nor Icon
     CaulyNativeAdComponentType_Icon,        // Icon Only
     CaulyNativeAdComponentType_Image,       // Image Only
     CaulyNativeAdComponentType_IconImage	// Icon and Image Both
