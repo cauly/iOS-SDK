@@ -4,7 +4,7 @@
 //
 //  Created by Macbook pro on 30/11/2019.
 //  Copyright © 2019 cauly. All rights reserved.
-//
+//  by Sam.Kim
 
 import UIKit
 
@@ -17,7 +17,8 @@ class SecondViewController: UIViewController, CaulyInterstitialAdDelegate {
         var _interstitialAd:CaulyInterstitialAd? = nil
         
         func loadInterstitial() {
-            self._interstitialAd = CaulyInterstitialAd.init(parentViewController: self);
+//            self._interstitialAd = CaulyInterstitialAd.init(parentViewController: self)
+            self._interstitialAd=CaulyInterstitialAd.init()
             _interstitialAd?.delegate = self;    //  전면 delegate 설정
             _interstitialAd?.startRequest();     //  전면광고 요청
         }
@@ -33,7 +34,7 @@ class SecondViewController: UIViewController, CaulyInterstitialAdDelegate {
         // 광고 정보 수신 성공
         func didReceive(_ interstitialAd: CaulyInterstitialAd!, isChargeableAd: Bool) {
             NSLog("Recevie intersitial");
-             _interstitialAd?.show()
+            _interstitialAd?.show(withParentViewController: self)
         }
 
         func didFail(toReceive interstitialAd: CaulyInterstitialAd!, errorCode: Int32, errorMsg: String!) {
