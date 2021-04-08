@@ -22,9 +22,9 @@ iOS SDK 설치가이드
 	- 기타 API
 	- Properties
  
-## Cauly iOS SDK v3.1.0
+## Cauly iOS SDK v3.1
 ### Release note
-- 성능 개선 및 UIWebview WKWebView 변경
+- OpenUDID  
 ### 주의 사항
 - iOS9 ATS(App Transport Security) 처리
 	- 애플은 iOS9에서 ATS(App Transport Security)라는 기능을 제공합니다. 기기에서 ATS 활성화 시 암호화된 HTTPS 방식만 허용됩니다. HTTPS 방식을 적용하지 않을 경우 애플 보안 기준을 충족하지 않는다는 이유로 광고가 차단될 수 있습니다.
