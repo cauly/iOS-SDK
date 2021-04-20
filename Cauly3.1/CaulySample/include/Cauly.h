@@ -14,7 +14,7 @@
 
 #define TEST_APP_CODE			(@"CAULY")
 
-#define CAULY_SDK_VERSION		(@"3.1.13")
+#define CAULY_SDK_VERSION		(@"3.1.14")
 
 #define CAULY_ERR_SUCCESS		(0)
 #define CAULY_ERR_FAILED		(1)
@@ -43,24 +43,6 @@ typedef enum {
     CaulyNativeAdComponentType_Image,       // Image Only
     CaulyNativeAdComponentType_IconImage	// Icon and Image Both
 } CaulyNativeAdComponentType;
-
-
-// 나이 설정
-typedef enum {
-    CaulyAge_10,			// 10대
-    CaulyAge_20,			// 20대
-    CaulyAge_30,			// 30대
-    CaulyAge_40,			// 40대
-    CaulyAge_50,			// 50대
-    CaulyAge_All			// 전체
-} CaulyAge;
-
-// 성별 설정
-typedef enum {
-    CaulyGender_Male,		// 남자
-    CaulyGender_Female,		// 여자
-    CaulyGender_All			// 전체
-} CaulyGender;
 
 // 화면 전환 효과
 typedef enum {

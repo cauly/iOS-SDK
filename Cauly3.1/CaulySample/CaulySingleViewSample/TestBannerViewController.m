@@ -40,8 +40,6 @@
     }
     
     
-    adSetting.gender                = CaulyGender_All;          //  성별 설정
-    adSetting.age                   = CaulyAge_All;             //  나이 설정
     adSetting.reloadTime            = CaulyReloadTime_120;       //  광고 갱신 시간
     adSetting.useDynamicReloadTime  = YES;                      //  동적 광고 갱신 허용 여부
     adSetting.closeOnLanding        = YES;                      // Landing 이동시 webview control lose 여부

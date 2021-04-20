@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "NativeAdViewViewController.h"
 #import "TestBannerViewController.h"
+#import <AppTrackingTransparency/AppTrackingTransparency.h>
+
 
 @interface ViewController (Private)
 @end
@@ -37,9 +39,6 @@
         [_bannerViewHeightConstraint setConstant:50.0f];
     }
     
-    
-    adSetting.gender                = CaulyGender_All;          //  성별 설정
-    adSetting.age                   = CaulyAge_All;             //  나이 설정
     adSetting.reloadTime            = CaulyReloadTime_30;       //  광고 갱신 시간
     adSetting.useDynamicReloadTime  = YES;                      //  동적 광고 갱신 허용 여부
     adSetting.closeOnLanding        = YES;                      // Landing 이동시 webview control lose 여부
@@ -58,6 +57,25 @@
     
     [self registerForKeyboardNotifications];
     
+    
+    if (@available(iOS 14, *)) {
+        [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+            switch (status) {
+                // 승인
+                case ATTrackingManagerAuthorizationStatusAuthorized:
+                    break;
+                // 거부
+                case ATTrackingManagerAuthorizationStatusDenied:
+                    break;
+                // 제한
+                case ATTrackingManagerAuthorizationStatusRestricted:
+                    break;
+                // 미결정
+                default:
+                    break;
+            }
+        }];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated{

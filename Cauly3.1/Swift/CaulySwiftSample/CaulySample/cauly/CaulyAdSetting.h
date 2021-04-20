@@ -26,8 +26,6 @@
 
 @property (nonatomic, strong) NSString * appCode;
 
-@property (nonatomic) CaulyGender gender;
-@property (nonatomic) CaulyAge age;
 @property (nonatomic) CaulyReloadTime reloadTime;
 @property (nonatomic) CaulyAdSize adSize;
 @property (nonatomic) CaulyAnim animType;
