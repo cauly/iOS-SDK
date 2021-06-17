@@ -2,7 +2,7 @@
 //  CaulyAdSetting.h
 //  Cauly
 //
-//  Created by Neil Kwon on 9/2/15.
+//  Created by on 9/2/15.
 //  Copyright (c) 2015 Cauly. All rights reserved.
 //
 
