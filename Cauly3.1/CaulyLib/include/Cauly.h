@@ -14,7 +14,7 @@
 
 #define TEST_APP_CODE			(@"CAULY")
 
-#define CAULY_SDK_VERSION		(@"3.1.14")
+#define CAULY_SDK_VERSION		(@"3.1.15")
 
 #define CAULY_ERR_SUCCESS		(0)
 #define CAULY_ERR_FAILED		(1)
@@ -23,17 +23,17 @@
 
 // 광고 갱신 시간
 typedef enum {
-    CaulyReloadTime_0,      //  0초
-    CaulyReloadTime_30,		// 30초
-    CaulyReloadTime_60,		// 60초
-    CaulyReloadTime_120		// 120초
+    CaulyReloadTime_0,                      // 0초
+    CaulyReloadTime_30,		                // 30초
+    CaulyReloadTime_60,		                // 60초
+    CaulyReloadTime_120		                // 120초
 } CaulyReloadTime;
 
 // 광고 크기
 typedef enum {
-    CaulyAdSize_IPhone,		// 320 * 50
-    CaulyAdSize_IPadLarge,	// 728 * 90
-    CaulyAdSize_IPadSmall	// 468 * 60
+    CaulyAdSize_IPhone,		                // 320 * 50
+    CaulyAdSize_IPadLarge,	                // 728 * 90
+    CaulyAdSize_IPadSmall	                // 468 * 60
 } CaulyAdSize;
 
 // Native Ad Component type
@@ -46,20 +46,20 @@ typedef enum {
 
 // 화면 전환 효과
 typedef enum {
-    CaulyAnimCurlUp,		// Curl Up
-    CaulyAnimCurlDown,		// Curl Down
-    CaulyAnimFlipFromLeft,	// 뒤집기(Left->Right)
-    CaulyAnimFlipFromRight,	// 뒤집기(Right->Left)
-    CaulyAnimFadeOut,		// Fade Out
-    CaulyAnimNone			// 애니메이션 없음
+    CaulyAnimCurlUp,		                // Curl Up
+    CaulyAnimCurlDown,		                // Curl Down
+    CaulyAnimFlipFromLeft,	                // 뒤집기(Left->Right)
+    CaulyAnimFlipFromRight,	                // 뒤집기(Right->Left)
+    CaulyAnimFadeOut,		                // Fade Out
+    CaulyAnimNone			                // 애니메이션 없음
 } CaulyAnim;
 
 // Log 레벨
 typedef enum {
-    CaulyLogLevelMinimal,
-    CaulyLogLevelRelease,
+    CaulyLogLevelError,
+    CaulyLogLevelInfo,
     CaulyLogLevelDebug,
-    CaulyLogLevelAll
+    CaulyLogLevelTrace
 } CaulyLogLevel;
 
 

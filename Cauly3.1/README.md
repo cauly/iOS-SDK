@@ -26,6 +26,133 @@ iOS SDK 설치가이드
 ### Release note
 - iOS14.5 개인정보정책 대응 
 ### 주의 사항
+- SKAdNetwork 지원
+	- 
+	- Info.plist 파일에 SKAdNetworkItems 키를 추가하고 Cauly (55644vm79v.skadnetwork) 에 대한 SKAdNetworkIdentifier 값과 함께 Cauly 의 파트너 DSP 의 SKAdNetworkIdentifier 값을 추가합니다.
+	- 즉, Info.plist 파일에 아래 내용을 추가해주시면 Cauly 와 Cauly 를 통한 다른 DSP 의 광고가 정상적으로 처리될 수 있습니다.
+		
+	```xml
+	<key>SKAdNetworkItems</key>
+	<array>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>55644vm79v.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>4fzdc2evr5.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>4pfyvq9l8r.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>v72qych5uu.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>6xzpu9s2p8.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>ludvb6z3bs.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>mlmmfzh3r3.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>294l99pt4k.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>24t9a8vw3c.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>hs6bdukanm.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>cstr6suwn9.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>54nzkqm89y.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>wzmmz9fp6w.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>yclnxrl5pm.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>7ug5zh24hu.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>feyaarzu9v.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>kbd757ywx3.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>275upjj5gd.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>9t245vhmpl.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>44jx6755aq.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>tl55sbb4fm.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>2u9pt9hc89.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>8s468mfl3y.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>74b6s63p6l.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>uw77j35x4d.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>gvmwg8q7h5.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>gta9lk7p23.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>32z4fx6l9h.skadnetwork</string>
+		</dict>
+		<dict>
+			<key>SKAdNetworkIdentifier</key>
+			<string>3rd42ekr43.skadnetwork</string>
+		</dict>
+	</array>
+	```	
+
 - iOS9 ATS(App Transport Security) 처리
 	- 애플은 iOS9에서 ATS(App Transport Security)라는 기능을 제공합니다. 기기에서 ATS 활성화 시 암호화된 HTTPS 방식만 허용됩니다. HTTPS 방식을 적용하지 않을 경우 애플 보안 기준을 충족하지 않는다는 이유로 광고가 차단될 수 있습니다.
 	- 모든 광고가 HTTPS 방식으로 호출되지 않으므로, info.plist 파일에 아래소스를 적용하여 사용 부탁 드립니다.
@@ -59,7 +186,7 @@ iOS SDK 설치가이드
 - libCauly-universal.a 는 simulator와 device 통합된 파일 입니다. 
 
 ### 참고 사항
-- cauly SDK는 iOS SDK 9.0 기반으로 작성 되었습니다.
+- cauly SDK는 iOS SDK 10.0 기반으로 작성 되었습니다.
 - 기존 프로젝트에 있던 과거 SDK를 깨끗하게 지운 후 설치해야 정상 동작 됩니다.
 - 새 SDK를 설치해도 기존 Library를 참조하는 경우 다음 작업을 수행 합니다.
 	- [Targets 에서 “Get Info”]
@@ -70,8 +197,8 @@ iOS SDK 설치가이드
 
 ### 권장 환경
 - Xcode 12.0 이상 권장
-- BASE SDK : iOS 9.0 이상
-- iOS Deployment Target iOS : 9.0 이상
+- BASE SDK : iOS 10.0 이상
+- iOS Deployment Target iOS : 10.0 이상
 ### SDK 구성
 - cauly SDK v3.1.0
 	- 헤더 파일
@@ -127,12 +254,16 @@ iOS SDK 설치가이드
 }
 ```
 #### Ad Settings
+- SKAdNetwork 를 지원하게 되면서 아래 초기화 부분에서 반드시 adSetting.appId 로 App Store 의 App ID 정보를 입력해주셔야 합니다.
+- 만약, 아직 출시 전 앱인 경우는 0 으로 지정할 수는 있으나 App Store 에 등록된 앱인 경우에는 반드시 입력해야 합니다.
+- 추가적으로, 기존에는 로그 레벨이 CaulyLogLevelRelease 였으나 CaulyLogLevelInfo 로 변경되었습니다.
 ```objectivec
 {
 	// 상세 설정 항목들은 하단 표 참조, 설정되지 않은 항목들은 기본값으로 설정됩니다.
 	CaulyAdSetting * adSetting = [CaulyAdSetting globalSetting];
-	[CaulyAdSetting setLogLevel:CaulyLogLevelRelease];               //  Cauly Log 레벨
-	adSetting.appCode               = @"CAULY";             //  발급ID 입력
+	[CaulyAdSetting setLogLevel:CaulyLogLevelInfo];               //  Cauly Log 레벨
+	adSetting.appId                 = @"1234567";           //  App Store 에 등록된 App ID 정보 (필수)
+	adSetting.appCode               = @"CAULY";             //  Cauly 로부터 발급 받은 ID 입력
 	adSetting.animType              = CaulyAnimNone;        //  화면 전환 효과	     
 	    
 	// app으로 이동할 때 webview popup창을 자동으로 닫아줍니다. 기본값은 NO입니다.

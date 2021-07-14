@@ -39,12 +39,10 @@
 
 - (void)startBannerAdRequest;
 - (void)stopAdRequest;
-- (void)didOrientationChanged:(UIInterfaceOrientation) orientation;
 
 - (void)showWithParentViewController:(UIViewController *)controller target:(UIView*)target;
 
 @property (nonatomic, weak) UIViewController * parentController;
-@property (nonatomic) BOOL showPreExpandableAd;
 
 @property (nonatomic, weak) id<CaulyAdViewDelegate> delegate;
 @property (nonatomic, strong) CaulyAdSetting * localSetting;

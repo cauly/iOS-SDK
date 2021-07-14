@@ -14,16 +14,17 @@
     NSArray* serverSettings;
 }
 
-+ (CaulyAdSetting *)adSettingWithAppCode:(NSString *)appCode;
++ (CaulyAdSetting *)adSettingWithAppCode:(NSString *)appCode appId:(NSString *)appId;
 + (CaulyAdSetting *)globalSetting;
 + (void)setLogLevel:(CaulyLogLevel)logLevel;
 + (void)setApplicationState:(BOOL)isBackground;
 
-- (id)initWithAppCode:(NSString *)appCode;
+- (id)initWithAppCode:(NSString *)appCode appId:(NSString *)appId;
 - (id)initWitAdSetting:(CaulyAdSetting *)adSetting;
 - (BOOL)isTestAppCode;
 
 
+@property (nonatomic, strong) NSString * appId;
 @property (nonatomic, strong) NSString * appCode;
 
 @property (nonatomic) CaulyReloadTime reloadTime;
