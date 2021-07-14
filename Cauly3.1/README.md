@@ -27,7 +27,6 @@ iOS SDK 설치가이드
 - iOS14.5 개인정보정책 대응 
 ### 주의 사항
 - SKAdNetwork 지원
-	- 
 	- Info.plist 파일에 SKAdNetworkItems 키를 추가하고 Cauly (55644vm79v.skadnetwork) 에 대한 SKAdNetworkIdentifier 값과 함께 Cauly 의 파트너 DSP 의 SKAdNetworkIdentifier 값을 추가합니다.
 	- 즉, Info.plist 파일에 아래 내용을 추가해주시면 Cauly 와 Cauly 를 통한 다른 DSP 의 광고가 정상적으로 처리될 수 있습니다.
 		
@@ -163,7 +162,6 @@ iOS SDK 설치가이드
 	 	<key>NSAllowsArbitraryLoads</key>
 	 	<true/>
  	</dict>
-		
 	```
 - 2017년 1월 이후 ATS (현재 무기한 보류중)
 	- 2017년 1월 이후 ATS를 활성화한 앱에 대해서만 앱스토어에 등록할 수 있도록한 애플 정책이 수립되었습니다. 따라서 기존 설정과 함께 추가적인 설정을 추가하여야 합니다.
