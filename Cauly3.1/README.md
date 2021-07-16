@@ -3,7 +3,7 @@ iOS SDK 설치가이드
 
 목차
 
-1. Cauly iOS SDK v3.1.0
+1. Cauly iOS SDK v3.1
 	- Release note
 	- 주의 사항
 	- 참고 사항
@@ -198,7 +198,7 @@ iOS SDK 설치가이드
 - BASE SDK : iOS 10.0 이상
 - iOS Deployment Target iOS : 10.0 이상
 ### SDK 구성
-- cauly SDK v3.1.0
+- cauly SDK v3.1
 	- 헤더 파일
 
 		| Headers ||
