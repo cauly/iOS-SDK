@@ -18,7 +18,7 @@ class SecondViewController: UIViewController, CaulyInterstitialAdDelegate {
         
         func loadInterstitial() {
 //            self._interstitialAd = CaulyInterstitialAd.init(parentViewController: self)
-            self._interstitialAd=CaulyInterstitialAd.init()
+            self._interstitialAd = CaulyInterstitialAd.init()
             _interstitialAd?.delegate = self;    //  전면 delegate 설정
             _interstitialAd?.startRequest();     //  전면광고 요청
         }
@@ -31,6 +31,7 @@ class SecondViewController: UIViewController, CaulyInterstitialAdDelegate {
         @IBAction func showInterstitial(_ sender: UIButton) {
             _interstitialAd?.show()
         }
+    
         // 광고 정보 수신 성공
         func didReceive(_ interstitialAd: CaulyInterstitialAd!, isChargeableAd: Bool) {
             NSLog("Recevie intersitial");
@@ -41,10 +42,12 @@ class SecondViewController: UIViewController, CaulyInterstitialAdDelegate {
             print("Recevie fail intersitial errorCode:\(errorCode) errorMsg:\(errorMsg!)");
             _interstitialAd = nil
         }
+    
         //Interstitial 형태의 광고가 보여지기 직전
         func willShow(_ interstitialAd: CaulyInterstitialAd!) {
             NSLog("willShow")
         }
+    
         // Interstitial 형태의 광고가 닫혔을 때
         func didClose(_ interstitialAd: CaulyInterstitialAd!) {
             NSLog("didClose")

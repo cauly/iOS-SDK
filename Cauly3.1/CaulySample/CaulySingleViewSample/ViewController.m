@@ -27,7 +27,8 @@
     orientaionLock = NO;
     
     CaulyAdSetting * adSetting = [CaulyAdSetting globalSetting];
-    [CaulyAdSetting setLogLevel:CaulyLogLevelAll];              //  Cauly Log 레벨
+    [CaulyAdSetting setLogLevel:CaulyLogLevelDebug];            //  Cauly Log 레벨
+    adSetting.appId                 = @"1234567";               //  App Store 에 등록된 App ID 정보 (필수)
     adSetting.appCode               = @"Cauly";                 //  Cauly AppCode
     
     adSetting.adSize                = CaulyAdSize_IPhone;       //  광고 크기
@@ -41,12 +42,11 @@
     
     adSetting.reloadTime            = CaulyReloadTime_30;       //  광고 갱신 시간
     adSetting.useDynamicReloadTime  = YES;                      //  동적 광고 갱신 허용 여부
-    adSetting.closeOnLanding        = YES;                      // Landing 이동시 webview control lose 여부
+    adSetting.closeOnLanding        = YES;                      //  Landing 이동시 webview control lose 여부
     
     
     _adView = [[CaulyAdView alloc] init];
 
-    
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resignOnTap:)];
     [singleTap setNumberOfTapsRequired:1];
     [singleTap setNumberOfTouchesRequired:1];
@@ -203,15 +203,7 @@
     NSLog(@"didFailToReceiveNativeAd");
 }
 
-
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
-    NSLog(@"willRotateToInterfaceOrientation : ");
-    [_adView didOrientationChanged:toInterfaceOrientation];
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
-    
     return orientaionLock;
 }
 
@@ -243,7 +235,7 @@
     
     _interstitialAd = [[CaulyInterstitialAd alloc] init];                               // 전면 광고 객체 생성
     _interstitialAd.delegate = self;                                                    // 전면 광고 delegate 설정
-    [_interstitialAd startInterstitialAdRequest];                                       //  전면광고 요청
+    [_interstitialAd startInterstitialAdRequest];                                       // 전면광고 요청
     
     
 }

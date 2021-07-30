@@ -29,20 +29,19 @@
     // Do any additional setup after loading the view from its nib.
     
     CaulyAdSetting * adSetting = [CaulyAdSetting globalSetting];
-    [CaulyAdSetting setLogLevel:CaulyLogLevelAll];              //  Cauly Log 레벨
-    adSetting.appCode               = @"CAULY";                 //  Cauly AppCode
+    [CaulyAdSetting setLogLevel:CaulyLogLevelDebug];            //  Cauly Log 레벨
+    adSetting.appId                 = @"1234567";               //  App Store 에 등록된 App ID 정보 (필수)
+    adSetting.appCode               = @"Cauly";                 //  Cauly AppCode
     adSetting.animType              = CaulyAnimNone;            //  화면 전환 효과
 
-    
     adSetting.adSize                = CaulyAdSize_IPhone;       //  광고 크기
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         adSetting.adSize                = CaulyAdSize_IPadSmall;       //  광고 크기
     }
-    
-    
+        
     adSetting.reloadTime            = CaulyReloadTime_120;       //  광고 갱신 시간
-    adSetting.useDynamicReloadTime  = YES;                      //  동적 광고 갱신 허용 여부
-    adSetting.closeOnLanding        = YES;                      // Landing 이동시 webview control lose 여부
+    adSetting.useDynamicReloadTime  = YES;                       //  동적 광고 갱신 허용 여부
+    adSetting.closeOnLanding        = YES;                       // Landing 이동시 webview control lose 여부
     
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
