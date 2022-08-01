@@ -24,8 +24,8 @@
 - (BOOL)isTestAppCode;
 
 
-@property (nonatomic, strong) NSString * appId;
-@property (nonatomic, strong) NSString * appCode;
+@property (nonatomic, strong) NSString *appId;
+@property (nonatomic, strong) NSString *appCode;
 
 @property (nonatomic) CaulyReloadTime reloadTime;
 @property (nonatomic) CaulyAdSize adSize;
