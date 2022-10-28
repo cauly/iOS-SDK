@@ -444,4 +444,3 @@ parentController
 // 전면광고 에러 메시지
 errorMsg
 ```
-
