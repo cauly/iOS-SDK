@@ -597,7 +597,48 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 
 ## 4. 커스텀 이벤트 네트워크 추가하기
 ### Cauly 광고 추가하기
-#### 어댑터 초기화
+
+#### 권장 환경
+- Xcode 13.2.1 이상 사용
+- iOS 10.0 이상 타겟팅
+
+#### SDK 구성
+- Cauly SDK 헤더 파일
+
+| 파일명                   | 설명                       |
+|-----------------------|--------------------------|
+| Cauly.h               | Cauly SDK 공용 헤더 파일       |
+| CaulyAdSetting.h      | Cauly 광고 세팅 클래스 헤더 파일    |
+| CaulyAdView.h         | 광고 광고 클래스 및 프로토콜 헤더 파일   |
+| CaulyInterstitialAd.h | 전면 광고 클래스 및 프로토콜 헤더 파일   |
+| CaulyNativeAd.h       | 네이티브 광고 클래스 및 프로토콜 헤더 파일 |
+| CaulyNativeAdItem.h   | 네이티브 광고 아이템 헤더 파일        |
+
+- Cauly SDK 라이브러리 파일
+
+| 파일명                  | 설명                                   |
+|----------------------|--------------------------------------|
+| libCauly.a           | Cauly SDK 라이브러리 파일 (디바이스 전용)         |
+| libCauly-universal.a | Cauly SDK 라이브러리 파일 (시뮬레이터 및 디바이스 통합) |
+		
+	
+#### SDK 설치 방법
+1. Cauly SDK 를 적용할 프로젝트 내에 ‘CaulyLib’ 폴더 복사
+2. Framework 추가
+	- AVKit.framework
+	- UIKit.framework
+	- Foundation.framework
+	- CoreGraphics.framework
+	- QuartzCore.framework
+	- SystemConfiguration.framework
+	- MediaPlayer.framework
+	- CFNetwork.framework
+	- MessageUI.framework  //‘Required’ 를 ‘Optional’로 변경해야 합니다.
+	- EventKit.framework    // ‘Required’ 를 ‘Optional’로 변경해야 합니다.
+	- AdSupport.Framwork  // ‘Required’ 를 ‘Optional’로 변경해야 합니다.
+
+
+### 어댑터 초기화
 
 - CaulyEvent.h
 ``` objectivec
