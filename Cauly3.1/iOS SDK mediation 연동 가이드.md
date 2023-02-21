@@ -19,6 +19,10 @@ iOS SDK mediation 연동 가이드
       - [어댑터 초기화](#어댑터-초기화)
       - [Cauly 배너 광고 추가하기](#cauly-배너-광고-추가하기)
       - [Cauly 전면 광고 추가하기](#cauly-전면-광고-추가하기)
+5. [TestFlight에 배포하기](#5-testflight에-배포하기)
+	- [앱 빌드 정보 및 환경 설정](#앱-빌드-정보-및-환경-설정)
+	- [iOS 앱 TestFlight에 업로드](#ios-앱-testflight-에-업로드)
+	- [TestFlight 외부 테스터 추가하기](#testflight-외부-테스터-추가하기)
 
 - - - 
 
@@ -943,4 +947,62 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 | -100 | SDK error|	SDK 에러 |
 | -200 | Request Failed(You are not allowed to send requests under minimum interval)|	최소요청주기 미달 |
 
+## 5. TestFlight에 배포하기
+> iOS 샘플앱 테스트를 위한 TestFlight 사용을 위해 작성된 가이드입니다.  
+> TestFlight에 대한 내용은 [여기](https://testflight.apple.com/) 에서 확인해주십시오.
 
+
+### 앱 빌드 정보 및 환경 설정
+#### 1. 앱 버전 명 변경
+- Targets 선택 > General 탭 선택 > Identity > Version, Build 값을 입력합니다.
+  - Version : 앱 버전명 입력
+  - Build : 빌드 버전명 입력
+
+#### 2. Debug/Release 모드 선택
+- Edit Scheme 메뉴를 클릭합니다.
+- Archive 에서 `Debug 모드` 와 `Release 모드` 중에서 선택합니다.
+
+
+### iOS 앱 TestFlight 에 업로드
+#### 1. Archive 진행
+- 빌드 디바이스로 `Any iOS Device` 를 선택합니다.
+- 상단 메뉴에서 Product > Archive 를 선택합니다.
+
+#### 2. 업로드할 앱 버전 선택
+- 업로드할 앱 버전 선택 > `Distribute App` 버튼을 클릭합니다.
+
+#### 3. 배포 방식 선택
+- App Store Connect 선택 > `Next` 버튼을 클릭합니다.
+
+#### 4. 앱 생성할 목적지 선택
+- Upload 선택 > `Next` 버튼을 클릭합니다.
+  - Upload : TestFlight 에 바로 업로드
+  - Export : ipa 파일로 앱을 내보내기 (Transporter 앱을 이용하여 ipa 파일을 TestFlight 에 업로드할 수 있습니다.)
+
+#### 5. 배포 옵션 선택
+- 기본 상태 그대로 옵션 선택 > `Next` 버튼을 클릭합니다.
+
+#### 6. TestFlight 에 업로드
+- 배포 인증서, 프로비저닝 파일 선택 > `Next` 버튼을 클릭합니다.
+- 앱 정보를 확인한 후 `Upload` 버튼을 클릭합니다.
+
+### TestFlight 에 앱 업로드 확인
+> App Store Connect 사이트 > Testflight > 빌드 > iOS 메뉴를 선택합니다.  
+> TestFlight 에 업로드한 앱 버전들을 확인할 수 있습니다.  
+> 업로드 직후에는 처리중 상태이며, 10 ~ 20분 후에 제출 준비 완료 상태로 변경됩니다.  
+> 제출 준비 완료 상태로 변경되면 TestFlight 앱을 통해 테스트앱을 다운로드 받을 수 있습니다.
+
+### TestFlight 외부 테스터 추가하기
+#### TestFlight 외부 테스트
+- TestFlight 앱을 통해 iOS 앱을 테스트할 수 있도록 외부 사용자에게 공유할 수 있는 기능입니다.
+  - 외부 사용자에게 앱을 공유할 수 있습니다.
+  - 공유하려는 앱은 TestFlight 베타 앱 심사에서 승인을 받아야합니다
+
+#### TestFlight 외부 테스터를 추가하는 방법
+- 외부 테스팅 그룹 생성
+  - 외부 테스팅 `+` 버튼 클릭 > 그룹명 입력 > `생성` 버튼을 클릭합니다.
+
+- 테스트 공개 링크 생성
+  - 외부 테스팅 그룹 선택 > 빌드 `+` 버튼 클릭 > 테스트할 바이너리 파일 선택 > `추가` 버튼을 클릭합니다.
+  - 심사가 통과되면 `공개 링크 활성화` 버튼을 클릭하여 공개 링크를 생성합니다.
+  - 공개 링크를 공유하여 팀 외부의 사용자를 초대하여 앱의 테스트가 가능합니다.
