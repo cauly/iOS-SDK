@@ -14,11 +14,13 @@ iOS SDK mediation 연동 가이드
 	- [배너 광고 추가하기](#배너-광고-추가하기)
 	- [전면 광고 추가하기](#전면-광고-추가하기)
 	- [보상형 광고 추가하기](#보상형-광고-추가하기)
+	- [네이티브 광고 추가하기](#네이티브-광고-추가하기)
 4. [커스텀 이벤트 네트워크 추가하기](#4-커스텀-이벤트-네트워크-추가하기)
 	- [Cauly 광고 추가하기](#cauly-광고-추가하기)
       - [어댑터 초기화](#어댑터-초기화)
       - [Cauly 배너 광고 추가하기](#cauly-배너-광고-추가하기)
       - [Cauly 전면 광고 추가하기](#cauly-전면-광고-추가하기)
+      - [Cauly 네이티브 광고 추가하기](#cauly-네이티브-광고-추가하기)
 5. [TestFlight에 배포하기](#5-testflight에-배포하기)
 	- [앱 빌드 정보 및 환경 설정](#앱-빌드-정보-및-환경-설정)
 	- [iOS 앱 TestFlight에 업로드](#ios-앱-testflight-에-업로드)
@@ -431,15 +433,18 @@ pod 'GoogleMobileAdsMediationTestSuite'
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     self.bannerView.adUnitID = @"ca-app-pub-xxxxxxxxxx";
     self.bannerView.rootViewController = self;
     self.bannerView.delegate = self;
 }
 
+#pragma mark - Banner Ad requset
 // 배너 광고 요청
 - (IBAction)bannerAdRequest:(id)sender {
-    [self.bannerView loadRequest:[GADRequest request]];
-    NSLog(@"%@", self.bannerView.responseInfo.description);
+    NSLog(@"##### bannerAdRequest");
+    GADRequest *request = [GADRequest request];
+    [self.bannerView loadRequest:request];
 }
 
 #pragma - Admob Banner delegates
@@ -486,30 +491,32 @@ pod 'GoogleMobileAdsMediationTestSuite'
 
 @implementation ViewController
 
+#pragma mark - Interstitial Ad Request
+// 전면 광고 요청
 - (IBAction)interstitialAdRequest:(id)sender {
+    NSLog(@"##### interstitialAdrequest");
     GADRequest *request = [GADRequest request];
     [GADInterstitialAd loadWithAdUnitID:@"ca-app-pub-xxxxxxxxxx"
-                                  request:request
+                        request:request
                         completionHandler:^(GADInterstitialAd *ad, NSError *error) {
         if (error) {
-          NSLog(@"Failed to load interstitial ad with error: %@", [error localizedDescription]);
-          return;
+            // 전면 광고 요청 실패
+            NSLog(@"Failed to load interstitial ad with error: %@", [error localizedDescription]);
+            return;
         }
         self.interstitialAd = ad;
         self.interstitialAd.fullScreenContentDelegate = self;
-        
-        GADResponseInfo *responseInfo = self.interstitialAd.responseInfo;
-        NSLog(@"%@", responseInfo.description);
-        
+
+        // 전면 광고 표시
         if (self.interstitialAd) {
             [self.interstitialAd presentFromRootViewController:self];
         } else {
             NSLog(@"Ad wasn't ready");
         }
-      }];
+    }];
 }
 
-#pragma - Admob Interstitial delegates
+#pragma mark - Admob Interstitial delegates
 
 /// Tells the delegate that the ad failed to present full screen content.
 - (void)ad:(nonnull id<GADFullScreenPresentingAd>)ad
@@ -545,41 +552,41 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 
 @implementation ViewController
 
+#pragma mark - Rewarded Ad Request
 // 보상형 광고 요청
-- (void)loadRewardedAd {
+- (IBAction)rewardedAdRequest:(id)sender {
+    NSLog(@"##### rewardedAdRequest");
     GADRequest *request = [GADRequest request];
     [GADRewardedAd
-           loadWithAdUnitID:@"ca-app-pub-8713069554470817/6844780809"
-                    request:request
-          completionHandler:^(GADRewardedAd *ad, NSError *error) {
-            if (error) {
-              NSLog(@"Rewarded ad failed to load with error: %@", [error localizedDescription]);
-              return;
-            }
-            self.rewardedAd = ad;
-        
-        GADResponseInfo *responseInfo = self.rewardedAd.responseInfo;
-        NSLog(@"%@", responseInfo.description);
-            NSLog(@"Rewarded ad loaded.");
+    loadWithAdUnitID:@"ca-app-pub-xxxxxxxxxx"
+            request:request
+            completionHandler:^(GADRewardedAd *ad, NSError *error) {
+        if (error) {
+            // 리워드 광고 요청 실패
+            NSLog(@"Rewarded ad failed to load with error: %@", [error localizedDescription]);
+            return;
+        }
+        self.rewardedAd = ad;
+
+        NSLog(@"Rewarded ad loaded.");
         [self showRewardedAd];
-          }];
+    }];
 }
 
-// 보상형 광고 노출 및 리워드 이벤트 처리
+// 리워드 광고 표시 및 리워드 이벤트 처리
 - (void)showRewardedAd {
+    NSLog(@"##### showRewardedAd");
     if (self.rewardedAd) {
         [self.rewardedAd presentFromRootViewController:self
-                                      userDidEarnRewardHandler:^{
-                                      GADAdReward *reward =
-                                          self.rewardedAd.adReward;
-                                      // TODO: Reward the user!
-            NSLog(@"rewardedAd");
-                                    }];
-      } else {
+                userDidEarnRewardHandler:^{
+            GADAdReward *reward = self.rewardedAd.adReward;
+            // TODO: Reward the user!
+            NSLog(@"reward the user");
+        }];
+    } else {
         NSLog(@"Ad wasn't ready");
-      }
+    }
 }
-
 #pragma - Admob rewarded delegates
 
 /// Tells the delegate that the ad failed to present full screen content.
@@ -598,6 +605,127 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
    NSLog(@"Ad did dismiss full screen content.");
 }
 ```
+
+### 네이티브 광고 추가하기
+- 광고를 요청하기 전에 `GADAdLoader` 를 초기화해야 합니다.
+- AdLoader 에는 다음 옵션이 필요합니다.
+  - 광고 단위 ID
+  - adTypes : 배열을 전달하여 요청할 네이티브 형식을 지정할 상수
+  - options : 매개변수에 사용할 수 있는 값은 [네이티브 광고 옵션 설정 페이지](https://developers.google.com/admob/ios/native/options?hl=ko)에서 확인할 수 있습니다.
+
+
+``` objectivec
+@import GoogleMobileAds;
+@import UIKit;
+#import "ExampleNativeAdView.h"
+
+@interface ViewController () <GADNativeAdLoaderDelegate, GADNativeAdDelegate>
+
+@property (strong, nonatomic) IBOutlet UIView *nativeAdPlaceholder;
+@property (strong, nonatomic) GADAdLoader *adLoader;
+@property (strong, nonatomic) NSLayoutConstraint *heightConstraint;
+
+@end
+
+@implementation ViewController
+
+#pragma mark - Native Ad Request
+// 네이티브 광고 요청
+- (IBAction)nativeAdRequest:(id)sender {
+    NSLog(@"##### nativeAdRequest");
+    GADVideoOptions *videoOptions = [[GADVideoOptions alloc] init];
+
+    // 광고 로더 초기화
+    self.adLoader = [[GADAdLoader alloc] initWithAdUnitID:@"ca-app-pub-xxxxxxxxxx"
+                                     rootViewController:self
+                                                 adTypes:@[GADAdLoaderAdTypeNative]
+                                                 options:@[videoOptions]];
+
+    self.adLoader.delegate = self;
+    [self.adLoader loadRequest:[GADRequest request]];
+}
+
+- (void)replaceNativeAdView:(UIView *)nativeAdView inPlaceholder:(UIView *)placeholder {
+    // Remove anything currently in the placeholder.
+    NSArray *currentSubviews = [placeholder.subviews copy];
+    for (UIView *subview in currentSubviews) {
+        [subview removeFromSuperview];
+    }
+    
+    if (!nativeAdView) {
+        return;
+    }
+    
+    // Add new ad view and set constraints to fill its container.
+    [placeholder addSubview:nativeAdView];
+    [nativeAdView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    NSDictionary *viewDictionary = NSDictionaryOfVariableBindings(nativeAdView);
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[nativeAdView]|"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:viewDictionary]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[nativeAdView]|"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:viewDictionary]];
+    
+}
+
+#pragma mark - Admob Native delegates
+- (void)adLoader:(GADAdLoader *)adLoader didReceiveNativeAd:(GADNativeAd *)nativeAd {
+    NSLog(@"%s, %@", __PRETTY_FUNCTION__, nativeAd);
+    
+    // Create and place ad in view hierarchy.
+    ExampleNativeAdView *nativeAdView =
+        [[NSBundle mainBundle] loadNibNamed:@"ExampleNativeAdView" owner:nil options:nil]
+            .firstObject;
+    
+    nativeAdView.nativeAd = nativeAd;
+    UIView *placeholder = self.nativeAdPlaceholder;
+    
+    [self replaceNativeAdView:nativeAdView inPlaceholder:placeholder];
+    
+    nativeAdView.mediaView.contentMode = UIViewContentModeScaleAspectFit;
+    nativeAdView.mediaView.hidden = NO;
+    [nativeAdView.mediaView setMediaContent:nativeAd.mediaContent];
+    // Populate the native ad view with the native ad assets.
+    // Some assets are guaranteed to be present in every native ad.
+    ((UILabel *)nativeAdView.headlineView).text = nativeAd.headline;
+    ((UILabel *)nativeAdView.bodyView).text = nativeAd.body;
+    [((UIButton *)nativeAdView.callToActionView) setTitle:nativeAd.callToAction
+                                                 forState:UIControlStateNormal];
+    
+    // These assets are not guaranteed to be present, and should be checked first.
+    ((UIImageView *)nativeAdView.iconView).image = nativeAd.icon.image;
+    nativeAdView.iconView.hidden = nativeAd.icon ? NO : YES;
+
+    ((UILabel *)nativeAdView.storeView).text = nativeAd.store;
+    nativeAdView.storeView.hidden = nativeAd.store ? NO : YES;
+
+    ((UILabel *)nativeAdView.priceView).text = nativeAd.price;
+    nativeAdView.priceView.hidden = nativeAd.price ? NO : YES;
+
+    ((UILabel *)nativeAdView.advertiserView).text = nativeAd.advertiser;
+    nativeAdView.advertiserView.hidden = nativeAd.advertiser ? NO : YES;
+
+    // In order for the SDK to process touch events properly, user interaction should be disabled.
+    nativeAdView.callToActionView.userInteractionEnabled = NO;
+
+}
+
+- (void)adLoaderDidFinishLoading:(GADAdLoader *)adLoader {
+    NSLog(@"adLoaderDidFinishLoading");
+}
+
+- (void)adLoader:(GADAdLoader *)adLoader didFailToReceiveAdWithError:(NSError *)error {
+    NSLog(@"didFailToReceiveAdWithError");
+}
+
+
+```
+
+
 
 ## 4. 커스텀 이벤트 네트워크 추가하기
 ### Cauly 광고 추가하기
@@ -664,11 +792,14 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 #import "CaulyEvent.h"
 #import "CaulyEventBanner.h"
 #import "CaulyEventInterstitial.h"
+#import "CaulyEventNative.h"
 
 @implementation CaulyEvent {
     CaulyEventBanner *caulyBanner;
     
     CaulyEventInterstitial *caulyInterstitial;
+
+    CaulyEventNative *caulyNative;
 }
 
 
@@ -706,17 +837,26 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
     completionHandler(nil);
 }
 
+#pragma mark - Cauly Banner Ad Request
 - (void)loadBannerForAdConfiguration:(GADMediationBannerAdConfiguration *)adConfiguration completionHandler:(GADMediationBannerLoadCompletionHandler)completionHandler {
     caulyBanner = [[CaulyEventBanner alloc] init];
     [caulyBanner loadBannerForAdConfiguration:adConfiguration completionHandler:completionHandler];
 }
 
+#pragma mark - Cauly Interstitial Ad Request
 - (void)loadInterstitialForAdConfiguration:
             (GADMediationInterstitialAdConfiguration *)adConfiguration
                          completionHandler:
                              (GADMediationInterstitialLoadCompletionHandler)completionHandler {
     caulyInterstitial = [[CaulyEventInterstitial alloc] init];
     [caulyInterstitial loadInterstitialForAdConfiguration:adConfiguration completionHandler:completionHandler];
+}
+
+#pragma mark - Cauly Native Ad request
+- (void)loadNativeAdForAdConfiguration:(GADMediationNativeAdConfiguration *)adConfiguration
+                     completionHandler:(GADMediationNativeLoadCompletionHandler)completionHandler {
+  caulyNative = [[CaulyEventNative alloc] init];
+  [caulyNative loadNativeAdForAdConfiguration:adConfiguration completionHandler:completionHandler];
 }
 
 @end
@@ -759,7 +899,9 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 
 @implementation CaulyEventBanner
 
+#pragma mark - Banner Ad Request
 - (void)loadBannerForAdConfiguration:(GADMediationBannerAdConfiguration *)adConfiguration completionHandler:(GADMediationBannerLoadCompletionHandler)completionHandler {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
     
     __block GADMediationBannerLoadCompletionHandler originalCompletionHandler =
         [completionHandler copy];
@@ -779,17 +921,33 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
       return delegate;
     };
     
+    // admob 대시보드 등록 parameter : cauly appCode
     NSString *adUnit = adConfiguration.credentials.settings[@"parameter"];
-    NSLog(@"paramater : %@", adUnit);
     
-    // 상세 설정 항목들은 하단 표 참조, 설정되지 않은 항목들은 기본값으로 설정됩니다.
     CaulyAdSetting * adSetting = [CaulyAdSetting globalSetting];
-    [CaulyAdSetting setLogLevel:CaulyLogLevelInfo];  // Cauly Log 레벨
-    adSetting.appId = @"1234567";           //  App Store 에 등록된 App ID 정보 (필수)
-    adSetting.appCode = adUnit;
-    adSetting.animType = CaulyAnimNone;   //  화면 전환 효과	
     
-	// app으로 이동할 때 webview popup창을 자동으로 닫아줍니다. 기본값은 NO입니다.
+    // 카울리 로그 레벨
+    [CaulyAdSetting setLogLevel:CaulyLogLevelTrace];
+    
+    // iTunes App ID
+    adSetting.appId = @"0";
+    
+    // 카울리 앱 코드
+    adSetting.appCode = adUnit;
+    
+    // 광고 View 크기
+    adSetting.adSize = CaulyAdSize_IPhone;
+    
+    // 화면 전환 효과
+    adSetting.animType = CaulyAnimNone;
+    
+    // 광고 자동 갱신 시간 (기본값)
+    adSetting.reloadTime = CaulyReloadTime_30;
+    
+    // 광고 자동 갱신 사용 여부 (기본값)
+    adSetting.useDynamicReloadTime = YES;
+    
+    // 광고 랜딩 시 WebView 제거 여부
     adSetting.closeOnLanding = YES;
     
     UIViewController *controller = [adConfiguration topViewController];
@@ -797,6 +955,8 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
     [controller.view addSubview:adView];
     
     adView.delegate = self;
+    
+    // 카울리 배너 광고 요청
     [adView startBannerAdRequest];
 }
 
@@ -807,17 +967,20 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 }
 
 #pragma - CaulyAdViewDelegate
+// 배너 광고 정보 수신 성공
 -(void)didReceiveAd:(CaulyAdView *)adView isChargeableAd:(BOOL)isChargeableAd {
     NSLog(@"didReceiveAd");
+    // admob에 광고 수신 성공 전달
     _adEventDelegate = _loadCompletionHandler(self, nil);
 }
 
+// 배너 광고 정보 수신 실패
 - (void)didFailToReceiveAd:(CaulyAdView *)adView errorCode:(int)errorCode errorMsg:(NSString *)errorMsg {
     NSLog(@"didFailToReceiveAd : %d(%@)", errorCode, errorMsg);
     NSError *error = [[NSError alloc] initWithDomain:@"kr.co.cauly.sdk.ios.mediation.sample" code:errorCode userInfo:@{NSLocalizedDescriptionKey:errorMsg}];
+    // admob에 광고 수신 실패 전달
     _adEventDelegate = _loadCompletionHandler(nil, error);
 }
-
 
 @end
 
@@ -835,11 +998,14 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 
 @interface CaulyEventInterstitial : NSObject <CaulyInterstitialAdDelegate, GADMediationInterstitialAd> {
     CaulyInterstitialAd *_interstitialAd;
-//    UIViewController *viewController;
     
+    /// The completion handler to call when the ad loading succeeds or fails.
     GADMediationInterstitialLoadCompletionHandler _loadCompletionHandler;
+    
+    /// The ad event delegate to forward ad rendering events to the Google Mobile Ads SDK.
     id<GADMediationInterstitialAdEventDelegate> _adEventDelegate;
 }
+
 - (void)loadInterstitialForAdConfiguration:
             (GADMediationInterstitialAdConfiguration *)adConfiguration
                          completionHandler:
@@ -854,36 +1020,44 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 
 @implementation CaulyEventInterstitial
 
+#pragma mark - Interstitial Ad Request
 - (void)loadInterstitialForAdConfiguration:(GADMediationInterstitialAdConfiguration *)adConfiguration completionHandler:(GADMediationInterstitialLoadCompletionHandler)completionHandler {
     __block GADMediationInterstitialLoadCompletionHandler originalCompletionHandler = [completionHandler copy];
     
     _loadCompletionHandler = ^id<GADMediationInterstitialAdEventDelegate>(_Nullable id<GADMediationInterstitialAd> ad, NSError *_Nullable error) {
         id<GADMediationInterstitialAdEventDelegate> delegate = nil;
         if (originalCompletionHandler) {
+            // Call original handler and hold on to its return value.
             delegate = originalCompletionHandler(ad, error);
         }
         
+        // Release reference to handler. Objects retained by the handler will also be released.
         originalCompletionHandler = nil;
         
         return delegate;
     };
     
+    // admob 대시보드 등록 parameter : cauly appCode
     NSString *adUnit = adConfiguration.credentials.settings[@"parameter"];
-    NSLog(@"paramater : %@", adUnit);
-
-    // 상세 설정 항목들은 하단 표 참조, 설정되지 않은 항목들은 기본값으로 설정됩니다.
-    CaulyAdSetting * adSetting = [CaulyAdSetting globalSetting];
-    [CaulyAdSetting setLogLevel:CaulyLogLevelInfo];  // Cauly Log 레벨
-    adSetting.appId = @"1234567";           //  App Store 에 등록된 App ID 정보 (필수)
-    adSetting.appCode = adUnit;
-    adSetting.animType = CaulyAnimNone;   //  화면 전환 효과	
     
-	// app으로 이동할 때 webview popup창을 자동으로 닫아줍니다. 기본값은 NO입니다.
+    CaulyAdSetting * adSetting = [CaulyAdSetting globalSetting];
+    
+    // 카울리 로그 레벨
+    [CaulyAdSetting setLogLevel:CaulyLogLevelTrace];
+    
+    // iTunes App ID
+    adSetting.appId = @"0";
+    
+    // 카울리 앱 코드
+    adSetting.appCode = adUnit;
+    
+    // 광고 랜딩 시 WebView 제거 여부
     adSetting.closeOnLanding = YES;
     
-//    viewController = [adConfiguration topViewController];
     _interstitialAd = [[CaulyInterstitialAd alloc] initWithParentViewController:[adConfiguration topViewController]];
     _interstitialAd.delegate = self;
+    
+    // 카울리 전면 광고 요청
     [_interstitialAd startInterstitialAdRequest];
 }
 
@@ -895,30 +1069,241 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 
 #pragma mark - CaulyInterstitialAdDelegate
 
+// 전면 광고 정보 수신 성공
 - (void)didReceiveInterstitialAd:(CaulyInterstitialAd *)interstitialAd isChargeableAd:(BOOL)isChargeableAd {
-//    [_interstitialAd show];
-//    [_interstitialAd showWithParentViewController:viewController];
     NSLog(@"cauly interstitial ad Show");
     _adEventDelegate = _loadCompletionHandler(self, nil);
 }
 
+// 전면 광고 닫음
 - (void)didCloseInterstitialAd:(CaulyInterstitialAd *)interstitialAd {
     NSLog(@"did Close Interstitial ad");
     _interstitialAd = nil;
 }
 
+// 전면 광고 표시
 - (void) willShowInterstitialAd:(CaulyInterstitialAd *)interstitialAd {
     NSLog(@"will Show Interstitial ad");
     [_adEventDelegate willPresentFullScreenView];
     [_adEventDelegate reportImpression];
 }
 
+// 전면 광고 정보 수신 실패
 - (void) didFailToReceiveInterstitialAd:(CaulyInterstitialAd *)interstitialAd errorCode:(int)errorCode errorMsg:(NSString *)errorMsg {
     _interstitialAd = nil;
     NSLog(@"fail interstitial ad");
     NSError *error = [[NSError alloc] initWithDomain:@"kr.co.cauly.sdk.ios.mediation.sample" code:errorCode userInfo:@{NSLocalizedDescriptionKey:errorMsg}];
     
     _adEventDelegate = _loadCompletionHandler(nil, error);
+}
+
+@end
+```
+
+### Cauly 네이티브 광고 추가하기
+- CaulyEventNative.h
+
+``` objectivec
+#import <Foundation/Foundation.h>
+#import "Cauly.h"
+#import "CaulyNativeAd.h"
+@import GoogleMobileAds;
+
+
+@interface CaulyEventNative : NSObject <CaulyNativeAdDelegate, GADMediationNativeAd> {
+    /// The completion handler to call when the ad loading succeeds or fails.
+    GADMediationNativeLoadCompletionHandler _loadCompletionHandler;
+
+    /// The ad event delegate to forward ad rendering events to the Google Mobile Ads SDK.
+    id<GADMediationNativeAdEventDelegate> _adEventDelegate;
+    
+    CaulyNativeAd *_nativeAd;
+    
+    NSDictionary *nativeAdItem;
+    
+    CaulyNativeAdItem *caulyNativeAdItem;
+}
+
+- (void)loadNativeAdForAdConfiguration:(GADMediationNativeAdConfiguration *)adConfiguration
+                     completionHandler:(GADMediationNativeLoadCompletionHandler)completionHandler;
+
+@end
+```
+
+- CaulyEventNative.m
+
+``` objectivec
+#import "CaulyEventNative.h"
+
+
+@implementation CaulyEventNative
+
+/// Used to store the ad's images. In order to implement the GADMediationNativeAd protocol, we use
+/// this class to return the images property.
+NSArray<GADNativeAdImage *> *_images;
+
+/// Used to store the ad's icon. In order to implement the GADMediationNativeAd protocol, we use
+/// this class to return the icon property.
+GADNativeAdImage *_icon;
+
+/// Used to store the ad's ad choices view. In order to implement the GADMediationNativeAd protocol,
+/// we use this class to return the adChoicesView property.
+UIView *_adChoicesView;
+
+UIImageView *_mediaView;
+
+UIImage *imageImg;
+
+#pragma mark - Native Ad Mapping
+- (nullable NSString *)headline {
+    return [nativeAdItem objectForKey:@"title"];
+}
+
+- (nullable NSArray<GADNativeAdImage *> *)images {
+    return _images;
+}
+
+- (nullable NSString *)body {
+    return [nativeAdItem objectForKey:@"description"];
+}
+
+- (nullable GADNativeAdImage *)icon {
+    NSLog(@"%@", _icon.image);
+    return _icon;
+}
+
+- (nullable NSString *)callToAction {
+    return nil;
+}
+
+- (nullable NSDecimalNumber *)starRating {
+  return nil;
+}
+
+- (nullable NSString *)store {
+  return nil;
+}
+
+- (nullable NSString *)price {
+  return nil;
+}
+
+- (nullable NSString *)advertiser {
+    return [nativeAdItem objectForKey:@"subtitle"];
+}
+
+- (nullable NSDictionary<NSString *, id> *)extraAssets {
+    return nil;
+}
+
+- (nullable UIView *)adChoicesView {
+  return _adChoicesView;
+}
+
+- (nullable UIView *)mediaView {
+    return _mediaView;
+}
+
+- (BOOL)hasVideoContent {
+  return self.mediaView != nil;
+}
+
+#pragma mark - Native Ad Request
+- (void)loadNativeAdForAdConfiguration:(GADMediationNativeAdConfiguration *)adConfiguration completionHandler:(GADMediationNativeLoadCompletionHandler)completionHandler {
+    __block GADMediationNativeLoadCompletionHandler originalCompletionHandler =
+        [completionHandler copy];
+
+    _loadCompletionHandler = ^id<GADMediationNativeAdEventDelegate>(
+        _Nullable id<GADMediationNativeAd> ad, NSError *_Nullable error) {
+
+      id<GADMediationNativeAdEventDelegate> delegate = nil;
+      if (originalCompletionHandler) {
+        // Call original handler and hold on to its return value.
+        delegate = originalCompletionHandler(ad, error);
+      }
+
+      // Release reference to handler. Objects retained by the handler will also be released.
+      originalCompletionHandler = nil;
+
+      return delegate;
+    };
+    
+    // admob 대시보드 등록 parameter : cauly appCode
+    NSString *adUnit = adConfiguration.credentials.settings[@"parameter"];
+    
+    CaulyAdSetting * adSetting = [CaulyAdSetting globalSetting];
+    
+    // 카울리 로그 레벨
+    [CaulyAdSetting setLogLevel:CaulyLogLevelInfo];
+    
+    // iTunes App ID
+    adSetting.appId = @"0";
+    
+    // 카울리 앱 코드
+    adSetting.appCode = adUnit;
+    
+    _nativeAd = [[CaulyNativeAd alloc] initWithParentViewController:[adConfiguration topViewController]];
+    _nativeAd.delegate = self;
+    
+    // 카울리 네이티브 광고 요청
+    [_nativeAd startNativeAdRequest:2 nativeAdComponentType:CaulyNativeAdComponentType_IconImage imageSize:@"720x480"];
+}
+
+#pragma mark - Cauly Native Delegates
+
+// 네이티브 광고 정보 수신 성공
+-(void) didReceiveNativeAd:(CaulyNativeAd *)nativeAd isChargeableAd:(BOOL)isChargeableAd {
+    NSLog(@"Cauly didReceiveNativeAd");
+    CaulyNativeAdItem *caulyNativeAd = [nativeAd nativeAdItemAt:0];
+    caulyNativeAdItem = [nativeAd nativeAdItemAt:0];
+    
+    NSArray* allList = [nativeAd nativeAdItemList];
+    
+    for (CaulyNativeAdItem *adItem in allList) {
+        // 수신된 모든 네이티브 광고(JSON) 로그 출력
+        NSLog(@"for nativeAdJSONString : %@", adItem.nativeAdJSONString);
+    }
+    
+    NSError *error;
+    nativeAdItem = [NSJSONSerialization JSONObjectWithData:[caulyNativeAd.nativeAdJSONString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    
+    _nativeAd = nativeAd;
+    
+    [self performSelectorInBackground:@selector(urlToImage) withObject:nil];
+    
+}
+
+- (void)didFailToReceiveNativeAd:(CaulyNativeAd *)nativeAd errorCode:(int)errorCode errorMsg:(NSString *)errorMsg {
+    NSLog(@"Cauly didFailToReceiveNativeAd errorCode: %d errorMsg: %@", errorCode, errorMsg);
+    NSError *error = [[NSError alloc] initWithDomain:@"kr.co.cauly.sdk.ios.mediation.sample" code:errorCode userInfo:@{NSLocalizedDescriptionKey:errorMsg}];
+    _adEventDelegate = _loadCompletionHandler(nil, error);
+}
+
+// 이미지 url 변환
+- (void)urlToImage {
+    NSURL *iconURL = [NSURL URLWithString:[nativeAdItem objectForKey:@"icon"]];
+    NSData *iconData = [NSData dataWithContentsOfURL:iconURL];
+    UIImage *iconImg = [[UIImage alloc] initWithData:iconData];
+    _icon = [[GADNativeAdImage alloc] initWithImage:iconImg];
+    
+    NSURL *imageURL = [NSURL URLWithString:[nativeAdItem objectForKey:@"image"]];
+    NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+    imageImg = [[UIImage alloc] initWithData:imageData];
+
+    [self performSelectorOnMainThread:@selector(setMediaViewImage) withObject:nil waitUntilDone:0];
+}
+
+// 변환된 이미지를 MediaView 에 표시
+- (void)setMediaViewImage {
+    _mediaView = [[UIImageView alloc] initWithImage:imageImg];
+    _adEventDelegate = _loadCompletionHandler(self, nil);
+}
+
+#pragma mark - GADMediatedUnifiedNativeAd
+
+- (void)didRecordClickOnAssetWithName:(GADNativeAssetIdentifier)assetName view:(UIView *)view viewController:(UIViewController *)viewController {
+    NSLog(@"didRecordClickOnAssetWithName");
+    [_nativeAd click:caulyNativeAdItem];
 }
 
 @end
