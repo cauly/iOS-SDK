@@ -168,6 +168,7 @@ iOS SDK 설치가이드
 	- BGM이 포함된 광고가 있을 수 있으니, APP에 BGM이 있는 경우 willShowLandingView API를 이용하여 일시 중지 해주세요, 그리고 광고 종료 후 didCloseLandingView API를 이용하여 BGM을 재 시작 하시면 됩니다.
 	- 광고뷰가 화면에 보여지지 않는 경우에도 광고 요청을 할 수 있습니다. 광고 요청을 중단하고자 할 때 [CaulyAdView 객체 stopAdRequest]; 명령을 실행하여 광고 요청을 반드시 중지하기 바랍니다.
 	- libCauly-universal.a 는 simulator와 device 통합된 파일 입니다. 
+	- libCauly.a, libCauly-universal.a, Cauly.xcframework 파일 중 환경에 맞는 파일을 사용하시면 됩니다.
 
 ### 참고 사항
 - Cauly SDK는 iOS SDK 10.0 기반으로 작성 되었습니다.
@@ -201,6 +202,7 @@ iOS SDK 설치가이드
 |----------------------|--------------------------------------|
 | libCauly.a           | Cauly SDK 라이브러리 파일 (디바이스 전용)         |
 | libCauly-universal.a | Cauly SDK 라이브러리 파일 (시뮬레이터 및 디바이스 통합) |
+| Cauly.xcframework    | Cauly SDK Framework 파일	(ARM64 계열 macOS 지원)	|
 		
 - Cauly SDK 샘플 프로젝트
 
@@ -208,7 +210,9 @@ iOS SDK 설치가이드
   - Swift Project
 	
 ## SDK 설치 방법
-1. Cauly SDK 를 적용할 프로젝트 내에 ‘CaulyLib’ 폴더 복사
+1. Cauly SDK 추가
+	- Cauly SDK 를 적용할 프로젝트 내에 ‘CaulyLib’ 폴더 복사
+	- Cauly.xcframework 추가 (ARM64 계열`M1, M2` macOS 지원)
 2. Framework 추가
 	- AVKit.framework
 	- UIKit.framework
