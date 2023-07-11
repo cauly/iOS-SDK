@@ -9,6 +9,7 @@ iOS SDK mediation 연동 가이드
 	- [광고 SDK 가져오기](#광고-sdk-가져오기)
 	- [Info.plist 업데이트](#inpoplist-업데이트)
 	- [광고 SDK 초기화](#광고-sdk-초기화)
+	- [파트너 통합 네트워크 설정](#파트너-통합-네트워크-설정)
 	- [테스트 광고 사용 설정](#테스트-광고-사용-설정)
 3. [광고 형식 추가하기](#3-광고-형식-추가하기)
 	- [배너 광고 추가하기](#배너-광고-추가하기)
@@ -17,10 +18,10 @@ iOS SDK mediation 연동 가이드
 	- [네이티브 광고 추가하기](#네이티브-광고-추가하기)
 4. [커스텀 이벤트 네트워크 추가하기](#4-커스텀-이벤트-네트워크-추가하기)
 	- [Cauly 광고 추가하기](#cauly-광고-추가하기)
-      - [어댑터 초기화](#어댑터-초기화)
-      - [Cauly 배너 광고 추가하기](#cauly-배너-광고-추가하기)
-      - [Cauly 전면 광고 추가하기](#cauly-전면-광고-추가하기)
-      - [Cauly 네이티브 광고 추가하기](#cauly-네이티브-광고-추가하기)
+		- [어댑터 초기화](#어댑터-초기화)
+		- [Cauly 배너 광고 추가하기](#cauly-배너-광고-추가하기)
+		- [Cauly 전면 광고 추가하기](#cauly-전면-광고-추가하기)
+		- [Cauly 네이티브 광고 추가하기](#cauly-네이티브-광고-추가하기)
 5. [TestFlight에 배포하기](#5-testflight에-배포하기)
 	- [앱 빌드 정보 및 환경 설정](#앱-빌드-정보-및-환경-설정)
 	- [iOS 앱 TestFlight에 업로드](#ios-앱-testflight-에-업로드)
@@ -47,29 +48,44 @@ iOS SDK mediation 연동 가이드
 > 2. `pod install --repo-update` 명령을 통해 다운로드 받도록 합니다.  
 > 3. 라이브러리 다운로드가 완료되면 Xcode 로 *.xcworkspace 파일을 열어 다음 과정으로 진행합니다.  
 
-- Admob SDK
+#### Admob SDK
 ``` bash
 pod 'Google-Mobile-Ads-SDK'
 ```
 
-- Inmobi SDK
+#### Inmobi SDK
 ``` bash
 pod 'GoogleMobileAdsMediationInMobi'
 ```
 
-- AppLovin SDK
+#### AppLovin SDK
 ``` bash
 pod 'GoogleMobileAdsMediationAppLovin'
 ```
 
-- Vungle SDK
+#### Vungle SDK
 ``` bash
 pod 'GoogleMobileAdsMediationVungle'
 ```
 
-- DT Exchange
+#### DT Exchange
 ``` bash
 pod 'GoogleMobileAdsMediationFyber'
+```
+
+#### Mintegral - 신규 네트워크사(임시)
+``` bash
+pod 'GoogleMobileAdsMediationMintegral'
+```
+
+#### Pangle - 신규 네트워크사(임시)
+``` bash
+pod 'GoogleMobileAdsMediationPangle'
+```
+
+#### Unity Ads - 신규 네트워크사(임시)
+``` bash
+pod 'GoogleMobileAdsMediationUnity'
 ```
 
 
@@ -84,6 +100,9 @@ pod 'GoogleMobileAdsMediationFyber'
 #### SKAdNetwork 지원
 - Info.plist 파일에 SKAdNetworkItems 키를 추가하고 Cauly (55644vm79v.skadnetwork), Google(cstr6suwn9.skadnetwork) SKAdNetworkIdentifier 값과 함께 Cauly 의 파트너 DSP 와 Google Third-Party SKAdNetworkIdentifier 값을 추가합니다.  
 - 즉, Info.plist 파일에 아래 내용을 추가해주시면 Cauly 와 Cauly 를 통한 다른 DSP, Google 의 광고가 정상적으로 처리될 수 있습니다.
+
+<details>
+	<summary>Cauly, Google SKAdNetworkItems</summary>
 
 ``` xml
 <key>SKAdNetworkItems</key>
@@ -338,6 +357,62 @@ pod 'GoogleMobileAdsMediationFyber'
     </dict>
   </array>
 ```
+</details>
+
+
+- Pangle SDK를 추가하는 경우 SKAdNetworkItems 키에 [SKAdNetworkIdentifier 값](https://www.pangleglobal.com/integration/ios14-readiness) 을 추가해야합니다.  - 신규 네트워크사(임시)
+<details><summary>Pangle SKAdNetworkItems</summary>
+	
+```xml
+<key>SKAdNetworkItems</key>
+  <array>
+    <dict>
+      <key>SKAdNetworkIdentifier</key>
+      <string>22mmun2rn5.skadnetwork</string>
+    </dict>
+    <dict>
+      <key>SKAdNetworkIdentifier</key>
+      <string>uw77j35x4d.skadnetwork</string>
+    </dict>
+    <dict>
+      <key>SKAdNetworkIdentifier</key>
+      <string>7ug5zh24hu.skadnetwork</string>
+    </dict>
+    <dict>
+      <key>SKAdNetworkIdentifier</key>
+      <string>9t245vhmpl.skadnetwork</string>
+    </dict>
+    <dict>
+      <key>SKAdNetworkIdentifier</key>
+      <string>kbd757ywx3.skadnetwork</string>
+    </dict>
+    <dict>
+      <key>SKAdNetworkIdentifier</key>
+      <string>a8cz6cu7e5.skadnetwork</string>
+    </dict>
+    <dict>
+      <key>SKAdNetworkIdentifier</key>
+      <string>578prtvx9j.skadnetwork</string>
+    </dict>
+    <dict>
+      <key>SKAdNetworkIdentifier</key>
+      <string>5tjdwbrq8w.skadnetwork</string>
+    </dict>
+    <dict>
+      <key>SKAdNetworkIdentifier</key>
+      <string>hs6bdukanm.skadnetwork</string>
+    </dict>
+    <dict>
+      <key>SKAdNetworkIdentifier</key>
+      <string>k674qkevps.skadnetwork</string>
+    </dict>
+    <dict>
+      <key>SKAdNetworkIdentifier</key>
+      <string>dbu4b84rxf.skadnetwork</string>
+    </dict>
+  </array>
+```
+</details>
 
 #### iOS9 ATS(App Transport Security) 처리  
 - 애플은 iOS9 에서 ATS(App Transport Security)라는 기능을 제공합니다. 기기에서 ATS 활성화 시 암호화된 HTTPS 방식만 허용됩니다. HTTPS 방식을 적용하지 않을 경우 애플 보안 기준을 충족하지 않는다는 이유로 광고가 차단될 수 있습니다.  
@@ -381,6 +456,53 @@ pod 'GoogleMobileAdsMediationFyber'
 }
 ```
 
+### 파트너 통합 네트워크 설정
+
+#### Inmobi 설정 (옵션)
+- Inmobi SDK 설정을 위해 추가 코드가 필요하지 않습니다.
+- 필요한 경우 [여기](https://developers.google.com/admob/ios/mediation/inmobi#optional_steps)를 참고하여 옵션 설정이 가능합니다.
+
+#### AppLovin 설정 (옵션)
+- AppLovin SDK 설정을 위해 추가 코드가 필요하지 않습니다.
+- 필요한 경우 [여기](https://developers.google.com/admob/ios/mediation/applovin#optional_steps)를 참고하여 옵션 설정이 가능합니다.
+
+#### Vungle 설정
+- Vungle SDK 초기화를 위해 앱 내에서 사용될 모든 배치 목록을 SDK 로 전달해야 합니다.
+- 필요한 경우 [여기](https://developers.google.com/admob/ios/mediation/liftoff-monetize#optional_steps)를 참고하여 옵션 설정이 가능합니다.
+
+``` objectivec
+#import <VungleAdapter/VungleAdapter.h>
+// ...
+
+GADRequest *request = [GADRequest request];
+VungleAdNetworkExtras *extras = [[VungleAdNetworkExtras alloc] init];
+
+NSMutableArray *placements = [[NSMutableArray alloc] initWithObjects:@"PLACEMENT_ID_1", @"PLACEMENT_ID_2", nil];
+extras.allPlacements = placements;
+[request registerAdNetworkExtras:extras];
+```
+
+#### DT Exchange 설정 (옵션)
+- DT Exchange SDK 설정을 위해 추가 코드가 필요하지 않습니다.
+- 필요한 경우 [여기](https://developers.google.com/admob/ios/mediation/dt-exchange#optional_steps)를 참고하여 옵션 설정이 가능합니다.
+
+#### Mintegral 설정 (옵션) - 신규 네트워크사(임시)
+- Mintegral SDK 설정을 위해 추가 코드가 필요하지 않습니다.
+- 필요한 경우 [여기](https://developers.google.com/admob/ios/mediation/mintegral#optional_steps)를 참고하여 옵션 설정이 가능합니다.
+
+#### Pangle 설정 - 신규 네트워크사(임시)
+- info.plist 파일의 SKAdNetworkItems 키에 [SKAdNetworkIdentifier 값](#skadnetwork-지원)을 추가해야합니다.
+
+
+#### Unity Ads 설정 - 신규 네트워크사(임시)
+- Swift 환경: Unity Ads SDK 설정을 위해 추가 코드가 필요하지 않습니다.
+- Objective-C 환경: Unity Ads adapter가 4.4.0.0 이상인 경우 [Unity 설명서](https://docs.unity.com/ads/en-us/manual/InstallingTheiOSSDK#Swift) 의 통합 단계를 따라야 합니다.
+  - 프로젝트에서 이미 Swift를 사용하는 경우 추가 조치가 필요하지 않습니다.
+  - 프로젝트에서 Swift를 사용하지 않는 경우 `File > New > Swift file` 을 선택하여 Xcode에서 빈 Swift 파일을 프로젝트에 추가합니다.
+  - 프로젝트가 iOS 12.4 이전 버전을 대상으로 하는 경우 Xcode에서 `TARGETS > Build Settings > Always embed Swift standard libraries`를 `YES` 로 설정해야 합니다.
+- 필요한 경우 [여기](https://developers.google.com/admob/ios/mediation/unity#optional_steps)를 참고하여 옵션 설정이 가능합니다.
+
+
 ### 테스트 광고 사용 설정
 > `상용화 시 반드시 테스트 광고 설정 관련 코드를 삭제해야 합니다.`
 
@@ -402,16 +524,19 @@ GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers =
 #### 미디에이션 테스트 모음 실행
 -  프로젝트 디렉토리에서 Podfile을 열고 다음 라이브러리를 추가한 후 `pod install --repo-update` 명령을 통해 다운로드 받도록 합니다.
 ``` bash
+Podfile ::
 pod 'GoogleMobileAdsMediationTestSuite'
 ```
 
 - 도구를 표시하기 위해 프레임워크를 가져옵니다.
 ``` objectivec
+ViewController.m ::
 @import GoogleMobileAdsMediationTestSuite;
 ```
 
 - 뷰가 표시된 후 다음과 같이 테스트 모음을 표시합니다.
 ``` objectivec
+ViewController.m ::
 [GoogleMobileAdsMediationTestSuite presentOnViewController:self delegate:nil];
 ```
 
