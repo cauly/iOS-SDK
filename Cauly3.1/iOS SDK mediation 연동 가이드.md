@@ -2663,7 +2663,7 @@ extras.allPlacements = placements;
 - 필요한 경우 [여기](https://developers.google.com/admob/ios/mediation/mintegral#optional_steps)를 참고하여 옵션 설정이 가능합니다.
 
 #### Pangle 설정
-- info.plist 파일의 SKAdNetworkItems 키에 [SKAdNetworkIdentifier 값](#skadnetwork-지원)을 추가해야합니다.
+- Pangle SDK 설정을 위해 추가 코드가 필요하지 않습니다.
 
 
 #### Unity Ads 설정 
