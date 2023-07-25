@@ -7,7 +7,7 @@ iOS SDK mediation 연동 가이드
 2. [미디에이션 시작하기](#2-미디에이션-시작하기)
 	- [사전 안내](#사전-안내)
 	- [광고 SDK 가져오기](#광고-sdk-가져오기)
-	- [Info.plist 업데이트](#inpoplist-업데이트)
+	- [Info.plist 업데이트](#infoplist-업데이트)
 	- [광고 SDK 초기화](#광고-sdk-초기화)
 	- [파트너 통합 네트워크 설정](#파트너-통합-네트워크-설정)
 	- [테스트 광고 사용 설정](#테스트-광고-사용-설정)
@@ -73,23 +73,23 @@ pod 'GoogleMobileAdsMediationVungle'
 pod 'GoogleMobileAdsMediationFyber'
 ```
 
-#### Mintegral - 신규 네트워크사(임시)
+#### Mintegral
 ``` bash
 pod 'GoogleMobileAdsMediationMintegral'
 ```
 
-#### Pangle - 신규 네트워크사(임시)
+#### Pangle
 ``` bash
 pod 'GoogleMobileAdsMediationPangle'
 ```
 
-#### Unity Ads - 신규 네트워크사(임시)
+#### Unity Ads
 ``` bash
 pod 'GoogleMobileAdsMediationUnity'
 ```
 
 
-### Inpo.plist 업데이트
+### Info.plist 업데이트
 
 #### Admob 연결
 ``` xml
@@ -98,319 +98,2463 @@ pod 'GoogleMobileAdsMediationUnity'
 ```
 
 #### SKAdNetwork 지원
-- Info.plist 파일에 SKAdNetworkItems 키를 추가하고 Cauly (55644vm79v.skadnetwork), Google(cstr6suwn9.skadnetwork) SKAdNetworkIdentifier 값과 함께 Cauly 의 파트너 DSP 와 Google Third-Party SKAdNetworkIdentifier 값을 추가합니다.  
-- 즉, Info.plist 파일에 아래 내용을 추가해주시면 Cauly 와 Cauly 를 통한 다른 DSP, Google 의 광고가 정상적으로 처리될 수 있습니다.
+- Info.plist 파일에 SKAdNetworkItems 키를 추가하고 Cauly (55644vm79v.skadnetwork), Google(cstr6suwn9.skadnetwork) SKAdNetworkIdentifier 값과 함께 Cauly 의 파트너 DSP 와 Google Third-Party SKAdNetworkIdentifier, Admob 파트너 네트워크 SKAdNetworkIdentifier 값을 추가합니다.  
+- 즉, Info.plist 파일에 아래 내용을 추가해주시면 Cauly 와 Cauly 를 통한 다른 DSP, Google Admob Mediation 의 광고가 정상적으로 처리될 수 있습니다.
 
 <details>
-	<summary>Cauly, Google SKAdNetworkItems</summary>
+	<summary>Cauly SKAdNetworkItems</summary>
+
+``` xml
+ <key>SKAdNetworkItems</key>
+ <array>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>55644vm79v.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>4fzdc2evr5.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>4pfyvq9l8r.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>v72qych5uu.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>6xzpu9s2p8.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>ludvb6z3bs.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>mlmmfzh3r3.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>294l99pt4k.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>24t9a8vw3c.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>hs6bdukanm.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>cstr6suwn9.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>54nzkqm89y.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>wzmmz9fp6w.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>yclnxrl5pm.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>7ug5zh24hu.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>feyaarzu9v.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>kbd757ywx3.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>275upjj5gd.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>9t245vhmpl.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>44jx6755aq.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>tl55sbb4fm.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>2u9pt9hc89.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>8s468mfl3y.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>74b6s63p6l.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>uw77j35x4d.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>gvmwg8q7h5.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>gta9lk7p23.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>32z4fx6l9h.skadnetwork</string>
+ 	</dict>
+ 	<dict>
+ 		<key>SKAdNetworkIdentifier</key>
+ 		<string>3rd42ekr43.skadnetwork</string>
+ 	</dict>
+ </array>
+```
+</details>
+
+<details>
+	<summary>Google Admob SKAdNetworkItems</summary>
+
+``` xml
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>cstr6suwn9.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>4fzdc2evr5.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>4pfyvq9l8r.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>2fnua5tdw4.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>ydx93a7ass.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>5a6flpkh64.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>p78axxw29g.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>v72qych5uu.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>ludvb6z3bs.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>cp8zw746q7.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>3sh42y64q3.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>c6k4g5qg8m.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>s39g8k73mm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>3qy4746246.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>f38h382jlk.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>hs6bdukanm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>v4nxqhlyqp.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>wzmmz9fp6w.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>yclnxrl5pm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>t38b2kh725.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>7ug5zh24hu.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>gta9lk7p23.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>vutu7akeur.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>y5ghdn5j9k.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>n6fk4nfna4.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>v9wttpbfk9.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>n38lu8286q.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>47vhws6wlr.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>kbd757ywx3.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>9t245vhmpl.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>eh6m2bh4zr.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>a2p9lx4jpn.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>22mmun2rn5.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>4468km3ulz.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>2u9pt9hc89.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>8s468mfl3y.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>klf5c3l5u5.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>ppxm28t8ap.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>ecpz2srf59.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>uw77j35x4d.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>pwa73g5rt2.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>mlmmfzh3r3.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>578prtvx9j.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>4dzt52r2t5.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>e5fvkxwrpn.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>8c4e2ghe7u.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>zq492l623r.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>3rd42ekr43.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>3qcr597p9d.skadnetwork</string>
+</dict>
+```
+</details>
+
+<details>
+	<summary>Inmobi SKAdNetworkItems</summary>
 
 ``` xml
 <key>SKAdNetworkItems</key>
   <array>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>cstr6suwn9.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>4fzdc2evr5.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>4pfyvq9l8r.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>2fnua5tdw4.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>ydx93a7ass.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>5a6flpkh64.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>p78axxw29g.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>v72qych5uu.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>ludvb6z3bs.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>cp8zw746q7.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>c6k4g5qg8m.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>s39g8k73mm.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>3qy4746246.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>3sh42y64q3.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>f38h382jlk.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>hs6bdukanm.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>prcb7njmu6.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>v4nxqhlyqp.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>wzmmz9fp6w.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>yclnxrl5pm.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>t38b2kh725.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>7ug5zh24hu.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>9rd848q2bz.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>y5ghdn5j9k.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>n6fk4nfna4.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>v9wttpbfk9.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>n38lu8286q.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>47vhws6wlr.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>kbd757ywx3.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>9t245vhmpl.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>a2p9lx4jpn.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>22mmun2rn5.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>4468km3ulz.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>2u9pt9hc89.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>8s468mfl3y.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>av6w8kgt66.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>klf5c3l5u5.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>ppxm28t8ap.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>424m5254lk.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>ecpz2srf59.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>uw77j35x4d.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>mlmmfzh3r3.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>578prtvx9j.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>4dzt52r2t5.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>gta9lk7p23.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>e5fvkxwrpn.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>8c4e2ghe7u.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>zq492l623r.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>3rd42ekr43.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>3qcr597p9d.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>55644vm79v.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>6xzpu9s2p8.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>294l99pt4k.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>24t9a8vw3c.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>54nzkqm89y.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>feyaarzu9v.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>275upjj5gd.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>44jx6755aq.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>tl55sbb4fm.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>74b6s63p6l.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>gvmwg8q7h5.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>32z4fx6l9h.skadnetwork</string>
-    </dict>
-  </array>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>uw77j35x4d.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>7ug5zh24hu.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>hs6bdukanm.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>4fzdc2evr5.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>ggvn48r87g.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>5lm9lj6jb7.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>9rd848q2bz.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>c6k4g5qg8m.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>wzmmz9fp6w.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>3sh42y64q3.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>yclnxrl5pm.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>kbd757ywx3.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>f73kdq92p3.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>ydx93a7ass.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>w9q455wk68.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>prcb7njmu6.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>wg4vff78zm.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>mlmmfzh3r3.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>tl55sbb4fm.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>4pfyvq9l8r.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>t38b2kh725.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>5l3tpt7t6e.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>7rz58n8ntl.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>klf5c3l5u5.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>cg4yq2srnc.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>av6w8kgt66.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>9t245vhmpl.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>v72qych5uu.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>2u9pt9hc89.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>44jx6755aq.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>8s468mfl3y.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>p78axxw29g.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>ppxm28t8ap.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>424m5254lk.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>5a6flpkh64.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>pwa73g5rt2.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>e5fvkxwrpn.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>9nlqeag3gk.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>k674qkevps.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>cj5566h2ga.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>mtkv5xtk9e.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>578prtvx9j.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>3rd42ekr43.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>g28c52eehv.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>2fnua5tdw4.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>4468km3ulz.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>97r2b46745.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>glqzh8vgby.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>3qcr597p9d.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>n6fk4nfna4.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>b9bk5wbcq9.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>kbmxgpxpgc.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>294l99pt4k.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>523jb4fst2.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>mls7yz5dvl.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>74b6s63p6l.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>22mmun2rn5.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>52fl2v3hgk.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>6g9af3uyq4.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>x5l83yy675.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>c3frkrj4fj.skadnetwork</string>
+  </dict>
+</array>
+```
+</details>
+
+<details>
+	<summary>AppLovin SKAdNetworkItems</summary>
+
+``` xml
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>22mmun2rn5.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>238da6jt44.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>24t9a8vw3c.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>24zw6aqk47.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>252b5q8x7y.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>275upjj5gd.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>294l99pt4k.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>2fnua5tdw4.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>2u9pt9hc89.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>32z4fx6l9h.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>3l6bd9hu43.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>3qcr597p9d.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>3qy4746246.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>3rd42ekr43.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>3sh42y64q3.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>424m5254lk.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>4468km3ulz.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>44jx6755aq.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>44n7hlldy6.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>47vhws6wlr.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>488r3q3dtq.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>4dzt52r2t5.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>4fzdc2evr5.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>4mn522wn87.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>4pfyvq9l8r.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>4w7y6s5ca2.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>523jb4fst2.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>52fl2v3hgk.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>54nzkqm89y.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>578prtvx9j.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>5a6flpkh64.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>5l3tpt7t6e.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>5lm9lj6jb7.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>5tjdwbrq8w.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>6964rsfnh4.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>6g9af3uyq4.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>6p4ks3rnbw.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>6v7lgmsu45.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>6xzpu9s2p8.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>737z793b9f.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>74b6s63p6l.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>79pbpufp6p.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>7fmhfwg9en.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>7rz58n8ntl.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>7ug5zh24hu.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>84993kbrcf.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>89z7zv988g.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>8c4e2ghe7u.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>8m87ys6875.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>8r8llnkz5a.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>8s468mfl3y.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>97r2b46745.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>9b89h5y424.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>9nlqeag3gk.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>9rd848q2bz.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>9t245vhmpl.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>9vvzujtq5s.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>9yg77x724h.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>a2p9lx4jpn.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>a7xqa6mtl2.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>a8cz6cu7e5.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>av6w8kgt66.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>b9bk5wbcq9.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>bxvub5ada5.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>c3frkrj4fj.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>c6k4g5qg8m.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>cg4yq2srnc.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>cj5566h2ga.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>cp8zw746q7.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>cs644xg564.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>cstr6suwn9.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>dbu4b84rxf.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>dkc879ngq3.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>dzg6xy7pwj.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>e5fvkxwrpn.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>ecpz2srf59.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>eh6m2bh4zr.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>ejvt5qm6ak.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>f38h382jlk.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>f73kdq92p3.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>f7s53z58qe.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>feyaarzu9v.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>g28c52eehv.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>g2y4y55b64.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>ggvn48r87g.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>glqzh8vgby.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>gta8lk7p23.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>gta9lk7p23.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>hb56zgv37p.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>hdw39hrw9y.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>hs6bdukanm.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>k674qkevps.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>kbd757ywx3.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>kbmxgpxpgc.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>klf5c3l5u5.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>krvm3zuq6h.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>lr83yxwka7.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>ludvb6z3bs.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>m297p6643m.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>m5mvw97r93.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>m8dbw4sv7c.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>mlmmfzh3r3.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>mls7yz5dvl.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>mp6xlyr22a.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>mtkv5xtk9e.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>n38lu8286q.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>n66cz3y3bx.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>n6fk4nfna4.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>n9x2a789qt.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>nzq8sh4pbs.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>p78axxw29g.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>ppxm28t8ap.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>prcb7njmu6.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>pwa73g5rt2.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>pwdxu55a5a.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>qqp299437r.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>r45fhb6rf7.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>rvh3l7un93.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>rx5hdcabgc.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>s39g8k73mm.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>s69wq72ugq.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>su67r6k2v3.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>t38b2kh725.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>tl55sbb4fm.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>u679fj5vs4.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>uw77j35x4d.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>v4nxqhlyqp.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>v72qych5uu.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>v79kvwwj4g.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>v9wttpbfk9.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>vcra2ehyfk.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>vutu7akeur.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>w9q455wk68.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>wg4vff78zm.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>wzmmz9fp6w.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>x44k69ngh6.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>x5l83yy675.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>x8jxxk4ff5.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>x8uqf25wch.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>xy9t38ct57.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>y45688jllp.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>y5ghdn5j9k.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>yclnxrl5pm.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>ydx93a7ass.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>zmvfpc5aq8.skadnetwork</string>
+</dict>
+<dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>zq492l623r.skadnetwork</string>
+</dict>
+```
+</details>
+
+<details>
+	<summary>Vungle SKAdNetworkItems</summary>
+
+``` xml
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>gta9lk7p23.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>c3frkrj4fj.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>p78axxw29g.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>4fzdc2evr5.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>4pfyvq9l8r.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>2fnua5tdw4.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>ydx93a7ass.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>cstr6suwn9.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>cg4yq2srnc.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>v72qych5uu.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>6xzpu9s2p8.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>mlmmfzh3r3.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>c6k4g5qg8m.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>wg4vff78zm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>g28c52eehv.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>523jb4fst2.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>294l99pt4k.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>ggvn48r87g.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>mls7yz5dvl.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>578prtvx9j.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>22mmun2rn5.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>3sh42y64q3.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>f38h382jlk.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>24t9a8vw3c.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>x44k69ngh6.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>mp6xlyr22a.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>hs6bdukanm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>9rd848q2bz.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>prcb7njmu6.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>m8dbw4sv7c.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>9nlqeag3gk.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>cj5566h2ga.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>9b89h5y424.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>ejvt5qm6ak.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>w9q455wk68.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>wzmmz9fp6w.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>7fmhfwg9en.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>yclnxrl5pm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>t38b2kh725.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>7ug5zh24hu.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>5lm9lj6jb7.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>zmvfpc5aq8.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>mtkv5xtk9e.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>n6fk4nfna4.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>7rz58n8ntl.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>feyaarzu9v.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>9t245vhmpl.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>7953jerfzd.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>n9x2a789qt.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>44jx6755aq.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>k674qkevps.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>4468km3ulz.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>2u9pt9hc89.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>5a6flpkh64.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>pwa73g5rt2.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>8s468mfl3y.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>glqzh8vgby.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>klf5c3l5u5.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>ppxm28t8ap.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>xy9t38ct57.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>424m5254lk.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>qu637u8glc.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>kbmxgpxpgc.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>5l3tpt7t6e.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>f7s53z58qe.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>uw77j35x4d.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>54nzkqm89y.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>9yg77x724h.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>n66cz3y3bx.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>prcb7njmu6.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>e5fvkxwrpn.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>tl55sbb4fm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>5tjdwbrq8w.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>r45fhb6rf7.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>32z4fx6l9h.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>3rd42ekr43.skadnetwork</string>
+</dict>
+```
+</details>
+
+<details>
+	<summary>DT Exchange SKAdNetworkItems</summary>
+
+``` xml
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>krvm3zuq6h.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>kbmxgpxpgc.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>9nlqeag3gk.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>c3frkrj4fj.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>mtkv5xtk9e.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>n6fk4nfna4.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>a2p9lx4jpn.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>bmxgpxpgc.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>k674qkevps.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>p78axxw29g.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>n9x2a789qt.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>ydx93a7ass.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>294l99pt4k.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>424m5254lk.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>3rd42ekr43.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>ggvn48r87g.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>s39g8k73mm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>32z4fx6l9h.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>e5fvkxwrpn.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>rx5hdcabgc.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>4fzdc2evr5.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>4pfyvq9l8r.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>5a6flpkh64.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>v72qych5uu.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>x8uqf25wch.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>c6k4g5qg8m.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>wg4vff78zm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>3qy4746246.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>252b5q8x7y.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>f38h382jlk.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>24t9a8vw3c.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>hs6bdukanm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>9rd848q2bz.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>prcb7njmu6.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>m8dbw4sv7c.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>9g2aggbj52.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>wzmmZ9fp6w.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>yclnxrl5pm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>t38b2kh725.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>7ug5zh24hu.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>5lm9lj6jb7.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>ejvt5qm6ak.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>7rz58n8ntl.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>kbd757ywx3.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>9t245vhmpl.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>44jx6755aq.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>tl55sbb4fm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>8s468mfl3y.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>4468km3ulz.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>2u9pt9hc89.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>av6w8kgt66.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>klf5c3l5u5.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>hdw39hrw9y.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>y45688jllp.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>dzg6xy7pwj.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>3sh42y64q3.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>ppxm28t8ap.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>f73kdq92p3.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>5l3tpt7t6e.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>uw77j35x4d.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>mlmmfzh3r3.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>6g9af3uyq4.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>cg4yq2srnc.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>g28c52eehv.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>pwa73g5rt2.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>zq492l623r.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>22mmun2rn5.skadnetwork</string>
+</dict>
+```
+</details>
+
+<details>
+	<summary>Mintegral SKAdNetworkItems</summary>
+
+``` xml
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>kbd757ywx3.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>mls7yz5dvl.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>4fzdc2evr5.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>4pfyvq9l8r.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>ydx93a7ass.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>cg4yq2srnc.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>p78axxw29g.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>737z793b9f.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>v72qych5uu.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>6xzpu9s2p8.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>ludvb6z3bs.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>mlmmfzh3r3.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>c6k4g5qg8m.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>wg4vff78zm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>523jb4fst2.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>ggvn48r87g.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>22mmun2rn5.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>3sh42y64q3.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>f38h382jlk.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>24t9a8vw3c.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>hs6bdukanm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>prcb7njmu6.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>m8dbw4sv7c.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>9nlqeag3gk.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>cj5566h2ga.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>cstr6suwn9.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>w9q455wk68.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>wzmmz9fp6w.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>yclnxrl5pm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>4468km3ulz.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>t38b2kh725.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>k674qkevps.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>7ug5zh24hu.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>5lm9lj6jb7.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>9rd848q2bz.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>7rz58n8ntl.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>4w7y6s5ca2.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>feyaarzu9v.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>ejvt5qm6ak.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>9t245vhmpl.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>n9x2a789qt.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>44jx6755aq.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>zmvfpc5aq8.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>tl55sbb4fm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>2u9pt9hc89.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>5a6flpkh64.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>8s468mfl3y.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>glqzh8vgby.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>av6w8kgt66.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>klf5c3l5u5.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>dzg6xy7pwj.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>y45688jllp.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>hdw39hrw9y.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>ppxm28t8ap.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>424m5254lk.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>5l3tpt7t6e.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>uw77j35x4d.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>4dzt52r2t5.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>mtkv5xtk9e.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>gta9lk7p23.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>5tjdwbrq8w.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>3rd42ekr43.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>g28c52eehv.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>su67r6k2v3.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>rx5hdcabgc.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>2fnua5tdw4.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>32z4fx6l9h.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>xy9t38ct57.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>54nzkqm89y.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>9b89h5y424.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>pwa73g5rt2.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>79pbpufp6p.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>kbmxgpxpgc.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>275upjj5gd.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>rvh3l7un93.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>qqp299437r.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>294l99pt4k.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>74b6s63p6l.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>44n7hlldy6.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>6p4ks3rnbw.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>f73kdq92p3.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>e5fvkxwrpn.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>97r2b46745.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>3qcr597p9d.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>578prtvx9j.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>n6fk4nfna4.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>b9bk5wbcq9.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>84993kbrcf.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>24zw6aqk47.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>pwdxu55a5a.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>cs644xg564.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>6964rsfnh4.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>9vvzujtq5s.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>a7xqa6mtl2.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>r45fhb6rf7.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>c3frkrj4fj.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>6g9af3uyq4.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>u679fj5vs4.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>V72QYCH5UU.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>g2y4y55b64.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>zq492l623r.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>a8cz6cu7e5.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>s39g8k73mm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>dbu4b84rxf.skadnetwork</string>
+</dict>
 ```
 </details>
 
 
-- Pangle SDK를 추가하는 경우 SKAdNetworkItems 키에 [SKAdNetworkIdentifier 값](https://www.pangleglobal.com/integration/ios14-readiness) 을 추가해야합니다.  - 신규 네트워크사(임시)
 <details><summary>Pangle SKAdNetworkItems</summary>
 	
 ```xml
-<key>SKAdNetworkItems</key>
-  <array>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>22mmun2rn5.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>uw77j35x4d.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>7ug5zh24hu.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>9t245vhmpl.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>kbd757ywx3.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>a8cz6cu7e5.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>578prtvx9j.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>5tjdwbrq8w.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>hs6bdukanm.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>k674qkevps.skadnetwork</string>
-    </dict>
-    <dict>
-      <key>SKAdNetworkIdentifier</key>
-      <string>dbu4b84rxf.skadnetwork</string>
-    </dict>
-  </array>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>22mmun2rn5.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>uw77j35x4d.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>7ug5zh24hu.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>9t245vhmpl.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>kbd757ywx3.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>a8cz6cu7e5.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>578prtvx9j.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>5tjdwbrq8w.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>hs6bdukanm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>k674qkevps.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>dbu4b84rxf.skadnetwork</string>
+</dict>
+```
+</details>
+
+<details>
+	<summary>Unity Ads SKAdNetworkItems</summary>
+
+``` xml
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>m8dbw4sv7c.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>4w7y6s5ca2.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>mlmmfzh3r3.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>424m5254lk.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>3rd42ekr43.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>ppxm28t8ap.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>mp6xlyr22a.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>4468km3ulz.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>lr83yxwka7.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>cstr6suwn9.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>t38b2kh725.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>32z4fx6l9h.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>488r3q3dtq.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>9t245vhmpl.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>4fzdc2evr5.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>glqzh8vgby.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>9rd848q2bz.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>5tjdwbrq8w.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>v72qych5uu.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>w9q455wk68.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>a2p9lx4jpn.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>wzmmz9fp6w.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>x44k69ngh6.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>8s468mfl3y.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>tl55sbb4fm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>c6k4g5qg8m.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>f38h382jlk.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>7ug5zh24hu.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>zq492l623r.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>f73kdq92p3.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>578prtvx9j.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>yclnxrl5pm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>ydx93a7ass.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>22mmun2rn5.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>5lm9lj6jb7.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>wg4vff78zm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>4pfyvq9l8r.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>k674qkevps.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>hs6bdukanm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>s39g8k73mm.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>2u9pt9hc89.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>v79kvwwj4g.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>294l99pt4k.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>av6w8kgt66.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>f7s53z58qe.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>238da6jt44.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>44jx6755aq.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>5a6flpkh64.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>3qy4746246.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>prcb7njmu6.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>4dzt52r2t5.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>kbd757ywx3.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>zmvfpc5aq8.skadnetwork</string>
+</dict>
+<dict>
+  <key>SKAdNetworkIdentifier</key>
+  <string>3sh42y64q3.skadnetwork</string>
+</dict>
 ```
 </details>
 
@@ -425,6 +2569,46 @@ pod 'GoogleMobileAdsMediationUnity'
   <key>NSAllowsArbitraryLoads</key>
   <true/>
 </dict>
+```
+
+#### iOS14 ATT(App Tracking Transparency) Framework 적용
+- 애플은 iOS14 에서 ATT(App Tracking Transparency) Framework가 추가되었습니다.
+- IDFA 식별자를 얻기 위해서는 `ATT Framework를 반드시 적용`해야 합니다.
+- `info.plist`
+```xml
+<key> NSUserTrackingUsageDescription </key>
+<string> 맞춤형 광고 제공을 위해 사용자의 데이터가 사용됩니다. </string>
+```
+
+- `ViewController.m`
+```objectivec
+if (@available(iOS 14, *)) {
+  [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+      switch (status) {
+          // 승인
+          case ATTrackingManagerAuthorizationStatusAuthorized:
+              break;
+          // 거부
+          case ATTrackingManagerAuthorizationStatusDenied:
+              break;
+          // 제한
+          case ATTrackingManagerAuthorizationStatusRestricted:
+              break;
+          // 미결정
+          default:
+              break;
+        }
+      }];
+}
+```
+
+#### 사용자 앱 내 광고 경험 개선을 위한 URL Scheme 적용
+- info.plist 작성
+```xml
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>naversearchapp</string>
+</array>
 ```
 
 
@@ -457,6 +2641,7 @@ pod 'GoogleMobileAdsMediationUnity'
 ```
 
 ### 파트너 통합 네트워크 설정
+> 각 네트워크별 [SKAdNetworkItems](#skadnetwork-지원)를 info.plist에 반드시 추가해야 합니다.
 
 #### Inmobi 설정 (옵션)
 - Inmobi SDK 설정을 위해 추가 코드가 필요하지 않습니다.
@@ -486,15 +2671,15 @@ extras.allPlacements = placements;
 - DT Exchange SDK 설정을 위해 추가 코드가 필요하지 않습니다.
 - 필요한 경우 [여기](https://developers.google.com/admob/ios/mediation/dt-exchange#optional_steps)를 참고하여 옵션 설정이 가능합니다.
 
-#### Mintegral 설정 (옵션) - 신규 네트워크사(임시)
+#### Mintegral 설정 (옵션)
 - Mintegral SDK 설정을 위해 추가 코드가 필요하지 않습니다.
 - 필요한 경우 [여기](https://developers.google.com/admob/ios/mediation/mintegral#optional_steps)를 참고하여 옵션 설정이 가능합니다.
 
-#### Pangle 설정 - 신규 네트워크사(임시)
+#### Pangle 설정
 - info.plist 파일의 SKAdNetworkItems 키에 [SKAdNetworkIdentifier 값](#skadnetwork-지원)을 추가해야합니다.
 
 
-#### Unity Ads 설정 - 신규 네트워크사(임시)
+#### Unity Ads 설정 
 - Swift 환경: Unity Ads SDK 설정을 위해 추가 코드가 필요하지 않습니다.
 - Objective-C 환경: Unity Ads adapter가 4.4.0.0 이상인 경우 [Unity 설명서](https://docs.unity.com/ads/en-us/manual/InstallingTheiOSSDK#Swift) 의 통합 단계를 따라야 합니다.
   - 프로젝트에서 이미 Swift를 사용하는 경우 추가 조치가 필요하지 않습니다.
