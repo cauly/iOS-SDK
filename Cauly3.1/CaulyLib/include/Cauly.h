@@ -14,7 +14,7 @@
 
 #define TEST_APP_CODE			(@"CAULY")
 
-#define CAULY_SDK_VERSION		(@"3.1.21")
+#define CAULY_SDK_VERSION		(@"3.1.22")
 
 #define CAULY_ERR_SUCCESS		(0)
 #define CAULY_ERR_FAILED		(1)
@@ -32,6 +32,8 @@ typedef enum {
 // 광고 크기
 typedef enum {
     CaulyAdSize_IPhone,		                // 320 * 50
+    CaulyAdSize_IPhoneLarge,                // 320 * 100
+    CaulyAdSize_IPhoneMediumRect,           // 300 * 250
     CaulyAdSize_IPadLarge,	                // 728 * 90
     CaulyAdSize_IPadSmall	                // 468 * 60
 } CaulyAdSize;

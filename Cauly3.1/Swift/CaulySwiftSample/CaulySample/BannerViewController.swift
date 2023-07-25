@@ -7,14 +7,33 @@
 //  by Sam.Kim
 
 import UIKit
+import AppTrackingTransparency
 
 class FirstViewController: UIViewController, CaulyAdViewDelegate {
     var caulyView:CaulyAdView? = nil
     var bannerView:UIView?=nil
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        initCauly()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            if #available(iOS 14, *) {
+                ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+                    switch status {
+                    case .authorized:       // 승인
+                        print("Authorized")
+                        self.initCauly()
+                    case .denied:           // 거부
+                        print("Denied")
+                    case .notDetermined:        // 미결정
+                        print("Not Determined")
+                    case .restricted:           // 제한
+                        print("Restricted")
+                    @unknown default:           // 알려지지 않음
+                        print("Unknow")
+                    }
+                })
+            }
+        }
     }
 
     func initCauly() {

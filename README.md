@@ -8,6 +8,11 @@
 
 -------------
 
+### Release note
+- 지원 광고 사이즈 추가 (320x100, 300x250)
+- 사용자의 앱내 광고 경험 개선을 위한 패치
+- ATT(App Tracking Transparency) framework 미선언 시 crash 발생 오류 수정
+
 ### 안내사항
 
 최근 애플의 iOS14 개인정보보호 강화에 따른 App Tracking Transparency(ATT) 정책이 업데이트 되었습니다.

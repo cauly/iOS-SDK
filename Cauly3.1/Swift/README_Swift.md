@@ -163,9 +163,52 @@ iOS SDK 설치가이드(swift)
  	</dict>
 	```
 
-- BGM이 포함된 광고가 있을 수 있으니, APP에 BGM이 있는 경우 willShowLandingView API를 이용하여 일시 중지 해주세요, 그리고 광고 종료 후 didCloseLandingView API를 이용하여 BGM을 재 시작 하시면 됩니다.
-- 광고뷰가 화면에 보여지지 않는 경우에도 광고 요청을 할 수 있습니다. 광고 요청을 중단하고자 할 때 [CaulyAdView 객체 stopAdRequest]; 명령을 실행하여 광고 요청을 반드시 중지하기 바랍니다.
-- libCauly-universal.a 는 simulator와 device 통합된 파일 입니다. 
+	- BGM이 포함된 광고가 있을 수 있으니, APP에 BGM이 있는 경우 willShowLandingView API를 이용하여 일시 중지 해주세요, 그리고 광고 종료 후 didCloseLandingView API를 이용하여 BGM을 재 시작 하시면 됩니다.
+	- 광고뷰가 화면에 보여지지 않는 경우에도 광고 요청을 할 수 있습니다. 광고 요청을 중단하고자 할 때 [CaulyAdView 객체 stopAdRequest]; 명령을 실행하여 광고 요청을 반드시 중지하기 바랍니다.
+	- libCauly-universal.a 는 simulator와 device 통합된 파일 입니다. 
+
+- iOS14 ATT(App Tracking Transparency) Framework 적용
+	- 애플은 iOS14 에서 ATT(App Tracking Transparency) Framework가 추가되었습니다.
+	- IDFA 식별자를 얻기 위해서는 `ATT Framework를 반드시 적용`해야 합니다.
+	- `info.plist`
+	```xml
+	<key> NSUserTrackingUsageDescription </key>
+	<string> 맞춤형 광고 제공을 위해 사용자의 데이터가 사용됩니다. </string>
+	```
+
+	- `BannerViewController.swift`
+	```swift
+	import AppTrackingTransparency
+	... 
+	DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            if #available(iOS 14, *) {
+                ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+                    switch status {
+                    case .authorized:       // 승인
+                        print("Authorized")
+                        // self.initCauly()			// 권한 요청이 완료된 다음, 광고를 요청해 주세요.
+                    case .denied:           // 거부
+                        print("Denied")
+                    case .notDetermined:        // 미결정
+                        print("Not Determined")
+                    case .restricted:           // 제한
+                        print("Restricted")
+                    @unknown default:           // 알려지지 않음
+                        print("Unknow")
+                    }
+                })
+            }
+        }
+	```
+
+- 사용자 앱 내 광고 경험 개선을 위한 URL Scheme 적용
+	- info.plist 작성
+	```xml
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>naversearchapp</string>
+	</array>
+	```
 
 ### 참고 사항
 - cauly SDK는 iOS SDK 10.0 기반으로 작성 되었습니다.
@@ -328,7 +371,7 @@ func didFail(toReceive interstitialAd: CaulyInterstitialAd!, errorCode: Int32, e
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | appCode              | Cauly 로부터 부여 받은 매체 식별자                                                                                                                                                                                                                                         |
 | animType             | 광고 교체 애니메이션 효과<br/>CaulyAnimNone (기본값) : 효과 없음<br/>CaulyAnumCurlDown : 아래쪽으로 말려 내려가는 효과<br/>CaulyAnumCurlUp : 위쪽으로 말려 올라가는 효과<br/>CaulyAnimFadeOut : 서서히 사라지는 효과<br/>CaulyAnimFlipFromLeft : 왼쪽에서 회전하며 나타나는 효과<br/>CaulyAnimFlipFromRight : 오른쪽에서 회전하며 나타나는 효과 |
-| adSize               | CaulyAdSize_IPhone : 320 x 48<br/>CaulyAdSize_IPadLarge : 728 x 90<br/>CaulyAdSize_IPadSmall : 468 x 60                                                                                                                                                        |
+| adSize               | CaulyAdSize_IPhone : 320 x 50<br/>CaulyAdSize_IPhoneLarge : 320 x 100<br/>CaulyAdSize_IPhoneMediumRect : 300 x 250<br/>CaulyAdSize_IPadLarge : 728 x 90<br/>CaulyAdSize_IPadSmall : 468 x 60                                                                                                                                                        |
 | reloadTime           | CaulyReloadTime_30 (기본값) : 30초<br/>CaulyReloadTime_60 : 60초<br/>CaulyReloadTime_120 : 120초                                                                                                                                                                     |
 | useDynamicReloadTime | YES (기본값) : 광고에 따라 노출 주기 조정할 수 있도록 하여 광고 수익 상승 효과 기대<br/>NO : 설정 시 reloadTime 설정 값으로 Rolling                                                                                                                                                                   |
 
