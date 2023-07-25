@@ -2599,16 +2599,6 @@ if (@available(iOS 14, *)) {
 }
 ```
 
-#### 사용자 앱 내 광고 경험 개선을 위한 URL Scheme 적용
-- info.plist 작성
-```xml
-<key>LSApplicationQueriesSchemes</key>
-<array>
-  <string>naversearchapp</string>
-</array>
-```
-
-
 ### 광고 SDK 초기화
 - `AppDelegate` 에서 `startWithCompletionHandler:` 메서드를 호출합니다.  
 - 미디에이션을 사용하는 경우 광고를 로드하기 전에 완료 핸들러를 호출할 때까지 기다려야 모든 미디에이션 어댑터가 초기화 됩니다.
