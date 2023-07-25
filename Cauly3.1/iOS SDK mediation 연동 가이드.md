@@ -799,7 +799,7 @@ if (@available(iOS 14, *)) {
 ```
 
 ### 파트너 통합 네트워크 설정
-> 각 네트워크별 [SKAdNetworkItems](#skadnetwork-지원)를 info.plist에 반드시 추가해야 합니다.
+> [SKAdNetworkItems](#skadnetwork-지원)를 info.plist에 반드시 추가해야 합니다.
 
 #### Inmobi 설정 (옵션)
 - Inmobi SDK 설정을 위해 추가 코드가 필요하지 않습니다.
