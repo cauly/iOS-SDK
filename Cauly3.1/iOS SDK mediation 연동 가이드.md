@@ -12,6 +12,7 @@ iOS SDK mediation 연동 가이드
 	- [파트너 통합 네트워크 설정](#파트너-통합-네트워크-설정)
 	- [테스트 광고 사용 설정](#테스트-광고-사용-설정)
 3. [광고 형식 추가하기](#3-광고-형식-추가하기)
+	- [앱 오프닝 광고 추가하기](#앱-오프닝-광고-추가하기)
 	- [배너 광고 추가하기](#배너-광고-추가하기)
 	- [전면 광고 추가하기](#전면-광고-추가하기)
 	- [보상형 광고 추가하기](#보상형-광고-추가하기)
@@ -86,6 +87,11 @@ pod 'GoogleMobileAdsMediationPangle'
 #### Unity Ads
 ``` bash
 pod 'GoogleMobileAdsMediationUnity'
+```
+
+#### Meta
+``` bash
+pod 'GoogleMobileAdsMediationFacebook'
 ```
 
 
@@ -736,9 +742,42 @@ pod 'GoogleMobileAdsMediationUnity'
 <key> NSUserTrackingUsageDescription </key>
 <string> 맞춤형 광고 제공을 위해 사용자의 데이터가 사용됩니다. </string>
 ```
+<details>
+	<summary>Swift</summary>
 
-- `ViewController.m`
+```swift
+import AppTrackingTransparency
+... 
+DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+    if #available(iOS 14, *) {
+        ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+            switch status {
+            case .authorized:       // 승인
+                print("Authorized")
+                // 권한 요청이 완료된 다음, 광고를 요청해 주세요.
+            case .denied:           // 거부
+                print("Denied")
+            case .notDetermined:        // 미결정
+                print("Not Determined")
+            case .restricted:           // 제한
+                print("Restricted")
+            @unknown default:           // 알려지지 않음
+                print("Unknow")
+            }
+        })
+    }
+}
+```
+
+</details>
+
+
+<details>
+	<summary>Objective-C</summary>
+
 ```objectivec
+#import <AppTrackingTransparency/AppTrackingTransparency.h>
+...
 if (@available(iOS 14, *)) {
   [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
       switch (status) {
@@ -759,6 +798,8 @@ if (@available(iOS 14, *)) {
 }
 ```
 
+</details>
+
 #### 사용자 앱 내 광고 경험 개선을 위한 URL Scheme 적용
 - Cauly SDK 3.1.22 부터 지원됩니다.
 - info.plist 작성
@@ -773,10 +814,36 @@ if (@available(iOS 14, *)) {
 ### 광고 SDK 초기화
 - `AppDelegate` 에서 `startWithCompletionHandler:` 메서드를 호출합니다.  
 - 미디에이션을 사용하는 경우 광고를 로드하기 전에 완료 핸들러를 호출할 때까지 기다려야 모든 미디에이션 어댑터가 초기화 됩니다.
+<details>
+	<summary>Swift</summary>
+
+``` swift
+import GoogleMobileAds
+
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    // Initialize Google Mobile Ads SDK.
+    let ads = GADMobileAds.sharedInstance()
+    ads.start { status in
+        // Optional: Log each adapter's initialization latency.
+        let adapterStatuses = status.adapterStatusesByClassName
+        for adapter in adapterStatuses {
+            let adapterStatus = adapter.value
+            NSLog("Adapter Name: %@, Description: %@, Latency: %f", adapter.key, adapterStatus.description, adapterStatus.latency)
+        }
+        
+        // Start loading ads here ...
+    }
+    return true
+}
+```
+
+</details>
+
+<details>
+	<summary>Objective-C</summary>
 
 ``` objectivec
 @import GoogleMobileAds;
-
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -798,6 +865,8 @@ if (@available(iOS 14, *)) {
 }
 ```
 
+</details>
+
 ### 파트너 통합 네트워크 설정
 > [SKAdNetworkItems](#skadnetwork-지원)를 info.plist에 반드시 추가해야 합니다.
 
@@ -813,6 +882,27 @@ if (@available(iOS 14, *)) {
 - Vungle SDK 초기화를 위해 앱 내에서 사용될 모든 배치 목록을 SDK 로 전달해야 합니다.
 - 필요한 경우 [여기](https://developers.google.com/admob/ios/mediation/liftoff-monetize#optional_steps)를 참고하여 옵션 설정이 가능합니다.
 
+
+<details>
+	<summary>Swift</summary>
+
+```swift
+import VungleAdapter
+// ...
+
+let request = GADRequest()
+let extras = VungleAdNetworkExtras()
+
+let placements = ["PLACEMENT_ID_1", "PLACEMENT_ID_2"]
+extras.allPlacements = placements
+request.register(extras)
+```
+
+</details>
+
+<details>
+	<summary>Objective-C</summary>
+
 ``` objectivec
 #import <VungleAdapter/VungleAdapter.h>
 // ...
@@ -824,6 +914,8 @@ NSMutableArray *placements = [[NSMutableArray alloc] initWithObjects:@"PLACEMENT
 extras.allPlacements = placements;
 [request registerAdNetworkExtras:extras];
 ```
+
+</details>
 
 #### DT Exchange 설정 (옵션)
 - DT Exchange SDK 설정을 위해 추가 코드가 필요하지 않습니다.
@@ -846,20 +938,64 @@ extras.allPlacements = placements;
 - 필요한 경우 [여기](https://developers.google.com/admob/ios/mediation/unity#optional_steps)를 참고하여 옵션 설정이 가능합니다.
 
 
+#### Meta 설정
+- Complie errors
+    - Swift 환경: Meta SDK 설정을 위해 추가 코드가 필요하지 않습니다.
+    - Objective-C 환경: Meta Audience Network 어댑터 6.9.0.0 이상의 경우 컴파일 오류를 방지하기 위해 [여기](https://developers.google.com/admob/ios/mediation/meta#objective-c) 의 통합 단계를 따라야 합니다.
+        - 타겟 수준의 `Build Settings` 아래 `Library Search Paths` 에 다음 경로를 추가하십시오.
+
+        ```bash
+        $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)
+        $(SDKROOT)/usr/lib/swift
+        ```
+        - 타겟 수준의 `Build Settings` 아래 `Runpath Search Paths` 에 다음 경로를 추가합니다.
+
+        ```bash
+        /usr/lib/swift
+        ```
+- Advertising tracking enabled
+    - iOS 14 이상을 타겟팅하는 경우 Meta Audience Network 에서는 아래 코드를 사용하여 [광고 추적 활성화 플래그](https://developers.facebook.com/docs/audience-network/setting-up/platform-setup/ios/advertising-tracking-enabled)를 명시적으로 설정해야합니다.
+
+    ```swift
+    Swift :: 
+    // Set the flag as true
+    FBAdSettings.setAdvertiserTrackingEnabled(true)
+    ```
+
+    ```objectivec
+    Objective-C ::
+    // Set the flag as true.
+    [FBAdSettings setAdvertiserTrackingEnabled:YES];
+    ```
+
+- 필요한 경우 [여기](https://developers.google.com/admob/ios/mediation/meta#optional_steps)를 참고하여 옵션 설정이 가능합니다.
+
+
+
 ### 테스트 광고 사용 설정
 > `상용화 시 반드시 테스트 광고 설정 관련 코드를 삭제해야 합니다.`
 
 #### 프로그래밍 방식으로 테스트 장치 추가
 
-- 광고를 요청한 후 콘솔에서 테스트 기기 ID를 복사합니다.
+- 광고를 요청한 후 Console에서 다음과 같은 메시지를 확인합니다.
 ``` clojure
-<Google> To get test ads on this device, set:
-GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers =
-@[ @"2077ef9a63d2b398840261c8221a0c9b" ];
+<Google> To get test ads on this device, set: 
+Objective-C
+	GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers = @[ @"2077ef9a63d2b398840261c8221a0c9b" ];
+Swift
+	GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ "2077ef9a63d2b398840261c8221a0c9b" ]
 ```
 
 - `testDeviceIdentifiers` 를 통해 테스트 기기 ID를 설정하도록 코드를 수정합니다.
+
+```clojure
+Swift ::
+GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers =
+    [ "2077ef9a63d2b398840261c8221a0c9b" ] // Sample device ID
+```
+
 ``` objectivec
+Objective-C ::
 GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers =
     @[ @"2077ef9a63d2b398840261c8221a0c9b"  ]; // Sample device ID
 ```
@@ -872,21 +1008,301 @@ pod 'GoogleMobileAdsMediationTestSuite'
 ```
 
 - 도구를 표시하기 위해 프레임워크를 가져옵니다.
+```swift
+Swift ::
+import GoogleMobileAdsMediationTestSuite  // Remove this line.
+```
+
 ``` objectivec
-ViewController.m ::
-@import GoogleMobileAdsMediationTestSuite;
+Objective-C ::
+@import GoogleMobileAdsMediationTestSuite;  // Remove this line.
 ```
 
 - 뷰가 표시된 후 다음과 같이 테스트 모음을 표시합니다.
+```swift
+Swift ::
+GoogleMobileAdsMediationTestSuite.present(on:self, delegate:nil)  // Remove this line.
+```
+
 ``` objectivec
-ViewController.m ::
-[GoogleMobileAdsMediationTestSuite presentOnViewController:self delegate:nil];
+Objective-C ::
+[GoogleMobileAdsMediationTestSuite presentOnViewController:self delegate:nil];  // Remove this line.
 ```
 
 ## 3. 광고 형식 추가하기
+### 앱 오프닝 광고 추가하기
+- 앱 오프닝 광고를 구현하는 데 필요한 단계는 크게 다음과 같습니다.
+    1. `AppDelegate`에 메서드를 추가하여 `GADAppOpenAd`를 로드하고 표시합니다.
+    2. 앱 포그라운드 이벤트 감지
+    3. 프레젠테이션 콜백을 처리합니다.
+
+<details> <summary>Swift</summary>
+
+- AppDelegate.swift
+
+```swift
+import UIKit
+import GoogleMobileAds
+
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var window: UIWindow?
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Initialize Google Mobile Ads SDK.
+        let ads = GADMobileAds.sharedInstance()
+        ads.start { status in
+            ...
+            
+            // Although the Google Mobile Ads SDK might not be fully initialized at this point,
+            // we should still load the app open ad so it becomes ready to show when the splash
+            // screen dismisses.
+            AppOpenAdManager.shared.loadAd()
+        }
+        return true
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        let rootViewController = application.windows.first(
+            where: { $0.isKeyWindow })?.rootViewController
+        if let rootViewController = rootViewController {
+            // Do not show app open ad if the current view controller is SplashViewController.
+            if (rootViewController is SplashViewController) {
+                return
+            }
+            AppOpenAdManager.shared.showAdIfAvailable(viewController: rootViewController)
+        }
+    }
+
+    // MARK: UISceneSession Lifecycle
+
+    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+        // Called when a new scene session is being created.
+        // Use this method to select a configuration to create the new scene with.
+        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    }
+
+    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
+        // Called when the user discards a scene session.
+        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
+        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+
+
+}
+```
+
+- AppOpenAdManager.swift
+```swift
+
+import GoogleMobileAds
+
+protocol AppOpenAdManagerDelegate: AnyObject {
+    /// Method to be invoked when an app open ad is complete (i.e. dismissed or fails to show).
+    func appOpenAdManagerAdDidComplete(_ appOpenAdManager: AppOpenAdManager)
+}
+
+class AppOpenAdManager: NSObject {
+    /// Ad references in the app open beta will time out after four hours,
+    /// but this time limit may change in future beta versions. For details, see:
+    /// https://support.google.com/admob/answer/9341964?hl=en
+    let timeoutInterval: TimeInterval = 4 * 3_600
+    /// The app open ad.
+    var appOpenAd: GADAppOpenAd?
+    /// Maintains a reference to the delegate.
+    weak var appOpenAdManagerDelegate: AppOpenAdManagerDelegate?
+    /// Keeps track of if an app open ad is loading.
+    var isLoadingAd = false
+    /// Keeps track of if an app open ad is showing.
+    var isShowingAd = false
+    /// Keeps track of the time when an app open ad was loaded to discard expired ad.
+    var loadTime: Date?
+    
+    static let shared = AppOpenAdManager()
+
+    private func wasLoadTimeLessThanNHoursAgo(timeoutInterval: TimeInterval) -> Bool {
+        // Check if ad was loaded more than n hours ago.
+        if let loadTime = loadTime {
+            return Date().timeIntervalSince(loadTime) < timeoutInterval
+        }
+        return false
+    }
+
+    private func isAdAvailable() -> Bool {
+        // Check if ad exists and can be shown.
+        return appOpenAd != nil && wasLoadTimeLessThanNHoursAgo(timeoutInterval: timeoutInterval)
+    }
+
+    private func appOpenAdManagerAdDidComplete() {
+        // The app open ad is considered to be complete when it dismisses or fails to show,
+        // call the delegate's appOpenAdManagerAdDidComplete method if the delegate is not nil.
+        appOpenAdManagerDelegate?.appOpenAdManagerAdDidComplete(self)
+    }
+
+    func loadAd() {
+        // Do not load ad if there is an unused ad or one is already loading.
+        if isLoadingAd || isAdAvailable() {
+            return
+        }
+        isLoadingAd = true
+        print("Start loading app open ad.")
+        GADAppOpenAd.load(
+            withAdUnitID: "ca-app-pub-xxxxxxxxxx",
+            request: GADRequest(),
+            orientation: UIInterfaceOrientation.portrait
+        ) { ad, error in
+            self.isLoadingAd = false
+            if let error = error {
+                self.appOpenAd = nil
+                self.loadTime = nil
+                print("App open ad failed to load with error: \(error.localizedDescription).")
+                return
+            }
+
+            self.appOpenAd = ad
+            self.appOpenAd?.fullScreenContentDelegate = self
+            self.loadTime = Date()
+            print("App open ad loaded successfully.")
+        }
+    }
+
+    func showAdIfAvailable(viewController: UIViewController) {
+        // If the app open ad is already showing, do not show the ad again.
+        if isShowingAd {
+            print("App open ad is already showing.")
+            return
+        }
+        // If the app open ad is not available yet but it is supposed to show,
+        // it is considered to be complete in this example. Call the appOpenAdManagerAdDidComplete
+        // method and load a new ad.
+        if !isAdAvailable() {
+            print("App open ad is not ready yet.")
+            appOpenAdManagerAdDidComplete()
+            loadAd()
+            return
+        }
+        if let ad = appOpenAd {
+            print("App open ad will be displayed.")
+            isShowingAd = true
+            ad.present(fromRootViewController: viewController)
+        }
+    }
+}
+
+extension AppOpenAdManager: GADFullScreenContentDelegate {
+    func adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("App open ad is will be presented.")
+    }
+
+    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        appOpenAd = nil
+        isShowingAd = false
+        print("App open ad was dismissed.")
+        appOpenAdManagerAdDidComplete()
+        loadAd()
+    }
+
+    func ad(
+        _ ad: GADFullScreenPresentingAd,
+        didFailToPresentFullScreenContentWithError error: Error
+    ) {
+        appOpenAd = nil
+        isShowingAd = false
+        print("App open ad failed to present with error: \(error.localizedDescription).")
+        appOpenAdManagerAdDidComplete()
+        loadAd()
+    }
+}
+```
+
+<details>
+
+
 ### 배너 광고 추가하기
 - rootViewController : 광고 클릭이 발생할 때 오버레이를 표시하는 데 사용되는 보기 컨트롤러입니다. 일반적으로 GADBannerView 를 포함하는 보기 컨트롤러로 설정해야 합니다.
 - adUnitID : GADBannerView 가 광고를 로드하는 광고 단위 ID입니다.
+
+
+<details> <summary>Swift</summary>
+
+```swift
+import GoogleMobileAds
+
+
+class ViewController: UIViewController, GADBannerViewDelegate {
+
+    @IBOutlet var bannerView: GADBannerView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        ...
+
+        bannerView = GADBannerView(adSize: GADAdSizeBanner)
+        bannerView.adUnitID = "ca-app-pub-xxxxxxxxxx"
+        bannerView.rootViewController = self
+        bannerView.delegate = self
+    }
+    
+    // 배너 광고 요청
+    @IBAction func bannerAdRequest(_ sender: UIButton) {
+        print("bannerAdRequest")
+        bannerView.load(GADRequest())
+    }
+    
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+        [NSLayoutConstraint(item: bannerView,
+                            attribute: .bottom,
+                            relatedBy: .equal,
+                            toItem: view.safeAreaLayoutGuide,
+                            attribute: .bottom,
+                            multiplier: 1,
+                            constant: 0),
+         NSLayoutConstraint(item: bannerView,
+                            attribute: .centerX,
+                            relatedBy: .equal,
+                            toItem: view,
+                            attribute: .centerX,
+                            multiplier: 1,
+                            constant: 0)
+        ])
+    }
+
+    // MARK: - bannerDelegate
+    func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("bannerViewDidReceiveAd")
+        addBannerViewToView(bannerView)
+    }
+    
+    func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
+        print("bannerView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+
+    func bannerViewDidRecordImpression(_ bannerView: GADBannerView) {
+        print("bannerViewDidRecordImpression")
+    }
+
+    func bannerViewWillPresentScreen(_ bannerView: GADBannerView) {
+        print("bannerViewWillPresentScreen")
+    }
+
+    func bannerViewWillDismissScreen(_ bannerView: GADBannerView) {
+        print("bannerViewWillDIsmissScreen")
+    }
+
+    func bannerViewDidDismissScreen(_ bannerView: GADBannerView) {
+        print("bannerViewDidDismissScreen")
+    }
+}
+```
+
+</details>
+
+<details> <summary>Objective-C</summary>
 
 ``` objectivec
 @import GoogleMobileAds;
@@ -901,6 +1317,8 @@ ViewController.m ::
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    ...
 
     self.bannerView.adUnitID = @"ca-app-pub-xxxxxxxxxx";
     self.bannerView.rootViewController = self;
@@ -942,10 +1360,72 @@ ViewController.m ::
 }
 ```
 
+</details>
+
 
 ### 전면 광고 추가하기
 - 전면 광고는 loadWithAdUnitID:request:completionHandler: 메서드를 사용하여 로드됩니다.
 - 로드 메서드에는 광고 단위 ID, GADRequest 객체, 광고 로드에 성공하거나 실패할 때 호출되는 완료 핸들러가 필요합니다.
+
+<details> <summary>Swift</summary>
+
+```swift
+
+import GoogleMobileAds
+
+
+class ViewController: UIViewController, GADFullScreenContentDelegate {
+
+    private var interstitial: GADInterstitialAd?
+    
+    ...
+    
+    // 전면 광고 요청
+    @IBAction func interstitialAdRequest(_ sender: UIButton) {
+        print("interstitialAdRequest")
+        let request = GADRequest()
+        GADInterstitialAd.load(withAdUnitID: "ca-app-pub-xxxxxxxxxx",
+                            request: request,
+                            completionHandler: { [self] ad, error in
+                                if let error = error {
+                                    // 전면 광고 요청 실패
+                                    print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                                    return
+                                }
+                                interstitial = ad
+                                interstitial?.fullScreenContentDelegate = self
+            
+                                // 전면 광고 표시
+                                if interstitial != nil {
+                                    interstitial?.present(fromRootViewController: self)
+                                } else {
+                                    print("Ad wasn't ready")
+                                }
+                            }
+        )
+    }
+    
+    // MARK: - interstitalDelegate
+    /// Tells the delegate that the ad failed to present full screen content.
+    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+        print("Ad did fail to present full screen content.")
+    }
+
+    /// Tells the delegate that the ad will present full screen content.
+    func adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("Ad will present full screen content.")
+    }
+
+    /// Tells the delegate that the ad dismissed full screen content.
+    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("Ad did dismiss full screen content.")
+    }
+}
+```
+
+</details>
+
+<details> <summary>Objective-C</summary>
 
 ``` objectivec
 @import GoogleMobileAds;
@@ -1004,9 +1484,80 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 
 ```
 
+</details>
+
+
 ### 보상형 광고 추가하기
 - 보상형 광고는 loadWithAdUnitID:request:completionHandler: 메서드를 사용하여 로드됩니다.
 - 로드 메서드에는 광고 단위 ID, GADRequest 객체, 광고 로드에 성공하거나 실패할 때 호출되는 완료 핸들러가 필요합니다.
+
+
+<details> <summary>swift</summary>
+
+```swift
+import GoogleMobileAds
+
+
+class ViewController: UIViewController, GADFullScreenContentDelegate {
+
+    private var rewardedAd: GADRewardedAd?
+    
+    ...
+    
+    // 보상형 광고 요청
+    @IBAction func rewardAdRequest(_ sender: UIButton) {
+        print("rewardAdRequest")
+        let request = GADRequest()
+        GADRewardedAd.load(withAdUnitID: "ca-app-pub-xxxxxxxxxx",
+                           request: request,
+                           completionHandler: { [self] ad, error in
+            if let error = error {
+                // 보상형 광고 요청 실패
+                print("Failed to load rewarded ad with error: \(error.localizedDescription)")
+                return
+            }
+            rewardedAd = ad
+
+            print("Rewarded ad loaded.")
+            rewardedAd?.fullScreenContentDelegate = self
+            showRewardedAd()
+        })
+    }
+    
+    // 리워드 광고 표시 및 리워드 이벤트 처리
+    func showRewardedAd() {
+        if let ad = rewardedAd {
+            ad.present(fromRootViewController: self) {
+                let reward = ad.adReward
+                print("Reward received with currency \(reward.amount), amount \(reward.amount.doubleValue)")
+                // TODO: Reward the user.
+            }
+        } else {
+            print("Ad wasn't ready")
+        }
+    }
+    
+    // MARK: - interstitalDelegate
+    /// Tells the delegate that the ad failed to present full screen content.
+    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+        print("Ad did fail to present full screen content.")
+    }
+
+    /// Tells the delegate that the ad will present full screen content.
+    func adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("Ad will present full screen content.")
+    }
+
+    /// Tells the delegate that the ad dismissed full screen content.
+    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("Ad did dismiss full screen content.")
+    }
+}
+```
+
+</details>
+
+<details> <summary>Objective-C</summary>
 
 ``` objectivec
 @import GoogleMobileAds;
@@ -1074,6 +1625,8 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 }
 ```
 
+</details>
+
 ### 네이티브 광고 추가하기
 - 광고를 요청하기 전에 `GADAdLoader` 를 초기화해야 합니다.
 - AdLoader 에는 다음 옵션이 필요합니다.
@@ -1081,6 +1634,176 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
   - adTypes : 배열을 전달하여 요청할 네이티브 형식을 지정할 상수
   - options : 매개변수에 사용할 수 있는 값은 [네이티브 광고 옵션 설정 페이지](https://developers.google.com/admob/ios/native/options?hl=ko)에서 확인할 수 있습니다.
 
+<details> <summary>Swift</summary>
+
+```swift
+import GoogleMobileAds
+
+class ViewController: UIViewController, GADNativeAdLoaderDelegate, GADNativeAdDelegate {
+
+    private var adLoader: GADAdLoader?
+    
+    @IBOutlet var nativeAdPlaceholder: UIView!
+    
+    ...
+
+    // 네이티브 광고 요청
+    @IBAction func nativeAdRequest(_ sender: UIButton) {
+        print("nativeAdRequest")
+        adLoader = GADAdLoader(adUnitID: "ca-app-pub-8713069554470817/2066596228",
+                               rootViewController: self,
+                               adTypes: [ .native],
+                               options: nil)
+        adLoader?.delegate = self
+        adLoader?.load(GADRequest())
+    }
+    
+    // MARK: - GADNativeAdLoaderDelegate
+    func adLoader(_ adLoader: GADAdLoader,didReceive nativeAd: GADNativeAd) {
+        // A native ad has loaded, and can be displayed.
+        print("Received native ad: \(nativeAd)")
+        
+        // Create and place ad in view hierarchy.
+        let nibView = Bundle.main.loadNibNamed("ExampleNativeAdView", owner: nil)?.first
+        guard let nativeAdView = nibView as? GADNativeAdView else {
+            return
+        }
+        setAdView(nativeAdView)
+        
+        // Set ourselves as the native ad delegate to be notified of native ad events.
+        nativeAd.delegate = self
+        
+        // Populate the native ad view with the native ad assets.
+        // The headline and mediaContent are guaranteed to be present in every native ad.
+        (nativeAdView.headlineView as? UILabel)?.text = nativeAd.headline
+        nativeAdView.mediaView?.mediaContent = nativeAd.mediaContent
+        
+        // This app uses a fixed width for the GADMediaView and changes its height to match the aspect
+        // ratio of the media it displays.
+        if let mediaView = nativeAdView.mediaView, nativeAd.mediaContent.aspectRatio > 0 {
+            let heightConstraint = NSLayoutConstraint(
+                item: mediaView,
+                attribute: .height,
+                relatedBy: .equal,
+                toItem: mediaView,
+                attribute: .width,
+                multiplier: CGFloat(1 / nativeAd.mediaContent.aspectRatio),
+                constant: 0)
+            heightConstraint.isActive = true
+        }
+        
+        // These assets are not guaranteed to be present. Check that they are before
+        // showing or hiding them.
+        (nativeAdView.bodyView as? UILabel)?.text = nativeAd.body
+        nativeAdView.bodyView?.isHidden = nativeAd.body == nil
+        
+        (nativeAdView.callToActionView as? UIButton)?.setTitle(nativeAd.callToAction, for: .normal)
+        nativeAdView.callToActionView?.isHidden = nativeAd.callToAction == nil
+
+        (nativeAdView.iconView as? UIImageView)?.image = nativeAd.icon?.image
+        nativeAdView.iconView?.isHidden = nativeAd.icon == nil
+
+        (nativeAdView.starRatingView as? UIImageView)?.image = imageOfStars(
+            from: nativeAd.starRating)
+        nativeAdView.starRatingView?.isHidden = nativeAd.starRating == nil
+
+        (nativeAdView.storeView as? UILabel)?.text = nativeAd.store
+        nativeAdView.storeView?.isHidden = nativeAd.store == nil
+
+        (nativeAdView.priceView as? UILabel)?.text = nativeAd.price
+        nativeAdView.priceView?.isHidden = nativeAd.price == nil
+
+        (nativeAdView.advertiserView as? UILabel)?.text = nativeAd.advertiser
+        nativeAdView.advertiserView?.isHidden = nativeAd.advertiser == nil
+        
+        // In order for the SDK to process touch events properly, user interaction should be disabled.
+        nativeAdView.callToActionView?.isUserInteractionEnabled = false
+        
+        // Associate the native ad view with the native ad object. This is
+        // required to make the ad clickable.
+        // Note: this should always be done after populating the ad views.
+        nativeAdView.nativeAd = nativeAd
+    }
+    
+    func setAdView(_ view: GADNativeAdView) {
+        // Remove the previous ad view.
+        nativeAdPlaceholder.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Layout constraints for positioning the native ad view to stretch the entire width and height
+        // of the nativeAdPlaceholder.
+        let viewDictionary = ["_nativeAdView": view]
+        self.view.addConstraints(
+          NSLayoutConstraint.constraints(
+            withVisualFormat: "H:|[_nativeAdView]|",
+            options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary)
+        )
+        self.view.addConstraints(
+          NSLayoutConstraint.constraints(
+            withVisualFormat: "V:|[_nativeAdView]|",
+            options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary)
+        )
+    }
+    
+    /// Returns a `UIImage` representing the number of stars from the given star rating; returns `nil`
+    /// if the star rating is less than 3.5 stars.
+    func imageOfStars(from starRating: NSDecimalNumber?) -> UIImage? {
+        guard let rating = starRating?.doubleValue else {
+            return nil
+        }
+        if rating >= 5 {
+            return UIImage(named: "stars_5")
+        } else if rating >= 4.5 {
+            return UIImage(named: "stars_4_5")
+        } else if rating >= 4 {
+            return UIImage(named: "stars_4")
+        } else if rating >= 3.5 {
+            return UIImage(named: "stars_3_5")
+        } else {
+            return nil
+        }
+    }
+    
+    func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: Error) {
+        print("adLoader didFailToReceiveAdWithError")
+    }
+    
+    func nativeAdDidRecordImpression(_ nativeAd: GADNativeAd) {
+        // The native ad shown.
+        print("nativeAdDidRecordImpression")
+    }
+    
+    func nativeAdDidRecordClick(_ nativeAd: GADNativeAd) {
+        // The native ad was clicked on.
+        print("nativeAdDidRecordClick")
+    }
+    
+    func nativeAdWillPresentScreen(_ nativeAd: GADNativeAd) {
+        // The native ad will present a full screen view.
+        print("nativeAdWillPresentScreen")
+    }
+    
+    func nativeAdWillDismissScreen(_ nativeAd: GADNativeAd) {
+        // The native ad will dismiss a full screen view.
+        print("nativeAdWillDismissScreen")
+    }
+    
+    func nativeAdDidDismissScreen(_ nativeAd: GADNativeAd) {
+        // The native ad did dismiss a full screen view.
+        print("nativeAdDidDismissScreen")
+    }
+    
+    func nativeAdWillLeaveApplication(_ nativeAd: GADNativeAd) {
+        // The native ad will cause the app to become inactive and
+        // open a new app.
+        print("nativeAdWillLeaveApplication")
+    }
+}
+```
+
+</details>
+
+<details> <summary>Objective-C</summary>
 
 ``` objectivec
 @import GoogleMobileAds;
@@ -1192,6 +1915,7 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 
 
 ```
+</details>
 
 
 
@@ -1237,8 +1961,92 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 	- EventKit.framework    // ‘Required’ 를 ‘Optional’로 변경해야 합니다.
 	- AdSupport.Framwork  // ‘Required’ 를 ‘Optional’로 변경해야 합니다.
 
+> Swift 개발 환경에서는 아래 항목을 추가로 진행해야 합니다.
+3. Import Header
+  - Bridging-Header.h 파일을 생성하고 밑에 사진과 같이 해더파일을 생성해야합니다.
+	
+<p float="left">
+  <img src="/Cauly3.1/Swift/images/hearder.png" width="800" hight="700" />
+</p>
+
+  - Build Settings -> 검색바에서 -> Swift Compiler -> Objective-C Bridging Heaer 프로젝트명-Bridging-Header.h 등록
+<p float="left">
+  <img src="/Cauly3.1/Swift/images/target.png" width="800" hight="1000"/>
+</p>
 
 ### 어댑터 초기화
+
+
+<details> <summary>Swift</summary>
+
+```swift
+import Foundation
+import GoogleMobileAds
+
+class CaulyEvent: NSObject, GADMediationAdapter {
+    
+    fileprivate var bannerAd: CaulyEventBanner?
+    
+    fileprivate var interstitialAd: CaulyEventInterstitial?
+    
+    required override init() {
+        super.init()
+    }
+    
+    // MARK: - Cauly Banner Ad Request
+    func loadBanner(for adConfiguration: GADMediationBannerAdConfiguration, completionHandler: @escaping GADMediationBannerLoadCompletionHandler) {
+        self.bannerAd = CaulyEventBanner()
+        self.bannerAd?.loadBanner(for: adConfiguration, completionHandler: completionHandler)
+    }
+    
+    // MARK: - Cauly Interstitial Ad Request
+    func loadInterstitial(for adConfiguration: GADMediationInterstitialAdConfiguration, completionHandler: @escaping GADMediationInterstitialLoadCompletionHandler) {
+        self.interstitialAd = CaulyEventInterstitial()
+        self.interstitialAd?.loadInterstitial(for: adConfiguration, completionHandler: completionHandler)
+    }
+
+    static func setUpWith(_ configuration: GADMediationServerConfiguration, completionHandler: @escaping GADMediationAdapterSetUpCompletionBlock) {
+        // This is where you will initialize the SDK that this custom event is built
+        // for. Upon finishing the SDK initialization, call the completion handler
+        // with success.
+        completionHandler(nil)
+    }
+
+    static func adapterVersion() -> GADVersionNumber {
+        let adapterVersion = "1.0.0.0"
+        let versionComponents = adapterVersion.components(separatedBy: ".")
+        var version = GADVersionNumber()
+        if versionComponents.count == 4 {
+            version.majorVersion = Int(versionComponents[0]) ?? 0
+            version.minorVersion = Int(versionComponents[1]) ?? 0
+            version.patchVersion = (Int(versionComponents[2]) ?? 0) * 100 + (Int(versionComponents[3]) ?? 0)
+        }
+        return version
+    }
+
+    static func adSDKVersion() -> GADVersionNumber {
+        let versionComponents = CAULY_SDK_VERSION.components(separatedBy: ".")
+        
+        if versionComponents.count >= 3 {
+            let majorVersion = Int(versionComponents[0]) ?? 0
+            let minorVersion = Int(versionComponents[1]) ?? 0
+            let patchVersion = Int(versionComponents[2]) ?? 0
+            
+            return GADVersionNumber(majorVersion: majorVersion, minorVersion: minorVersion, patchVersion: patchVersion)
+        }
+        
+        return GADVersionNumber()
+    }
+
+    static func networkExtrasClass() -> GADAdNetworkExtras.Type? {
+        return nil
+    }
+}
+```
+
+</details>
+
+<details> <summary>Objective-C</summary>
 
 - CaulyEvent.h
 ``` objectivec
@@ -1331,10 +2139,102 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 
 ```
 
+</details>
+
 
 ### Cauly 배너 광고 추가하기
 > - SKAdNetwork 를 지원하게 되면서 아래 초기화 부분에서 반드시 adSetting.appId 로 App Store 의 App ID 정보를 입력해주셔야 합니다.
 > - 만약, 아직 출시 전 앱인 경우는 0 으로 지정할 수는 있으나 App Store 에 등록된 앱인 경우에는 반드시 입력해야 합니다.
+
+<details> <summary>Swift</summary>
+
+```swift
+import Foundation
+import GoogleMobileAds
+import UIKit
+
+class CaulyEventBanner: NSObject, GADMediationBannerAd, CaulyAdViewDelegate {
+    /// The Cauly Ad Network banner ad.
+    var adView: CaulyAdView?
+    
+    /// The ad event delegate to forward ad rendering events to the Google Mobile Ads SDK.
+    var delegate: GADMediationBannerAdEventDelegate?
+    
+    /// The ad event delegate to forward ad rendering events to the Google Mobile Ads SDK.
+    var completionHandler: GADMediationBannerLoadCompletionHandler?
+    
+    func loadBanner(for adConfiguration: GADMediationBannerAdConfiguration, completionHandler: @escaping GADMediationBannerLoadCompletionHandler) {
+        // Create the bannerView with the appropriate size.
+        let adSize = adConfiguration.adSize
+        
+        let adUnit = adConfiguration.credentials.settings["parameter"] as? String
+        print("adUnit: \(adUnit ?? "nil")")
+        
+        // 상세 설정 항목들은 표 참조, 설정되지 않은 항목들은 기본값으로 설정됩니다.
+        let caulySetting = CaulyAdSetting.global()
+        CaulyAdSetting.setLogLevel(CaulyLogLevelTrace)   // CaulyLog 레벨
+        caulySetting?.appId = "0"                       // App Store 에 등록된 App ID 정보
+        caulySetting?.appCode = adUnit                  // Cauly 로부터 발급 받은 ID 입력 (admob parameter 입력값 사용)
+        caulySetting?.animType = CaulyAnimNone          // 화면 전환 효과
+        caulySetting?.closeOnLanding = true             // App 으로 이동할 때 webview popup 창을 자동으로 닫아줍니다. 기본값을 false
+        caulySetting?.useDynamicReloadTime = false
+        
+        adView = CaulyAdView.init()
+        adView?.delegate = self
+        
+        let frame = CGRect(x: 0, y: 0, width: adSize.size.width, height: adSize.size.height)
+        adView?.bounds = frame
+        
+        self.completionHandler = completionHandler
+        adView?.startBannerAdRequest()      // 배너 광고 요청
+    }
+    
+    // MARK: - GADMediationBannerAd implementation
+    var view: UIView {
+        return adView ?? UIView()
+    }
+    
+    required override init() {
+        super.init()
+    }
+    
+    // MARK: - CaulyAdViewDelegate
+    // 광고 정보 수신 성공
+    func didReceiveAd(_ adView: CaulyAdView!, isChargeableAd: Bool) {
+        print("Loaded didReceiveAd callback")
+        if let handler = completionHandler {
+            delegate = handler(self, nil)
+        }
+    }
+    
+    // 광고 정보 수신 실패
+    func didFail(toReceiveAd adView: CaulyAdView!, errorCode: Int32, errorMsg: String!) {
+        print("didFailToReceiveAd: \(errorCode)(\(errorMsg!)")
+        
+        let error = NSError(domain: "kr.co.cauly.sdk.ios.mediation.sample", code: Int(errorCode), userInfo: ["description" : errorMsg as Any])
+        
+        if let handler = completionHandler {
+            delegate = handler(nil, error)
+        }
+    }
+    
+    // 랜딩 화면 표시
+    func willShowLanding(_ adView: CaulyAdView!) {
+        print("willShowLandingView")
+        delegate?.reportClick()
+    }
+    
+    // 랜딩 화면이 닫혔을 때
+    func didCloseLanding(_ adView: CaulyAdView!) {
+        print("didCloseLandingView")
+    }
+}
+```
+
+</details>
+
+<details> <summary>Objective-C</summary>
+
 - CaulyEventBanner.h
 
 ``` objectivec
@@ -1454,8 +2354,94 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 
 ```
 
+</details>
+
 
 ### Cauly 전면 광고 추가하기
+
+<details> <summary>Swift</summary>
+
+```swift
+
+import Foundation
+import GoogleMobileAds
+
+class CaulyEventInterstitial: NSObject, GADMediationInterstitialAd, CaulyInterstitialAdDelegate {
+    /// The Cauly Ad Network interstitial.
+    var interstitial: CaulyInterstitialAd?
+    
+    /// The ad event delegate to forward ad rendering events to the Google Mobile Ads SDK.
+    var delegate: GADMediationInterstitialAdEventDelegate?
+    
+    var completionHandler: GADMediationInterstitialLoadCompletionHandler?
+    
+    func loadInterstitial( for adConfiguration: GADMediationInterstitialAdConfiguration, completionHandler: @escaping GADMediationInterstitialLoadCompletionHandler) {
+        let adUnit = adConfiguration.credentials.settings["parameter"] as? String
+        
+        // 상세 설정 항목들은 표 참조, 설정되지 않은 항목들은 기본값으로 설정됩니다.
+        let caulySetting = CaulyAdSetting.global()
+        CaulyAdSetting.setLogLevel(CaulyLogLevelTrace)   // CaulyLog 레벨
+        caulySetting?.appId = "0"                       // App Store 에 등록된 App ID 정보
+        caulySetting?.appCode = adUnit                  // Cauly 로부터 발급 받은 ID 입력 (admob parameter 입력값 사용)
+        caulySetting?.closeOnLanding = true             // App 으로 이동할 때 webview popup 창을 자동으로 닫아줍니다. 기본값을 false
+        
+        self.interstitial = CaulyInterstitialAd.init(parentViewController: adConfiguration.topViewController)
+        self.interstitial?.delegate = self;              // 전면 delegate 설정
+        self.completionHandler = completionHandler
+        self.interstitial?.startRequest()                // 전면광고 요청
+    }
+    
+    // MARK: - GADMediationInterstitialAd implementation
+    required override init() {
+        super.init()
+    }
+    
+    func present(from viewController: UIViewController) {
+        if interstitial != nil {
+            interstitial?.show(withParentViewController: viewController)
+        }
+    }
+    
+    // MARK: - CaulyInterstitialAdDelegate
+    // 광고 정보 수신 성공
+    func didReceive(_ interstitialAd: CaulyInterstitialAd!, isChargeableAd: Bool) {
+        print("didReceiveInterstitialAd")
+        interstitial = interstitialAd
+        
+        if let handler = completionHandler {
+            delegate = handler(self, nil)
+        }
+    }
+    
+    // Interstitial 형태의 광고가 닫혔을 때
+    func didClose(_ interstitialAd: CaulyInterstitialAd!) {
+        print("didCloseInterstitialAd")
+    }
+    
+    // Interstitial 형태의 광고가 보여지기 직전
+    func willShow(_ interstitialAd: CaulyInterstitialAd!) {
+        print("willShowInterstitialAd")
+    }
+    
+    // 광고 정보 수신 실패
+    func didFail(toReceive interstitialAd: CaulyInterstitialAd!, errorCode: Int32, errorMsg: String!) {
+        print("Receive fail interstitial errorCode:\(errorCode)(\(errorMsg!)")
+        
+        interstitial = nil
+        
+        let error = NSError(domain: "kr.co.cauly.sdk.ios.mediation.sample", code: Int(errorCode), userInfo: ["description" : errorMsg as Any])
+        
+        if let handler = completionHandler {
+            delegate = handler(nil, error)
+        }
+    }
+}
+```
+
+</details>
+
+<details> <summary>Objective-C</summary>
+
 - CaulyEventInterstitial.h
 ``` objectivec
 #import <Foundation/Foundation.h>
@@ -1568,7 +2554,12 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 @end
 ```
 
+</details>
+
 ### Cauly 네이티브 광고 추가하기
+
+<details> <summary>Objective-C</summary>
+
 - CaulyEventNative.h
 
 ``` objectivec
@@ -1778,13 +2769,15 @@ UIImage *imageImg;
 
 ```
 
+</details>
+
 [설정 방법]
 
 | 속성                   | 설명                                                                                                                                                                                                                                                             |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | appCode              | Cauly 로부터 부여 받은 매체 식별자                                                                                                                                                                                                                                         |
 | animType             | 광고 교체 애니메이션 효과<br/>CaulyAnimNone (기본값) : 효과 없음<br/>CaulyAnumCurlDown : 아래쪽으로 말려 내려가는 효과<br/>CaulyAnumCurlUp : 위쪽으로 말려 올라가는 효과<br/>CaulyAnimFadeOut : 서서히 사라지는 효과<br/>CaulyAnimFlipFromLeft : 왼쪽에서 회전하며 나타나는 효과<br/>CaulyAnimFlipFromRight : 오른쪽에서 회전하며 나타나는 효과 |
-| adSize               | CaulyAdSize_IPhone : 320 x 48<br/>CaulyAdSize_IPadLarge : 728 x 90<br/>CaulyAdSize_IPadSmall : 468 x 60                                                                                                                                                        |
+| adSize               | CaulyAdSize_IPhone : 320 x 50<br/>CaulyAdSize_IPhoneLarge : 320 x 100<br/>CaulyAdSize_IPhoneMediumRect : 300 x 250<br/>CaulyAdSize_IPadLarge : 728 x 90<br/>CaulyAdSize_IPadSmall : 468 x 60                                                                                                                                                        |
 | reloadTime           | CaulyReloadTime_30 (기본값) : 30초<br/>CaulyReloadTime_60 : 60초<br/>CaulyReloadTime_120 : 120초                                                                                                                                                                     |
 | useDynamicReloadTime | YES (기본값) : 광고에 따라 노출 주기 조정할 수 있도록 하여 광고 수익 상승 효과 기대<br/>NO : 설정 시 reloadTime 설정 값으로 Rolling                                                                                                                                                                   |
 
