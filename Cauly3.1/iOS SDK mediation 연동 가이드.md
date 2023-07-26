@@ -1216,7 +1216,7 @@ extension AppOpenAdManager: GADFullScreenContentDelegate {
 }
 ```
 
-<details>
+</details>
 
 
 ### 배너 광고 추가하기
