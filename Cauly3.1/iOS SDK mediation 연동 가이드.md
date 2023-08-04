@@ -19,10 +19,13 @@ iOS SDK mediation 연동 가이드
 	- [네이티브 광고 추가하기](#네이티브-광고-추가하기)
 4. [커스텀 이벤트 네트워크 추가하기](#4-커스텀-이벤트-네트워크-추가하기)
 	- [Cauly 광고 추가하기](#cauly-광고-추가하기)
-		- [어댑터 초기화](#어댑터-초기화)
+		- [Cauly 어댑터 초기화](#cauly-어댑터-초기화)
 		- [Cauly 배너 광고 추가하기](#cauly-배너-광고-추가하기)
 		- [Cauly 전면 광고 추가하기](#cauly-전면-광고-추가하기)
 		- [Cauly 네이티브 광고 추가하기](#cauly-네이티브-광고-추가하기)
+	- [AdFit 광고 추가하기](#adfit-광고-추가하기)
+        - [AdFit 어댑터 초기화](#adfit-어댑터-초기화)
+        - [AdFit 네이티브 광고 추가하기](#adfit-네이티브-광고-추가하기)
 5. [TestFlight에 배포하기](#5-testflight에-배포하기)
 	- [앱 빌드 정보 및 환경 설정](#앱-빌드-정보-및-환경-설정)
 	- [iOS 앱 TestFlight에 업로드](#ios-앱-testflight-에-업로드)
@@ -69,31 +72,35 @@ pod 'GoogleMobileAdsMediationAppLovin'
 pod 'GoogleMobileAdsMediationVungle'
 ```
 
-#### DT Exchange
+#### DT Exchange SDK
 ``` bash
 pod 'GoogleMobileAdsMediationFyber'
 ```
 
-#### Mintegral
+#### Mintegral SDK
 ``` bash
 pod 'GoogleMobileAdsMediationMintegral'
 ```
 
-#### Pangle
+#### Pangle SDK
 ``` bash
 pod 'GoogleMobileAdsMediationPangle'
 ```
 
-#### Unity Ads
+#### Unity Ads SDK
 ``` bash
 pod 'GoogleMobileAdsMediationUnity'
 ```
 
-#### Meta
+#### Meta SDK
 ``` bash
 pod 'GoogleMobileAdsMediationFacebook'
 ```
 
+#### AdFit SDK
+``` bash
+pod 'AdFitSDK'
+```
 
 ### Info.plist 업데이트
 
@@ -1920,6 +1927,12 @@ class ViewController: UIViewController, GADNativeAdLoaderDelegate, GADNativeAdDe
 
 
 ## 4. 커스텀 이벤트 네트워크 추가하기
+> 커스텀 이벤트를 구현하기 위해 `GADMediationAdapter` 프로토콜이 구현된 클래스, `GADMediation{지면타입}Ad` 프로토콜이 구현된 클래스가 필요합니다.  
+>
+> 예를 들어, Cauly 이벤트를 추가하는 경우 이 문서의 `CaulyEvent`와 추가 예정의 지면타입에 맞는 `CaulyEventBanner`, `CaulyEventInterstitial`, `CaulyEventNative` 클래스를 추가해주시면 됩니다.  
+> 각 클래스는 `하나씩`만 선언해주시면 됩니다.
+
+
 ### Cauly 광고 추가하기
 
 #### 권장 환경
@@ -1974,7 +1987,7 @@ class ViewController: UIViewController, GADNativeAdLoaderDelegate, GADNativeAdDe
   <img src="/Cauly3.1/Swift/images/target.png" width="800" hight="1000"/>
 </p>
 
-### 어댑터 초기화
+### Cauly 어댑터 초기화
 
 
 <details> <summary>Swift</summary>
@@ -1988,6 +2001,8 @@ class CaulyEvent: NSObject, GADMediationAdapter {
     fileprivate var bannerAd: CaulyEventBanner?
     
     fileprivate var interstitialAd: CaulyEventInterstitial?
+    
+    fileprivate var nativeAd: CaulyEventNative?
     
     required override init() {
         super.init()
@@ -2003,6 +2018,12 @@ class CaulyEvent: NSObject, GADMediationAdapter {
     func loadInterstitial(for adConfiguration: GADMediationInterstitialAdConfiguration, completionHandler: @escaping GADMediationInterstitialLoadCompletionHandler) {
         self.interstitialAd = CaulyEventInterstitial()
         self.interstitialAd?.loadInterstitial(for: adConfiguration, completionHandler: completionHandler)
+    }
+
+    // MARK: - Cauly Native Ad Request
+    func loadNativeAd(for adConfiguration: GADMediationNativeAdConfiguration, completionHandler: @escaping GADMediationNativeLoadCompletionHandler) {
+        self.nativeAd = CaulyEventNative()
+        self.nativeAd?.loadNativeAd(for: adConfiguration, completionHandler: completionHandler)
     }
 
     static func setUpWith(_ configuration: GADMediationServerConfiguration, completionHandler: @escaping GADMediationAdapterSetUpCompletionBlock) {
@@ -2167,6 +2188,7 @@ class CaulyEventBanner: NSObject, GADMediationBannerAd, CaulyAdViewDelegate {
         // Create the bannerView with the appropriate size.
         let adSize = adConfiguration.adSize
         
+        // admob 등록 parameter(Cauly 발급 키)를 가져옵니다.
         let adUnit = adConfiguration.credentials.settings["parameter"] as? String
         print("adUnit: \(adUnit ?? "nil")")
         
@@ -2174,7 +2196,7 @@ class CaulyEventBanner: NSObject, GADMediationBannerAd, CaulyAdViewDelegate {
         let caulySetting = CaulyAdSetting.global()
         CaulyAdSetting.setLogLevel(CaulyLogLevelTrace)   // CaulyLog 레벨
         caulySetting?.appId = "0"                       // App Store 에 등록된 App ID 정보
-        caulySetting?.appCode = adUnit                  // Cauly 로부터 발급 받은 ID 입력 (admob parameter 입력값 사용)
+        caulySetting?.appCode = adUnit                  // admob 등록 parameter (Cauly 발급 키)
         caulySetting?.animType = CaulyAnimNone          // 화면 전환 효과
         caulySetting?.closeOnLanding = true             // App 으로 이동할 때 webview popup 창을 자동으로 닫아줍니다. 기본값을 false
         caulySetting?.useDynamicReloadTime = false
@@ -2376,13 +2398,14 @@ class CaulyEventInterstitial: NSObject, GADMediationInterstitialAd, CaulyInterst
     var completionHandler: GADMediationInterstitialLoadCompletionHandler?
     
     func loadInterstitial( for adConfiguration: GADMediationInterstitialAdConfiguration, completionHandler: @escaping GADMediationInterstitialLoadCompletionHandler) {
+        // admob 등록 parameter(Cauly 발급 키)를 가져옵니다.
         let adUnit = adConfiguration.credentials.settings["parameter"] as? String
         
         // 상세 설정 항목들은 표 참조, 설정되지 않은 항목들은 기본값으로 설정됩니다.
         let caulySetting = CaulyAdSetting.global()
         CaulyAdSetting.setLogLevel(CaulyLogLevelTrace)   // CaulyLog 레벨
         caulySetting?.appId = "0"                       // App Store 에 등록된 App ID 정보
-        caulySetting?.appCode = adUnit                  // Cauly 로부터 발급 받은 ID 입력 (admob parameter 입력값 사용)
+        caulySetting?.appCode = adUnit                  // admob 등록 parameter (Cauly 발급 키)
         caulySetting?.closeOnLanding = true             // App 으로 이동할 때 webview popup 창을 자동으로 닫아줍니다. 기본값을 false
         
         self.interstitial = CaulyInterstitialAd.init(parentViewController: adConfiguration.topViewController)
@@ -2557,6 +2580,146 @@ class CaulyEventInterstitial: NSObject, GADMediationInterstitialAd, CaulyInterst
 </details>
 
 ### Cauly 네이티브 광고 추가하기
+
+
+<details> <summary>Swift</summary>
+
+``` swift
+import Foundation
+import GoogleMobileAds
+
+class CaulyEventNative: NSObject, GADMediationNativeAd, CaulyNativeAdDelegate {
+    /// The Sample Ad Network native ad.
+    var nativeAd: CaulyNativeAd?
+    
+    var nativeAdItem: Dictionary<String, Any>?
+    
+    var caulyNativeAdItem: CaulyNativeAdItem?
+    
+    var _mediaView: UIView?
+    
+    /// The ad event delegate to forward ad rendering events to the Google Mobile Ads SDK.
+    var delegate: GADMediationNativeAdEventDelegate?
+    
+    /// Completion handler called after ad load
+    var completionHandler: GADMediationNativeLoadCompletionHandler?
+    
+    func loadNativeAd( for adConfiguration: GADMediationNativeAdConfiguration, completionHandler: @escaping GADMediationNativeLoadCompletionHandler) {
+        // admob 등록 parameter(Cauly 발급 키)를 가져옵니다.
+        let adUnit = adConfiguration.credentials.settings["parameter"] as? String
+        
+        // 상세 설정 항목들은 표 참조, 설정되지 않은 항목들은 기본값으로 설정됩니다.
+        let caulySetting = CaulyAdSetting.global()
+        CaulyAdSetting.setLogLevel(CaulyLogLevelInfo)   // CaulyLog 레벨
+        caulySetting?.appId = "0"                       // App Store 에 등록된 App ID 정보
+        caulySetting?.appCode = adUnit                  // admob 등록 parameter (Cauly 발급 키)
+        
+        nativeAd = CaulyNativeAd.init(parentViewController: adConfiguration.topViewController)
+        nativeAd?.delegate = self;
+        self.completionHandler = completionHandler
+        
+        // 카울리 네이티브 광고 요청
+        nativeAd?.startRequest(2, nativeAdComponentType: CaulyNativeAdComponentType_IconImage, imageSize: "720x480")
+    }
+    
+    // MARK: - GADMediationNative
+    required override init() {
+        super.init()
+    }
+    
+    var headline: String? {
+        return nativeAdItem?["title"] as? String
+    }
+    
+    var images: [GADNativeAdImage]?
+    
+    var body: String? {
+        return nativeAdItem?["description"] as? String
+    }
+    
+    var icon: GADNativeAdImage?
+    
+    var callToAction: String? {
+        return ""
+    }
+    
+    var starRating: NSDecimalNumber? {
+        return nil
+    }
+    
+    var store: String? {
+        return ""
+    }
+    
+    var price: String? {
+        return ""
+    }
+    
+    var advertiser: String? {
+        return nativeAdItem?["subtitle"] as? String
+    }
+    
+    var extraAssets: [String : Any]? {
+        return nil
+    }
+    
+    var adChoicesView: UIView?
+    
+    var mediaView: UIView? {
+        return _mediaView
+    }
+    
+    // MARK: - Cauly Native Delegate
+    // 네이티브 광고 정보 수신 성공
+    func didReceive(_ nativeAd: CaulyNativeAd!, isChargeableAd: Bool) {
+        print("Cauly didReceiveNativeAd")
+        caulyNativeAdItem = nativeAd.nativeAdItem(at: 0)
+        
+        do {
+            nativeAdItem = try JSONSerialization.jsonObject(with: Data((caulyNativeAdItem?.nativeAdJSONString.utf8)!), options: []) as? Dictionary<String, Any>
+        } catch {
+            print(error.localizedDescription)
+        }
+        print(nativeAdItem as Any)
+        self.nativeAd = nativeAd
+        
+        urlToImage()
+    }
+    
+    func didFail(toReceive nativeAd: CaulyNativeAd!, errorCode: Int32, errorMsg: String!) {
+        print("Cauly didFailToReceiveNativeAd errorCode: \(errorCode), errMsg: \(errorMsg ?? "No Message")")
+        
+        let error = NSError(domain: "kr.co.cauly.sdk.ios.mediation.sample", code: Int(errorCode), userInfo: ["description" : errorMsg as Any])
+        
+        if let handler = completionHandler {
+            delegate = handler(nil, error)
+        }
+    }
+    
+    func urlToImage() {
+        let iconUrl = URL(string: nativeAdItem?["icon"] as! String)
+        let mediaUrl = URL(string: nativeAdItem?["image"] as! String)
+        
+        DispatchQueue.global().async { [weak self] in
+            if let iconData = try? Data(contentsOf: iconUrl!), let mediaData = try? Data(contentsOf: mediaUrl!) {
+                if let iconImage = UIImage(data: iconData), let mediaImage = UIImage(data: mediaData) {
+                    DispatchQueue.main.async {
+                        self?.icon = GADNativeAdImage(image: iconImage)
+                        self?._mediaView = UIImageView(image: mediaImage)
+                        self?.images = [GADNativeAdImage(image: mediaImage)]
+                        
+                        if let handler = self?.completionHandler {
+                            self?.delegate = handler(self, nil)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+</details>
 
 <details> <summary>Objective-C</summary>
 
@@ -2792,6 +2955,228 @@ UIImage *imageImg;
 | 500 | Server error|	Cauly서버 에러 |
 | -100 | SDK error|	SDK 에러 |
 | -200 | Request Failed(You are not allowed to send requests under minimum interval)|	최소요청주기 미달 |
+
+
+
+### AdFit 광고 추가하기
+
+#### 권장 환경
+- AdFit SDK는 Swift 4 기반으로 개발되었습니다. Objective-C 기반의 프로젝트에서 AdFit SDK를 사용하기 위해서는 Swift Standard 라이브러리들을 Embed 시켜주어야 합니다.
+- 앱 프로젝트의 빌드 세팅에서 `Always Embed Swift Standard Libraries` 항목을 `Yes` 로 설정해주세요.
+
+
+### AdFit 어댑터 초기화
+
+<details> <summary>Swift</summary>
+
+``` swift
+import Foundation
+import GoogleMobileAds
+
+class AdFitEvent: NSObject, GADMediationAdapter {
+    
+    fileprivate var nativeAd: AdFitEventNative?
+    
+    required override init() {
+        super.init()
+    }
+    
+    // MARK: - AdFit Native Ad Request
+    func loadNativeAd(for adConfiguration: GADMediationNativeAdConfiguration, completionHandler: @escaping GADMediationNativeLoadCompletionHandler) {
+        self.nativeAd = AdFitEventNative()
+        self.nativeAd?.loadNativeAd(for: adConfiguration, completionHandler: completionHandler)
+    }
+
+    static func setUpWith(_ configuration: GADMediationServerConfiguration, completionHandler: @escaping GADMediationAdapterSetUpCompletionBlock) {
+        // This is where you will initialize the SDK that this custom event is built
+        // for. Upon finishing the SDK initialization, call the completion handler
+        // with success.
+        completionHandler(nil)
+    }
+
+    static func adapterVersion() -> GADVersionNumber {
+        let adapterVersion = "1.0.0.0"
+        let versionComponents = adapterVersion.components(separatedBy: ".")
+        var version = GADVersionNumber()
+        if versionComponents.count == 4 {
+            version.majorVersion = Int(versionComponents[0]) ?? 0
+            version.minorVersion = Int(versionComponents[1]) ?? 0
+            version.patchVersion = (Int(versionComponents[2]) ?? 0) * 100 + (Int(versionComponents[3]) ?? 0)
+        }
+        return version
+    }
+
+    static func adSDKVersion() -> GADVersionNumber {
+        let versionComponents = CAULY_SDK_VERSION.components(separatedBy: ".")
+        
+        if versionComponents.count >= 3 {
+            let majorVersion = Int(versionComponents[0]) ?? 0
+            let minorVersion = Int(versionComponents[1]) ?? 0
+            let patchVersion = Int(versionComponents[2]) ?? 0
+            
+            return GADVersionNumber(majorVersion: majorVersion, minorVersion: minorVersion, patchVersion: patchVersion)
+        }
+        
+        return GADVersionNumber()
+    }
+
+    static func networkExtrasClass() -> GADAdNetworkExtras.Type? {
+        return nil
+    }
+}
+```
+</details>
+
+### AdFit 네이티브 광고 추가하기
+
+> AdFit 네이티브 광고 뷰 구성은 [AdFit Native 광고 연동 가이드](https://github.com/adfit/adfit-ios-sdk/blob/master/Guide/Native%20Ad.md)를 기반으로 작성되어있습니다.  
+> 혹여 이 문서에서 설명되지 않은 사항들은 해당 참조 링크에서 확인해주십시오.  
+
+
+<details> <summary>Swift</summary>
+
+``` swift
+import Foundation
+import GoogleMobileAds
+import AdFitSDK
+import UIKit
+
+class AdFitEventNative: NSObject, GADMediationNativeAd, AdFitNativeAdDelegate, AdFitNativeAdLoaderDelegate {
+    /// The Sample Ad Network native ad.
+    var nativeAd: AdFitNativeAd?
+    
+    var nativeAdLoader: AdFitNativeAdLoader?
+    
+    /// The ad event delegate to forward ad rendering events to the Google Mobile Ads SDK.
+    var delegate: GADMediationNativeAdEventDelegate?
+    
+    /// Completion handler called after ad load
+    var completionHandler: GADMediationNativeLoadCompletionHandler?
+    
+    var nativeAdView: MyNativeAdView?
+    
+    func loadNativeAd( for adConfiguration: GADMediationNativeAdConfiguration, completionHandler: @escaping GADMediationNativeLoadCompletionHandler) {
+        
+        // admob 등록 parameter(Cauly 발급 키)를 가져옵니다.
+        let adUnit = adConfiguration.credentials.settings["parameter"] as? String
+        
+        self.completionHandler = completionHandler
+        
+        nativeAdLoader = AdFitNativeAdLoader(clientId: adUnit ?? "")
+        nativeAdLoader?.delegate = self
+        
+        /**
+         광고 뷰 내에서 정보 아이콘이 표시될 위치.
+         이 아이콘을 표시하기 위해 별다른 처리는 필요하지 않으며, 지정된 위치에 자동으로 표시됩니다.
+         기본값은 **topRight** (우측 상단) 입니다.
+         
+         ***topRight**(우측 상단), **topLeft**(좌측 상단), **bottomRight**(우측 하단), **bottomLeft**(좌측 하단)
+         */
+        nativeAdLoader?.infoIconPosition = .topRight
+        nativeAdLoader?.loadAd()
+    }
+    
+    // MARK: - GADMediationNative Mapping
+    required override init() {
+        super.init()
+    }
+    
+    var headline: String? {
+        return nil
+    }
+    
+    var images: [GADNativeAdImage]?
+    
+    var body: String? {
+        return nil
+    }
+    
+    var icon: GADNativeAdImage?
+    
+    var callToAction: String? {
+        return nil
+    }
+    
+    var starRating: NSDecimalNumber? {
+        return nil
+    }
+    
+    var store: String? {
+        return nil
+    }
+    
+    var price: String? {
+        return nil
+    }
+    
+    var advertiser: String? {
+        return nil
+    }
+    
+    var extraAssets: [String : Any]? {
+        return [
+            "mediaAspectRatio" : nativeAd?.mediaAspectRatio as Any,
+            "view" : nativeAdView as Any
+        ]
+    }
+    
+    var adChoicesView: UIView?
+  
+    var mediaView: UIView?
+    
+    
+    // MARK: - AdFit NativeAdLoader Delegate
+    func nativeAdLoaderDidReceiveAd(_ nativeAd: AdFitNativeAd) {
+        let message = "delegate: nativeAdDidReceiveAd"
+        print(message)
+        
+        if let nativeAdView = Bundle.main.loadNibNamed("MyNativeAdView", owner: nil, options: nil)?.first as? MyNativeAdView {
+            self.nativeAd = nativeAd
+            nativeAdView.backgroundColor = .white
+            nativeAd.bind(nativeAdView)
+            
+            self.nativeAdView = nativeAdView
+            
+            mediaView = nativeAdView.adMediaView()
+        }
+        
+        if let handler = completionHandler {
+            delegate = handler(self, nil)
+        }
+    }
+    
+    func nativeAdLoaderDidFailToReceiveAd(_ nativeAdLoader: AdFitNativeAdLoader, error: Error) {
+        let message = "delegate: nativeAdLoaderDidFailToReceiveAd, error: \(error.localizedDescription)"
+        print(message)
+        
+        if let handler = completionHandler {
+            delegate = handler(nil, error)
+        }
+    }
+    
+    func nativeAdDidClickAd(_ nativeAd: AdFitNativeAd) {
+        let message = "delegate: nativeAdDidClickAd"
+        print(message)
+        
+        delegate?.reportClick()
+    }
+    
+}
+```
+
+</details>
+
+
+[error 코드 정의]
+
+|   코드  |               메시지                   |                    설명                               |
+|:------:|--------------------------------------|------------------------------------------------------|
+|  1     | clientId property is nil             | AdFitBannerAdView 객체에 clientId가 세팅되지 않은 경우.     |
+|  2     | no ad to show                        | 노출 가능한 광고가 없는 경우. 잠시 후 다시 광고 요청을 시도해주세요. |
+|  3     | invalid ad received                  | 유효하지 않은 광고를 받은 경우. AdFit에 문의해주세요.            |
+|  5     | attempted to load ad too frequently  | 과도하게 짧은 시간 간격으로 광고를 재요청한 경우.                 |
+|  6     | HTTP failed                          | HTTP 에러. 계속해서 반복 발생하는 경우 AdFit에 문의해주세요.      |
+
 
 ## 5. TestFlight에 배포하기
 > iOS 샘플앱 테스트를 위한 TestFlight 사용을 위해 작성된 가이드입니다.  
