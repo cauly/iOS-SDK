@@ -3030,7 +3030,13 @@ class AdFitEvent: NSObject, GADMediationAdapter {
 ### AdFit 네이티브 광고 추가하기
 
 > AdFit 네이티브 광고 뷰 구성은 [AdFit Native 광고 연동 가이드](https://github.com/adfit/adfit-ios-sdk/blob/master/Guide/Native%20Ad.md)를 기반으로 작성되어있습니다.  
-> 혹여 이 문서에서 설명되지 않은 사항들은 해당 참조 링크에서 확인해주십시오.  
+> 혹여 이 문서에서 설명되지 않은 사항들은 해당 참조 링크에서 확인해주십시오.
+
+
+#### 1. 광고 요청
+- 네이티브 광고의 요청은 `AdFitNativeAdLoader` 클래스를 통해 이루어집니다.
+- 광고 요청 후 성공적으로 응답을 받으면, 구현된 `AdFitNativeAdLoaderDelegate` 프로토콜을 통해 광고 애셋을 포함한 `AdFitNativeAd` 객체를 제공합니다.
+- `AdFitNativeAd` 를 통해서 구현한 뷰와 바인딩하여 네이티브 광고를 표시합니다.
 
 
 <details> <summary>Swift</summary>
@@ -3166,6 +3172,85 @@ class AdFitEventNative: NSObject, GADMediationNativeAd, AdFitNativeAdDelegate, A
 
 </details>
 
+
+#### 2. 광고 뷰 구현하기
+- 네이티브 광고의 UI는 서비스의 컨텐츠와 잘 어울리도록 구성되어야 하므로, 뷰 클래스를 개별 앱에서 직접 구현하셔야 합니다.
+- 네이티브 광고의 뷰 클래스는 `UIView` 클래스를 상속받도록 하고, `AdFitNativeAdRenderable` 프로토콜을 추가로 구현해주세요.
+
+##### 1) 네이티브 광고 뷰 구성
+다음은 피드 형태로 네이티브 광고 뷰를 구성한 예입니다.
+
+<img src="https://t1.daumcdn.net/adfit_sdk/document-assets/ios/native-ad-components3.png" width="640" style="border:1px solid #aaa">
+
+| 번호 | 설명                     | UI 클래스                | AdFitNativeAdRenderable |
+|-----|-------------------------|------------------------|-------------------------|
+| 1   | 제목                     | UILabel                | adTitleLabel()          |
+| 2   | 행동유도버튼               | UIButton               | adCallToActionButton()  |
+| 3   | 프로필명                  | UILabel                | adProfileNameLabel()    |
+| 4   | 프로필이미지               | UIImageView             | adProfileIconView()    |
+| 5   | 미디어 (이미지, 동영상 등)    | AdFitMediaView         | adMediaView()           |
+| 6   | 광고 아이콘                |                        |                         |
+| 7   | 홍보문구                  | UILabel                 | adBodyLabel()           |
+
+- AdFit의 네이티브 광고는 위의 7가지 요소로 구성됩니다.
+- 개별 요소들은 위 표에서 대응되는 UI 클래스를 통해 표시되도록 구현해주세요.
+- 사용자가 광고임을 명확히 인지할 수 있도록 "광고", "AD", "Sponsored" 등의 텍스트를 별도로 표시해주셔야 합니다.
+- `5. 미디어` 요소의 경우 SDK에 포함된 `AdFitMediaView` 클래스를 사용하여 표시합니다.<br>
+   인터페이스 빌더를 사용하시는 경우, 빈 View를 배치한 후 클래스를 `AdFitMediaView` 로 지정하시면 됩니다.
+  - `AdFitMediaView` 클래스에는 `videoRenderer()` 메서드가 구현되어 있습니다.<br>
+ 네이티브 광고의 미디어 타입이 비디오인 경우, 해당 메서드를 호출하여 `AdFitVideoRenderer` 객체에 접근할 수 있습니다.<br>
+ 해당 객체를 사용하면 네이티브 광고에 표시된 비디오의 제어(`play` / `pause` / `mute` / `unmute`)가 가능합니다.
+
+##### 2) AdFitNativeAdRenderable 프로토콜
+- 네이티브 광고 뷰의 구현을 마친 후에는, `AdFitNativeAdRenderable` 프로토콜에 정의된 메서드를 추가로 구현해야 합니다.
+- 뷰 클래스가 `AdFitNativeAdRenderable` 프로토콜을 따르도록 구현되어야 네이티브 광고 수신 후 정상적으로 바인딩이 이루어질 수 있습니다.
+
+다음은 뷰 클래스에 `AdFitNativeAdRenderable` 프로토콜을 구현한 예입니다.
+
+
+<details> <summary>Swift</summary>
+
+``` swift
+import UIKit
+import AdFitSDK
+
+class MyNativeAdView: UIView, AdFitNativeAdRenderable {
+    
+    @IBOutlet weak var titleLabel: UILabel?
+    @IBOutlet var bodyLabel: UILabel!
+    @IBOutlet weak var profileLabel: UILabel?
+    @IBOutlet weak var actionButton: UIButton?
+    @IBOutlet weak var iconImageView: UIImageView?
+    @IBOutlet weak var mediaView: AdFitMediaView?
+    
+    // MARK: - AdFitNativeAdRenderable
+    func adTitleLabel() -> UILabel? {
+        return titleLabel
+    }
+    
+    func adBodyLabel() -> UILabel? {
+        return bodyLabel
+    }
+    
+    func adCallToActionButton() -> UIButton? {
+        return actionButton
+    }
+    
+    func adProfileNameLabel() -> UILabel? {
+        return profileLabel
+    }
+    
+    func adProfileIconView() -> UIImageView? {
+        return iconImageView
+    }
+    
+    func adMediaView() -> AdFitMediaView? {
+        return mediaView
+    }
+}
+```
+
+</details>
 
 [error 코드 정의]
 
