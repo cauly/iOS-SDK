@@ -3041,6 +3041,8 @@ class AdFitEvent: NSObject, GADMediationAdapter {
 
 <details> <summary>Swift</summary>
 
+- AdFitEventNative.swift
+
 ``` swift
 import Foundation
 import GoogleMobileAds
@@ -3167,6 +3169,29 @@ class AdFitEventNative: NSObject, GADMediationNativeAd, AdFitNativeAdDelegate, A
         delegate?.reportClick()
     }
     
+}
+```
+
+
+- ViewController.swift
+  - AdFit 네이티브 광고 사용을 위해 ViewController.adLoader() 에도 다음 코드 추가가 필요합니다.
+  - [여기](#네이티브-광고-추가하기)에서 안내된 adLoader()에 코드를 추가해주세요.
+
+``` swift
+func adLoader(_ adLoader: GADAdLoader,didReceive nativeAd: GADNativeAd) {
+    .... 기본 안내코드
+    
+    if let nativeView = nativeAd.extraAssets?["view"] as? UIView, let mediaAspectRatio = nativeAd.extraAssets?["mediaAspectRatio"] as? CGFloat {
+        let screenMinWidth = min(nativeAdPlaceholder.bounds.width, nativeAdPlaceholder.bounds.height)
+        let mediaHeight = screenMinWidth / mediaAspectRatio
+        nativeView.frame = nativeAdPlaceholder.bounds.divided(atDistance: mediaHeight + 130 , from: .minYEdge).slice
+        nativeView.contentMode = .scaleToFill
+        nativeAdView.mediaView?.isHidden = true
+        
+        nativeAdPlaceholder.addSubview(nativeView)
+    }
+    
+    nativeAdView.nativeAd = nativeAd.   // 기본 안내코드
 }
 ```
 
