@@ -2198,6 +2198,7 @@ class CaulyEventBanner: NSObject, GADMediationBannerAd, CaulyAdViewDelegate {
         caulySetting?.appId = "0"                       // App Store 에 등록된 App ID 정보
         caulySetting?.appCode = adUnit                  // admob 등록 parameter (Cauly 발급 키)
         caulySetting?.animType = CaulyAnimNone          // 화면 전환 효과
+        caulySetting?.adSize = CaulyAdSize_IPhone       // 광고 View 크기
         caulySetting?.closeOnLanding = true             // App 으로 이동할 때 webview popup 창을 자동으로 닫아줍니다. 기본값을 false
         caulySetting?.useDynamicReloadTime = false
         
