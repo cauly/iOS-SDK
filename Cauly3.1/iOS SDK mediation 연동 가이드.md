@@ -11,12 +11,12 @@ iOS SDK mediation 연동 가이드
 	- [광고 SDK 초기화](#광고-sdk-초기화)
 	- [파트너 통합 네트워크 설정](#파트너-통합-네트워크-설정)
 	- [테스트 광고 사용 설정](#테스트-광고-사용-설정)
-3. [광고 형식 추가하기](#3-광고-형식-추가하기)
-	- [앱 오프닝 광고 추가하기](#앱-오프닝-광고-추가하기)
-	- [배너 광고 추가하기](#배너-광고-추가하기)
-	- [전면 광고 추가하기](#전면-광고-추가하기)
-	- [보상형 광고 추가하기](#보상형-광고-추가하기)
-	- [네이티브 광고 추가하기](#네이티브-광고-추가하기)
+3. [Admob 광고 추가하기](#3-admob-광고-추가하기)
+	- [Admob 앱 오프닝 광고 추가하기](#admob-앱-오프닝-광고-추가하기)
+	- [Admob 배너 광고 추가하기](#admob-배너-광고-추가하기)
+	- [Admob 전면 광고 추가하기](#admob-전면-광고-추가하기)
+	- [Admob 보상형 광고 추가하기](#admob-보상형-광고-추가하기)
+	- [Admob 네이티브 광고 추가하기](#admob-네이티브-광고-추가하기)
 4. [커스텀 이벤트 네트워크 추가하기](#4-커스텀-이벤트-네트워크-추가하기)
 	- [Cauly 광고 추가하기](#cauly-광고-추가하기)
 		- [Cauly 어댑터 초기화](#cauly-어댑터-초기화)
@@ -1036,8 +1036,8 @@ Objective-C ::
 [GoogleMobileAdsMediationTestSuite presentOnViewController:self delegate:nil];  // Remove this line.
 ```
 
-## 3. 광고 형식 추가하기
-### 앱 오프닝 광고 추가하기
+## 3. Admob 광고 추가하기
+### Admob 앱 오프닝 광고 추가하기
 - 앱 오프닝 광고를 구현하는 데 필요한 단계는 크게 다음과 같습니다.
     1. `AppDelegate`에 메서드를 추가하여 `GADAppOpenAd`를 로드하고 표시합니다.
     2. 앱 포그라운드 이벤트 감지
@@ -1226,7 +1226,7 @@ extension AppOpenAdManager: GADFullScreenContentDelegate {
 </details>
 
 
-### 배너 광고 추가하기
+### Admob 배너 광고 추가하기
 - rootViewController : 광고 클릭이 발생할 때 오버레이를 표시하는 데 사용되는 보기 컨트롤러입니다. 일반적으로 GADBannerView 를 포함하는 보기 컨트롤러로 설정해야 합니다.
 - adUnitID : GADBannerView 가 광고를 로드하는 광고 단위 ID입니다.
 
@@ -1370,7 +1370,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
 </details>
 
 
-### 전면 광고 추가하기
+### Admob 전면 광고 추가하기
 - 전면 광고는 loadWithAdUnitID:request:completionHandler: 메서드를 사용하여 로드됩니다.
 - 로드 메서드에는 광고 단위 ID, GADRequest 객체, 광고 로드에 성공하거나 실패할 때 호출되는 완료 핸들러가 필요합니다.
 
@@ -1494,7 +1494,7 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 </details>
 
 
-### 보상형 광고 추가하기
+### Admob 보상형 광고 추가하기
 - 보상형 광고는 loadWithAdUnitID:request:completionHandler: 메서드를 사용하여 로드됩니다.
 - 로드 메서드에는 광고 단위 ID, GADRequest 객체, 광고 로드에 성공하거나 실패할 때 호출되는 완료 핸들러가 필요합니다.
 
@@ -1634,7 +1634,7 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 
 </details>
 
-### 네이티브 광고 추가하기
+### Admob 네이티브 광고 추가하기
 - 광고를 요청하기 전에 `GADAdLoader` 를 초기화해야 합니다.
 - AdLoader 에는 다음 옵션이 필요합니다.
   - 광고 단위 ID
