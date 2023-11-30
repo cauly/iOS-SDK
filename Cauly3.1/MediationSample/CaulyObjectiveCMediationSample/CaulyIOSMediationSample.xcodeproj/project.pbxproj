@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		732A0BD029C18C4500702852 /* ExampleNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 732A0BCD29C18C4400702852 /* ExampleNativeAdView.xib */; };
+		732A0BD129C18C4500702852 /* ExampleNativeAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 732A0BCF29C18C4500702852 /* ExampleNativeAdView.m */; };
+		732A0BDB29C1AEA200702852 /* libCauly-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 732A0BD529C1AEA200702852 /* libCauly-universal.a */; };
+		732A0BDE29C1AEB900702852 /* CaulyEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 732A0BDD29C1AEB900702852 /* CaulyEvent.m */; };
+		732A0BE129C1AECB00702852 /* CaulyEventBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 732A0BE029C1AECB00702852 /* CaulyEventBanner.m */; };
+		732A0BE429C1AEDB00702852 /* CaulyEventInterstitial.m in Sources */ = {isa = PBXBuildFile; fileRef = 732A0BE329C1AEDB00702852 /* CaulyEventInterstitial.m */; };
+		732A0BE729C1AEEA00702852 /* CaulyEventNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 732A0BE629C1AEEA00702852 /* CaulyEventNative.m */; };
+		73FA070C298A271C004A0221 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73FA070B298A271C004A0221 /* AppDelegate.m */; };
+		73FA070F298A271C004A0221 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73FA070E298A271C004A0221 /* SceneDelegate.m */; };
+		73FA0712298A271C004A0221 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73FA0711298A271C004A0221 /* ViewController.m */; };
+		73FA0715298A271C004A0221 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73FA0713298A271C004A0221 /* Main.storyboard */; };
+		73FA0717298A271D004A0221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73FA0716298A271D004A0221 /* Assets.xcassets */; };
+		73FA071A298A271D004A0221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73FA0718298A271D004A0221 /* LaunchScreen.storyboard */; };
+		73FA071D298A271D004A0221 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73FA071C298A271D004A0221 /* main.m */; };
+		9A12AF075264032443999228 /* Pods_CaulyIOSMediationSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7AC16E797A13A8EE02A8D6 /* Pods_CaulyIOSMediationSample.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0665C672D333DA27689871A9 /* Pods-CaulyIOSMediationSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaulyIOSMediationSample.release.xcconfig"; path = "Target Support Files/Pods-CaulyIOSMediationSample/Pods-CaulyIOSMediationSample.release.xcconfig"; sourceTree = "<group>"; };
+		1D7AC16E797A13A8EE02A8D6 /* Pods_CaulyIOSMediationSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CaulyIOSMediationSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		732A0BCD29C18C4400702852 /* ExampleNativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleNativeAdView.xib; sourceTree = "<group>"; };
+		732A0BCE29C18C4400702852 /* ExampleNativeAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleNativeAdView.h; sourceTree = "<group>"; };
+		732A0BCF29C18C4500702852 /* ExampleNativeAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleNativeAdView.m; sourceTree = "<group>"; };
+		732A0BD429C1AEA200702852 /* CaulyInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyInterstitialAd.h; sourceTree = "<group>"; };
+		732A0BD529C1AEA200702852 /* libCauly-universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCauly-universal.a"; sourceTree = "<group>"; };
+		732A0BD629C1AEA200702852 /* Cauly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cauly.h; sourceTree = "<group>"; };
+		732A0BD729C1AEA200702852 /* CaulyNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyNativeAd.h; sourceTree = "<group>"; };
+		732A0BD829C1AEA200702852 /* CaulyNativeAdItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyNativeAdItem.h; sourceTree = "<group>"; };
+		732A0BD929C1AEA200702852 /* CaulyAdSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyAdSetting.h; sourceTree = "<group>"; };
+		732A0BDA29C1AEA200702852 /* CaulyAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyAdView.h; sourceTree = "<group>"; };
+		732A0BDC29C1AEB900702852 /* CaulyEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaulyEvent.h; sourceTree = "<group>"; };
+		732A0BDD29C1AEB900702852 /* CaulyEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaulyEvent.m; sourceTree = "<group>"; };
+		732A0BDF29C1AECB00702852 /* CaulyEventBanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaulyEventBanner.h; sourceTree = "<group>"; };
+		732A0BE029C1AECB00702852 /* CaulyEventBanner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaulyEventBanner.m; sourceTree = "<group>"; };
+		732A0BE229C1AEDB00702852 /* CaulyEventInterstitial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaulyEventInterstitial.h; sourceTree = "<group>"; };
+		732A0BE329C1AEDB00702852 /* CaulyEventInterstitial.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaulyEventInterstitial.m; sourceTree = "<group>"; };
+		732A0BE529C1AEEA00702852 /* CaulyEventNative.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaulyEventNative.h; sourceTree = "<group>"; };
+		732A0BE629C1AEEA00702852 /* CaulyEventNative.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaulyEventNative.m; sourceTree = "<group>"; };
+		73FA0707298A271B004A0221 /* CaulyIOSMediationSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaulyIOSMediationSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		73FA070A298A271B004A0221 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		73FA070B298A271C004A0221 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		73FA070D298A271C004A0221 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		73FA070E298A271C004A0221 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		73FA0710298A271C004A0221 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		73FA0711298A271C004A0221 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		73FA0714298A271C004A0221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		73FA0716298A271D004A0221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		73FA0719298A271D004A0221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		73FA071B298A271D004A0221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73FA071C298A271D004A0221 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C8AB2D96AE01F4A543428071 /* Pods-CaulyIOSMediationSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaulyIOSMediationSample.debug.xcconfig"; path = "Target Support Files/Pods-CaulyIOSMediationSample/Pods-CaulyIOSMediationSample.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		73FA0704298A271B004A0221 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				732A0BDB29C1AEA200702852 /* libCauly-universal.a in Frameworks */,
+				9A12AF075264032443999228 /* Pods_CaulyIOSMediationSample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A8E1D0B7FC56FCD1FF0477B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D7AC16E797A13A8EE02A8D6 /* Pods_CaulyIOSMediationSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		732A0BD229C1AE8900702852 /* CaulyCustomEvent */ = {
+			isa = PBXGroup;
+			children = (
+				732A0BDC29C1AEB900702852 /* CaulyEvent.h */,
+				732A0BDD29C1AEB900702852 /* CaulyEvent.m */,
+				732A0BDF29C1AECB00702852 /* CaulyEventBanner.h */,
+				732A0BE029C1AECB00702852 /* CaulyEventBanner.m */,
+				732A0BE229C1AEDB00702852 /* CaulyEventInterstitial.h */,
+				732A0BE329C1AEDB00702852 /* CaulyEventInterstitial.m */,
+				732A0BE529C1AEEA00702852 /* CaulyEventNative.h */,
+				732A0BE629C1AEEA00702852 /* CaulyEventNative.m */,
+			);
+			path = CaulyCustomEvent;
+			sourceTree = "<group>";
+		};
+		732A0BD329C1AEA200702852 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				732A0BD429C1AEA200702852 /* CaulyInterstitialAd.h */,
+				732A0BD529C1AEA200702852 /* libCauly-universal.a */,
+				732A0BD629C1AEA200702852 /* Cauly.h */,
+				732A0BD729C1AEA200702852 /* CaulyNativeAd.h */,
+				732A0BD829C1AEA200702852 /* CaulyNativeAdItem.h */,
+				732A0BD929C1AEA200702852 /* CaulyAdSetting.h */,
+				732A0BDA29C1AEA200702852 /* CaulyAdView.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		73FA06FE298A271B004A0221 = {
+			isa = PBXGroup;
+			children = (
+				732A0BD329C1AEA200702852 /* include */,
+				732A0BD229C1AE8900702852 /* CaulyCustomEvent */,
+				73FA0709298A271B004A0221 /* CaulyIOSMediationSample */,
+				73FA0708298A271B004A0221 /* Products */,
+				934732A10DC3F87538C78919 /* Pods */,
+				0A8E1D0B7FC56FCD1FF0477B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		73FA0708298A271B004A0221 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73FA0707298A271B004A0221 /* CaulyIOSMediationSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		73FA0709298A271B004A0221 /* CaulyIOSMediationSample */ = {
+			isa = PBXGroup;
+			children = (
+				73FA070A298A271B004A0221 /* AppDelegate.h */,
+				73FA070B298A271C004A0221 /* AppDelegate.m */,
+				73FA070D298A271C004A0221 /* SceneDelegate.h */,
+				73FA070E298A271C004A0221 /* SceneDelegate.m */,
+				73FA0710298A271C004A0221 /* ViewController.h */,
+				73FA0711298A271C004A0221 /* ViewController.m */,
+				732A0BCE29C18C4400702852 /* ExampleNativeAdView.h */,
+				732A0BCF29C18C4500702852 /* ExampleNativeAdView.m */,
+				732A0BCD29C18C4400702852 /* ExampleNativeAdView.xib */,
+				73FA0713298A271C004A0221 /* Main.storyboard */,
+				73FA0716298A271D004A0221 /* Assets.xcassets */,
+				73FA0718298A271D004A0221 /* LaunchScreen.storyboard */,
+				73FA071B298A271D004A0221 /* Info.plist */,
+				73FA071C298A271D004A0221 /* main.m */,
+			);
+			path = CaulyIOSMediationSample;
+			sourceTree = "<group>";
+		};
+		934732A10DC3F87538C78919 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8AB2D96AE01F4A543428071 /* Pods-CaulyIOSMediationSample.debug.xcconfig */,
+				0665C672D333DA27689871A9 /* Pods-CaulyIOSMediationSample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		73FA0706298A271B004A0221 /* CaulyIOSMediationSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73FA0720298A271D004A0221 /* Build configuration list for PBXNativeTarget "CaulyIOSMediationSample" */;
+			buildPhases = (
+				07DDC01110E56A50407664C0 /* [CP] Check Pods Manifest.lock */,
+				73FA0703298A271B004A0221 /* Sources */,
+				73FA0704298A271B004A0221 /* Frameworks */,
+				73FA0705298A271B004A0221 /* Resources */,
+				673C8D8F0EF184A16396E1AC /* [CP] Embed Pods Frameworks */,
+				35C18AB636388AA0C88CC7EB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CaulyIOSMediationSample;
+			productName = CaulyIOSMediationSample;
+			productReference = 73FA0707298A271B004A0221 /* CaulyIOSMediationSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		73FA06FF298A271B004A0221 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					73FA0706298A271B004A0221 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 73FA0702298A271B004A0221 /* Build configuration list for PBXProject "CaulyIOSMediationSample" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 73FA06FE298A271B004A0221;
+			productRefGroup = 73FA0708298A271B004A0221 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				73FA0706298A271B004A0221 /* CaulyIOSMediationSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		73FA0705298A271B004A0221 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73FA071A298A271D004A0221 /* LaunchScreen.storyboard in Resources */,
+				73FA0717298A271D004A0221 /* Assets.xcassets in Resources */,
+				73FA0715298A271C004A0221 /* Main.storyboard in Resources */,
+				732A0BD029C18C4500702852 /* ExampleNativeAdView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07DDC01110E56A50407664C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CaulyIOSMediationSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35C18AB636388AA0C88CC7EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CaulyIOSMediationSample/Pods-CaulyIOSMediationSample-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CaulyIOSMediationSample/Pods-CaulyIOSMediationSample-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CaulyIOSMediationSample/Pods-CaulyIOSMediationSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		673C8D8F0EF184A16396E1AC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CaulyIOSMediationSample/Pods-CaulyIOSMediationSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CaulyIOSMediationSample/Pods-CaulyIOSMediationSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CaulyIOSMediationSample/Pods-CaulyIOSMediationSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		73FA0703298A271B004A0221 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73FA0712298A271C004A0221 /* ViewController.m in Sources */,
+				732A0BDE29C1AEB900702852 /* CaulyEvent.m in Sources */,
+				732A0BD129C18C4500702852 /* ExampleNativeAdView.m in Sources */,
+				732A0BE129C1AECB00702852 /* CaulyEventBanner.m in Sources */,
+				73FA070C298A271C004A0221 /* AppDelegate.m in Sources */,
+				732A0BE729C1AEEA00702852 /* CaulyEventNative.m in Sources */,
+				73FA071D298A271D004A0221 /* main.m in Sources */,
+				73FA070F298A271C004A0221 /* SceneDelegate.m in Sources */,
+				732A0BE429C1AEDB00702852 /* CaulyEventInterstitial.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		73FA0713298A271C004A0221 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73FA0714298A271C004A0221 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		73FA0718298A271D004A0221 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73FA0719298A271D004A0221 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		73FA071E298A271D004A0221 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		73FA071F298A271D004A0221 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		73FA0721298A271D004A0221 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8AB2D96AE01F4A543428071 /* Pods-CaulyIOSMediationSample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 55644VM79V;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CaulyIOSMediationSample/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/include",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.cauly.sdk.ios.mediation.sample.CaulyIOSMediationSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		73FA0722298A271D004A0221 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0665C672D333DA27689871A9 /* Pods-CaulyIOSMediationSample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 55644VM79V;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CaulyIOSMediationSample/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/include",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.cauly.sdk.ios.mediation.sample.CaulyIOSMediationSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		73FA0702298A271B004A0221 /* Build configuration list for PBXProject "CaulyIOSMediationSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73FA071E298A271D004A0221 /* Debug */,
+				73FA071F298A271D004A0221 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73FA0720298A271D004A0221 /* Build configuration list for PBXNativeTarget "CaulyIOSMediationSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73FA0721298A271D004A0221 /* Debug */,
+				73FA0722298A271D004A0221 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 73FA06FF298A271B004A0221 /* Project object */;
+}

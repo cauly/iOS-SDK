@@ -1,0 +1,905 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2483A505ED825665EFFDCBB8 /* Pods_CaulySwiftMediationSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAB8957A5B19C0F658D9489 /* Pods_CaulySwiftMediationSample.framework */; };
+		734FB5122A6E0C9B00AC3C30 /* CaulyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734FB5112A6E0C9B00AC3C30 /* CaulyEvent.swift */; };
+		734FB5142A6E16E700AC3C30 /* CaulyEventBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734FB5132A6E16E700AC3C30 /* CaulyEventBanner.swift */; };
+		734FB5162A6E1E6500AC3C30 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734FB5152A6E1E6500AC3C30 /* AVKit.framework */; };
+		734FB5182A6E1E6A00AC3C30 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734FB5172A6E1E6A00AC3C30 /* UIKit.framework */; };
+		734FB51A2A6E1E7100AC3C30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734FB5192A6E1E7100AC3C30 /* Foundation.framework */; };
+		734FB51C2A6E1E7700AC3C30 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734FB51B2A6E1E7700AC3C30 /* CoreGraphics.framework */; };
+		734FB51E2A6E1E8300AC3C30 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734FB51D2A6E1E8300AC3C30 /* QuartzCore.framework */; };
+		734FB5202A6E1E8B00AC3C30 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734FB51F2A6E1E8B00AC3C30 /* SystemConfiguration.framework */; };
+		734FB5222A6E1F6600AC3C30 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734FB5212A6E1F6600AC3C30 /* MediaPlayer.framework */; };
+		734FB5242A6E1F6D00AC3C30 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734FB5232A6E1F6D00AC3C30 /* CFNetwork.framework */; };
+		734FB5262A6E1F7600AC3C30 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734FB5252A6E1F7600AC3C30 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		734FB5282A6E1F7E00AC3C30 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734FB5272A6E1F7E00AC3C30 /* EventKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		734FB52A2A6E1F8500AC3C30 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734FB5292A6E1F8500AC3C30 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		734FB5332A6E390E00AC3C30 /* libCauly-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 734FB52D2A6E390E00AC3C30 /* libCauly-universal.a */; };
+		7366BFA02A777D52005F11F6 /* MyNativeAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366BF9E2A777D52005F11F6 /* MyNativeAdView.swift */; };
+		7366BFA12A777D52005F11F6 /* MyNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7366BF9F2A777D52005F11F6 /* MyNativeAdView.xib */; };
+		739721DF2A6A475800594FF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739721DE2A6A475800594FF0 /* AppDelegate.swift */; };
+		739721E12A6A475800594FF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739721E02A6A475800594FF0 /* SceneDelegate.swift */; };
+		739721E32A6A475800594FF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739721E22A6A475800594FF0 /* ViewController.swift */; };
+		739721E62A6A475800594FF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739721E42A6A475800594FF0 /* Main.storyboard */; };
+		739721E82A6A475900594FF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 739721E72A6A475900594FF0 /* Assets.xcassets */; };
+		739721EB2A6A475900594FF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739721E92A6A475900594FF0 /* LaunchScreen.storyboard */; };
+		73B69C292A6EA15400E3AC0F /* CaulyEventInterstitial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B69C282A6EA15400E3AC0F /* CaulyEventInterstitial.swift */; };
+		73CACB972A6D42C9002998DB /* ExampleNativeAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73CACB952A6D42C9002998DB /* ExampleNativeAdView.m */; };
+		73CACB982A6D42C9002998DB /* ExampleNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73CACB962A6D42C9002998DB /* ExampleNativeAdView.xib */; };
+		73CACB9A2A6D5440002998DB /* AppOpenAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CACB992A6D5440002998DB /* AppOpenAdManager.swift */; };
+		73CACB9C2A6D5707002998DB /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CACB9B2A6D5707002998DB /* SplashViewController.swift */; };
+		73FC83622A735D4C00CD2E65 /* AdFitEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FC83612A735D4C00CD2E65 /* AdFitEvent.swift */; };
+		73FC83642A736A5100CD2E65 /* AdFitEventNative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FC83632A736A5100CD2E65 /* AdFitEventNative.swift */; };
+		73FC83662A7388B200CD2E65 /* CaulyEventNative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FC83652A7388B200CD2E65 /* CaulyEventNative.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3AAB8957A5B19C0F658D9489 /* Pods_CaulySwiftMediationSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CaulySwiftMediationSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B232DCC4A1E2BC709BB0A2B /* Pods-CaulySwiftMediationSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaulySwiftMediationSample.debug.xcconfig"; path = "Target Support Files/Pods-CaulySwiftMediationSample/Pods-CaulySwiftMediationSample.debug.xcconfig"; sourceTree = "<group>"; };
+		6856D569B29FFD547C95502D /* Pods-CaulySwiftMediationSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaulySwiftMediationSample.release.xcconfig"; path = "Target Support Files/Pods-CaulySwiftMediationSample/Pods-CaulySwiftMediationSample.release.xcconfig"; sourceTree = "<group>"; };
+		734FB5112A6E0C9B00AC3C30 /* CaulyEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaulyEvent.swift; sourceTree = "<group>"; };
+		734FB5132A6E16E700AC3C30 /* CaulyEventBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaulyEventBanner.swift; sourceTree = "<group>"; };
+		734FB5152A6E1E6500AC3C30 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		734FB5172A6E1E6A00AC3C30 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		734FB5192A6E1E7100AC3C30 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		734FB51B2A6E1E7700AC3C30 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		734FB51D2A6E1E8300AC3C30 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		734FB51F2A6E1E8B00AC3C30 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		734FB5212A6E1F6600AC3C30 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		734FB5232A6E1F6D00AC3C30 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		734FB5252A6E1F7600AC3C30 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		734FB5272A6E1F7E00AC3C30 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		734FB5292A6E1F8500AC3C30 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		734FB52C2A6E390E00AC3C30 /* CaulyInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyInterstitialAd.h; sourceTree = "<group>"; };
+		734FB52D2A6E390E00AC3C30 /* libCauly-universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCauly-universal.a"; sourceTree = "<group>"; };
+		734FB52E2A6E390E00AC3C30 /* Cauly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cauly.h; sourceTree = "<group>"; };
+		734FB52F2A6E390E00AC3C30 /* CaulyNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyNativeAd.h; sourceTree = "<group>"; };
+		734FB5302A6E390E00AC3C30 /* CaulyNativeAdItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyNativeAdItem.h; sourceTree = "<group>"; };
+		734FB5312A6E390E00AC3C30 /* CaulyAdSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyAdSetting.h; sourceTree = "<group>"; };
+		734FB5322A6E390E00AC3C30 /* CaulyAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyAdView.h; sourceTree = "<group>"; };
+		7366BF9E2A777D52005F11F6 /* MyNativeAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNativeAdView.swift; sourceTree = "<group>"; };
+		7366BF9F2A777D52005F11F6 /* MyNativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyNativeAdView.xib; sourceTree = "<group>"; };
+		739721DB2A6A475800594FF0 /* CaulySwiftMediationSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaulySwiftMediationSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		739721DE2A6A475800594FF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		739721E02A6A475800594FF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		739721E22A6A475800594FF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		739721E52A6A475800594FF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		739721E72A6A475900594FF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		739721EA2A6A475900594FF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		739721EC2A6A475900594FF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73B69C282A6EA15400E3AC0F /* CaulyEventInterstitial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaulyEventInterstitial.swift; sourceTree = "<group>"; };
+		73CACB932A6D42C8002998DB /* CaulySwiftMediationSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CaulySwiftMediationSample-Bridging-Header.h"; sourceTree = "<group>"; };
+		73CACB942A6D42C9002998DB /* ExampleNativeAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleNativeAdView.h; sourceTree = "<group>"; };
+		73CACB952A6D42C9002998DB /* ExampleNativeAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleNativeAdView.m; sourceTree = "<group>"; };
+		73CACB962A6D42C9002998DB /* ExampleNativeAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleNativeAdView.xib; sourceTree = "<group>"; };
+		73CACB992A6D5440002998DB /* AppOpenAdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOpenAdManager.swift; sourceTree = "<group>"; };
+		73CACB9B2A6D5707002998DB /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		73FC83612A735D4C00CD2E65 /* AdFitEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdFitEvent.swift; sourceTree = "<group>"; };
+		73FC83632A736A5100CD2E65 /* AdFitEventNative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdFitEventNative.swift; sourceTree = "<group>"; };
+		73FC83652A7388B200CD2E65 /* CaulyEventNative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaulyEventNative.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		739721D82A6A475800594FF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				734FB52A2A6E1F8500AC3C30 /* AdSupport.framework in Frameworks */,
+				734FB51C2A6E1E7700AC3C30 /* CoreGraphics.framework in Frameworks */,
+				734FB51A2A6E1E7100AC3C30 /* Foundation.framework in Frameworks */,
+				734FB51E2A6E1E8300AC3C30 /* QuartzCore.framework in Frameworks */,
+				734FB5282A6E1F7E00AC3C30 /* EventKit.framework in Frameworks */,
+				734FB5242A6E1F6D00AC3C30 /* CFNetwork.framework in Frameworks */,
+				734FB5182A6E1E6A00AC3C30 /* UIKit.framework in Frameworks */,
+				2483A505ED825665EFFDCBB8 /* Pods_CaulySwiftMediationSample.framework in Frameworks */,
+				734FB5202A6E1E8B00AC3C30 /* SystemConfiguration.framework in Frameworks */,
+				734FB5222A6E1F6600AC3C30 /* MediaPlayer.framework in Frameworks */,
+				734FB5262A6E1F7600AC3C30 /* MessageUI.framework in Frameworks */,
+				734FB5162A6E1E6500AC3C30 /* AVKit.framework in Frameworks */,
+				734FB5332A6E390E00AC3C30 /* libCauly-universal.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		734FB5102A6E0C8500AC3C30 /* CaulyCustomEvent */ = {
+			isa = PBXGroup;
+			children = (
+				734FB5112A6E0C9B00AC3C30 /* CaulyEvent.swift */,
+				734FB5132A6E16E700AC3C30 /* CaulyEventBanner.swift */,
+				73B69C282A6EA15400E3AC0F /* CaulyEventInterstitial.swift */,
+				73FC83652A7388B200CD2E65 /* CaulyEventNative.swift */,
+			);
+			path = CaulyCustomEvent;
+			sourceTree = "<group>";
+		};
+		734FB52B2A6E390E00AC3C30 /* cauly */ = {
+			isa = PBXGroup;
+			children = (
+				734FB52C2A6E390E00AC3C30 /* CaulyInterstitialAd.h */,
+				734FB52D2A6E390E00AC3C30 /* libCauly-universal.a */,
+				734FB52E2A6E390E00AC3C30 /* Cauly.h */,
+				734FB52F2A6E390E00AC3C30 /* CaulyNativeAd.h */,
+				734FB5302A6E390E00AC3C30 /* CaulyNativeAdItem.h */,
+				734FB5312A6E390E00AC3C30 /* CaulyAdSetting.h */,
+				734FB5322A6E390E00AC3C30 /* CaulyAdView.h */,
+			);
+			path = cauly;
+			sourceTree = "<group>";
+		};
+		739721D22A6A475800594FF0 = {
+			isa = PBXGroup;
+			children = (
+				73FC83602A735D2100CD2E65 /* AdFitCustomEvent */,
+				734FB5102A6E0C8500AC3C30 /* CaulyCustomEvent */,
+				739721DD2A6A475800594FF0 /* CaulySwiftMediationSample */,
+				739721DC2A6A475800594FF0 /* Products */,
+				CCA0DCA39C5700338C5FB827 /* Pods */,
+				DC322C767CBEBADD0CC0AEBE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		739721DC2A6A475800594FF0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				739721DB2A6A475800594FF0 /* CaulySwiftMediationSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		739721DD2A6A475800594FF0 /* CaulySwiftMediationSample */ = {
+			isa = PBXGroup;
+			children = (
+				734FB52B2A6E390E00AC3C30 /* cauly */,
+				739721DE2A6A475800594FF0 /* AppDelegate.swift */,
+				739721E02A6A475800594FF0 /* SceneDelegate.swift */,
+				739721E22A6A475800594FF0 /* ViewController.swift */,
+				739721E42A6A475800594FF0 /* Main.storyboard */,
+				73CACB942A6D42C9002998DB /* ExampleNativeAdView.h */,
+				73CACB952A6D42C9002998DB /* ExampleNativeAdView.m */,
+				73CACB962A6D42C9002998DB /* ExampleNativeAdView.xib */,
+				739721E72A6A475900594FF0 /* Assets.xcassets */,
+				739721E92A6A475900594FF0 /* LaunchScreen.storyboard */,
+				739721EC2A6A475900594FF0 /* Info.plist */,
+				73CACB932A6D42C8002998DB /* CaulySwiftMediationSample-Bridging-Header.h */,
+				73CACB992A6D5440002998DB /* AppOpenAdManager.swift */,
+				73CACB9B2A6D5707002998DB /* SplashViewController.swift */,
+			);
+			path = CaulySwiftMediationSample;
+			sourceTree = "<group>";
+		};
+		73FC83602A735D2100CD2E65 /* AdFitCustomEvent */ = {
+			isa = PBXGroup;
+			children = (
+				73FC83612A735D4C00CD2E65 /* AdFitEvent.swift */,
+				73FC83632A736A5100CD2E65 /* AdFitEventNative.swift */,
+				7366BF9E2A777D52005F11F6 /* MyNativeAdView.swift */,
+				7366BF9F2A777D52005F11F6 /* MyNativeAdView.xib */,
+			);
+			path = AdFitCustomEvent;
+			sourceTree = "<group>";
+		};
+		CCA0DCA39C5700338C5FB827 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B232DCC4A1E2BC709BB0A2B /* Pods-CaulySwiftMediationSample.debug.xcconfig */,
+				6856D569B29FFD547C95502D /* Pods-CaulySwiftMediationSample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DC322C767CBEBADD0CC0AEBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				734FB5292A6E1F8500AC3C30 /* AdSupport.framework */,
+				734FB5272A6E1F7E00AC3C30 /* EventKit.framework */,
+				734FB5252A6E1F7600AC3C30 /* MessageUI.framework */,
+				734FB5232A6E1F6D00AC3C30 /* CFNetwork.framework */,
+				734FB5212A6E1F6600AC3C30 /* MediaPlayer.framework */,
+				734FB51F2A6E1E8B00AC3C30 /* SystemConfiguration.framework */,
+				734FB51D2A6E1E8300AC3C30 /* QuartzCore.framework */,
+				734FB51B2A6E1E7700AC3C30 /* CoreGraphics.framework */,
+				734FB5192A6E1E7100AC3C30 /* Foundation.framework */,
+				734FB5172A6E1E6A00AC3C30 /* UIKit.framework */,
+				734FB5152A6E1E6500AC3C30 /* AVKit.framework */,
+				3AAB8957A5B19C0F658D9489 /* Pods_CaulySwiftMediationSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		739721DA2A6A475800594FF0 /* CaulySwiftMediationSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 739721EF2A6A475900594FF0 /* Build configuration list for PBXNativeTarget "CaulySwiftMediationSample" */;
+			buildPhases = (
+				F3BBB62FEC688B2BCBF0A3ED /* [CP] Check Pods Manifest.lock */,
+				739721D72A6A475800594FF0 /* Sources */,
+				739721D82A6A475800594FF0 /* Frameworks */,
+				739721D92A6A475800594FF0 /* Resources */,
+				85EB33E6644F95FFB5E220B3 /* [CP] Embed Pods Frameworks */,
+				8E34488BDBD9188AF2B12EB3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CaulySwiftMediationSample;
+			productName = CaulySwiftMediationSample;
+			productReference = 739721DB2A6A475800594FF0 /* CaulySwiftMediationSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		739721D32A6A475800594FF0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					739721DA2A6A475800594FF0 = {
+						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
+					};
+				};
+			};
+			buildConfigurationList = 739721D62A6A475800594FF0 /* Build configuration list for PBXProject "CaulySwiftMediationSample" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 739721D22A6A475800594FF0;
+			productRefGroup = 739721DC2A6A475800594FF0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				739721DA2A6A475800594FF0 /* CaulySwiftMediationSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		739721D92A6A475800594FF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				739721EB2A6A475900594FF0 /* LaunchScreen.storyboard in Resources */,
+				7366BFA12A777D52005F11F6 /* MyNativeAdView.xib in Resources */,
+				739721E82A6A475900594FF0 /* Assets.xcassets in Resources */,
+				739721E62A6A475800594FF0 /* Main.storyboard in Resources */,
+				73CACB982A6D42C9002998DB /* ExampleNativeAdView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		85EB33E6644F95FFB5E220B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CaulySwiftMediationSample/Pods-CaulySwiftMediationSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CaulySwiftMediationSample/Pods-CaulySwiftMediationSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CaulySwiftMediationSample/Pods-CaulySwiftMediationSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E34488BDBD9188AF2B12EB3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CaulySwiftMediationSample/Pods-CaulySwiftMediationSample-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CaulySwiftMediationSample/Pods-CaulySwiftMediationSample-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CaulySwiftMediationSample/Pods-CaulySwiftMediationSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3BBB62FEC688B2BCBF0A3ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CaulySwiftMediationSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		739721D72A6A475800594FF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				739721E32A6A475800594FF0 /* ViewController.swift in Sources */,
+				73FC83642A736A5100CD2E65 /* AdFitEventNative.swift in Sources */,
+				739721DF2A6A475800594FF0 /* AppDelegate.swift in Sources */,
+				7366BFA02A777D52005F11F6 /* MyNativeAdView.swift in Sources */,
+				73CACB9A2A6D5440002998DB /* AppOpenAdManager.swift in Sources */,
+				73FC83662A7388B200CD2E65 /* CaulyEventNative.swift in Sources */,
+				73B69C292A6EA15400E3AC0F /* CaulyEventInterstitial.swift in Sources */,
+				73CACB9C2A6D5707002998DB /* SplashViewController.swift in Sources */,
+				73FC83622A735D4C00CD2E65 /* AdFitEvent.swift in Sources */,
+				739721E12A6A475800594FF0 /* SceneDelegate.swift in Sources */,
+				73CACB972A6D42C9002998DB /* ExampleNativeAdView.m in Sources */,
+				734FB5122A6E0C9B00AC3C30 /* CaulyEvent.swift in Sources */,
+				734FB5142A6E16E700AC3C30 /* CaulyEventBanner.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		739721E42A6A475800594FF0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				739721E52A6A475800594FF0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		739721E92A6A475900594FF0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				739721EA2A6A475900594FF0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		739721ED2A6A475900594FF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		739721EE2A6A475900594FF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		739721F02A6A475900594FF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B232DCC4A1E2BC709BB0A2B /* Pods-CaulySwiftMediationSample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 55644VM79V;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CaulySwiftMediationSample/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/include",
+					"$(PROJECT_DIR)/CaulySwiftMediationSample/cauly",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"BURelyFoundationGlobalAFN\"",
+					"-l\"BURelyFoundationGlobalFoundation\"",
+					"-l\"BURelyFoundationGlobalGecko\"",
+					"-l\"BURelyFoundationGlobalHeader\"",
+					"-l\"BURelyFoundationGlobalNETWork\"",
+					"-l\"BURelyFoundationGlobalSDWebImage\"",
+					"-l\"BURelyFoundationGlobalYYModel\"",
+					"-l\"BURelyFoundationGlobalZFPlayer\"",
+					"-l\"BURelyFoundationGlobalZip\"",
+					"-l\"bz2\"",
+					"-l\"c++\"",
+					"-l\"c++abi\"",
+					"-l\"iconv\"",
+					"-l\"resolv\"",
+					"-l\"resolv.9\"",
+					"-l\"sqlite3\"",
+					"-l\"sqlite3.0\"",
+					"-l\"xml2\"",
+					"-l\"xml2.2\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AdSupport\"",
+					"-framework",
+					"\"AppLovinAdapter\"",
+					"-framework",
+					"\"AppLovinSDK\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"BURelyAdSDK\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreMotion\"",
+					"-framework",
+					"\"CoreServices\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"CoreVideo\"",
+					"-framework",
+					"\"DTExchangeAdapter\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleAppMeasurementIdentitySupport\"",
+					"-framework",
+					"\"GoogleMobileAds\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"IASDKCore\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"InMobiAdapter\"",
+					"-framework",
+					"\"InMobiSDK\"",
+					"-framework",
+					"\"JavaScriptCore\"",
+					"-framework",
+					"\"LiftoffMonetizeAdapter\"",
+					"-framework",
+					"\"MTGSDK\"",
+					"-framework",
+					"\"MTGSDKBanner\"",
+					"-framework",
+					"\"MTGSDKBidding\"",
+					"-framework",
+					"\"MTGSDKInterstitialVideo\"",
+					"-framework",
+					"\"MTGSDKNewInterstitial\"",
+					"-framework",
+					"\"MTGSDKReward\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"MintegralAdapter\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"PAGAdSDK\"",
+					"-framework",
+					"\"PangleAdapter\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"UnityAdapter\"",
+					"-framework",
+					"\"UnityAds\"",
+					"-framework",
+					"\"UserMessagingPlatform\"",
+					"-framework",
+					"\"VungleAdsSDK\"",
+					"-framework",
+					"\"WebKit\"",
+					"-framework",
+					"\"nanopb\"",
+					"-weak_framework",
+					"\"AdSupport\"",
+					"-weak_framework",
+					"\"AppTrackingTransparency\"",
+					"-weak_framework",
+					"\"CoreML\"",
+					"-weak_framework",
+					"\"DeviceCheck\"",
+					"-weak_framework",
+					"\"Foundation\"",
+					"-weak_framework",
+					"\"JavaScriptCore\"",
+					"-weak_framework",
+					"\"SafariServices\"",
+					"-weak_framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"WebKit\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.cauly.sdk.ios.mediation.sample.CaulySwiftMediationSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CaulySwiftMediationSample/CaulySwiftMediationSample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		739721F12A6A475900594FF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6856D569B29FFD547C95502D /* Pods-CaulySwiftMediationSample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 55644VM79V;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CaulySwiftMediationSample/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/include",
+					"$(PROJECT_DIR)/CaulySwiftMediationSample/cauly",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"BURelyFoundationGlobalAFN\"",
+					"-l\"BURelyFoundationGlobalFoundation\"",
+					"-l\"BURelyFoundationGlobalGecko\"",
+					"-l\"BURelyFoundationGlobalHeader\"",
+					"-l\"BURelyFoundationGlobalNETWork\"",
+					"-l\"BURelyFoundationGlobalSDWebImage\"",
+					"-l\"BURelyFoundationGlobalYYModel\"",
+					"-l\"BURelyFoundationGlobalZFPlayer\"",
+					"-l\"BURelyFoundationGlobalZip\"",
+					"-l\"bz2\"",
+					"-l\"c++\"",
+					"-l\"c++abi\"",
+					"-l\"iconv\"",
+					"-l\"resolv\"",
+					"-l\"resolv.9\"",
+					"-l\"sqlite3\"",
+					"-l\"sqlite3.0\"",
+					"-l\"xml2\"",
+					"-l\"xml2.2\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AdSupport\"",
+					"-framework",
+					"\"AppLovinAdapter\"",
+					"-framework",
+					"\"AppLovinSDK\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"BURelyAdSDK\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreMotion\"",
+					"-framework",
+					"\"CoreServices\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"CoreVideo\"",
+					"-framework",
+					"\"DTExchangeAdapter\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleAppMeasurementIdentitySupport\"",
+					"-framework",
+					"\"GoogleMobileAds\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"IASDKCore\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"InMobiAdapter\"",
+					"-framework",
+					"\"InMobiSDK\"",
+					"-framework",
+					"\"JavaScriptCore\"",
+					"-framework",
+					"\"LiftoffMonetizeAdapter\"",
+					"-framework",
+					"\"MTGSDK\"",
+					"-framework",
+					"\"MTGSDKBanner\"",
+					"-framework",
+					"\"MTGSDKBidding\"",
+					"-framework",
+					"\"MTGSDKInterstitialVideo\"",
+					"-framework",
+					"\"MTGSDKNewInterstitial\"",
+					"-framework",
+					"\"MTGSDKReward\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"MintegralAdapter\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"PAGAdSDK\"",
+					"-framework",
+					"\"PangleAdapter\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"UnityAdapter\"",
+					"-framework",
+					"\"UnityAds\"",
+					"-framework",
+					"\"UserMessagingPlatform\"",
+					"-framework",
+					"\"VungleAdsSDK\"",
+					"-framework",
+					"\"WebKit\"",
+					"-framework",
+					"\"nanopb\"",
+					"-weak_framework",
+					"\"AdSupport\"",
+					"-weak_framework",
+					"\"AppTrackingTransparency\"",
+					"-weak_framework",
+					"\"CoreML\"",
+					"-weak_framework",
+					"\"DeviceCheck\"",
+					"-weak_framework",
+					"\"Foundation\"",
+					"-weak_framework",
+					"\"JavaScriptCore\"",
+					"-weak_framework",
+					"\"SafariServices\"",
+					"-weak_framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"WebKit\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.cauly.sdk.ios.mediation.sample.CaulySwiftMediationSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CaulySwiftMediationSample/CaulySwiftMediationSample-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		739721D62A6A475800594FF0 /* Build configuration list for PBXProject "CaulySwiftMediationSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				739721ED2A6A475900594FF0 /* Debug */,
+				739721EE2A6A475900594FF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		739721EF2A6A475900594FF0 /* Build configuration list for PBXNativeTarget "CaulySwiftMediationSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				739721F02A6A475900594FF0 /* Debug */,
+				739721F12A6A475900594FF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 739721D32A6A475800594FF0 /* Project object */;
+}

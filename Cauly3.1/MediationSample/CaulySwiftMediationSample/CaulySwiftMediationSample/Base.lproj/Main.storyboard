@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="egg-3n-GcQ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="ss8-gP-NsD">
+            <objects>
+                <viewController id="egg-3n-GcQ" customClass="SplashViewController" customModule="CaulySwiftMediationSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cUS-OB-Mp1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mediation Sample" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="0SG-JX-8nM">
+                                <rect key="frame" x="46.333333333333343" y="199" width="300.33333333333326" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="App is done loading in: 5 seconds." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Cg-Fn-UFS">
+                                <rect key="frame" x="66" y="341" width="261" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lyU-qh-3m6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0SG-JX-8nM" firstAttribute="top" secondItem="lyU-qh-3m6" secondAttribute="top" constant="140" id="d6d-wO-b9D"/>
+                            <constraint firstItem="0SG-JX-8nM" firstAttribute="centerX" secondItem="cUS-OB-Mp1" secondAttribute="centerX" id="gix-S5-Y1G"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="splashScreenLabel" destination="7Cg-Fn-UFS" id="Lfh-Ts-lEz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ue-Is-zRT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-781" y="-35"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainStoryBoard" id="BYZ-38-t0r" customClass="ViewController" customModule="CaulySwiftMediationSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLr-GW-HKJ">
+                                <rect key="frame" x="147" y="164" width="99" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Interstitial"/>
+                                <connections>
+                                    <action selector="interstitialAdRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pdY-Yl-eMa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNv-Ov-bEQ">
+                                <rect key="frame" x="160" y="219" width="73" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Native"/>
+                                <connections>
+                                    <action selector="nativeAdRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kB8-UW-XfO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHl-yL-32r">
+                                <rect key="frame" x="146" y="274" width="101" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Rewarded"/>
+                                <connections>
+                                    <action selector="rewardAdRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aeO-kd-nGZ"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atA-v7-DLs" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="768" width="393" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qd6-4l-Rub"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwR-AC-xhW">
+                                <rect key="frame" x="157.66666666666666" y="109" width="78" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Banner"/>
+                                <connections>
+                                    <action selector="bannerAdRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XZT-z1-Xko"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZNL-dy-gBL" userLabel="Placeholder View">
+                                <rect key="frame" x="0.0" y="348" width="393" height="400"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="sjq-VO-iFb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NwR-AC-xhW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="0Vw-to-VIN"/>
+                            <constraint firstItem="zLr-GW-HKJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Jz-cn-2Nr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="atA-v7-DLs" secondAttribute="trailing" id="4bJ-TQ-gES"/>
+                            <constraint firstItem="atA-v7-DLs" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ofw-aE-fWb"/>
+                            <constraint firstItem="WNv-Ov-bEQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QzG-00-CFQ"/>
+                            <constraint firstItem="HHl-yL-32r" firstAttribute="top" secondItem="WNv-Ov-bEQ" secondAttribute="bottom" constant="20" id="URB-CR-LTQ"/>
+                            <constraint firstItem="WNv-Ov-bEQ" firstAttribute="top" secondItem="zLr-GW-HKJ" secondAttribute="bottom" constant="20" id="Xj8-I4-mWh"/>
+                            <constraint firstItem="ZNL-dy-gBL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dw4-mf-MhA"/>
+                            <constraint firstItem="NwR-AC-xhW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eIT-L5-2ww"/>
+                            <constraint firstItem="atA-v7-DLs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hWr-Cn-8sQ"/>
+                            <constraint firstItem="zLr-GW-HKJ" firstAttribute="top" secondItem="NwR-AC-xhW" secondAttribute="bottom" constant="20" id="kdY-jK-8Qq"/>
+                            <constraint firstItem="atA-v7-DLs" firstAttribute="top" secondItem="ZNL-dy-gBL" secondAttribute="bottom" constant="20" id="lbA-Ni-Zls"/>
+                            <constraint firstItem="HHl-yL-32r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ldx-yQ-YZl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZNL-dy-gBL" secondAttribute="trailing" id="p5P-HP-1eu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bannerView" destination="atA-v7-DLs" id="Lfs-BH-Yp6"/>
+                        <outlet property="nativeAdPlaceholder" destination="ZNL-dy-gBL" id="1bF-mZ-n68"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
