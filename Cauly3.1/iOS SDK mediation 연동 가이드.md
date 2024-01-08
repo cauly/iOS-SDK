@@ -9,6 +9,7 @@ iOS SDK mediation 연동 가이드
 	- [광고 SDK 가져오기](#광고-sdk-가져오기)
 	- [Info.plist 업데이트](#infoplist-업데이트)
 	- [광고 SDK 초기화](#광고-sdk-초기화)
+    - [UMP 설정](#ump-user-messaging-platform-설정)
 	- [파트너 통합 네트워크 설정](#파트너-통합-네트워크-설정)
 	- [테스트 광고 사용 설정](#테스트-광고-사용-설정)
 3. [Admob 광고 추가하기](#3-admob-광고-추가하기)
@@ -743,13 +744,20 @@ DT_TOOLCHAIN_DIR cannot be used to evaluate LIBRARY_SEARCH_PATHS, use TOOLCHAIN_
 ```
 
 #### iOS14 ATT(App Tracking Transparency) Framework 적용
+> 애드몹 UMP의 GDPR 동의 화면이 보이는 상태에서,  
+> 프로그래밍 방식을 사용하여 수동으로 ATT (App Tracking Transparency) 동의 알림을 요청하는 경우  
+> `애플 앱 심사에서 거절될 수 있습니다.`  
+> 애드몹 UMP를 사용하여 GDPR 메시지 사용 시 프로그래밍 방식을 사용하여 ATT 동의 요청을 하지 마십시오.
+
 - 애플은 iOS14 에서 ATT(App Tracking Transparency) Framework가 추가되었습니다.
 - IDFA 식별자를 얻기 위해서는 `ATT Framework를 반드시 적용`해야 합니다.
 - `info.plist`
+
 ```xml
 <key> NSUserTrackingUsageDescription </key>
 <string> 맞춤형 광고 제공을 위해 사용자의 데이터가 사용됩니다. </string>
 ```
+
 <details>
 	<summary>Swift</summary>
 
@@ -817,6 +825,169 @@ if (@available(iOS 14, *)) {
   <string>naversearchapp</string>
 </array>
 ```
+
+
+### UMP (User Messaging Platform) 설정
+
+#### GDPR (General Data Protection Regulation)
+
+`GDPR은 유럽 연합(이하 'EU')의 개인정보 보호 법령으로, 서비스 제공자는 EU 사용자의 개인정보 수집 및 활용에 대해 사용자에게 동의 여부를 확인받아야 합니다.`
+
+#### 1. SDK 추가
+
+1. 프로젝트의 Podfil을 열고 아래 내용을 추가합니다.
+
+``` bash
+pod 'GoogleUserMessagingPlatform'
+```
+
+2. pod 을 설치하고 .xcworkspace 파일을 엽니다.
+
+``` bash
+pod install --repo-update
+```
+
+#### 2. 구현
+
+> AppDelegate 에서 광고 관련 코드를 요청하기 전에 애드몹 UMP (User Messaging Platform) 를 통하여 GDPR 동의를 처리해야 합니다.  
+>  
+> 애드몹 UMP의 GDPR 동의 화면이 보이는 상태에서,  
+> 프로그래밍 방식을 사용하여 수동으로 ATT (App Tracking Transparency) 동의 알림을 요청하는 경우  
+> `애플 앱 심사에서 거절될 수 있습니다.`  
+> 애드몹 UMP를 사용하여 GDPR 메시지 사용 시 프로그래밍 방식을 사용하여 ATT 동의 요청을 하지 마십시오.
+
+- 아래 예제코드는 ViewController의 viewDidLoad() 에서 처리하는 방법에 대한 예제코드입니다.
+
+Swift
+
+``` swift
+import UIKit
+import GoogleMobileAds
+import UserMessagingPlatform
+
+
+class ViewController: UIViewController {
+
+    // Use a boolean to initialize the Google Mobile Ads SDK and load ads once.
+    private var isMobileAdsStartCalled = false
+    
+    @IBOutlet var nativeAdPlaceholder: UIView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Request an update for the consent information.
+        UMPConsentInformation.sharedInstance.requestConsentInfoUpdate(with: parameters) {
+            [weak self] requestConsentError in
+            guard let self else { return }
+
+            if let consentError = requestConsentError {
+            // Consent gathering failed.
+                return print("Error: \(consentError.localizedDescription)")
+            }
+
+            UMPConsentForm.loadAndPresentIfRequired(from: self) {
+                [weak self] loadAndPresentError in
+                guard let self else { return }
+
+                if let consentError = loadAndPresentError {
+                    // Consent gathering failed.
+                    return print("Error: \(consentError.localizedDescription)")
+                }
+
+                // Consent has been gathered.
+                if UMPConsentInformation.sharedInstance.canRequestAds {
+                    self.startGoogleMobileAdsSDK()
+                }
+            }
+        }
+        
+        // Check if you can initialize the Google Mobile Ads SDK in parallel
+        // while checking for new consent information. Consent obtained in
+        // the previous session can be used to request ads.
+        if UMPConsentInformation.sharedInstance.canRequestAds {
+            startGoogleMobileAdsSDK()
+        }
+    }
+
+    private func startGoogleMobileAdsSDK() {
+        DispatchQueue.main.async {
+          guard !self.isMobileAdsStartCalled else { return }
+
+          self.isMobileAdsStartCalled = true
+
+          // Initialize the Google Mobile Ads SDK.
+          GADMobileAds.sharedInstance().start()
+
+          // TODO: Request an ad.
+        }
+      }
+}
+```
+
+
+#### 3. 테스트
+> 해당 설정은 테스트 목적으로만 사용할 수 있습니다.  
+> 앱을 출시하기 전에 테스트 설정 코드를 반드시 삭제해야 합니다.
+
+- UMP SDK의 Debug 설정은 테스트 기기에서만 작동합니다.
+- UMPDebugSettings에서 UMPDebugGeography 유형의 debugGeography 속성을 사용하여 기기가 EEA 또는 영국에 있는 것처럼 앱 동작을 테스트할 수 있습니다.
+- UMPConsentInformation.sharedInstance.reset() 을 사용하여 UMP SDK의 상태를 재설정할 수 있습니다.
+
+``` clojure
+애드몹 UMP의 GDPR 동의 화면을 테스트 목적으로 확인하기 위해서는 아래 단계에 따라 테스트 기기 등록이 필요합니다.
+
+1. requestConsentInfoUpdateWithParameters:completionHandler: 를 호출합니다.
+2. 로그 출력에서 다음과 같은 메시지를 확인합니다. 메시지에는 기기 ID와 이를 테스트 기기로 추가하는 방법이 나와있습니다.
+
+<UMP SDK>To enable debug mode for this device, set: UMPDebugSettings.testDeviceIdentifiers = @[2077ef9a63d2b398840261c8221a0c9b]
+
+3. UMPDebugSettings().testDeviceIdentifiers 에 테스트 기기 ID 목록을 전달합니다.
+```
+
+Swift
+
+``` swift
+let parameters = UMPRequestParameters()
+let debugSettings = UMPDebugSettings()
+// 테스트 기기 설정
+debugSettings.testDeviceIdentifiers = ["2077ef9a63d2b398840261c8221a0c9b"]
+// EEA 지역 설정
+debugSettings.geography = .EEA
+parameters.debugSettings = debugSettings
+
+// 동의 상태 재설정
+UMPConsentInformation.sharedInstance.reset()
+
+// Request an update for the consent information.
+UMPConsentInformation.sharedInstance.requestConsentInfoUpdate(with: parameters) {
+    [weak self] requestConsentError in
+    guard let self else { return }
+    ...
+};
+```
+
+
+#### 4. IDFA 메시지 작성
+> 애드몹 UMP의 GDPR 메시지 사용 설정을 할 경우 IDFA 메시지 작성도 같이 작성해야합니다.  
+> 위에서 [ATT Framework 적용](#ios14-attapp-tracking-transparency-framework-적용)을 진행했다면 관련 코드를 모두 제거해야 합니다.
+
+
+1. 애드몹 IDFA 메시지 작성
+- [애드몹 대쉬보드](https://apps.admob.com)로 이동한 다음 [IDFA 메시지 작성 가이드](https://support.google.com/admob/answer/10115331?hl=ko)를 따라 IDFA 메시지를 작성하고 게시를 완료합니다.
+
+<p float="left">
+    <img src="/Cauly3.1/images/idfa_message.png" width="800" hight="700" />
+</p>
+
+2. ATT 동의 요청을 위한 설정 추가
+- ATT (App Tracking Transparency) 동의 요청을 위해 info.plist 에 다음 내용이 반드시 포함되어야 합니다.
+
+```xml
+<key> NSUserTrackingUsageDescription </key>
+<string> 맞춤형 광고 제공을 위해 사용자의 데이터가 사용됩니다. </string>
+```
+
 
 
 ### 광고 SDK 초기화
