@@ -85,14 +85,25 @@ pod 'GoogleMobileAdsMediationFacebook', '~> 6.14.0'
 # adfit
 pod 'AdFitSDK'
 
-# Xcode15.0 이상 버전에서 TOOL CHAIN 관련 빌드 에러가 발생한 경우 아래 코드를 추가하십시오.
+
+
 post_install do |installer|
+    # Xcode15.0 이상 버전에서 TOOL CHAIN 관련 빌드 에러가 발생한 경우 아래 코드를 추가하십시오.
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
-        xcconfig_path = config.base_configuration_reference.real_path
-        xcconfig = File.read(xcconfig_path)
-        xcconfig_mod = xcconfig.gsub(/DT_TOOLCHAIN_DIR/, "TOOLCHAIN_DIR")
-        File.open(xcconfig_path, "w") { |file| file << xcconfig_mod }
+            xcconfig_path = config.base_configuration_reference.real_path
+            xcconfig = File.read(xcconfig_path)
+            xcconfig_mod = xcconfig.gsub(/DT_TOOLCHAIN_DIR/, "TOOLCHAIN_DIR")
+            File.open(xcconfig_path, "w") { |file| file << xcconfig_mod }
+        end
+    end
+
+    # Xcode15.0 이상 버전에서 minimum deployment target 관련 빌드 에러가 발생한 경우 아래 코드를 추가하십시오.
+    installer.generated_projects.each do |project|
+        project.targets.each do |target|
+            target.build_configurations.each do |config|
+                config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+            end
         end
     end
 end
@@ -103,6 +114,15 @@ end
 
 ``` bash
 DT_TOOLCHAIN_DIR cannot be used to evaluate LIBRARY_SEARCH_PATHS, use TOOLCHAIN_DIR instead
+```
+
+- Xcode 15.0 이상 버전에서 빌드 시, iOS Minimum Deployments 버전 (최소 지원 버전)을 12.0 이상으로 설정하지 않은 경우 다음과 같은 에러가 발생할 수 있습니다.
+- 이 경우 Podfile에 위 내용을 참조하여 수정합니다.
+
+``` bash
+SDK does not contain 'libarclite' at the path 
+'/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/arc/libarclite_iphoneos.a'; 
+try increasing the minimum deployment target
 ```
 
 ### Info.plist 업데이트
@@ -927,6 +947,74 @@ class ViewController: UIViewController {
 ```
 
 
+Objective-C
+``` objectivec
+#import <UIKit/UIKit.h>
+@import GoogleMobileAds;
+#include <UserMessagingPlatform/UserMessagingPlatform.h>
+
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    __weak __typeof__(self) weakSelf = self;
+    
+    // Request an update for the consent information.
+    [UMPConsentInformation.sharedInstance requestConsentInfoUpdateWithParameters:nil completionHandler:^(NSError * _Nullable requestConsentError) {
+        if (requestConsentError) {
+            // Consent gathering failed.
+            NSLog(@"Error: %@", requestConsentError.localizedDescription);
+            return;
+        }
+        
+        __strong __typeof__(self) strongSelf = weakSelf;
+        if (!strongSelf) {
+            return;
+        }
+        
+        [UMPConsentForm loadAndPresentIfRequiredFromViewController:strongSelf
+                                                 completionHandler:^(NSError *loadAndPresentError) {
+            if (loadAndPresentError) {
+                // Consent gathering failed.
+                NSLog(@"Error: %@", loadAndPresentError.localizedDescription);
+                return;
+            }
+            
+            // Consent has been gathered.
+            __strong __typeof__(self) strongSelf = weakSelf;
+            if (!strongSelf) {
+                return;
+            }
+            
+            if (UMPConsentInformation.sharedInstance.canRequestAds) {
+                [strongSelf startGoogleMobileAdsSDK];
+            }
+        }];
+        
+    }];
+
+    // Check if you can initialize the Google Mobile Ads SDK in parallel
+    // while checking for new consent information. Consent obtained in
+    // the previous session can be used to request ads.
+    if (UMPConsentInformation.sharedInstance.canRequestAds) {
+        [self startGoogleMobileAdsSDK];
+    }
+}
+
+- (void)startGoogleMobileAdsSDK {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        // Initialize the Google Mobile Ads SDK.
+        [GADMobileAds.sharedInstance startWithCompletionHandler:nil];
+        
+        // TODO: Request an ad.
+    });
+}
+```
+
+
 #### 3. 테스트
 > 해당 설정은 테스트 목적으로만 사용할 수 있습니다.  
 > 앱을 출시하기 전에 테스트 설정 코드를 반드시 삭제해야 합니다.
@@ -966,6 +1054,26 @@ UMPConsentInformation.sharedInstance.requestConsentInfoUpdate(with: parameters) 
     guard let self else { return }
     ...
 };
+```
+
+Objective-C
+
+``` objectivec
+UMPRequestParameters *parameters = [[UMPRequestParameters alloc] init];
+UMPDebugSettings *debugSettings = [[UMPDebugSettings alloc] init];
+// 테스트 기기 설정
+debugSettings.testDeviceIdentifiers = @[@"2077ef9a63d2b398840261c8221a0c9b"];
+// EEA 지역 설정
+debugSettings.geography = UMPDebugGeographyEEA;
+parameters.debugSettings = debugSettings;
+
+// 동의 상태 재설정
+[UMPConsentInformation.sharedInstance reset];
+
+// Request an update for the consent information.
+[UMPConsentInformation.sharedInstance requestConsentInfoUpdateWithParameters:parameters completionHandler:^(NSError * _Nullable requestConsentError) {
+    ...
+}];
 ```
 
 
