@@ -80,7 +80,10 @@ pod 'GoogleMobileAdsMediationPangle', '~> 5.6.0.8.0'
 pod 'GoogleMobileAdsMediationUnity', '~> 4.9.2.0'
 
 # meta
-pod 'GoogleMobileAdsMediationFacebook', '~> 6.14.0'
+pod 'GoogleMobileAdsMediationFacebook', '~> 6.14.0.0'
+
+# IronSource
+pod 'GoogleMobileAdsMediationIronSource', '~>7.6.0.0'
 
 # adfit
 pod 'AdFitSDK'
@@ -1317,6 +1320,9 @@ extras.allPlacements = placements;
 
 
 #### Meta 설정
+- Meta 네트워크를 사용하기 위해 Facebook 로그인 및 `read_audience_network_insights` 권한이 필요합니다.
+    - Facebook 로그인은 [iOS용 Facebook 로그인](https://developers.facebook.com/docs/facebook-login/ios)을 참고하여 설정이 가능합니다.
+
 - Complie errors
     - Swift 환경: Meta SDK 설정을 위해 추가 코드가 필요하지 않습니다.
     - Objective-C 환경: Meta Audience Network 어댑터 6.9.0.0 이상의 경우 컴파일 오류를 방지하기 위해 [여기](https://developers.google.com/admob/ios/mediation/meta#objective-c) 의 통합 단계를 따라야 합니다.
@@ -1348,6 +1354,10 @@ extras.allPlacements = placements;
 
 - 필요한 경우 [여기](https://developers.google.com/admob/ios/mediation/meta#optional_steps)를 참고하여 옵션 설정이 가능합니다.
 
+
+#### IronSource 설정
+- IronSource SDK 설정을 위해 추가 코드가 필요하지 않습니다.
+- 필요한 경우 [여기](https://developers.google.com/admob/ios/mediation/ironsource?hl=ko#step_4_implement_privacy_settings_on_ironsource_sdk)를 참고하여 추가 설정이 가능합니다.
 
 
 ### 테스트 광고 사용 설정
