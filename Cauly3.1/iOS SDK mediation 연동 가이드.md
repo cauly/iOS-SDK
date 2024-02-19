@@ -47,7 +47,11 @@ iOS SDK mediation 연동 가이드
 
 > [AdMob 연동 가이드](https://developers.google.com/admob/ios/quick-start?hl=ko) 에 안내되었고, 이 샘플이 [AdMob 연동 샘플](https://github.com/googleads/googleads-mobile-ios-mediation) 에 기반하였으므로  
 > 이 문서에도 [CocoaPods](https://cocoapods.org/) 를 사용한 라이브러리 Dependency 관리를 합니다.  
-> CocoaPods 가 설치되어 있지 않다면 [여기](https://guides.cocoapods.org/using/getting-started) 를 방문하여 설치 및 환경 구성을 진행해주십시오.  
+> CocoaPods 가 설치되어 있지 않다면 [여기](https://guides.cocoapods.org/using/getting-started) 를 방문하여 설치 및 환경 구성을 진행해주십시오.
+
+### 권장 환경
+- Xcode 15.1 이상 사용
+- iOS 12.0 이상 타겟팅
 
 ### 광고 SDK 가져오기
 > 1. 프로젝트 디렉토리에서 Podfile을 열고 필요로 하는 라이브러리를 추가합니다.  
@@ -2315,10 +2319,6 @@ class ViewController: UIViewController, GADNativeAdLoaderDelegate, GADNativeAdDe
 
 
 ### Cauly 광고 추가하기
-
-#### 권장 환경
-- Xcode 13.2.1 이상 사용
-- iOS 10.0 이상 타겟팅
 
 #### SDK 구성
 - Cauly SDK 헤더 파일
