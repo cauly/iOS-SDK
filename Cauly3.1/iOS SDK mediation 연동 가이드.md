@@ -1263,44 +1263,10 @@ GADMobileAds.sharedInstance.requestConfiguration.maxAdContentRating = GADMaxAdCo
 - AppLovin SDK 설정을 위해 추가 코드가 필요하지 않습니다.
 - 필요한 경우 [여기](https://developers.google.com/admob/ios/mediation/applovin#optional_steps)를 참고하여 옵션 설정이 가능합니다.
 
-#### Vungle 설정
-- Vungle SDK 초기화를 위해 앱 내에서 사용될 모든 배치 목록을 SDK 로 전달해야 합니다.
+#### Vungle 설정 (옵션)
+- Vungle SDK 설정을 위해 추가 코드가 필요하지 않습니다.
 - 필요한 경우 [여기](https://developers.google.com/admob/ios/mediation/liftoff-monetize#optional_steps)를 참고하여 옵션 설정이 가능합니다.
 
-
-<details>
-	<summary>Swift</summary>
-
-```swift
-import VungleAdapter
-// ...
-
-let request = GADRequest()
-let extras = VungleAdNetworkExtras()
-
-let placements = ["PLACEMENT_ID_1", "PLACEMENT_ID_2"]
-extras.allPlacements = placements
-request.register(extras)
-```
-
-</details>
-
-<details>
-	<summary>Objective-C</summary>
-
-``` objectivec
-#import <VungleAdapter/VungleAdapter.h>
-// ...
-
-GADRequest *request = [GADRequest request];
-VungleAdNetworkExtras *extras = [[VungleAdNetworkExtras alloc] init];
-
-NSMutableArray *placements = [[NSMutableArray alloc] initWithObjects:@"PLACEMENT_ID_1", @"PLACEMENT_ID_2", nil];
-extras.allPlacements = placements;
-[request registerAdNetworkExtras:extras];
-```
-
-</details>
 
 #### DT Exchange 설정 (옵션)
 - DT Exchange SDK 설정을 위해 추가 코드가 필요하지 않습니다.
@@ -1310,7 +1276,7 @@ extras.allPlacements = placements;
 - Mintegral SDK 설정을 위해 추가 코드가 필요하지 않습니다.
 - 필요한 경우 [여기](https://developers.google.com/admob/ios/mediation/mintegral#optional_steps)를 참고하여 옵션 설정이 가능합니다.
 
-#### Pangle 설정
+#### Pangle 설정 (옵션)
 - Pangle SDK 설정을 위해 추가 코드가 필요하지 않습니다.
 
 
@@ -1359,7 +1325,7 @@ extras.allPlacements = placements;
 - 필요한 경우 [여기](https://developers.google.com/admob/ios/mediation/meta#optional_steps)를 참고하여 옵션 설정이 가능합니다.
 
 
-#### IronSource 설정
+#### IronSource 설정 (옵션)
 - IronSource SDK 설정을 위해 추가 코드가 필요하지 않습니다.
 - 필요한 경우 [여기](https://developers.google.com/admob/ios/mediation/ironsource?hl=ko#step_4_implement_privacy_settings_on_ironsource_sdk)를 참고하여 추가 설정이 가능합니다.
 
