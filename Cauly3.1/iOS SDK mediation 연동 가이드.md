@@ -51,7 +51,7 @@ iOS SDK mediation 연동 가이드
 
 ### 권장 환경
 - Xcode 15.1 이상 사용
-- iOS 12.0 이상 타겟팅
+- iOS 12.0 이상 타겟팅 (Adfit 네트워크를 사용하는 경우 13.0 이상 타겟팅)
 
 ### 광고 SDK 가져오기
 > 1. 프로젝트 디렉토리에서 Podfile을 열고 필요로 하는 라이브러리를 추가합니다.  
@@ -90,7 +90,8 @@ pod 'GoogleMobileAdsMediationFacebook', '~> 6.14.0.0'
 pod 'GoogleMobileAdsMediationIronSource', '~>7.6.0.0'
 
 # adfit
-pod 'AdFitSDK'
+# adfit을 사용하는 경우, iOS Minimum Deployments 13.0 이상 타겟팅이 필요합니다.
+pod 'AdFitSDK', '~>3.14.5'
 
 
 
