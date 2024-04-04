@@ -1945,6 +1945,7 @@ class ViewController: UIViewController, GADFullScreenContentDelegate {
             return;
         }
         self.rewardedAd = ad;
+	self.rewardedAd.fullScreenContentDelegate = self;
 
         NSLog(@"Rewarded ad loaded.");
         [self showRewardedAd];
@@ -1970,7 +1971,7 @@ class ViewController: UIViewController, GADFullScreenContentDelegate {
 /// Tells the delegate that the ad failed to present full screen content.
 - (void)ad:(nonnull id<GADFullScreenPresentingAd>)ad
 didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
-    NSLog(@"Ad did fail to present full screen content.");
+    NSLog(@"Ad did fail to present full screen content. error: %@", error);
 }
 
 /// Tells the delegate that the ad will present full screen content.
