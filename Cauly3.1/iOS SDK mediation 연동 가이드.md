@@ -1971,7 +1971,7 @@ class ViewController: UIViewController, GADFullScreenContentDelegate {
 /// Tells the delegate that the ad failed to present full screen content.
 - (void)ad:(nonnull id<GADFullScreenPresentingAd>)ad
 didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
-    NSLog(@"Ad did fail to present full screen content. error: %@", error);
+    NSLog(@"Ad did fail to present full screen content. error: %@", [error localizedDescription]);
 }
 
 /// Tells the delegate that the ad will present full screen content.
