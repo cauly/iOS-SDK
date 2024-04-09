@@ -1581,6 +1581,7 @@ extension AppOpenAdManager: GADFullScreenContentDelegate {
 ### Admob 배너 광고 추가하기
 - rootViewController : 광고 클릭이 발생할 때 오버레이를 표시하는 데 사용되는 보기 컨트롤러입니다. 일반적으로 GADBannerView 를 포함하는 보기 컨트롤러로 설정해야 합니다.
 - adUnitID : GADBannerView 가 광고를 로드하는 광고 단위 ID입니다.
+- StoryBoard 또는 xib 파일에 GADBannerView를 추가할 수 있습니다. 이 방법을 사용할 때는 배너에 위치 제약 조건을 추가해야하며, 배너의 광고 크기는 프로그래매틱 방식으로 설정이 필요합니다.
 
 
 <details> <summary>Swift</summary>
@@ -1591,6 +1592,10 @@ import GoogleMobileAds
 
 class ViewController: UIViewController, GADBannerViewDelegate {
 
+    // 프로그래매틱 방식으로 생성하는 경우 사용
+    var bannerView: GADBannerView
+
+    // StoryBoard 또는 xib 파일에 GADBannerView를 추가하는 경우 사용
     @IBOutlet var bannerView: GADBannerView!
     
     override func viewDidLoad() {
@@ -1598,7 +1603,10 @@ class ViewController: UIViewController, GADBannerViewDelegate {
 
         ...
 
-        bannerView = GADBannerView(adSize: GADAdSizeBanner)
+        bannerView = GADBannerView(adSize: GADAdSizeBanner)     // 프로그래매틱 방식으로 생성하는 경우에만 사용
+
+        bannerView.adSize = GADAdSizeBanner       // StoryBoard 또는 xib 파일에 GADBannerView를 추가하는 경우에만 사용
+
         bannerView.adUnitID = "ca-app-pub-xxxxxxxxxx"
         bannerView.rootViewController = self
         bannerView.delegate = self
@@ -1610,6 +1618,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         bannerView.load(GADRequest())
     }
     
+    // 프로그래매틱 방식으로 생성하는 경우에만 사용
     func addBannerViewToView(_ bannerView: GADBannerView) {
         bannerView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(bannerView)
@@ -1634,6 +1643,8 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     // MARK: - bannerDelegate
     func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
         print("bannerViewDidReceiveAd")
+
+        // 프로그래매틱 방식으로 생성하는 경우에만 사용
         addBannerViewToView(bannerView)
     }
     
@@ -1668,7 +1679,11 @@ class ViewController: UIViewController, GADBannerViewDelegate {
 
 @interface ViewController () <GADBannerViewDelegate>
 
+// 프로그래매틱 방식으로 생성하는 경우 사용
 @property(nonatomic, strong) GADBannerView *bannerView;
+
+// StoryBoard 또는 xib 파일에 GADBannerView를 추가하는 경우 사용
+@property(nonatomic, strong) IBOutlet GADBannerView *bannerView;
 
 @end
 
@@ -1678,11 +1693,15 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     [super viewDidLoad];
 
     ...
+    self.bannerView = [[GADBannerView alloc] initWithAdSize:GADAdSizeBanner]; // 프로그래매틱 방식으로 생성하는 경우에만 사용
+
+    self.bannerView.adSize = GADAdSizeBanner       // StoryBoard 또는 xib 파일에 GADBannerView를 추가하는 경우에만 사용
 
     self.bannerView.adUnitID = @"ca-app-pub-xxxxxxxxxx";
     self.bannerView.rootViewController = self;
     self.bannerView.delegate = self;
 }
+
 
 #pragma mark - Banner Ad requset
 // 배너 광고 요청
@@ -1692,10 +1711,35 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     [self.bannerView loadRequest:request];
 }
 
+// 프로그래매틱 방식으로 생성하는 경우에만 사용
+- (void)addBannerViewToView:(UIView *)bannerView {
+    bannerView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:bannerView];
+    [self.view addConstraints:@[
+    [NSLayoutConstraint constraintWithItem:bannerView
+                               attribute:NSLayoutAttributeBottom
+                               relatedBy:NSLayoutRelationEqual
+                                  toItem:self.view.safeAreaLayoutGuide
+                               attribute:NSLayoutAttributeBottom
+                              multiplier:1
+                                constant:0],
+    [NSLayoutConstraint constraintWithItem:bannerView
+                               attribute:NSLayoutAttributeCenterX
+                               relatedBy:NSLayoutRelationEqual
+                                  toItem:self.view
+                               attribute:NSLayoutAttributeCenterX
+                              multiplier:1
+                                constant:0]
+                                ]];
+}
+
 #pragma - Admob Banner delegates
 
 - (void)bannerViewDidReceiveAd:(GADBannerView *)bannerView {
   NSLog(@"bannerViewDidReceiveAd");
+
+  // 프로그래매틱 방식으로 생성하는 경우에만 사용
+  [self addBannerViewToView:self.bannerView];
 }
 
 - (void)bannerView:(GADBannerView *)bannerView didFailToReceiveAdWithError:(NSError *)error {
@@ -1720,6 +1764,16 @@ class ViewController: UIViewController, GADBannerViewDelegate {
 ```
 
 </details>
+
+#### 배너 광고 사이즈
+
+| GADAdSize                | Size (width * height)       |
+|--------------------------|-----------------------------|
+| GADAdSizeBanner          | 320x50 - Phone and Tablets  |
+| GADAdSizeLargeBanner     | 320x100 - Phone and Tablets |
+| GADAdSizeMediumRectangle | 300x250 - Phone and Tablets |
+| GADAdSizeFullBanner      | 468x60 - Tablets            |
+| GADAdSizeLeaderboard     | 728x90 - Tablets            |
 
 
 ### Admob 전면 광고 추가하기
