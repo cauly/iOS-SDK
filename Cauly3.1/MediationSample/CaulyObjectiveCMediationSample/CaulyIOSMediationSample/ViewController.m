@@ -21,6 +21,7 @@
     // admob test unit ID 입니다.
     // 배포시 애드몹에서 발급한 unit ID 로 반드시 변경해야합니다.
     self.bannerView.adUnitID = @"ca-app-pub-3940256099942544/2934735716";
+    self.bannerView.adSize = GADAdSizeBanner;
     self.bannerView.rootViewController = self;
     self.bannerView.delegate = self;
     
@@ -50,12 +51,11 @@
         self.rewardedAd = ad;
 
         NSLog(@"Rewarded ad loaded.");
-        [self showRewardedAd];
     }];
 }
 
 // 리워드 광고 표시 및 리워드 이벤트 처리
-- (void)showRewardedAd {
+- (IBAction)rewardedAdShow:(id)sender {
     NSLog(@"##### showRewardedAd");
     if (self.rewardedAd) {
         [self.rewardedAd presentFromRootViewController:self
@@ -132,14 +132,17 @@
         }
         self.interstitialAd = ad;
         self.interstitialAd.fullScreenContentDelegate = self;
-
-        // 전면 광고 표시
-        if (self.interstitialAd) {
-            [self.interstitialAd presentFromRootViewController:self];
-        } else {
-            NSLog(@"Ad wasn't ready");
-        }
     }];
+}
+
+
+// 전면 광고 표시
+- (IBAction)interstitialAdShow:(id)sender {
+    if (self.interstitialAd) {
+        [self.interstitialAd presentFromRootViewController:self];
+    } else {
+        NSLog(@"Ad wasn't ready");
+    }
 }
 
 #pragma mark - Banner Ad requset

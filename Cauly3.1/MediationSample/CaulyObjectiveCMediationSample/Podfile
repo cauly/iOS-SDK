@@ -6,34 +6,34 @@ target 'CaulyIOSMediationSample' do
   use_frameworks!
 
   # Google Admob
-  pod 'Google-Mobile-Ads-SDK'
-
-  # Google Admob TestSuite (상용화시 반드시 삭제)
-  pod 'GoogleMobileAdsMediationTestSuite'
+  pod 'Google-Mobile-Ads-SDK', '~> 11.2.0'
 
   # inmobi
-  pod 'GoogleMobileAdsMediationInMobi'
+  pod 'GoogleMobileAdsMediationInMobi', '~> 10.7.1.0'
 
   # applovin
-  pod 'GoogleMobileAdsMediationAppLovin'
+  pod 'GoogleMobileAdsMediationAppLovin', '~> 12.3.0.0'
 
   # vungle
-  pod 'GoogleMobileAdsMediationVungle'
+  pod 'GoogleMobileAdsMediationVungle', '~> 7.3.0.0'
 
   # DT Exchange
-  pod 'GoogleMobileAdsMediationFyber'
+  pod 'GoogleMobileAdsMediationFyber', '~> 8.2.7.0'
 
   # Mintegral
-  pod 'GoogleMobileAdsMediationMintegral'
+  pod 'GoogleMobileAdsMediationMintegral', '~> 7.5.9.0'
 
   # Pangle
-  pod 'GoogleMobileAdsMediationPangle'
+  pod 'GoogleMobileAdsMediationPangle', '~> 5.8.0.8.0'
 
   # Unity Ads
-  pod 'GoogleMobileAdsMediationUnity'
-  
+  pod 'GoogleMobileAdsMediationUnity', '~> 4.10.0.0'
+
   # meta
-  pod 'GoogleMobileAdsMediationFacebook'
+  pod 'GoogleMobileAdsMediationFacebook', '~> 6.15.0.0'
+
+  # IronSource
+  pod 'GoogleMobileAdsMediationIronSource', '~>7.9.1.0.0'
 
   post_install do |installer|
       installer.generated_projects.each do |project|

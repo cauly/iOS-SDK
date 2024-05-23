@@ -6,34 +6,50 @@ target 'CaulySwiftMediationSample' do
   use_frameworks!
 
   # Google Admob
-  pod 'Google-Mobile-Ads-SDK'
+  pod 'Google-Mobile-Ads-SDK', '~> 11.2.0'
 
   # inmobi
-  pod 'GoogleMobileAdsMediationInMobi'
+  pod 'GoogleMobileAdsMediationInMobi', '~> 10.7.1.0'
 
   # applovin
-  pod 'GoogleMobileAdsMediationAppLovin'
+  pod 'GoogleMobileAdsMediationAppLovin', '~> 12.3.0.0'
 
   # vungle
-  pod 'GoogleMobileAdsMediationVungle'
+  pod 'GoogleMobileAdsMediationVungle', '~> 7.3.0.0'
 
   # DT Exchange
-  pod 'GoogleMobileAdsMediationFyber'
+  pod 'GoogleMobileAdsMediationFyber', '~> 8.2.7.0'
 
   # Mintegral
-  pod 'GoogleMobileAdsMediationMintegral'
+  pod 'GoogleMobileAdsMediationMintegral', '~> 7.5.9.0'
 
   # Pangle
-  pod 'GoogleMobileAdsMediationPangle'
+  pod 'GoogleMobileAdsMediationPangle', '~> 5.8.0.8.0'
 
   # Unity Ads
-  pod 'GoogleMobileAdsMediationUnity'
+  pod 'GoogleMobileAdsMediationUnity', '~> 4.10.0.0'
 
   # meta
-  pod 'GoogleMobileAdsMediationFacebook'
+  pod 'GoogleMobileAdsMediationFacebook', '~> 6.15.0.0'
+
+  # IronSource
+  pod 'GoogleMobileAdsMediationIronSource', '~>7.9.1.0.0'
 
   # adfit
-  pod 'AdFitSDK'
+  # adfit을 사용하는 경우, iOS Minimum Deployments 14.0 이상 타겟팅이 필요합니다.
+  pod 'AdFitSDK', '~>3.14.17'
+  
+  post_install do |installer|
+      # Xcode15.0 이상 버전에서 TOOL CHAIN 관련 빌드 에러가 발생한 경우 아래 코드를 추가하십시오.
+      installer.pods_project.targets.each do |target|
+          target.build_configurations.each do |config|
+              xcconfig_path = config.base_configuration_reference.real_path
+              xcconfig = File.read(xcconfig_path)
+              xcconfig_mod = xcconfig.gsub(/DT_TOOLCHAIN_DIR/, "TOOLCHAIN_DIR")
+              File.open(xcconfig_path, "w") { |file| file << xcconfig_mod }
+          end
+      end
+  end
 
   # Pods for CaulySwiftMediationSample
 

@@ -60,9 +60,8 @@ class AppOpenAdManager: NSObject {
         GADAppOpenAd.load(
             // admob test unit ID 입니다.
             // 배포시 애드몹에서 발급한 unit ID 로 반드시 변경해야합니다.
-            withAdUnitID: "ca-app-pub-3940256099942544/5662855259",
-            request: GADRequest(),
-            orientation: UIInterfaceOrientation.portrait
+            withAdUnitID: "ca-app-pub-3940256099942544/5575463023",
+            request: GADRequest()
         ) { ad, error in
             self.isLoadingAd = false
             if let error = error {

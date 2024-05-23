@@ -119,12 +119,19 @@ class ViewController: UIViewController, GADBannerViewDelegate, GADFullScreenCont
                                 }
                                 interstitial = ad
                                 interstitial?.fullScreenContentDelegate = self
-            
-                                // 전면 광고 표시
-                                showInterstitialAd()
                             }
         )
     }
+    
+    // 전면 광고 표시
+    @IBAction func interstitialAdShow(_ sender: UIButton) {
+        if interstitial != nil {
+            interstitial?.present(fromRootViewController: self)
+        } else {
+            print("Ad wasn't ready")
+        }
+    }
+    
     
     // 리워드 광고 요청
     @IBAction func rewardAdRequest(_ sender: UIButton) {
@@ -143,12 +150,11 @@ class ViewController: UIViewController, GADBannerViewDelegate, GADFullScreenCont
             rewardedAd = ad
             print("Rewarded ad loaded.")
             rewardedAd?.fullScreenContentDelegate = self
-            showRewardedAd()
         })
     }
     
     // 리워드 광고 표시 및 리워드 이벤트 처리
-    func showRewardedAd() {
+    @IBAction func rewardAdShow(_ sender: UIButton) {
         if let ad = rewardedAd {
             ad.present(fromRootViewController: self) {
                 let reward = ad.adReward
@@ -176,14 +182,6 @@ class ViewController: UIViewController, GADBannerViewDelegate, GADFullScreenCont
         print("Ad did dismiss full screen content.")
     }
     
-    
-    func showInterstitialAd() {
-        if interstitial != nil {
-            interstitial?.present(fromRootViewController: self)
-        } else {
-            print("Ad wasn't ready")
-        }
-    }
     
     // 네이티브 광고 요청
     @IBAction func nativeAdRequest(_ sender: UIButton) {

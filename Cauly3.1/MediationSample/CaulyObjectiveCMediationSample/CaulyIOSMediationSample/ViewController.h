@@ -7,7 +7,6 @@
 
 #import <UIKit/UIKit.h>
 @import GoogleMobileAds;
-@import GoogleMobileAdsMediationTestSuite;
 #import "ExampleNativeAdView.h"
 
 
@@ -22,8 +21,10 @@
 
 - (IBAction)bannerAdRequest:(id)sender;
 - (IBAction)interstitialAdRequest:(id)sender;
+- (IBAction)interstitialAdShow:(id)sender;
 - (IBAction)nativeAdRequest:(id)sender;
 - (IBAction)rewardedAdRequest:(id)sender;
+- (IBAction)rewardedAdShow:(id)sender;
 
 @end
 
