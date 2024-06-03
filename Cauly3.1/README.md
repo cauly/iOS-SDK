@@ -213,7 +213,7 @@ iOS SDK 설치가이드
 	```
 
 ### 참고 사항
-- Cauly SDK는 iOS SDK 10.0 기반으로 작성 되었습니다.
+- Cauly SDK는 iOS SDK 12.0 기반으로 작성 되었습니다.
 - 기존 프로젝트에 있던 과거 SDK를 깨끗하게 지운 후 설치해야 정상 동작 됩니다.
 - 새 SDK를 설치해도 기존 Library를 참조하는 경우 다음 작업을 수행 합니다.
 	- [Targets 에서 “Get Info”]
@@ -223,8 +223,11 @@ iOS SDK 설치가이드
 - 배너광고 최소 요청 주기 15 초 입니다.
 
 ### 권장 환경
-- Xcode 13.2.1 이상 사용
-- iOS 10.0 이상 타겟팅
+> 2024년 4월 29일부터 앱 스토어에 앱을 제출하려면 Xcode 15.0 이상 버전 사용이 필요합니다.  
+> https://developer.apple.com/news/upcoming-requirements/?id=04292024a  
+
+- Xcode 15.0 이상 사용
+- iOS 12.0 이상 타겟팅
 
 ### SDK 구성
 - Cauly SDK 헤더 파일
@@ -244,7 +247,7 @@ iOS SDK 설치가이드
 |----------------------|--------------------------------------|
 | libCauly.a           | Cauly SDK 라이브러리 파일 (디바이스 전용)         |
 | libCauly-universal.a | Cauly SDK 라이브러리 파일 (시뮬레이터 및 디바이스 통합) |
-| Cauly.xcframework    | Cauly SDK Framework 파일	(ARM64 계열 macOS 지원)	|
+| CaulySDK.xcframework    | Cauly SDK Framework 파일	(ARM64 계열 macOS 지원)	|
 		
 - Cauly SDK 샘플 프로젝트
 
@@ -252,9 +255,26 @@ iOS SDK 설치가이드
   - Swift Project
 	
 ## SDK 설치 방법
+### 준비
+
+#### 1. Cocoapods 사용하여 설치
+> 1. 프로젝트 디렉토리에서 Podfile을 열고 Cauly SDK를 추가합니다.  
+> 2. `pod install --repo-update` 명령을 통해 다운로드 받도록 합니다.  
+> 3. 라이브러리 다운로드가 완료되면 Xcode 로 *.xcworkspace 파일을 열어 다음 과정으로 진행합니다.  
+
+
+``` bash
+source 'https://github.com/cauly/CaulySDK_iOS.git'
+pod 'CaulySDK', '3.1.22'
+```
+
+
+#### 2. 수동 설치
 1. Cauly SDK 추가
-	- Cauly SDK 를 적용할 프로젝트 내에 ‘CaulyLib’ 폴더 복사
-	- Cauly.xcframework 추가 (ARM64 계열`M1, M2` macOS 지원)
+	- 아래 항목 중 하나의 방법으로 SDK 추가
+		1. Cauly SDK 를 적용할 프로젝트 내에 ‘CaulyLib’ 폴더 복사 (CaulySDK.xcframework 파일 제외)
+		2. CaulySDK.xcframework 추가 (ARM64 계열`M1, M2` macOS 지원)
+			- Embed & Sign 설정
 2. Framework 추가
 	- AVKit.framework
 	- UIKit.framework
@@ -267,6 +287,13 @@ iOS SDK 설치가이드
 	- MessageUI.framework  //‘Required’ 를 ‘Optional’로 변경해야 합니다.
 	- EventKit.framework    // ‘Required’ 를 ‘Optional’로 변경해야 합니다.
 	- AdSupport.Framwork  // ‘Required’ 를 ‘Optional’로 변경해야 합니다.
+
+#### Cocoapods 설치 또는 CaulySDK.xcframework 수동 설치 방법으로 진행하는 경우  
+- 해당 SDK에 Privacy Manifest, Code Signature 가 포함되어있습니다.
+- CaulySDK 호출
+``` objectivec
+@import CaulySDK;
+```
 
 ### 구현 
 - iOS 7.1 이하 버전의 디바이스에서 Banner 광고의 Orientation Rotate 를 정확히 처리하기 위해선 아래 code를 적용. 

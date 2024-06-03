@@ -1,0 +1,6 @@
+framework module CaulySDK {
+  umbrella header "CaulySDK.h"
+  export *
+
+  module * { export * }
+}
