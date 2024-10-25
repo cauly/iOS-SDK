@@ -60,34 +60,37 @@ iOS SDK mediation 연동 가이드
 
 ``` bash
 # Google Admob
-pod 'Google-Mobile-Ads-SDK', '~> 11.2.0'
+pod 'Google-Mobile-Ads-SDK', '~> 11.8.0'
 
 # inmobi
-pod 'GoogleMobileAdsMediationInMobi', '~> 10.7.1.0'
+pod 'GoogleMobileAdsMediationInMobi', '~> 10.7.5.0'
 
 # applovin
-pod 'GoogleMobileAdsMediationAppLovin', '~> 12.3.0.0'
+pod 'GoogleMobileAdsMediationAppLovin', '~> 12.6.1.0'
 
 # vungle
-pod 'GoogleMobileAdsMediationVungle', '~> 7.3.0.0'
+pod 'GoogleMobileAdsMediationVungle', '~> 7.4.0.1'
 
 # DT Exchange
-pod 'GoogleMobileAdsMediationFyber', '~> 8.2.7.0'
+pod 'GoogleMobileAdsMediationFyber', '~> 8.3.1.0'
 
 # Mintegral
-pod 'GoogleMobileAdsMediationMintegral', '~> 7.5.9.0'
+pod 'GoogleMobileAdsMediationMintegral', '~> 7.7.1.0'
 
 # Pangle
-pod 'GoogleMobileAdsMediationPangle', '~> 5.8.0.8.0'
+pod 'GoogleMobileAdsMediationPangle', '~> 6.2.0.5.0'
 
 # Unity Ads
-pod 'GoogleMobileAdsMediationUnity', '~> 4.10.0.0'
+pod 'GoogleMobileAdsMediationUnity', '~> 4.12.2.0'
 
 # meta
-pod 'GoogleMobileAdsMediationFacebook', '~> 6.15.0.0'
+pod 'GoogleMobileAdsMediationFacebook', '~> 6.15.2.0'
 
 # IronSource
-pod 'GoogleMobileAdsMediationIronSource', '~>7.9.1.0.0'
+pod 'GoogleMobileAdsMediationIronSource', '~> 8.3.0.0.0'
+
+# UMP SDK
+pod 'GoogleUserMessagingPlatform', '~> 2.6.0'
 
 # adfit
 # adfit을 사용하는 경우, iOS Minimum Deployments 14.0 이상 타겟팅이 필요합니다.
@@ -755,6 +758,14 @@ try increasing the minimum deployment target
       <key>SKAdNetworkIdentifier</key>
       <string>9g2aggbj52.skadnetwork</string>
     </dict>
+    <dict>
+      <key>SKAdNetworkIdentifier</key>
+      <string>mj797d8u6f.skadnetwork</string>
+    </dict>
+    <dict>
+      <key>SKAdNetworkIdentifier</key>
+      <string>mqn7fxpca7.skadnetwork</string>
+    </dict>
 </array>
 ```
 </details>
@@ -878,7 +889,7 @@ pod install --repo-update
 
 #### 2. 구현
 
-> AppDelegate 에서 광고 관련 코드를 요청하기 전에 애드몹 UMP (User Messaging Platform) 를 통하여 GDPR 동의를 처리해야 합니다.  
+> 앱에서 SDK 초기화를 포함한 광고 관련 코드를 요청하기 전에 애드몹 UMP (User Messaging Platform) 를 통하여 GDPR 동의를 처리해야 합니다.  
 >  
 > 애드몹 UMP의 GDPR 동의 화면이 보이는 상태에서,  
 > 프로그래밍 방식을 사용하여 수동으로 ATT (App Tracking Transparency) 동의 알림을 요청하는 경우  
@@ -941,16 +952,25 @@ class ViewController: UIViewController {
 
     private func startGoogleMobileAdsSDK() {
         DispatchQueue.main.async {
-          guard !self.isMobileAdsStartCalled else { return }
-
-          self.isMobileAdsStartCalled = true
-
-          // Initialize the Google Mobile Ads SDK.
-          GADMobileAds.sharedInstance().start()
-
-          // TODO: Request an ad.
+            guard !self.isMobileAdsStartCalled else { return }
+            
+            self.isMobileAdsStartCalled = true
+            
+            // Initialize the Google Mobile Ads SDK.
+            GADMobileAds.sharedInstance().start { status in
+                // Optional: Log each adapter's initialization latency.
+                // 미디에이션 어댑터 연결 정보 확인
+                let adapterStatuses = status.adapterStatusesByClassName
+                for adapter in adapterStatuses {
+                    let adapterStatus = adapter.value
+                    NSLog("Adapter Name: %@, Description: %@, Latency: %f", adapter.key, adapterStatus.description, adapterStatus.latency)
+                }
+                
+                // Start loading ads here ...
+                AppOpenAdManager.shared.loadAd()
+            }
         }
-      }
+    }
 }
 ```
 
@@ -959,8 +979,7 @@ Objective-C
 ``` objectivec
 #import <UIKit/UIKit.h>
 @import GoogleMobileAds;
-#include <UserMessagingPlatform/UserMessagingPlatform.h>
-
+@import UserMessagingPlatform;
 
 @implementation ViewController
 
@@ -1015,9 +1034,19 @@ Objective-C
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         // Initialize the Google Mobile Ads SDK.
-        [GADMobileAds.sharedInstance startWithCompletionHandler:nil];
-        
-        // TODO: Request an ad.
+        GADMobileAds *ads = [GADMobileAds sharedInstance];
+        [ads startWithCompletionHandler:^(GADInitializationStatus *status) {
+            // Optional: Log each adapter's initialization latency.
+            // 미디에이션 어댑터 연결 정보 확인
+            NSDictionary *adapterStatuses = [status adapterStatusesByClassName];
+            for (NSString *adapter in adapterStatuses) {
+              GADAdapterStatus *adapterStatus = adapterStatuses[adapter];
+              NSLog(@"Adapter Name: %@, Description: %@, Latency: %f", adapter,
+                    adapterStatus.description, adapterStatus.latency);
+            }
+
+            // TODO: Request an ad.
+          }];
     });
 }
 ```
@@ -1108,7 +1137,8 @@ parameters.debugSettings = debugSettings;
 
 
 ### 광고 SDK 초기화
-- `AppDelegate` 에서 `startWithCompletionHandler:` 메서드를 호출합니다.  
+- `AppDelegate` 에서 `startWithCompletionHandler:` 메서드를 호출합니다. 
+- 위에서 [UMP 설정](#ump-user-messaging-platform-설정)을 진행했다면 `startGoogleMobileSDK()` 메서드를 통해 광고 SDK 초기화가 진행되므로 다음 단계를 진행하십시오.
 - 미디에이션을 사용하는 경우 광고를 로드하기 전에 완료 핸들러를 호출할 때까지 기다려야 모든 미디에이션 어댑터가 초기화 됩니다.
 <details>
 	<summary>Swift</summary>
@@ -1121,6 +1151,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     let ads = GADMobileAds.sharedInstance()
     ads.start { status in
         // Optional: Log each adapter's initialization latency.
+        // 미디에이션 어댑터 연결 정보 확인
         let adapterStatuses = status.adapterStatusesByClassName
         for adapter in adapterStatuses {
             let adapterStatus = adapter.value
@@ -1147,6 +1178,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     GADMobileAds *ads = [GADMobileAds sharedInstance];
     [ads startWithCompletionHandler:^(GADInitializationStatus *status) {
         // Optional: Log each adapter's initialization latency.
+        // 미디에이션 어댑터 연결 정보 확인
         NSDictionary *adapterStatuses = [status adapterStatusesByClassName];
         for (NSString *adapter in adapterStatuses) {
           GADAdapterStatus *adapterStatus = adapterStatuses[adapter];
@@ -1359,78 +1391,49 @@ GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers =
     @[ @"2077ef9a63d2b398840261c8221a0c9b"  ]; // Sample device ID
 ```
 
-## 3. Admob 광고 추가하기
-### Admob 앱 오프닝 광고 추가하기
-- 앱 오프닝 광고를 구현하는 데 필요한 단계는 크게 다음과 같습니다.
-    1. `AppDelegate`에 메서드를 추가하여 `GADAppOpenAd`를 로드하고 표시합니다.
-    2. 앱 포그라운드 이벤트 감지
-    3. 프레젠테이션 콜백을 처리합니다.
+#### 프로그래밍 방식으로 광고 검사기 실행
 
-<details> <summary>Swift</summary>
+- 광고 검사기는 앱을 출시하기 전 테스트 기기에서 직접 테스트 광고 요청에 대한 분석을 수행할 수 있도록 지원합니다.
+- 광고 검사기는 테스트 기기에서만 실행되며, AdMob 페이지에서 설정 또는 [프로그래밍 방식으로 테스트 장치 추가](#프로그래밍-방식으로-테스트-장치-추가) 를 통해 테스트 기기 설정이 가능합니다.
 
-- AppDelegate.swift
-
+Swift
 ```swift
-import UIKit
-import GoogleMobileAds
-
-@main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    
-    var window: UIWindow?
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Initialize Google Mobile Ads SDK.
-        let ads = GADMobileAds.sharedInstance()
-        ads.start { status in
-            ...
-            
-            // Although the Google Mobile Ads SDK might not be fully initialized at this point,
-            // we should still load the app open ad so it becomes ready to show when the splash
-            // screen dismisses.
-            AppOpenAdManager.shared.loadAd()
-        }
-        return true
+GADMobileAds.sharedInstance().presentAdInspector(from: self) { error in
+    if error != nil {
+        print("ad inspector error: \(String(describing: error))")
     }
-    
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        let rootViewController = application.windows.first(
-            where: { $0.isKeyWindow })?.rootViewController
-        if let rootViewController = rootViewController {
-            // Do not show app open ad if the current view controller is SplashViewController.
-            if (rootViewController is SplashViewController) {
-                return
-            }
-            AppOpenAdManager.shared.showAdIfAvailable(viewController: rootViewController)
-        }
-    }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
-
-
 }
 ```
 
-- AppOpenAdManager.swift
-```swift
+Objective-C
+``` objectivec
+[GADMobileAds.sharedInstance presentAdInspectorFromViewController:self completionHandler:^(NSError * error) {
+    if (error != nil) {
+        NSLog(@"ad inspector error: %@", error);
+    }
+}];
+```
 
+## 3. Admob 광고 추가하기
+### Admob 앱 오프닝 광고 추가하기
+- 앱 오프닝 광고를 구현하는 데 필요한 단계는 크게 다음과 같습니다.
+    1. 광고를 표시하기 전에 광고를 로드하는 관리자 클래스를 생성합니다.
+    2. 앱이 포그라운드 이벤트 중에 광고를 표시합니다.
+    3. 프레젠테이션 콜백을 처리합니다.
+- 다음은 앱 오프닝 광고 구현 예시입니다.
+
+<details> <summary>Swift</summary>
+
+- AppOpenAdManager.swift
+
+```swift
 import GoogleMobileAds
 
 protocol AppOpenAdManagerDelegate: AnyObject {
-    /// Method to be invoked when an app open ad is complete (i.e. dismissed or fails to show).
-    func appOpenAdManagerAdDidComplete(_ appOpenAdManager: AppOpenAdManager)
+    func appOpenAdDidLoad();
+    func appOpenAdFailedToLoad(_ error: Error);
+    func appOpenAdDidShow();
+    func appOpenAdFailedToShow(_ error: Error);
 }
 
 class AppOpenAdManager: NSObject {
@@ -1464,12 +1467,6 @@ class AppOpenAdManager: NSObject {
         return appOpenAd != nil && wasLoadTimeLessThanNHoursAgo(timeoutInterval: timeoutInterval)
     }
 
-    private func appOpenAdManagerAdDidComplete() {
-        // The app open ad is considered to be complete when it dismisses or fails to show,
-        // call the delegate's appOpenAdManagerAdDidComplete method if the delegate is not nil.
-        appOpenAdManagerDelegate?.appOpenAdManagerAdDidComplete(self)
-    }
-
     func loadAd() {
         // Do not load ad if there is an unused ad or one is already loading.
         if isLoadingAd || isAdAvailable() {
@@ -1477,26 +1474,30 @@ class AppOpenAdManager: NSObject {
         }
         isLoadingAd = true
         print("Start loading app open ad.")
+        
         GADAppOpenAd.load(
-            withAdUnitID: "ca-app-pub-xxxxxxxxxx",
+            withAdUnitID: "ca-app-pub-3940256099942544/5575463023",
             request: GADRequest()
         ) { ad, error in
             self.isLoadingAd = false
             if let error = error {
                 self.appOpenAd = nil
                 self.loadTime = nil
-                print("App open ad failed to load with error: \(error.localizedDescription).")
+                print("App open ad failed to load with error: \(error).")
+                self.appOpenAdManagerDelegate?.appOpenAdFailedToLoad(error)
                 return
             }
 
             self.appOpenAd = ad
             self.appOpenAd?.fullScreenContentDelegate = self
             self.loadTime = Date()
+            
+            self.appOpenAdManagerDelegate?.appOpenAdDidLoad()
             print("App open ad loaded successfully.")
         }
     }
 
-    func showAdIfAvailable(viewController: UIViewController) {
+    func showAdIfAvailable() {
         // If the app open ad is already showing, do not show the ad again.
         if isShowingAd {
             print("App open ad is already showing.")
@@ -1507,14 +1508,13 @@ class AppOpenAdManager: NSObject {
         // method and load a new ad.
         if !isAdAvailable() {
             print("App open ad is not ready yet.")
-            appOpenAdManagerAdDidComplete()
             loadAd()
             return
         }
         if let ad = appOpenAd {
             print("App open ad will be displayed.")
             isShowingAd = true
-            ad.present(fromRootViewController: viewController)
+            ad.present(fromRootViewController: nil)
         }
     }
 }
@@ -1528,8 +1528,8 @@ extension AppOpenAdManager: GADFullScreenContentDelegate {
         appOpenAd = nil
         isShowingAd = false
         print("App open ad was dismissed.")
-        appOpenAdManagerAdDidComplete()
         loadAd()
+        appOpenAdManagerDelegate?.appOpenAdDidShow()
     }
 
     func ad(
@@ -1538,11 +1538,305 @@ extension AppOpenAdManager: GADFullScreenContentDelegate {
     ) {
         appOpenAd = nil
         isShowingAd = false
-        print("App open ad failed to present with error: \(error.localizedDescription).")
-        appOpenAdManagerAdDidComplete()
+        print("App open ad failed to present with error: \(error).")
         loadAd()
+        appOpenAdManagerDelegate?.appOpenAdFailedToShow(error)
     }
 }
+```
+
+- SplashViewController.swift
+``` swift
+import UIKit
+import GoogleMobileAds
+
+class SplashViewController: UIViewController, AppOpenAdManagerDelegate {
+    /// Number of seconds remaining to show the app open ad.
+    /// This simulates the time needed to load the app.
+    ///
+    /// Use a boolean to initialize the Google Mobile Ads SDK and load ads once.
+    private var isMobileAdsStartCalled = false
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        AppOpenAdManager.shared.appOpenAdManagerDelegate = self
+        
+        // UMP(User Messaging Platform) 를 사용하고자 하는 경우 SDK 초기화 전에 UMP 동의 절차가 우선 진행되어야 합니다.
+        DispatchQueue.main.async {
+            guard !self.isMobileAdsStartCalled else { return }
+            
+            self.isMobileAdsStartCalled = true
+            
+            // Initialize the Google Mobile Ads SDK.
+            GADMobileAds.sharedInstance().start { status in
+                // Optional: Log each adapter's initialization latency.
+                // 미디에이션 어댑터 연결 정보 확인
+                let adapterStatuses = status.adapterStatusesByClassName
+                for adapter in adapterStatuses {
+                    let adapterStatus = adapter.value
+                    NSLog("Adapter Name: %@, Description: %@, Latency: %f", adapter.key, adapterStatus.description, adapterStatus.latency)
+                }
+                
+                // Start loading ads here ...
+                AppOpenAdManager.shared.loadAd()
+            }
+        }
+    }
+    
+    // 메인 화면으로 이동
+    func startMainScreen() {
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+        let mainViewController = mainStoryBoard.instantiateViewController(withIdentifier: "MainStoryBoard")
+        
+        let keyWindow = UIApplication.shared.windows.first(where: { $0.isKeyWindow })
+        keyWindow?.rootViewController = mainViewController
+    }
+    
+    // MARK: AppOpenAdManagerDelegate
+    
+    // 앱 오프닝 광고 수신 성공
+    func appOpenAdDidLoad() {
+        print("appOpenAdDidLoad")
+        AppOpenAdManager.shared.showAdIfAvailable()
+    }
+    
+    // 앱 오프닝 광고 수신 실패
+    func appOpenAdFailedToLoad(_ error: any Error) {
+        print("appOpenAdFailedToLoad: \(error)");
+        startMainScreen()
+    }
+    
+    // 앱 오프닝 광고 노출 성공
+    func appOpenAdDidShow() {
+        print("appOpenAdDidShow")
+        startMainScreen()
+    }
+    
+    // 앱 오프닝 광고 노출 실패
+    func appOpenAdFailedToShow(_ error: any Error) {
+        print("appOpenAdFailedToShow: \(error)");
+        startMainScreen()
+    }
+}
+```
+
+</details>
+
+
+<details> <summary>Objective-C</summary>
+
+- AppOpenAdManager.h
+
+```objectivec
+#import <UIKit/UIKit.h>
+#import <GoogleMobileAds/GoogleMobileAds.h>
+
+@protocol AppOpenAdManagerDelegate <NSObject>
+
+- (void)appOpenAdDidLoad;
+- (void)appOpenAdFailedToLoad:(NSError *)error;
+- (void)appOpenAdDidShow;
+- (void)appOpenAdFailedToShow:(NSError *)error;
+
+@end
+
+@interface AppOpenAdManager : NSObject <GADFullScreenContentDelegate>
+
+@property (nonatomic, weak) id <AppOpenAdManagerDelegate> _Nullable delegate;
+
++ (nonnull AppOpenAdManager *)sharedInstance;
+- (void)loadAd;
+- (void)showAdIfAvailable;
+
+@end
+```
+
+- AppOpenAdManager.m
+
+```objectivec
+#import "AppOpenAdManager.h"
+
+static NSTimeInterval const fourHoursInSeconds = 3600 * 4;
+
+@interface AppOpenAdManager()
+/// The app open ad.
+@property(nonatomic, strong) GADAppOpenAd *appOpenAd;
+/// Keeps track of if an app open ad is loading.
+@property(nonatomic, assign) BOOL isLoadingAd;
+/// Keeps track of if an app open ad is showing.
+@property(nonatomic, assign) BOOL isShowingAd;
+/// Keeps track of the time when an app open ad was loaded to discard expired ad.
+@property(weak, nonatomic) NSDate *loadTime;
+
+@end
+
+@implementation AppOpenAdManager
+
++ (nonnull AppOpenAdManager *)sharedInstance {
+    static AppOpenAdManager *instance = nil;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[AppOpenAdManager alloc] init];
+    });
+    
+    return instance;
+}
+
+- (void)loadAd {
+    // Do not load ad if there is an unused ad or one is already loading.
+    if (self.isLoadingAd || [self isAdAvailable]) {
+        return;
+    }
+    
+    self.isLoadingAd = YES;
+
+    // admob test unit ID 입니다.
+    // 배포시 애드몹에서 발급한 unit ID 로 반드시 변경해야합니다.
+    [GADAppOpenAd loadWithAdUnitID:@"ca-app-pub-3940256099942544/5575463023"
+            request:[GADRequest request]
+            completionHandler:^(GADAppOpenAd *_Nullable appOpenAd, NSError *_Nullable error) {
+                self.isLoadingAd = NO;
+                if (error) {
+                    NSLog(@"Failed to load app open ad: %@", error);
+                    [self.delegate appOpenAdFailedToLoad:error];
+                    return;
+                }
+                self.appOpenAd = appOpenAd;
+                self.appOpenAd.fullScreenContentDelegate = self;
+                self.loadTime = [NSDate date];
+        
+                [self.delegate appOpenAdDidLoad];
+            }];
+}
+
+- (void)showAdIfAvailable {
+    // If the app open ad is already showing, do not show the ad again.
+    if (self.isShowingAd) {
+        return;
+    }
+
+    // If the app open ad is not available yet but is supposed to show, load a
+    // new ad.
+    if (![self isAdAvailable]) {
+        [self loadAd];
+        return;
+    }
+
+    self.isShowingAd = YES;
+    [self.appOpenAd presentFromRootViewController:nil];
+}
+
+- (BOOL)isAdAvailable {
+    // Check if ad exists and can be shown.
+    return self.appOpenAd != nil && [self wasLoadTimeLessThanHoursAgo];
+}
+
+- (BOOL)wasLoadTimeLessThanHoursAgo {
+    // Check if ad was loaded more than n hours ago.
+    return [[NSDate date] timeIntervalSinceDate:self.loadTime] < fourHoursInSeconds;
+}
+
+
+#pragma mark - GADFullScreenContentDelegate methods
+
+- (void)adWillPresentFullScreenContent:(id<GADFullScreenPresentingAd>)ad {
+    NSLog(@"App open ad is will be presented.");
+}
+
+- (void)adDidDismissFullScreenContent:(id<GADFullScreenPresentingAd>)ad {
+    self.appOpenAd = nil;
+    self.isShowingAd = NO;
+    // Reload an ad.
+    [self loadAd];
+    [self.delegate appOpenAdDidShow];
+}
+
+- (void)ad:(id<GADFullScreenPresentingAd>)ad didFailToPresentFullScreenContentWithError:(NSError *)error {
+    self.appOpenAd = nil;
+    self.isShowingAd = NO;
+    // Reload an ad.
+    [self loadAd];
+    [self.delegate appOpenAdFailedToShow:error];
+}
+
+@end
+```
+
+- SplashViewController.m
+
+```objectivec
+#import "SplashViewController.h"
+#import "AppOpenAdManager.h"
+@import GoogleMobileAds;
+
+@interface SplashViewController () <AppOpenAdManagerDelegate>
+
+@end
+
+@implementation SplashViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    AppOpenAdManager.sharedInstance.delegate = self;
+    
+    // UMP(User Messaging Platform) 를 사용하고자 하는 경우 SDK 초기화 전에 UMP 동의 절차가 우선 진행되어야 합니다.
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        // Initialize the Google Mobile Ads SDK.
+        GADMobileAds *ads = [GADMobileAds sharedInstance];
+        [ads startWithCompletionHandler:^(GADInitializationStatus *status) {
+            // Optional: Log each adapter's initialization latency.
+            // 미디에이션 어댑터 연결 정보 확인
+            NSDictionary *adapterStatuses = [status adapterStatusesByClassName];
+            for (NSString *adapter in adapterStatuses) {
+              GADAdapterStatus *adapterStatus = adapterStatuses[adapter];
+              NSLog(@"Adapter Name: %@, Description: %@, Latency: %f", adapter,
+                    adapterStatus.description, adapterStatus.latency);
+            }
+
+            // Start loading ads here...
+            [AppOpenAdManager.sharedInstance loadAd];
+          }];
+    });
+}
+
+// 메인 화면으로 이동
+- (void)startMainScreen {
+    AppOpenAdManager.sharedInstance.delegate = nil;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *mainViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"MainViewController"];
+
+    UIApplication.sharedApplication.keyWindow.rootViewController = mainViewController;
+}
+
+// 앱 오프닝 광고 수신 성공
+- (void)appOpenAdDidLoad {
+    NSLog(@"appOpenAdDidLoad");
+    [AppOpenAdManager.sharedInstance showAdIfAvailable];
+}
+
+// 앱 오프닝 광고 수신 실패
+- (void)appOpenAdFailedToLoad:(NSError *)error {
+    NSLog(@"appOpenAdFailedToLoad: %@", error);
+    [self startMainScreen];
+}
+
+// 앱 오프닝 광고 노출 성공
+- (void)appOpenAdDidShow {
+    NSLog(@"appOpenAdDidShow");
+    [self startMainScreen];
+}
+
+// 앱 오프닝 광고 노출 실패
+- (void)appOpenAdFailedToShow:(NSError *)error {
+    NSLog(@"appOpenAdFailedToShow: %@", error);
+    [self startMainScreen];
+}
+
+@end
 ```
 
 </details>
@@ -1713,7 +2007,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
 }
 
 - (void)bannerView:(GADBannerView *)bannerView didFailToReceiveAdWithError:(NSError *)error {
-  NSLog(@"bannerView:didFailToReceiveAdWithError: %@", [error localizedDescription]);
+  NSLog(@"bannerView:didFailToReceiveAdWithError: %@", error);
 }
 
 - (void)bannerViewDidRecordImpression:(GADBannerView *)bannerView {
@@ -1772,7 +2066,7 @@ class ViewController: UIViewController, GADFullScreenContentDelegate {
                             completionHandler: { [self] ad, error in
                                 if let error = error {
                                     // 전면 광고 요청 실패
-                                    print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                                    print("Failed to load interstitial ad with error: \(error)")
                                     return
                                 }
                                 interstitial = ad
@@ -1834,7 +2128,7 @@ class ViewController: UIViewController, GADFullScreenContentDelegate {
                         completionHandler:^(GADInterstitialAd *ad, NSError *error) {
         if (error) {
             // 전면 광고 요청 실패
-            NSLog(@"Failed to load interstitial ad with error: %@", [error localizedDescription]);
+            NSLog(@"Failed to load interstitial ad with error: %@", error);
             return;
         }
         self.interstitialAd = ad;
@@ -1900,7 +2194,7 @@ class ViewController: UIViewController, GADFullScreenContentDelegate {
                            completionHandler: { [self] ad, error in
             if let error = error {
                 // 보상형 광고 요청 실패
-                print("Failed to load rewarded ad with error: \(error.localizedDescription)")
+                print("Failed to load rewarded ad with error: \(error)")
                 return
             }
             rewardedAd = ad
@@ -1969,7 +2263,7 @@ class ViewController: UIViewController, GADFullScreenContentDelegate {
             completionHandler:^(GADRewardedAd *ad, NSError *error) {
         if (error) {
             // 리워드 광고 요청 실패
-            NSLog(@"Rewarded ad failed to load with error: %@", [error localizedDescription]);
+            NSLog(@"Rewarded ad failed to load with error: %@", error);
             return;
         }
         self.rewardedAd = ad;
@@ -2000,7 +2294,7 @@ class ViewController: UIViewController, GADFullScreenContentDelegate {
 /// Tells the delegate that the ad failed to present full screen content.
 - (void)ad:(nonnull id<GADFullScreenPresentingAd>)ad
 didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
-    NSLog(@"Ad did fail to present full screen content. error: %@", [error localizedDescription]);
+    NSLog(@"Ad did fail to present full screen content. error: %@", error);
 }
 
 /// Tells the delegate that the ad will present full screen content.
@@ -2154,7 +2448,7 @@ class ViewController: UIViewController, GADNativeAdLoaderDelegate, GADNativeAdDe
     }
     
     func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: Error) {
-        print("adLoader didFailToReceiveAdWithError")
+        print("adLoader didFailToReceiveAdWithError: \(error)")
     }
     
     func nativeAdDidRecordImpression(_ nativeAd: GADNativeAd) {
@@ -2299,7 +2593,7 @@ class ViewController: UIViewController, GADNativeAdLoaderDelegate, GADNativeAdDe
 }
 
 - (void)adLoader:(GADAdLoader *)adLoader didFailToReceiveAdWithError:(NSError *)error {
-    NSLog(@"didFailToReceiveAdWithError");
+    NSLog(@"didFailToReceiveAdWithError: %@", error);
 }
 
 
@@ -3073,6 +3367,11 @@ class CaulyEventNative: NSObject, GADMediationNativeAd, CaulyNativeAdDelegate {
         if let handler = completionHandler {
             delegate = handler(nil, error)
         }
+    }
+
+    func didRecordClickOnAsset(withName assetName: GADNativeAssetIdentifier, view: UIView, viewController: UIViewController) {
+        print("didRecordClickOnAssetWithName");
+        nativeAd?.click(caulyNativeAdItem)
     }
     
     func urlToImage() {

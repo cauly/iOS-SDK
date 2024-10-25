@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="egg-3n-GcQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="egg-3n-GcQ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,15 +18,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mediation Sample" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="0SG-JX-8nM">
-                                <rect key="frame" x="46.333333333333343" y="199" width="300.33333333333326" height="43"/>
+                                <rect key="frame" x="46.333333333333343" y="259" width="300.33333333333326" height="43"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="App is done loading in: 5 seconds." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Cg-Fn-UFS">
-                                <rect key="frame" x="66" y="341" width="261" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -34,13 +27,10 @@
                         <viewLayoutGuide key="safeArea" id="lyU-qh-3m6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0SG-JX-8nM" firstAttribute="top" secondItem="lyU-qh-3m6" secondAttribute="top" constant="140" id="d6d-wO-b9D"/>
+                            <constraint firstItem="0SG-JX-8nM" firstAttribute="top" secondItem="lyU-qh-3m6" secondAttribute="top" constant="200" id="d6d-wO-b9D"/>
                             <constraint firstItem="0SG-JX-8nM" firstAttribute="centerX" secondItem="cUS-OB-Mp1" secondAttribute="centerX" id="gix-S5-Y1G"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="splashScreenLabel" destination="7Cg-Fn-UFS" id="Lfh-Ts-lEz"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ue-Is-zRT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -134,15 +124,25 @@
                                     <action selector="rewardAdShow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A3u-NS-NcI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgZ-b9-ThZ">
+                                <rect key="frame" x="262" y="69" width="121" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Ad Inspector"/>
+                                <connections>
+                                    <action selector="showAdInspector:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xIZ-4y-nUa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NwR-AC-xhW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="0Vw-to-VIN"/>
                             <constraint firstItem="zLr-GW-HKJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Jz-cn-2Nr"/>
+                            <constraint firstItem="AgZ-b9-ThZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="3k7-bn-Xdl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="atA-v7-DLs" secondAttribute="trailing" id="4bJ-TQ-gES"/>
                             <constraint firstItem="zLr-GW-HKJ" firstAttribute="leading" secondItem="Ihb-bs-kE0" secondAttribute="trailing" constant="10" id="GBs-bb-EZf"/>
                             <constraint firstItem="HHl-yL-32r" firstAttribute="bottom" secondItem="PGE-uo-Xcz" secondAttribute="bottom" id="H5U-fo-Gkh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AgZ-b9-ThZ" secondAttribute="trailing" constant="10" id="Kct-IU-OzG"/>
                             <constraint firstItem="zLr-GW-HKJ" firstAttribute="top" secondItem="Ihb-bs-kE0" secondAttribute="top" id="NLY-pF-53E"/>
                             <constraint firstItem="atA-v7-DLs" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ofw-aE-fWb"/>
                             <constraint firstItem="WNv-Ov-bEQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QzG-00-CFQ"/>

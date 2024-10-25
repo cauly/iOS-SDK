@@ -116,6 +116,11 @@ class CaulyEventNative: NSObject, GADMediationNativeAd, CaulyNativeAdDelegate {
         }
     }
     
+    func didRecordClickOnAsset(withName assetName: GADNativeAssetIdentifier, view: UIView, viewController: UIViewController) {
+        print("didRecordClickOnAssetWithName");
+        nativeAd?.click(caulyNativeAdItem)
+    }
+    
     func urlToImage() {
         let iconUrl = URL(string: nativeAdItem?["icon"] as! String)
         let mediaUrl = URL(string: nativeAdItem?["image"] as! String)

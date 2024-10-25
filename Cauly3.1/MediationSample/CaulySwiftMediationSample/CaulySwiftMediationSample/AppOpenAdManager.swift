@@ -8,8 +8,10 @@
 import GoogleMobileAds
 
 protocol AppOpenAdManagerDelegate: AnyObject {
-    /// Method to be invoked when an app open ad is complete (i.e. dismissed or fails to show).
-    func appOpenAdManagerAdDidComplete(_ appOpenAdManager: AppOpenAdManager)
+    func appOpenAdDidLoad();
+    func appOpenAdFailedToLoad(_ error: Error);
+    func appOpenAdDidShow();
+    func appOpenAdFailedToShow(_ error: Error);
 }
 
 class AppOpenAdManager: NSObject {
@@ -43,12 +45,6 @@ class AppOpenAdManager: NSObject {
         return appOpenAd != nil && wasLoadTimeLessThanNHoursAgo(timeoutInterval: timeoutInterval)
     }
 
-    private func appOpenAdManagerAdDidComplete() {
-        // The app open ad is considered to be complete when it dismisses or fails to show,
-        // call the delegate's appOpenAdManagerAdDidComplete method if the delegate is not nil.
-        appOpenAdManagerDelegate?.appOpenAdManagerAdDidComplete(self)
-    }
-
     func loadAd() {
         // Do not load ad if there is an unused ad or one is already loading.
         if isLoadingAd || isAdAvailable() {
@@ -56,10 +52,8 @@ class AppOpenAdManager: NSObject {
         }
         isLoadingAd = true
         print("Start loading app open ad.")
-        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ "ae081a94356e73cdaac17e213d2d613b" ]
+        
         GADAppOpenAd.load(
-            // admob test unit ID 입니다.
-            // 배포시 애드몹에서 발급한 unit ID 로 반드시 변경해야합니다.
             withAdUnitID: "ca-app-pub-3940256099942544/5575463023",
             request: GADRequest()
         ) { ad, error in
@@ -67,18 +61,21 @@ class AppOpenAdManager: NSObject {
             if let error = error {
                 self.appOpenAd = nil
                 self.loadTime = nil
-                print("App open ad failed to load with error: \(error.localizedDescription).")
+                print("App open ad failed to load with error: \(error).")
+                self.appOpenAdManagerDelegate?.appOpenAdFailedToLoad(error)
                 return
             }
 
             self.appOpenAd = ad
             self.appOpenAd?.fullScreenContentDelegate = self
             self.loadTime = Date()
+            
+            self.appOpenAdManagerDelegate?.appOpenAdDidLoad()
             print("App open ad loaded successfully.")
         }
     }
 
-    func showAdIfAvailable(viewController: UIViewController) {
+    func showAdIfAvailable() {
         // If the app open ad is already showing, do not show the ad again.
         if isShowingAd {
             print("App open ad is already showing.")
@@ -89,14 +86,13 @@ class AppOpenAdManager: NSObject {
         // method and load a new ad.
         if !isAdAvailable() {
             print("App open ad is not ready yet.")
-            appOpenAdManagerAdDidComplete()
             loadAd()
             return
         }
         if let ad = appOpenAd {
             print("App open ad will be displayed.")
             isShowingAd = true
-            ad.present(fromRootViewController: viewController)
+            ad.present(fromRootViewController: nil)
         }
     }
 }
@@ -110,8 +106,8 @@ extension AppOpenAdManager: GADFullScreenContentDelegate {
         appOpenAd = nil
         isShowingAd = false
         print("App open ad was dismissed.")
-        appOpenAdManagerAdDidComplete()
         loadAd()
+        appOpenAdManagerDelegate?.appOpenAdDidShow()
     }
 
     func ad(
@@ -120,9 +116,8 @@ extension AppOpenAdManager: GADFullScreenContentDelegate {
     ) {
         appOpenAd = nil
         isShowingAd = false
-        print("App open ad failed to present with error: \(error.localizedDescription).")
-        appOpenAdManagerAdDidComplete()
+        print("App open ad failed to present with error: \(error).")
         loadAd()
+        appOpenAdManagerDelegate?.appOpenAdFailedToShow(error)
     }
 }
-

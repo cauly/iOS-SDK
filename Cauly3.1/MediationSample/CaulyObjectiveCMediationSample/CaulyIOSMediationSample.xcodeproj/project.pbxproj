@@ -21,6 +21,8 @@
 		73FA0717298A271D004A0221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73FA0716298A271D004A0221 /* Assets.xcassets */; };
 		73FA071A298A271D004A0221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73FA0718298A271D004A0221 /* LaunchScreen.storyboard */; };
 		73FA071D298A271D004A0221 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73FA071C298A271D004A0221 /* main.m */; };
+		73FF3EB42CBF4D9800B61E1B /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73FF3EB32CBF4D9800B61E1B /* SplashViewController.m */; };
+		73FF3EB72CBF4DBB00B61E1B /* AppOpenAdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73FF3EB62CBF4DBB00B61E1B /* AppOpenAdManager.m */; };
 		9A12AF075264032443999228 /* Pods_CaulyIOSMediationSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7AC16E797A13A8EE02A8D6 /* Pods_CaulyIOSMediationSample.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,10 @@
 		73FA0719298A271D004A0221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73FA071B298A271D004A0221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73FA071C298A271D004A0221 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		73FF3EB22CBF4D9800B61E1B /* SplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		73FF3EB32CBF4D9800B61E1B /* SplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		73FF3EB52CBF4DBB00B61E1B /* AppOpenAdManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppOpenAdManager.h; sourceTree = "<group>"; };
+		73FF3EB62CBF4DBB00B61E1B /* AppOpenAdManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppOpenAdManager.m; sourceTree = "<group>"; };
 		C8AB2D96AE01F4A543428071 /* Pods-CaulyIOSMediationSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CaulyIOSMediationSample.debug.xcconfig"; path = "Target Support Files/Pods-CaulyIOSMediationSample/Pods-CaulyIOSMediationSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +139,7 @@
 		73FA0709298A271B004A0221 /* CaulyIOSMediationSample */ = {
 			isa = PBXGroup;
 			children = (
+				73FF3EB12CBF4D6F00B61E1B /* AppOpenAd */,
 				73FA070A298A271B004A0221 /* AppDelegate.h */,
 				73FA070B298A271C004A0221 /* AppDelegate.m */,
 				73FA070D298A271C004A0221 /* SceneDelegate.h */,
@@ -149,6 +156,17 @@
 				73FA071C298A271D004A0221 /* main.m */,
 			);
 			path = CaulyIOSMediationSample;
+			sourceTree = "<group>";
+		};
+		73FF3EB12CBF4D6F00B61E1B /* AppOpenAd */ = {
+			isa = PBXGroup;
+			children = (
+				73FF3EB52CBF4DBB00B61E1B /* AppOpenAdManager.h */,
+				73FF3EB62CBF4DBB00B61E1B /* AppOpenAdManager.m */,
+				73FF3EB22CBF4D9800B61E1B /* SplashViewController.h */,
+				73FF3EB32CBF4D9800B61E1B /* SplashViewController.m */,
+			);
+			path = AppOpenAd;
 			sourceTree = "<group>";
 		};
 		934732A10DC3F87538C78919 /* Pods */ = {
@@ -172,6 +190,7 @@
 				73FA0704298A271B004A0221 /* Frameworks */,
 				73FA0705298A271B004A0221 /* Resources */,
 				C7C13741BD5A9AC7653DA729 /* [CP] Copy Pods Resources */,
+				E25B3BCF57C271C1D5B146B9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -268,6 +287,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CaulyIOSMediationSample/Pods-CaulyIOSMediationSample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E25B3BCF57C271C1D5B146B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CaulyIOSMediationSample/Pods-CaulyIOSMediationSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CaulyIOSMediationSample/Pods-CaulyIOSMediationSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CaulyIOSMediationSample/Pods-CaulyIOSMediationSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -280,10 +316,12 @@
 				732A0BD129C18C4500702852 /* ExampleNativeAdView.m in Sources */,
 				732A0BE129C1AECB00702852 /* CaulyEventBanner.m in Sources */,
 				73FA070C298A271C004A0221 /* AppDelegate.m in Sources */,
+				73FF3EB42CBF4D9800B61E1B /* SplashViewController.m in Sources */,
 				732A0BE729C1AEEA00702852 /* CaulyEventNative.m in Sources */,
 				73FA071D298A271D004A0221 /* main.m in Sources */,
 				73FA070F298A271C004A0221 /* SceneDelegate.m in Sources */,
 				732A0BE429C1AEDB00702852 /* CaulyEventInterstitial.m in Sources */,
+				73FF3EB72CBF4DBB00B61E1B /* AppOpenAdManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

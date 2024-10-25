@@ -23,31 +23,29 @@ class ViewController: UIViewController, GADBannerViewDelegate, GADFullScreenCont
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            if #available(iOS 14, *) {
-                ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
-                    switch status {
-                    case .authorized:       // 승인
-                        print("Authorized")
-                    case .denied:           // 거부
-                        print("Denied")
-                    case .notDetermined:        // 미결정
-                        print("Not Determined")
-                    case .restricted:           // 제한
-                        print("Restricted")
-                    @unknown default:           // 알려지지 않음
-                        print("Unknow")
-                    }
-                })
-            }
-        }
-        
+        // Replace this ad unit ID with your own ad unit ID.
+        // admob test unit ID 입니다.
+        // 배포시 애드몹에서 발급한 unit ID 로 반드시 변경해야합니다.
         bannerView = GADBannerView(adSize: GADAdSizeBanner)
         // admob test unit ID 입니다.
         // 배포시 애드몹에서 발급한 unit ID 로 반드시 변경해야합니다.
         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         bannerView.rootViewController = self
         bannerView.delegate = self
+        
+        // Requests test ads on devices you specify. Your test device ID is printed to the console when an ad request is made.
+        // GADBannerView automatically returns test ads when running on a simulator.
+        // 앱을 출시하기 전에 테스트 설정 코드를 반드시 삭제해야 합니다.
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = ["2077ef9a63d2b398840261c8221a0c9b"]
+    }
+    
+    // 광고 검사기 호출
+    @IBAction func showAdInspector(_ sender: UIButton) {
+        GADMobileAds.sharedInstance().presentAdInspector(from: self) { error in
+            if error != nil {
+                print("ad inspector error: \(String(describing: error))")
+            }
+        }
     }
     
     // 배너 광고 요청
@@ -84,7 +82,7 @@ class ViewController: UIViewController, GADBannerViewDelegate, GADFullScreenCont
     }
     
     func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
-        print("bannerView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+        print("bannerView:didFailToReceiveAdWithError: \(error)")
     }
 
     func bannerViewDidRecordImpression(_ bannerView: GADBannerView) {
@@ -114,7 +112,7 @@ class ViewController: UIViewController, GADBannerViewDelegate, GADFullScreenCont
                             completionHandler: { [self] ad, error in
                                 if let error = error {
                                     // 전면 광고 요청 실패
-                                    print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                                    print("Failed to load interstitial ad with error: \(error)")
                                     return
                                 }
                                 interstitial = ad
@@ -144,7 +142,7 @@ class ViewController: UIViewController, GADBannerViewDelegate, GADFullScreenCont
                            completionHandler: { [self] ad, error in
             if let error = error {
                 // 리워드 광고 요청 실패
-                print("Failed to load rewarded ad with error: \(error.localizedDescription)")
+                print("Failed to load rewarded ad with error: \(error)")
                 return
             }
             rewardedAd = ad
@@ -169,7 +167,7 @@ class ViewController: UIViewController, GADBannerViewDelegate, GADFullScreenCont
     // MARK: - interstitalDelegate
     /// Tells the delegate that the ad failed to present full screen content.
     func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
-        print("Ad did fail to present full screen content.")
+        print("Ad did fail to present full screen content. error: \(error)")
     }
 
     /// Tells the delegate that the ad will present full screen content.
@@ -314,7 +312,7 @@ class ViewController: UIViewController, GADBannerViewDelegate, GADFullScreenCont
     }
     
     func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: Error) {
-        print("adLoader didFailToReceiveAdWithError \(error.localizedDescription)")
+        print("adLoader didFailToReceiveAdWithError \(error)")
     }
     
     func nativeAdDidRecordImpression(_ nativeAd: GADNativeAd) {

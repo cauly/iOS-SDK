@@ -25,12 +25,21 @@
     self.bannerView.rootViewController = self;
     self.bannerView.delegate = self;
     
-    // Requests test ads on devices you specify. Your test device ID is printed to the console when
-    // an ad request is made. GADBannerView automatically returns test ads when running on a
-    // simulator.
-    // GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers = @[ GADSimulatorID ];
-    GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers = @[ @"ae081a94356e73cdaac17e213d2d613b" ];
+    // Requests test ads on devices you specify. Your test device ID is printed to the console when an ad request is made.
+    // GADBannerView automatically returns test ads when running on a simulator.
+    // 앱을 출시하기 전에 테스트 설정 코드를 반드시 삭제해야 합니다.
+     GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers = @[ @"2077ef9a63d2b398840261c8221a0c9b" ];
 }
+
+// 광고 검사기 호출
+- (IBAction)showAdInspector:(id)sender {
+    [GADMobileAds.sharedInstance presentAdInspectorFromViewController:self completionHandler:^(NSError * error) {
+        if (error != nil) {
+            NSLog(@"ad inspector error: %@", error);
+        }
+    }];
+}
+
 
 #pragma mark - Rewarded Ad Request
 // 리워드 광고 요청
@@ -45,7 +54,7 @@
             completionHandler:^(GADRewardedAd *ad, NSError *error) {
         if (error) {
             // 리워드 광고 요청 실패
-            NSLog(@"Rewarded ad failed to load with error: %@", [error localizedDescription]);
+            NSLog(@"Rewarded ad failed to load with error: %@", error);
             return;
         }
         self.rewardedAd = ad;
@@ -127,7 +136,7 @@
                         completionHandler:^(GADInterstitialAd *ad, NSError *error) {
         if (error) {
             // 전면 광고 요청 실패
-            NSLog(@"Failed to load interstitial ad with error: %@", [error localizedDescription]);
+            NSLog(@"Failed to load interstitial ad with error: %@", error);
             return;
         }
         self.interstitialAd = ad;
@@ -183,7 +192,7 @@
 /// Tells the delegate that the ad failed to present full screen content.
 - (void)ad:(nonnull id<GADFullScreenPresentingAd>)ad
 didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
-    NSLog(@"Ad did fail to present full screen content.");
+    NSLog(@"Ad did fail to present full screen content. error: %@", error);
 }
 
 /// Tells the delegate that the ad will present full screen content.
@@ -244,6 +253,6 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 }
 
 - (void)adLoader:(GADAdLoader *)adLoader didFailToReceiveAdWithError:(NSError *)error {
-    NSLog(@"didFailToReceiveAdWithError");
+    NSLog(@"didFailToReceiveAdWithError: %@", error);
 }
 @end

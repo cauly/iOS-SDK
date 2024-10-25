@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vyD-AX-0HF">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,6 +97,14 @@
                                     <action selector="rewardedAdShow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SNm-aA-npF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9S-DE-dp0">
+                                <rect key="frame" x="262" y="69" width="121" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Ad Inspector"/>
+                                <connections>
+                                    <action selector="showAdInspector:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jja-Zb-knz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -108,6 +116,7 @@
                             <constraint firstItem="qGK-TM-yXz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Lb-ar-xck"/>
                             <constraint firstItem="yMB-vG-P0h" firstAttribute="leading" secondItem="D31-r2-HBc" secondAttribute="trailing" constant="10" id="7TL-dD-yM3"/>
                             <constraint firstItem="bj2-T5-I7T" firstAttribute="leading" secondItem="PXI-1e-VZq" secondAttribute="trailing" constant="20" id="8rg-QR-Wcj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K9S-DE-dp0" secondAttribute="trailing" constant="10" id="9c5-wo-p51"/>
                             <constraint firstItem="UX0-Ky-Hz1" firstAttribute="top" secondItem="yMB-vG-P0h" secondAttribute="top" id="9gn-Vp-fWQ"/>
                             <constraint firstItem="UX0-Ky-Hz1" firstAttribute="bottom" secondItem="yMB-vG-P0h" secondAttribute="bottom" id="9nF-5o-Wiw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9CL-Y7-pGo" secondAttribute="trailing" constant="10" id="9zG-PL-7Yj"/>
@@ -121,6 +130,7 @@
                             <constraint firstItem="9CL-Y7-pGo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VZz-LP-UBm"/>
                             <constraint firstItem="NX6-dS-IuJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W3q-SO-oEA"/>
                             <constraint firstItem="PXI-1e-VZq" firstAttribute="top" secondItem="rwR-Ar-dhY" secondAttribute="top" id="XGX-pg-Xwx"/>
+                            <constraint firstItem="K9S-DE-dp0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ie1-1y-Tqq"/>
                             <constraint firstItem="PXI-1e-VZq" firstAttribute="leading" secondItem="rwR-Ar-dhY" secondAttribute="trailing" constant="10" id="oEc-io-M8j"/>
                             <constraint firstItem="bj2-T5-I7T" firstAttribute="top" secondItem="PXI-1e-VZq" secondAttribute="top" id="oNU-3s-W8i"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qGK-TM-yXz" secondAttribute="bottom" id="qQT-7T-WkD"/>
@@ -139,6 +149,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="41.984732824427482" y="-34.507042253521128"/>
+        </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="0PB-GV-bys">
+            <objects>
+                <viewController id="vyD-AX-0HF" customClass="SplashViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ymz-cg-jZR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mediation Sample" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akx-ur-Qbz">
+                                <rect key="frame" x="46" y="259" width="301" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="peq-UJ-CzW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="akx-ur-Qbz" firstAttribute="centerX" secondItem="ymz-cg-jZR" secondAttribute="centerX" id="LWz-zI-ZkZ"/>
+                            <constraint firstItem="akx-ur-Qbz" firstAttribute="top" secondItem="peq-UJ-CzW" secondAttribute="top" constant="200" id="q7I-ze-uVo"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uQD-kN-p6p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-801" y="-35"/>
         </scene>
     </scenes>
     <resources>

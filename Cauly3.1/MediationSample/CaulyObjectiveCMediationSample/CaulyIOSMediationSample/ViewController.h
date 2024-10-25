@@ -19,6 +19,7 @@
 @property (strong, nonatomic) GADAdLoader *adLoader;
 @property (strong, nonatomic) NSLayoutConstraint *heightConstraint;
 
+- (IBAction)showAdInspector:(id)sender;
 - (IBAction)bannerAdRequest:(id)sender;
 - (IBAction)interstitialAdRequest:(id)sender;
 - (IBAction)interstitialAdShow:(id)sender;
