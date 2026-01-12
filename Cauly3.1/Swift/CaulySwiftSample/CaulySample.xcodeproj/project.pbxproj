@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1980D049C77C9A3DCD6B14B1 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1980DB66C6C75B8BAFBC86CF /* BannerViewController.swift */; };
 		1980D17F9E6B0D4A933ABDD0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1980DB29532E1F338523B1AD /* CoreGraphics.framework */; };
 		1980D2FD78A1337F01DC6733 /* libCauly-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1980D43D58322661F4B952B9 /* libCauly-universal.a */; };
 		1980D458C693D154CAA9734B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1980D2D70AB5E4E88F3B48E7 /* CFNetwork.framework */; };
@@ -20,12 +19,14 @@
 		1980D8D3014A84122631B61A /* CaulySampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1980DFBC88F248003DA2A3B4 /* CaulySampleTests.swift */; };
 		1980D91267313641DA18CD19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1980DB99262325B1F4A7F279 /* Main.storyboard */; };
 		1980DB0BA82E5636B232B3B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1980DE27D4B37733306D2473 /* Assets.xcassets */; };
-		1980DBDA7B4F904D60B88579 /* InterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1980DD98F464429CADC813A1 /* InterstitialViewController.swift */; };
 		1980DBFC8D8DBB591CBD9EBD /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1980D23F0ED5BAD5C4225DC7 /* AVKit.framework */; };
 		1980DC24FED09E051A19D43F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1980D5C1711AE9F10F5AE285 /* QuartzCore.framework */; };
 		1980DC9A5D7D558AB5A1BC40 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1980D354DD36A10B0741F852 /* MediaPlayer.framework */; };
 		1980DD43586377670F268C63 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1980D385738C465D4ADB85AB /* SystemConfiguration.framework */; };
 		1980DF3BD12B5E9EEA8FCB89 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1980DE7EA6D6C7D32A9CC344 /* MessageUI.framework */; };
+		73E7A9252F04E0E900901EE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E7A9242F04E0E900901EE2 /* ViewController.swift */; };
+		73E7A9292F04E10100901EE2 /* NativeAdViewViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E7A9272F04E10100901EE2 /* NativeAdViewViewViewController.swift */; };
+		73E7A92A2F04E10100901EE2 /* NativeAdViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73E7A9262F04E10100901EE2 /* NativeAdViewViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,17 +69,18 @@
 		1980D9AD79F44099B16318CD /* CaulyAdSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyAdSetting.h; sourceTree = "<group>"; };
 		1980DB29532E1F338523B1AD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1980DB3757A09BAAF5217DBC /* libCauly-universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCauly-universal.a"; sourceTree = "<group>"; };
-		1980DB66C6C75B8BAFBC86CF /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
 		1980DB9BB39243AB44090F8A /* CaulyInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyInterstitialAd.h; sourceTree = "<group>"; };
 		1980DCAC92D4ABD96EA641B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1980DCC1A099BC2C91C2C64B /* CaulyAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyAdView.h; sourceTree = "<group>"; };
-		1980DD98F464429CADC813A1 /* InterstitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialViewController.swift; sourceTree = "<group>"; };
 		1980DE27D4B37733306D2473 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1980DE4DB66912EA72704F9A /* CaulySampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaulySampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1980DE7EA6D6C7D32A9CC344 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		1980DE835AEF56A61FA6A9A6 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		1980DFBC88F248003DA2A3B4 /* CaulySampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaulySampleTests.swift; sourceTree = "<group>"; };
 		1980DFDD48C0C3F035C2F4EB /* CaulySDK-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CaulySDK-Bridging-Header.h"; sourceTree = "<group>"; };
+		73E7A9242F04E0E900901EE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		73E7A9262F04E10100901EE2 /* NativeAdViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeAdViewViewController.xib; sourceTree = "<group>"; };
+		73E7A9272F04E10100901EE2 /* NativeAdViewViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdViewViewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,9 +127,9 @@
 				1980DE27D4B37733306D2473 /* Assets.xcassets */,
 				1980DD077486B52869797244 /* LaunchScreen.storyboard */,
 				1980D6E7221C84E94A3005B2 /* AppDelegate.swift */,
+				73E7A9242F04E0E900901EE2 /* ViewController.swift */,
 				1980DB99262325B1F4A7F279 /* Main.storyboard */,
-				1980DB66C6C75B8BAFBC86CF /* BannerViewController.swift */,
-				1980DD98F464429CADC813A1 /* InterstitialViewController.swift */,
+				73E7A9282F04E10100901EE2 /* View */,
 				1980DFDD48C0C3F035C2F4EB /* CaulySDK-Bridging-Header.h */,
 				1980D8F725A2B4B2A0BF6643 /* cauly */,
 			);
@@ -203,6 +205,15 @@
 				1980D8E1B69021C704C76526 /* Info.plist */,
 			);
 			path = CaulySampleUITests;
+			sourceTree = "<group>";
+		};
+		73E7A9282F04E10100901EE2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				73E7A9262F04E10100901EE2 /* NativeAdViewViewController.xib */,
+				73E7A9272F04E10100901EE2 /* NativeAdViewViewViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1980DB0BA82E5636B232B3B0 /* Assets.xcassets in Resources */,
+				73E7A92A2F04E10100901EE2 /* NativeAdViewViewController.xib in Resources */,
 				1980D82D50464646387C463C /* LaunchScreen.storyboard in Resources */,
 				1980D91267313641DA18CD19 /* Main.storyboard in Resources */,
 			);
@@ -327,9 +339,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73E7A9252F04E0E900901EE2 /* ViewController.swift in Sources */,
 				1980D70411A368D7BA1B2C0B /* AppDelegate.swift in Sources */,
-				1980D049C77C9A3DCD6B14B1 /* BannerViewController.swift in Sources */,
-				1980DBDA7B4F904D60B88579 /* InterstitialViewController.swift in Sources */,
+				73E7A9292F04E10100901EE2 /* NativeAdViewViewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +400,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 55644VM79V;
+				EXCLUDED_ARCHS = arm64;
 				FRAMEWORK_SEARCH_PATHS = "\"${PROJECT_DIR}/CaulySample/cauly\"/**";
 				HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/CaulySample/cauly\"";
 				INFOPLIST_FILE = CaulySample/Info.plist;
@@ -499,6 +512,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 55644VM79V;
+				EXCLUDED_ARCHS = arm64;
 				FRAMEWORK_SEARCH_PATHS = "\"${PROJECT_DIR}/CaulySample/cauly\"/**";
 				HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/CaulySample/cauly\"";
 				INFOPLIST_FILE = CaulySample/Info.plist;
