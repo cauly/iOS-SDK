@@ -6,6 +6,16 @@
 
 각 버전에 해당하는 README 참조
 
+
+-------------
+
+iOS SDK 연동
+----
+
+- **`SDK 3.1.22 이상 버전`** 에 대한 SDK 연동 방법은 [iOS SDK 연동 가이드(Gitbook페이지)](https://cauly.gitbook.io/cauly/ios/app-prerequisites)에서 확인하실 수 있습니다.  
+- **`SDK 3.1.22 이하 버전`** 에 대한 SDK 연동 방법은 [iOS SDK 연동 가이드](https://github.com/cauly/iOS-SDK/blob/master/Cauly3.1/README.md) 에서 확인하실 수 있습니다.
+
+
 -------------
 
 ### Release note
