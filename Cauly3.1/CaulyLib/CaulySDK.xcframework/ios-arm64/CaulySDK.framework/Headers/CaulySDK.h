@@ -2,8 +2,6 @@
 //  CaulySDK.h
 //  CaulySDK
 //
-//  Created by FSN on 10/23/23.
-//
 
 #import <Foundation/Foundation.h>
 
@@ -14,7 +12,6 @@ FOUNDATION_EXPORT double CaulySDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char CaulySDKVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <CaulySDK/PublicHeader.h>
-
 
 #import <CaulySDK/Cauly.h>
 #import <CaulySDK/CaulyAdView.h>

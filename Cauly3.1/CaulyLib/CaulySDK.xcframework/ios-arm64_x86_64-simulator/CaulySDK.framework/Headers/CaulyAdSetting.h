@@ -1,8 +1,9 @@
 //
 //  CaulyAdSetting.h
-//  CaulySDK
+//  Cauly
 //
-//  Created by FSN on 10/23/23.
+//  Created by Neil Kwon on 9/2/15.
+//  Copyright (c) 2015 Cauly. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -31,5 +32,7 @@
 @property (nonatomic) CaulyAnim animType;
 @property (nonatomic) BOOL useDynamicReloadTime;
 @property (nonatomic) BOOL closeOnLanding;
+@property (nonatomic, strong) NSNumber *tagForChildDirectedTreatment; // nil = 미설정
+@property (nonatomic, strong) NSNumber *gdprConsentAvailable; // nil = 미설정
 
 @end

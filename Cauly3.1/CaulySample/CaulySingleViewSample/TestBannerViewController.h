@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CaulyAdView.h"
+@import CaulySDK;
 
 @interface TestBannerViewController : UIViewController<CaulyAdViewDelegate>
 

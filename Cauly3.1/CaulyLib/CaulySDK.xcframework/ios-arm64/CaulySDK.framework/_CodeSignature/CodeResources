@@ -6,35 +6,35 @@
 	<dict>
 		<key>Headers/Cauly.h</key>
 		<data>
-		bgd+9reav2gbI/du/bjsXrbT2gc=
+		3WU0ZOe3jXulW2XTdJ3e+pRguAE=
 		</data>
 		<key>Headers/CaulyAdSetting.h</key>
 		<data>
-		HQhRU2TLant1oxachYq1oskW7Eo=
+		oV3akHAphWdwE3fEHPffR0LG0gk=
 		</data>
 		<key>Headers/CaulyAdView.h</key>
 		<data>
-		IaRLItcNQ5BSk3SBLzi1LJHte4g=
+		SwUg7MD7MqZSfuSwS8Nxu1KxOvQ=
 		</data>
 		<key>Headers/CaulyInterstitialAd.h</key>
 		<data>
-		1+X1JaZHkKl7XPD+ixO5cKEIXew=
+		aNzmib/6kn1Hc/2Xex/Jsev3Sds=
 		</data>
 		<key>Headers/CaulyNativeAd.h</key>
 		<data>
-		kYTzKkD1EIwltwClSewTvirZ5VM=
+		35UvyxLuOIrn7Jvup1v3ur+6V0I=
 		</data>
 		<key>Headers/CaulyNativeAdItem.h</key>
 		<data>
-		sBaGWY+sND7ay50TWYIAmQxGEOo=
+		FbnB8ULmf6PqePOZkTZ1S+d1Bt8=
 		</data>
 		<key>Headers/CaulySDK.h</key>
 		<data>
-		t3fxxwF60+KDp0AcHsl6fRMOVak=
+		PxE47PfQ9bEEnasJgZrDyi1UzSY=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		toiCMqMMhQSUR5MKJ0IyWYSRpak=
+		ONcRGfIHOrUckvzir/hmEvAFyew=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,49 +51,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hQ7TiZS/25FxtIQdBUxf0USXJ48ONsBhWq4umNdzBjY=
+			3HPYN+u4+b+AQ8J+kc7ttUZ7/LY4AEIEzW/gc0bFbYM=
 			</data>
 		</dict>
 		<key>Headers/CaulyAdSetting.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mes+5dQwnWPYcjEkNrvNXQ3r1K1cYOE4RfobKVsFSpY=
+			CrVsSp/WZRcZ+xhQX0llxxnlTFf9ZlfX36un9GjIKRM=
 			</data>
 		</dict>
 		<key>Headers/CaulyAdView.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vhacY850BdFBnSOu6MirOsY1sd/w9xMLetXUvgMxSzo=
+			hJ2y/NSAM1DhMc2rVQ6qC/ZDLBvauhdesK17ff1MD9U=
 			</data>
 		</dict>
 		<key>Headers/CaulyInterstitialAd.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rRXuKkEdjotHfoApiRJDHoXBcnDDK5jyVzV/wBJLdGA=
+			UN+KykEBULLTTQ8lMVmBWzWSIexkRfqJ6wFC3noTqxU=
 			</data>
 		</dict>
 		<key>Headers/CaulyNativeAd.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bnNUgNYCNt5ujaJFkstP1Ohzr0AkFdviQip52w1AFe4=
+			A/2DYnj7bn6fjDYTxDclyBKX23E/Y42OBkCMvCESbYE=
 			</data>
 		</dict>
 		<key>Headers/CaulyNativeAdItem.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gQr/E8MAWE/i7SSqq6PypiE8hUgF2t42jGssyv399do=
+			iMF13ekOM+OwFsxNjTd8cfjItvexvJUD/Qer6eWX1xc=
 			</data>
 		</dict>
 		<key>Headers/CaulySDK.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vGhSnX4YKWqQE9bfCZJIXKv926W/OL6hqumBOVxFsyw=
+			avKZmPlE5cpjtNBGwlhnbVjMwLqOu6dPykvRK9OtyWw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

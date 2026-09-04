@@ -8,10 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "Cauly.h"
-#import "CaulyAdView.h"
-#import "CaulyInterstitialAd.h"
-#import "CaulyNativeAd.h"
+@import CaulySDK;
 
 
 

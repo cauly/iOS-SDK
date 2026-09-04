@@ -1,8 +1,9 @@
 //
 //  CaulyNativeAd.h
-//  CaulySDK
+//  Cauly
 //
-//  Created by FSN on 10/23/23.
+//  Created by Neil Kwon on 10/8/15.
+//  Copyright © 2015 Cauly. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

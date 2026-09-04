@@ -1,0 +1,1185 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     '/Users/fsn/Library/Developer/Xcode/DerivedData/Cauly-bslrdacwubbheifhbazqqmomeegr/Build/Intermediates.noindex/ArchiveIntermediates/Cauly/InstallationBuildProductsLocation/Library/Frameworks/CaulySDK.framework/CaulySDK'
+relocations:
+  - { offset: 0x8313F, size: 0x8, addend: 0x0, symName: _btn_me2day_png, symObjAddr: 0x0, symBinAddr: 0x54250, symSize: 0x0 }
+  - { offset: 0x83171, size: 0x8, addend: 0x0, symName: _btn_me2day_png_len, symObjAddr: 0x19E0, symBinAddr: 0x55C30, symSize: 0x0 }
+  - { offset: 0x831B0, size: 0x8, addend: 0x0, symName: '+[BDPreference sharedInstance]', symObjAddr: 0x0, symBinAddr: 0x10A0, symSize: 0x50 }
+  - { offset: 0x831CA, size: 0x8, addend: 0x0, symName: __instance, symObjAddr: 0xBD58, symBinAddr: 0x78E30, symSize: 0x0 }
+  - { offset: 0x83224, size: 0x8, addend: 0x0, symName: '+[BDPreference sharedInstance]', symObjAddr: 0x0, symBinAddr: 0x10A0, symSize: 0x50 }
+  - { offset: 0x8326F, size: 0x8, addend: 0x0, symName: '-[BDPreference init]', symObjAddr: 0x50, symBinAddr: 0x10F0, symSize: 0x24F }
+  - { offset: 0x83432, size: 0x8, addend: 0x0, symName: '-[BDPreference objectForKey:]', symObjAddr: 0x29F, symBinAddr: 0x133F, symSize: 0x89 }
+  - { offset: 0x834CC, size: 0x8, addend: 0x0, symName: '-[BDPreference stringForKey:]', symObjAddr: 0x328, symBinAddr: 0x13C8, symSize: 0x89 }
+  - { offset: 0x83566, size: 0x8, addend: 0x0, symName: '-[BDPreference longForKey:]', symObjAddr: 0x3B1, symBinAddr: 0x1451, symSize: 0xA7 }
+  - { offset: 0x83618, size: 0x8, addend: 0x0, symName: '-[BDPreference boolForKey:]', symObjAddr: 0x458, symBinAddr: 0x14F8, symSize: 0xA7 }
+  - { offset: 0x836CA, size: 0x8, addend: 0x0, symName: '-[BDPreference setValue:forKey:]', symObjAddr: 0x4FF, symBinAddr: 0x159F, symSize: 0x9A }
+  - { offset: 0x8377D, size: 0x8, addend: 0x0, symName: '-[BDPreference setInteger:forKey:]', symObjAddr: 0x599, symBinAddr: 0x1639, symSize: 0xB9 }
+  - { offset: 0x83830, size: 0x8, addend: 0x0, symName: '-[BDPreference setBool:forKey:]', symObjAddr: 0x652, symBinAddr: 0x16F2, symSize: 0xB9 }
+  - { offset: 0x838E3, size: 0x8, addend: 0x0, symName: '-[BDPreference synchronize]', symObjAddr: 0x70B, symBinAddr: 0x17AB, symSize: 0x1D5 }
+  - { offset: 0x83A78, size: 0x8, addend: 0x0, symName: '-[BDPreference .cxx_destruct]', symObjAddr: 0x8E0, symBinAddr: 0x1980, symSize: 0x10 }
+  - { offset: 0x83B70, size: 0x8, addend: 0x0, symName: '-[BDDownloadImageCommand url]', symObjAddr: 0x0, symBinAddr: 0x1990, symSize: 0x56 }
+  - { offset: 0x83DCF, size: 0x8, addend: 0x0, symName: '-[BDDownloadImageCommand url]', symObjAddr: 0x0, symBinAddr: 0x1990, symSize: 0x56 }
+  - { offset: 0x83E4B, size: 0x8, addend: 0x0, symName: '+[BDDownloadImageCommand pathFromUrl:]', symObjAddr: 0x56, symBinAddr: 0x19E6, symSize: 0x1EB }
+  - { offset: 0x83FCB, size: 0x8, addend: 0x0, symName: '-[BDDownloadImageCommand download]', symObjAddr: 0x241, symBinAddr: 0x1BD1, symSize: 0x72 }
+  - { offset: 0x84030, size: 0x8, addend: 0x0, symName: '+[BDDownloadImageCommand downloadSynchronouse:useCache:]', symObjAddr: 0x2B3, symBinAddr: 0x1C43, symSize: 0xE5 }
+  - { offset: 0x8411D, size: 0x8, addend: 0x0, symName: '-[BDDownloadImageCommand internalExecute]', symObjAddr: 0x398, symBinAddr: 0x1D28, symSize: 0x184 }
+  - { offset: 0x8424B, size: 0x8, addend: 0x0, symName: '-[BDDownloadImageCommand handleResultData]', symObjAddr: 0x51C, symBinAddr: 0x1EAC, symSize: 0x154 }
+  - { offset: 0x84317, size: 0x8, addend: 0x0, symName: '-[BDDownloadImageCommand logResultData]', symObjAddr: 0x670, symBinAddr: 0x2000, symSize: 0x6B }
+  - { offset: 0x84392, size: 0x8, addend: 0x0, symName: '-[BDDownloadImageCommand image]', symObjAddr: 0x6DB, symBinAddr: 0x206B, symSize: 0x11 }
+  - { offset: 0x843C7, size: 0x8, addend: 0x0, symName: '-[BDDownloadImageCommand useCache]', symObjAddr: 0x6EC, symBinAddr: 0x207C, symSize: 0x10 }
+  - { offset: 0x843FC, size: 0x8, addend: 0x0, symName: '-[BDDownloadImageCommand setUseCache:]', symObjAddr: 0x6FC, symBinAddr: 0x208C, symSize: 0x10 }
+  - { offset: 0x84439, size: 0x8, addend: 0x0, symName: '-[BDDownloadImageCommand imageUrl]', symObjAddr: 0x70C, symBinAddr: 0x209C, symSize: 0x11 }
+  - { offset: 0x8446E, size: 0x8, addend: 0x0, symName: '-[BDDownloadImageCommand setImageUrl:]', symObjAddr: 0x71D, symBinAddr: 0x20AD, symSize: 0x38 }
+  - { offset: 0x844C7, size: 0x8, addend: 0x0, symName: '-[BDDownloadImageCommand roundCorner]', symObjAddr: 0x755, symBinAddr: 0x20E5, symSize: 0x10 }
+  - { offset: 0x844FC, size: 0x8, addend: 0x0, symName: '-[BDDownloadImageCommand setRoundCorner:]', symObjAddr: 0x765, symBinAddr: 0x20F5, symSize: 0x10 }
+  - { offset: 0x84539, size: 0x8, addend: 0x0, symName: '-[BDDownloadImageCommand .cxx_destruct]', symObjAddr: 0x775, symBinAddr: 0x2105, symSize: 0x31 }
+  - { offset: 0x845D3, size: 0x8, addend: 0x0, symName: '+[CaulyAdSetting adSettingWithAppCode:appId:]', symObjAddr: 0x0, symBinAddr: 0x2136, symSize: 0x6F }
+  - { offset: 0x845ED, size: 0x8, addend: 0x0, symName: __globalSetting, symObjAddr: 0xE468, symBinAddr: 0x78E38, symSize: 0x0 }
+  - { offset: 0x84805, size: 0x8, addend: 0x0, symName: '+[CaulyAdSetting adSettingWithAppCode:appId:]', symObjAddr: 0x0, symBinAddr: 0x2136, symSize: 0x6F }
+  - { offset: 0x848A4, size: 0x8, addend: 0x0, symName: '-[CaulyAdSetting initWithAppCode:appId:]', symObjAddr: 0x6F, symBinAddr: 0x21A5, symSize: 0x108 }
+  - { offset: 0x8498B, size: 0x8, addend: 0x0, symName: '-[CaulyAdSetting initWitAdSetting:]', symObjAddr: 0x177, symBinAddr: 0x22AD, symSize: 0x1B9 }
+  - { offset: 0x84AF2, size: 0x8, addend: 0x0, symName: '+[CaulyAdSetting globalSetting]', symObjAddr: 0x330, symBinAddr: 0x2466, symSize: 0x6A }
+  - { offset: 0x84B49, size: 0x8, addend: 0x0, symName: '+[CaulyAdSetting setApplicationState:]', symObjAddr: 0x39A, symBinAddr: 0x24D0, symSize: 0x83 }
+  - { offset: 0x84BC4, size: 0x8, addend: 0x0, symName: '-[CaulyAdSetting isTestAppCode]', symObjAddr: 0x41D, symBinAddr: 0x2553, symSize: 0x4C }
+  - { offset: 0x84C13, size: 0x8, addend: 0x0, symName: '+[CaulyAdSetting setLogLevel:]', symObjAddr: 0x469, symBinAddr: 0x259F, symSize: 0xC }
+  - { offset: 0x84C79, size: 0x8, addend: 0x0, symName: '-[CaulyAdSetting setAdSize:]', symObjAddr: 0x475, symBinAddr: 0x25AB, symSize: 0x3C }
+  - { offset: 0x84CC8, size: 0x8, addend: 0x0, symName: '-[CaulyAdSetting appId]', symObjAddr: 0x4B1, symBinAddr: 0x25E7, symSize: 0xA }
+  - { offset: 0x84CFD, size: 0x8, addend: 0x0, symName: '-[CaulyAdSetting setAppId:]', symObjAddr: 0x4BB, symBinAddr: 0x25F1, symSize: 0x28 }
+  - { offset: 0x84D56, size: 0x8, addend: 0x0, symName: '-[CaulyAdSetting appCode]', symObjAddr: 0x4E3, symBinAddr: 0x2619, symSize: 0xA }
+  - { offset: 0x84D8B, size: 0x8, addend: 0x0, symName: '-[CaulyAdSetting setAppCode:]', symObjAddr: 0x4ED, symBinAddr: 0x2623, symSize: 0x28 }
+  - { offset: 0x84DE4, size: 0x8, addend: 0x0, symName: '-[CaulyAdSetting reloadTime]', symObjAddr: 0x515, symBinAddr: 0x264B, symSize: 0x9 }
+  - { offset: 0x84E19, size: 0x8, addend: 0x0, symName: '-[CaulyAdSetting setReloadTime:]', symObjAddr: 0x51E, symBinAddr: 0x2654, symSize: 0x9 }
+  - { offset: 0x84E56, size: 0x8, addend: 0x0, symName: '-[CaulyAdSetting adSize]', symObjAddr: 0x527, symBinAddr: 0x265D, symSize: 0x9 }
+  - { offset: 0x84E8B, size: 0x8, addend: 0x0, symName: '-[CaulyAdSetting animType]', symObjAddr: 0x530, symBinAddr: 0x2666, symSize: 0x9 }
+  - { offset: 0x84EC0, size: 0x8, addend: 0x0, symName: '-[CaulyAdSetting setAnimType:]', symObjAddr: 0x539, symBinAddr: 0x266F, symSize: 0x9 }
+  - { offset: 0x84EFD, size: 0x8, addend: 0x0, symName: '-[CaulyAdSetting useDynamicReloadTime]', symObjAddr: 0x542, symBinAddr: 0x2678, symSize: 0x9 }
+  - { offset: 0x84F32, size: 0x8, addend: 0x0, symName: '-[CaulyAdSetting setUseDynamicReloadTime:]', symObjAddr: 0x54B, symBinAddr: 0x2681, symSize: 0x9 }
+  - { offset: 0x84F6F, size: 0x8, addend: 0x0, symName: '-[CaulyAdSetting closeOnLanding]', symObjAddr: 0x554, symBinAddr: 0x268A, symSize: 0x9 }
+  - { offset: 0x84FA4, size: 0x8, addend: 0x0, symName: '-[CaulyAdSetting setCloseOnLanding:]', symObjAddr: 0x55D, symBinAddr: 0x2693, symSize: 0x9 }
+  - { offset: 0x84FE1, size: 0x8, addend: 0x0, symName: '-[CaulyAdSetting tagForChildDirectedTreatment]', symObjAddr: 0x566, symBinAddr: 0x269C, symSize: 0xA }
+  - { offset: 0x85016, size: 0x8, addend: 0x0, symName: '-[CaulyAdSetting setTagForChildDirectedTreatment:]', symObjAddr: 0x570, symBinAddr: 0x26A6, symSize: 0x28 }
+  - { offset: 0x8506F, size: 0x8, addend: 0x0, symName: '-[CaulyAdSetting gdprConsentAvailable]', symObjAddr: 0x598, symBinAddr: 0x26CE, symSize: 0xA }
+  - { offset: 0x850A4, size: 0x8, addend: 0x0, symName: '-[CaulyAdSetting setGdprConsentAvailable:]', symObjAddr: 0x5A2, symBinAddr: 0x26D8, symSize: 0x28 }
+  - { offset: 0x850FD, size: 0x8, addend: 0x0, symName: '-[CaulyAdSetting .cxx_destruct]', symObjAddr: 0x5CA, symBinAddr: 0x2700, symSize: 0x49 }
+  - { offset: 0x851C9, size: 0x8, addend: 0x0, symName: _btn_ibooks_png, symObjAddr: 0x0, symBinAddr: 0x55C40, symSize: 0x0 }
+  - { offset: 0x851FB, size: 0x8, addend: 0x0, symName: _btn_ibooks_png_len, symObjAddr: 0x14BC, symBinAddr: 0x570FC, symSize: 0x0 }
+  - { offset: 0x85248, size: 0x8, addend: 0x0, symName: _video_fastfw_btn_png_len, symObjAddr: 0x0, symBinAddr: 0x57100, symSize: 0x0 }
+  - { offset: 0x85265, size: 0x8, addend: 0x0, symName: _video_fastfw_btn_png, symObjAddr: 0x10, symBinAddr: 0x57110, symSize: 0x0 }
+  - { offset: 0x852C6, size: 0x8, addend: 0x0, symName: _sdk_cl_png, symObjAddr: 0x0, symBinAddr: 0x58200, symSize: 0x0 }
+  - { offset: 0x852F7, size: 0x8, addend: 0x0, symName: _sdk_cl_png_len, symObjAddr: 0x8DC, symBinAddr: 0x58ADC, symSize: 0x0 }
+  - { offset: 0x85336, size: 0x8, addend: 0x0, symName: '-[BDCommand execute]', symObjAddr: 0x0, symBinAddr: 0x2749, symSize: 0x10 }
+  - { offset: 0x8541B, size: 0x8, addend: 0x0, symName: '-[BDCommand execute]', symObjAddr: 0x0, symBinAddr: 0x2749, symSize: 0x10 }
+  - { offset: 0x8544C, size: 0x8, addend: 0x0, symName: '-[BDCommand cancel]', symObjAddr: 0x10, symBinAddr: 0x2759, symSize: 0x29 }
+  - { offset: 0x8548B, size: 0x8, addend: 0x0, symName: '-[BDCommand fire]', symObjAddr: 0x39, symBinAddr: 0x2782, symSize: 0x25 }
+  - { offset: 0x854CA, size: 0x8, addend: 0x0, symName: '-[BDCommand isSucceeded]', symObjAddr: 0x5E, symBinAddr: 0x27A7, symSize: 0xE }
+  - { offset: 0x854FF, size: 0x8, addend: 0x0, symName: '-[BDCommand error]', symObjAddr: 0x6C, symBinAddr: 0x27B5, symSize: 0xA }
+  - { offset: 0x85534, size: 0x8, addend: 0x0, symName: '-[BDCommand setError:]', symObjAddr: 0x76, symBinAddr: 0x27BF, symSize: 0x28 }
+  - { offset: 0x8558D, size: 0x8, addend: 0x0, symName: '-[BDCommand data]', symObjAddr: 0x9E, symBinAddr: 0x27E7, symSize: 0xA }
+  - { offset: 0x855C2, size: 0x8, addend: 0x0, symName: '-[BDCommand setData:]', symObjAddr: 0xA8, symBinAddr: 0x27F1, symSize: 0x28 }
+  - { offset: 0x8561B, size: 0x8, addend: 0x0, symName: '-[BDCommand tag]', symObjAddr: 0xD0, symBinAddr: 0x2819, symSize: 0x9 }
+  - { offset: 0x85650, size: 0x8, addend: 0x0, symName: '-[BDCommand setTag:]', symObjAddr: 0xD9, symBinAddr: 0x2822, symSize: 0x9 }
+  - { offset: 0x8568D, size: 0x8, addend: 0x0, symName: '-[BDCommand delegate]', symObjAddr: 0xE2, symBinAddr: 0x282B, symSize: 0xA }
+  - { offset: 0x856C2, size: 0x8, addend: 0x0, symName: '-[BDCommand setDelegate:]', symObjAddr: 0xEC, symBinAddr: 0x2835, symSize: 0x28 }
+  - { offset: 0x8571B, size: 0x8, addend: 0x0, symName: '-[BDCommand .cxx_destruct]', symObjAddr: 0x114, symBinAddr: 0x285D, symSize: 0x33 }
+  - { offset: 0x857A7, size: 0x8, addend: 0x0, symName: _btn_call_png, symObjAddr: 0x0, symBinAddr: 0x58AE0, symSize: 0x0 }
+  - { offset: 0x857D9, size: 0x8, addend: 0x0, symName: _btn_call_png_len, symObjAddr: 0x13A4, symBinAddr: 0x59E84, symSize: 0x0 }
+  - { offset: 0x85818, size: 0x8, addend: 0x0, symName: '-[BDDelayedCommand init]', symObjAddr: 0x0, symBinAddr: 0x2890, symSize: 0x49 }
+  - { offset: 0x8592E, size: 0x8, addend: 0x0, symName: '-[BDDelayedCommand init]', symObjAddr: 0x0, symBinAddr: 0x2890, symSize: 0x49 }
+  - { offset: 0x85965, size: 0x8, addend: 0x0, symName: '-[BDDelayedCommand performCompleted]', symObjAddr: 0x49, symBinAddr: 0x28D9, symSize: 0x3C }
+  - { offset: 0x859B0, size: 0x8, addend: 0x0, symName: '-[BDDelayedCommand execute]', symObjAddr: 0x85, symBinAddr: 0x2915, symSize: 0x56 }
+  - { offset: 0x859EF, size: 0x8, addend: 0x0, symName: '-[BDDelayedCommand cancel]', symObjAddr: 0xDB, symBinAddr: 0x296B, symSize: 0x5D }
+  - { offset: 0x85A2E, size: 0x8, addend: 0x0, symName: '-[BDDelayedCommand internalExecute]', symObjAddr: 0x138, symBinAddr: 0x29C8, symSize: 0x6 }
+  - { offset: 0x85A5D, size: 0x8, addend: 0x0, symName: '-[BDDelayedCommand delayTime]', symObjAddr: 0x13E, symBinAddr: 0x29CE, symSize: 0x12 }
+  - { offset: 0x85A92, size: 0x8, addend: 0x0, symName: '-[BDDelayedCommand setDelayTime:]', symObjAddr: 0x150, symBinAddr: 0x29E0, symSize: 0x12 }
+  - { offset: 0x85B1A, size: 0x8, addend: 0x0, symName: '-[BDAPIBaseCommand controller]', symObjAddr: 0x0, symBinAddr: 0x29F2, symSize: 0x11 }
+  - { offset: 0x85CFA, size: 0x8, addend: 0x0, symName: '-[BDAPIBaseCommand controller]', symObjAddr: 0x0, symBinAddr: 0x29F2, symSize: 0x11 }
+  - { offset: 0x85D2F, size: 0x8, addend: 0x0, symName: '-[BDAPIBaseCommand setController:]', symObjAddr: 0x11, symBinAddr: 0x2A03, symSize: 0x38 }
+  - { offset: 0x85D88, size: 0x8, addend: 0x0, symName: '-[BDAPIBaseCommand .cxx_destruct]', symObjAddr: 0x49, symBinAddr: 0x2A3B, symSize: 0x13 }
+  - { offset: 0x85E06, size: 0x8, addend: 0x0, symName: '-[BDAdView dealloc]', symObjAddr: 0x0, symBinAddr: 0x2A4E, symSize: 0xA7 }
+  - { offset: 0x86D8D, size: 0x8, addend: 0x0, symName: '-[BDAdView dealloc]', symObjAddr: 0x0, symBinAddr: 0x2A4E, symSize: 0xA7 }
+  - { offset: 0x86E1D, size: 0x8, addend: 0x0, symName: '-[BDAdView initWithParentAdView:]', symObjAddr: 0xA7, symBinAddr: 0x2AF5, symSize: 0x14 }
+  - { offset: 0x86EC5, size: 0x8, addend: 0x0, symName: '-[BDAdView initWithParentAdView:viewController:]', symObjAddr: 0xBB, symBinAddr: 0x2B09, symSize: 0x11A }
+  - { offset: 0x86FDA, size: 0x8, addend: 0x0, symName: '-[BDAdView initWithParentNativeAd:]', symObjAddr: 0x1D5, symBinAddr: 0x2C23, symSize: 0x14 }
+  - { offset: 0x8702B, size: 0x8, addend: 0x0, symName: '-[BDAdView initWithParentNativeAd:viewController:]', symObjAddr: 0x1E9, symBinAddr: 0x2C37, symSize: 0x126 }
+  - { offset: 0x87158, size: 0x8, addend: 0x0, symName: '-[BDAdView initWithParentInterstitialAd:]', symObjAddr: 0x30F, symBinAddr: 0x2D5D, symSize: 0x14 }
+  - { offset: 0x871A9, size: 0x8, addend: 0x0, symName: '-[BDAdView initWithParentInterstitialAd:viewController:]', symObjAddr: 0x323, symBinAddr: 0x2D71, symSize: 0x17A }
+  - { offset: 0x8729E, size: 0x8, addend: 0x0, symName: '-[BDAdView startAdRequestWithAdForm:]', symObjAddr: 0x49D, symBinAddr: 0x2EEB, symSize: 0x1D }
+  - { offset: 0x872E9, size: 0x8, addend: 0x0, symName: '-[BDAdView startAdRequestWithAdForm:adListSize:nativeAdComponentType:imageSize:]', symObjAddr: 0x4BA, symBinAddr: 0x2F08, symSize: 0x3D4 }
+  - { offset: 0x87592, size: 0x8, addend: 0x0, symName: '-[BDAdView stopAdRequest:]', symObjAddr: 0x88E, symBinAddr: 0x32DC, symSize: 0x12E }
+  - { offset: 0x8764F, size: 0x8, addend: 0x0, symName: '-[BDAdView getNativeAdItem:]', symObjAddr: 0x9BC, symBinAddr: 0x340A, symSize: 0x99 }
+  - { offset: 0x876FE, size: 0x8, addend: 0x0, symName: '-[BDAdView getAllNativeAdItemList]', symObjAddr: 0xA55, symBinAddr: 0x34A3, symSize: 0x241 }
+  - { offset: 0x87823, size: 0x8, addend: 0x0, symName: '-[BDAdView sendNativeImpressInform:]', symObjAddr: 0xC96, symBinAddr: 0x36E4, symSize: 0x71 }
+  - { offset: 0x87896, size: 0x8, addend: 0x0, symName: '-[BDAdView sendNativeClick:]', symObjAddr: 0xD07, symBinAddr: 0x3755, symSize: 0x1CB }
+  - { offset: 0x87A0C, size: 0x8, addend: 0x0, symName: '-[BDAdView sendNativeOptOut:]', symObjAddr: 0xED2, symBinAddr: 0x3920, symSize: 0x61 }
+  - { offset: 0x87A8F, size: 0x8, addend: 0x0, symName: '-[BDAdView showInterstitial:]', symObjAddr: 0xF33, symBinAddr: 0x3981, symSize: 0x31 }
+  - { offset: 0x87ADE, size: 0x8, addend: 0x0, symName: '-[BDAdView showInterstitial]', symObjAddr: 0xF64, symBinAddr: 0x39B2, symSize: 0x3C8 }
+  - { offset: 0x87D22, size: 0x8, addend: 0x0, symName: '-[BDAdView closeInterstitial]', symObjAddr: 0x132C, symBinAddr: 0x3D7A, symSize: 0x80 }
+  - { offset: 0x87DB3, size: 0x8, addend: 0x0, symName: '-[BDAdView earnType]', symObjAddr: 0x13AC, symBinAddr: 0x3DFA, symSize: 0x87 }
+  - { offset: 0x87E27, size: 0x8, addend: 0x0, symName: '-[BDAdView price]', symObjAddr: 0x1433, symBinAddr: 0x3E81, symSize: 0x94 }
+  - { offset: 0x87E9B, size: 0x8, addend: 0x0, symName: '-[BDAdView errorMsg]', symObjAddr: 0x14C7, symBinAddr: 0x3F15, symSize: 0x1D }
+  - { offset: 0x87EDF, size: 0x8, addend: 0x0, symName: '-[BDAdView didReceiveAdServerConfig:]', symObjAddr: 0x14E4, symBinAddr: 0x3F32, symSize: 0x18 }
+  - { offset: 0x87F2A, size: 0x8, addend: 0x0, symName: '-[BDAdView needCloseAdView:]', symObjAddr: 0x14FC, symBinAddr: 0x3F4A, symSize: 0x1E0 }
+  - { offset: 0x88055, size: 0x8, addend: 0x0, symName: '-[BDAdView needShowLanding]', symObjAddr: 0x16DC, symBinAddr: 0x412A, symSize: 0x879 }
+  - { offset: 0x88564, size: 0x8, addend: 0x0, symName: '___27-[BDAdView needShowLanding]_block_invoke', symObjAddr: 0x1F55, symBinAddr: 0x49A3, symSize: 0x47 }
+  - { offset: 0x885EF, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s, symObjAddr: 0x1F9C, symBinAddr: 0x49EA, symSize: 0xF }
+  - { offset: 0x88622, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s, symObjAddr: 0x1FAB, symBinAddr: 0x49F9, symSize: 0xF }
+  - { offset: 0x8864D, size: 0x8, addend: 0x0, symName: '-[BDAdView didReceiveAdItem:]', symObjAddr: 0x1FBA, symBinAddr: 0x4A08, symSize: 0x465 }
+  - { offset: 0x88885, size: 0x8, addend: 0x0, symName: '-[BDAdView didReceiveMutilAdItem:]', symObjAddr: 0x241F, symBinAddr: 0x4E6D, symSize: 0x15C }
+  - { offset: 0x88980, size: 0x8, addend: 0x0, symName: '-[BDAdView didReceiveError:errorMsg:]', symObjAddr: 0x257B, symBinAddr: 0x4FC9, symSize: 0x93 }
+  - { offset: 0x88A20, size: 0x8, addend: 0x0, symName: '-[BDAdView didReceiveMultiAdError:errorMsg:]', symObjAddr: 0x260E, symBinAddr: 0x505C, symSize: 0x93 }
+  - { offset: 0x88AC0, size: 0x8, addend: 0x0, symName: '-[BDAdView didContentLoaded]', symObjAddr: 0x26A1, symBinAddr: 0x50EF, symSize: 0x3B5 }
+  - { offset: 0x88D54, size: 0x8, addend: 0x0, symName: '-[BDAdView didContentLoadFailed:]', symObjAddr: 0x2A56, symBinAddr: 0x54A4, symSize: 0x122 }
+  - { offset: 0x88E2B, size: 0x8, addend: 0x0, symName: '-[BDAdView showPreviousAdItem]', symObjAddr: 0x2B78, symBinAddr: 0x55C6, symSize: 0x54 }
+  - { offset: 0x88E89, size: 0x8, addend: 0x0, symName: '-[BDAdView didCloseLandingViewController:]', symObjAddr: 0x2BCC, symBinAddr: 0x561A, symSize: 0x122 }
+  - { offset: 0x88F50, size: 0x8, addend: 0x0, symName: '-[BDAdView executeApp]', symObjAddr: 0x2CEE, symBinAddr: 0x573C, symSize: 0x288 }
+  - { offset: 0x890FD, size: 0x8, addend: 0x0, symName: '-[BDAdView fireSuccessForAdItem:]', symObjAddr: 0x2F76, symBinAddr: 0x59C4, symSize: 0x2A5 }
+  - { offset: 0x89272, size: 0x8, addend: 0x0, symName: '-[BDAdView fireSuccessForMultiAdItem:]', symObjAddr: 0x321B, symBinAddr: 0x5C69, symSize: 0x2A5 }
+  - { offset: 0x893E7, size: 0x8, addend: 0x0, symName: '-[BDAdView fireFailureForAdItem:errorCode:errorMsg:]', symObjAddr: 0x34C0, symBinAddr: 0x5F0E, symSize: 0x327 }
+  - { offset: 0x895D5, size: 0x8, addend: 0x0, symName: '-[BDAdView fireFailureForMultiAdItem:errorCode:errorMsg:]', symObjAddr: 0x37E7, symBinAddr: 0x6235, symSize: 0x205 }
+  - { offset: 0x8973B, size: 0x8, addend: 0x0, symName: '-[BDAdView storeOpened]', symObjAddr: 0x39EC, symBinAddr: 0x643A, symSize: 0x3F }
+  - { offset: 0x89789, size: 0x8, addend: 0x0, symName: '-[BDAdView storeClosed]', symObjAddr: 0x3A2B, symBinAddr: 0x6479, symSize: 0x3C }
+  - { offset: 0x897D7, size: 0x8, addend: 0x0, symName: '-[BDAdView parentView]', symObjAddr: 0x3A67, symBinAddr: 0x64B5, symSize: 0x19 }
+  - { offset: 0x8980E, size: 0x8, addend: 0x0, symName: '-[BDAdView setParentView:]', symObjAddr: 0x3A80, symBinAddr: 0x64CE, symSize: 0x14 }
+  - { offset: 0x8984F, size: 0x8, addend: 0x0, symName: '-[BDAdView .cxx_destruct]', symObjAddr: 0x3A94, symBinAddr: 0x64E2, symSize: 0xC6 }
+  - { offset: 0x89EE3, size: 0x8, addend: 0x0, symName: _video_sound_off_btn_png, symObjAddr: 0x0, symBinAddr: 0x5A070, symSize: 0x0 }
+  - { offset: 0x89F14, size: 0x8, addend: 0x0, symName: _video_sound_off_btn_png_len, symObjAddr: 0x69C, symBinAddr: 0x5A70C, symSize: 0x0 }
+  - { offset: 0x89F61, size: 0x8, addend: 0x0, symName: _optout_icon_png_len, symObjAddr: 0x0, symBinAddr: 0x5A710, symSize: 0x0 }
+  - { offset: 0x89F7E, size: 0x8, addend: 0x0, symName: _optout_icon_png, symObjAddr: 0x10, symBinAddr: 0x5A720, symSize: 0x0 }
+  - { offset: 0x89FD1, size: 0x8, addend: 0x0, symName: '-[BDRichContentView initWithAdItem:adController:]', symObjAddr: 0x0, symBinAddr: 0x65A8, symSize: 0x15E }
+  - { offset: 0x8AC87, size: 0x8, addend: 0x0, symName: '-[BDRichContentView initWithAdItem:adController:]', symObjAddr: 0x0, symBinAddr: 0x65A8, symSize: 0x15E }
+  - { offset: 0x8AD8F, size: 0x8, addend: 0x0, symName: '-[BDRichContentView startLoad]', symObjAddr: 0x15E, symBinAddr: 0x6706, symSize: 0x8B }
+  - { offset: 0x8AE26, size: 0x8, addend: 0x0, symName: '-[BDRichContentView needUserInteraction]', symObjAddr: 0x1E9, symBinAddr: 0x6791, symSize: 0x93 }
+  - { offset: 0x8AE9B, size: 0x8, addend: 0x0, symName: '-[BDRichContentView stopLoad]', symObjAddr: 0x27C, symBinAddr: 0x6824, symSize: 0x3A }
+  - { offset: 0x8AEE8, size: 0x8, addend: 0x0, symName: '-[BDRichContentView didLoadFinished]', symObjAddr: 0x2B6, symBinAddr: 0x685E, symSize: 0x68 }
+  - { offset: 0x8AF41, size: 0x8, addend: 0x0, symName: '-[BDRichContentView didLoadFailed]', symObjAddr: 0x31E, symBinAddr: 0x68C6, symSize: 0x68 }
+  - { offset: 0x8AF9A, size: 0x8, addend: 0x0, symName: '-[BDRichContentView didClickedLink:]', symObjAddr: 0x386, symBinAddr: 0x692E, symSize: 0x4FF }
+  - { offset: 0x8B29A, size: 0x8, addend: 0x0, symName: '-[BDRichContentView didClosed]', symObjAddr: 0x885, symBinAddr: 0x6E2D, symSize: 0x18 }
+  - { offset: 0x8B2D7, size: 0x8, addend: 0x0, symName: '-[BDRichContentView didUrlChanged:]', symObjAddr: 0x89D, symBinAddr: 0x6E45, symSize: 0x11B }
+  - { offset: 0x8B3AC, size: 0x8, addend: 0x0, symName: '-[BDRichContentView storeOpened]', symObjAddr: 0x9B8, symBinAddr: 0x6F60, symSize: 0x42 }
+  - { offset: 0x8B3F9, size: 0x8, addend: 0x0, symName: '-[BDRichContentView storeClosed]', symObjAddr: 0x9FA, symBinAddr: 0x6FA2, symSize: 0x3F }
+  - { offset: 0x8B446, size: 0x8, addend: 0x0, symName: '-[BDRichContentView .cxx_destruct]', symObjAddr: 0xA39, symBinAddr: 0x6FE1, symSize: 0x13 }
+  - { offset: 0x8B56D, size: 0x8, addend: 0x0, symName: '-[CaulyAdView init]', symObjAddr: 0x0, symBinAddr: 0x6FF4, symSize: 0x50 }
+  - { offset: 0x8B57B, size: 0x8, addend: 0x0, symName: '+[CaulyAdView initializeCaulyAdView]', symObjAddr: 0x9B6, symBinAddr: 0x79AA, symSize: 0x1EB }
+  - { offset: 0x8B5A1, size: 0x8, addend: 0x0, symName: _initializeCaulyAdView.initalized, symObjAddr: 0x16DCF, symBinAddr: 0x78E40, symSize: 0x0 }
+  - { offset: 0x8B955, size: 0x8, addend: 0x0, symName: '-[CaulyAdView init]', symObjAddr: 0x0, symBinAddr: 0x6FF4, symSize: 0x50 }
+  - { offset: 0x8B998, size: 0x8, addend: 0x0, symName: '-[CaulyAdView initWithFrame:]', symObjAddr: 0x50, symBinAddr: 0x7044, symSize: 0x61 }
+  - { offset: 0x8B9EA, size: 0x8, addend: 0x0, symName: '-[CaulyAdView initWithParentViewController:]', symObjAddr: 0xB1, symBinAddr: 0x70A5, symSize: 0x68 }
+  - { offset: 0x8BA55, size: 0x8, addend: 0x0, symName: '-[CaulyAdView removeFromSuperview]', symObjAddr: 0x119, symBinAddr: 0x710D, symSize: 0xDD }
+  - { offset: 0x8BAE0, size: 0x8, addend: 0x0, symName: '+[CaulyAdView caulyAdViewWithController:]', symObjAddr: 0x1F6, symBinAddr: 0x71EA, symSize: 0x4D }
+  - { offset: 0x8BB57, size: 0x8, addend: 0x0, symName: '-[CaulyAdView earnType]', symObjAddr: 0x243, symBinAddr: 0x7237, symSize: 0x54 }
+  - { offset: 0x8BBC2, size: 0x8, addend: 0x0, symName: '-[CaulyAdView price]', symObjAddr: 0x297, symBinAddr: 0x728B, symSize: 0x7F }
+  - { offset: 0x8BC39, size: 0x8, addend: 0x0, symName: '-[CaulyAdView startBannerAdRequest]', symObjAddr: 0x316, symBinAddr: 0x730A, symSize: 0x397 }
+  - { offset: 0x8BE55, size: 0x8, addend: 0x0, symName: '-[CaulyAdView showWithParentViewController:target:]', symObjAddr: 0x6AD, symBinAddr: 0x76A1, symSize: 0xEC }
+  - { offset: 0x8BF2E, size: 0x8, addend: 0x0, symName: '-[CaulyAdView show:]', symObjAddr: 0x799, symBinAddr: 0x778D, symSize: 0xA6 }
+  - { offset: 0x8BFC5, size: 0x8, addend: 0x0, symName: '-[CaulyAdView hide]', symObjAddr: 0x83F, symBinAddr: 0x7833, symSize: 0x37 }
+  - { offset: 0x8C012, size: 0x8, addend: 0x0, symName: '-[CaulyAdView stopAdRequest]', symObjAddr: 0x876, symBinAddr: 0x786A, symSize: 0x4B }
+  - { offset: 0x8C079, size: 0x8, addend: 0x0, symName: '-[CaulyAdView localSetting]', symObjAddr: 0x8C1, symBinAddr: 0x78B5, symSize: 0x9E }
+  - { offset: 0x8C0EC, size: 0x8, addend: 0x0, symName: '-[CaulyAdView errorMsg]', symObjAddr: 0x95F, symBinAddr: 0x7953, symSize: 0x57 }
+  - { offset: 0x8C17B, size: 0x8, addend: 0x0, symName: '-[CaulyAdView orientationChanged:]', symObjAddr: 0xBA1, symBinAddr: 0x7B95, symSize: 0x11B }
+  - { offset: 0x8C23E, size: 0x8, addend: 0x0, symName: '-[CaulyAdView parentController]', symObjAddr: 0xCBC, symBinAddr: 0x7CB0, symSize: 0x19 }
+  - { offset: 0x8C275, size: 0x8, addend: 0x0, symName: '-[CaulyAdView setParentController:]', symObjAddr: 0xCD5, symBinAddr: 0x7CC9, symSize: 0x14 }
+  - { offset: 0x8C2B6, size: 0x8, addend: 0x0, symName: '-[CaulyAdView delegate]', symObjAddr: 0xCE9, symBinAddr: 0x7CDD, symSize: 0x19 }
+  - { offset: 0x8C2ED, size: 0x8, addend: 0x0, symName: '-[CaulyAdView setDelegate:]', symObjAddr: 0xD02, symBinAddr: 0x7CF6, symSize: 0x14 }
+  - { offset: 0x8C32E, size: 0x8, addend: 0x0, symName: '-[CaulyAdView setLocalSetting:]', symObjAddr: 0xD16, symBinAddr: 0x7D0A, symSize: 0x38 }
+  - { offset: 0x8C387, size: 0x8, addend: 0x0, symName: '-[CaulyAdView data]', symObjAddr: 0xD4E, symBinAddr: 0x7D42, symSize: 0x11 }
+  - { offset: 0x8C3BC, size: 0x8, addend: 0x0, symName: '-[CaulyAdView setData:]', symObjAddr: 0xD5F, symBinAddr: 0x7D53, symSize: 0x38 }
+  - { offset: 0x8C415, size: 0x8, addend: 0x0, symName: '-[CaulyAdView .cxx_destruct]', symObjAddr: 0xD97, symBinAddr: 0x7D8B, symSize: 0x4F }
+  - { offset: 0x8D12C, size: 0x8, addend: 0x0, symName: '+[BDAdInfoXMLParser parseXML:error:]', symObjAddr: 0x0, symBinAddr: 0x7DDA, symSize: 0x21C }
+  - { offset: 0x8D162, size: 0x8, addend: 0x0, symName: '+[BDAdInfoXMLParser parseXML:error:]', symObjAddr: 0x0, symBinAddr: 0x7DDA, symSize: 0x21C }
+  - { offset: 0x8D2E0, size: 0x8, addend: 0x0, symName: '+[BDAdInfoXMLParser parseCaulyAdData:withXMLElement:]', symObjAddr: 0x21C, symBinAddr: 0x7FF6, symSize: 0x17BA }
+  - { offset: 0x8DFE4, size: 0x8, addend: 0x0, symName: '+[BDAdInfoXMLParser parseInmobiAdData:withXMLElement:]', symObjAddr: 0x19D6, symBinAddr: 0x97B0, symSize: 0x11F }
+  - { offset: 0x8E91B, size: 0x8, addend: 0x0, symName: _btn_blog_png, symObjAddr: 0x0, symBinAddr: 0x5AE20, symSize: 0x0 }
+  - { offset: 0x8E94D, size: 0x8, addend: 0x0, symName: _btn_blog_png_len, symObjAddr: 0x17B4, symBinAddr: 0x5C5D4, symSize: 0x0 }
+  - { offset: 0x8E99A, size: 0x8, addend: 0x0, symName: _sdk_bg_png, symObjAddr: 0x0, symBinAddr: 0x5C5E0, symSize: 0x0 }
+  - { offset: 0x8E9CB, size: 0x8, addend: 0x0, symName: _sdk_bg_png_len, symObjAddr: 0x524, symBinAddr: 0x5CB04, symSize: 0x0 }
+  - { offset: 0x8EA0A, size: 0x8, addend: 0x0, symName: '-[BDLandingViewController dealloc]', symObjAddr: 0x0, symBinAddr: 0x98CF, symSize: 0x55 }
+  - { offset: 0x8EA24, size: 0x8, addend: 0x0, symName: _isShowLanding, symObjAddr: 0x10BC8, symBinAddr: 0x78E41, symSize: 0x0 }
+  - { offset: 0x8F589, size: 0x8, addend: 0x0, symName: '-[BDLandingViewController dealloc]', symObjAddr: 0x0, symBinAddr: 0x98CF, symSize: 0x55 }
+  - { offset: 0x8F5E9, size: 0x8, addend: 0x0, symName: '-[BDLandingViewController initWithAdItem:adController:delegate:]', symObjAddr: 0x55, symBinAddr: 0x9924, symSize: 0xE5 }
+  - { offset: 0x8F6D6, size: 0x8, addend: 0x0, symName: '-[BDLandingViewController viewDidLoad]', symObjAddr: 0x13A, symBinAddr: 0x9A09, symSize: 0xB1 }
+  - { offset: 0x8F753, size: 0x8, addend: 0x0, symName: '-[BDLandingViewController viewDidClose]', symObjAddr: 0x1EB, symBinAddr: 0x9ABA, symSize: 0x120 }
+  - { offset: 0x8F80C, size: 0x8, addend: 0x0, symName: '-[BDLandingViewController presentModalViewController]', symObjAddr: 0x30B, symBinAddr: 0x9BDA, symSize: 0x18 }
+  - { offset: 0x8F849, size: 0x8, addend: 0x0, symName: '-[BDLandingViewController presentModalViewController:]', symObjAddr: 0x323, symBinAddr: 0x9BF2, symSize: 0xD0 }
+  - { offset: 0x8F8E2, size: 0x8, addend: 0x0, symName: '-[BDLandingViewController closeViewController:]', symObjAddr: 0x3F3, symBinAddr: 0x9CC2, symSize: 0x7A }
+  - { offset: 0x8F963, size: 0x8, addend: 0x0, symName: '-[BDLandingViewController sendCloseLog]', symObjAddr: 0x46D, symBinAddr: 0x9D3C, symSize: 0xAF }
+  - { offset: 0x8F9E4, size: 0x8, addend: 0x0, symName: '-[BDLandingViewController freeResources]', symObjAddr: 0x51C, symBinAddr: 0x9DEB, symSize: 0x18 }
+  - { offset: 0x8FA21, size: 0x8, addend: 0x0, symName: '-[BDLandingViewController shouldAutorotate]', symObjAddr: 0x534, symBinAddr: 0x9E03, symSize: 0x78 }
+  - { offset: 0x8FA8A, size: 0x8, addend: 0x0, symName: '-[BDLandingViewController supportedInterfaceOrientations]', symObjAddr: 0x5AC, symBinAddr: 0x9E7B, symSize: 0x78 }
+  - { offset: 0x8FAF3, size: 0x8, addend: 0x0, symName: '+[BDLandingViewController isShowLanding]', symObjAddr: 0x624, symBinAddr: 0x9EF3, symSize: 0x1F }
+  - { offset: 0x8FB34, size: 0x8, addend: 0x0, symName: '-[BDLandingViewController prefersStatusBarHidden]', symObjAddr: 0x643, symBinAddr: 0x9F12, symSize: 0x1B }
+  - { offset: 0x8FB75, size: 0x8, addend: 0x0, symName: '-[BDLandingViewController delegate]', symObjAddr: 0x65E, symBinAddr: 0x9F2D, symSize: 0x19 }
+  - { offset: 0x8FBAC, size: 0x8, addend: 0x0, symName: '-[BDLandingViewController setDelegate:]', symObjAddr: 0x677, symBinAddr: 0x9F46, symSize: 0x14 }
+  - { offset: 0x8FBED, size: 0x8, addend: 0x0, symName: '-[BDLandingViewController rootViewController]', symObjAddr: 0x68B, symBinAddr: 0x9F5A, symSize: 0x19 }
+  - { offset: 0x8FC24, size: 0x8, addend: 0x0, symName: '-[BDLandingViewController setRootViewController:]', symObjAddr: 0x6A4, symBinAddr: 0x9F73, symSize: 0x14 }
+  - { offset: 0x8FC65, size: 0x8, addend: 0x0, symName: '-[BDLandingViewController .cxx_destruct]', symObjAddr: 0x6B8, symBinAddr: 0x9F87, symSize: 0x4F }
+  - { offset: 0x8FD0D, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView dealloc]', symObjAddr: 0x0, symBinAddr: 0x9FD6, symSize: 0x92 }
+  - { offset: 0x8FD27, size: 0x8, addend: 0x0, symName: _RICHVIDEO_ITEM_FRAME, symObjAddr: 0x5A88, symBinAddr: 0x3D158, symSize: 0x0 }
+  - { offset: 0x8FD75, size: 0x8, addend: 0x0, symName: _RICHVIDEO_ITEM_IMG, symObjAddr: 0x5A90, symBinAddr: 0x3D160, symSize: 0x0 }
+  - { offset: 0x8FD8B, size: 0x8, addend: 0x0, symName: _RICHVIDEO_ITEM_TEXT, symObjAddr: 0x5A98, symBinAddr: 0x3D168, symSize: 0x0 }
+  - { offset: 0x8FDA1, size: 0x8, addend: 0x0, symName: _RICHVIDEO_ITEM_CLOSE, symObjAddr: 0x5AA0, symBinAddr: 0x3D170, symSize: 0x0 }
+  - { offset: 0x8FDB7, size: 0x8, addend: 0x0, symName: _RICHVIDEO_ITEM_SOUND, symObjAddr: 0x5AA8, symBinAddr: 0x3D178, symSize: 0x0 }
+  - { offset: 0x8FDCD, size: 0x8, addend: 0x0, symName: _RICHVIDEO_ITEM_VIDEO, symObjAddr: 0x5AB0, symBinAddr: 0x3D180, symSize: 0x0 }
+  - { offset: 0x8FDE3, size: 0x8, addend: 0x0, symName: _RICHVIDEO_ITEM_WEB, symObjAddr: 0x5AB8, symBinAddr: 0x3D188, symSize: 0x0 }
+  - { offset: 0x8FDF9, size: 0x8, addend: 0x0, symName: _LINK_TAG, symObjAddr: 0x5AC0, symBinAddr: 0x3D190, symSize: 0x0 }
+  - { offset: 0x8FE0F, size: 0x8, addend: 0x0, symName: _BTN_ID_TAG, symObjAddr: 0x5AC8, symBinAddr: 0x3D198, symSize: 0x0 }
+  - { offset: 0x90C74, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView dealloc]', symObjAddr: 0x0, symBinAddr: 0x9FD6, symSize: 0x92 }
+  - { offset: 0x90CF8, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView initWithAdItem:adController:]', symObjAddr: 0x92, symBinAddr: 0xA068, symSize: 0xD8 }
+  - { offset: 0x90E22, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView startLoad]', symObjAddr: 0x16A, symBinAddr: 0xA140, symSize: 0x1B8A }
+  - { offset: 0x91A51, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView setLinkAction:link:btnId:]', symObjAddr: 0x1CF4, symBinAddr: 0xBCCA, symSize: 0x1E7 }
+  - { offset: 0x91BFC, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView linkTouched:]', symObjAddr: 0x1EDB, symBinAddr: 0xBEB1, symSize: 0x830 }
+  - { offset: 0x9212A, size: 0x8, addend: 0x0, symName: '___38-[BDRichVideoContentView linkTouched:]_block_invoke', symObjAddr: 0x270B, symBinAddr: 0xC6E1, symSize: 0x1C }
+  - { offset: 0x9219D, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView needUserInteraction]', symObjAddr: 0x2745, symBinAddr: 0xC6FD, symSize: 0x44 }
+  - { offset: 0x921EF, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView stopLoad]', symObjAddr: 0x2789, symBinAddr: 0xC741, symSize: 0x21B }
+  - { offset: 0x922D9, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView notifyReady]', symObjAddr: 0x29A4, symBinAddr: 0xC95C, symSize: 0x139 }
+  - { offset: 0x9237B, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView playbackDidFinish:]', symObjAddr: 0x2ADD, symBinAddr: 0xCA95, symSize: 0x12E }
+  - { offset: 0x92457, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView currentVolume]', symObjAddr: 0x2C0B, symBinAddr: 0xCBC3, symSize: 0x6A }
+  - { offset: 0x924CE, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView setCurrentVolume:]', symObjAddr: 0x2C75, symBinAddr: 0xCC2D, symSize: 0x18 }
+  - { offset: 0x92519, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView soundBtnClick]', symObjAddr: 0x2C8D, symBinAddr: 0xCC45, symSize: 0x90 }
+  - { offset: 0x92581, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView didClickSoundState:]', symObjAddr: 0x2D1D, symBinAddr: 0xCCD5, symSize: 0x73 }
+  - { offset: 0x925E0, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView volumeOn]', symObjAddr: 0x2D90, symBinAddr: 0xCD48, symSize: 0x52 }
+  - { offset: 0x9262E, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView volumeOff]', symObjAddr: 0x2DE2, symBinAddr: 0xCD9A, symSize: 0x52 }
+  - { offset: 0x9267C, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView volumePause]', symObjAddr: 0x2E34, symBinAddr: 0xCDEC, symSize: 0x8B }
+  - { offset: 0x926EE, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView volumeResume]', symObjAddr: 0x2EBF, symBinAddr: 0xCE77, symSize: 0xA9 }
+  - { offset: 0x92765, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView volumeChanged:]', symObjAddr: 0x2F68, symBinAddr: 0xCF20, symSize: 0x137 }
+  - { offset: 0x92835, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView initializeVolumeButtonStealer]', symObjAddr: 0x309F, symBinAddr: 0xD057, symSize: 0x77 }
+  - { offset: 0x9289B, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView webView:decidePolicyForNavigationAction:decisionHandler:]', symObjAddr: 0x3116, symBinAddr: 0xD0CE, symSize: 0xC27 }
+  - { offset: 0x92FF2, size: 0x8, addend: 0x0, symName: '___82-[BDRichVideoContentView webView:decidePolicyForNavigationAction:decisionHandler:]_block_invoke', symObjAddr: 0x3D3D, symBinAddr: 0xDCF5, symSize: 0x6 }
+  - { offset: 0x93035, size: 0x8, addend: 0x0, symName: '___82-[BDRichVideoContentView webView:decidePolicyForNavigationAction:decisionHandler:]_block_invoke_2', symObjAddr: 0x3D43, symBinAddr: 0xDCFB, symSize: 0x6 }
+  - { offset: 0x93078, size: 0x8, addend: 0x0, symName: '___82-[BDRichVideoContentView webView:decidePolicyForNavigationAction:decisionHandler:]_block_invoke_3', symObjAddr: 0x3D49, symBinAddr: 0xDD01, symSize: 0x6 }
+  - { offset: 0x930BB, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView webView:didStartProvisionalNavigation:]', symObjAddr: 0x3D4F, symBinAddr: 0xDD07, symSize: 0x18 }
+  - { offset: 0x93113, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView webView:didFinishNavigation:]', symObjAddr: 0x3D67, symBinAddr: 0xDD1F, symSize: 0x6E }
+  - { offset: 0x93193, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView webView:didFailNavigation:withError:]', symObjAddr: 0x3DD5, symBinAddr: 0xDD8D, symSize: 0x50 }
+  - { offset: 0x93214, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView hasCloseButton]', symObjAddr: 0x3E25, symBinAddr: 0xDDDD, symSize: 0x1B }
+  - { offset: 0x93256, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView closePopup]', symObjAddr: 0x3E40, symBinAddr: 0xDDF8, symSize: 0x99 }
+  - { offset: 0x932E0, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView playVideo]', symObjAddr: 0x3ED9, symBinAddr: 0xDE91, symSize: 0x3C }
+  - { offset: 0x9332E, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView pauseVideo]', symObjAddr: 0x3F15, symBinAddr: 0xDECD, symSize: 0x3C }
+  - { offset: 0x9337C, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView didChangeVideoState:]', symObjAddr: 0x3F51, symBinAddr: 0xDF09, symSize: 0xB1 }
+  - { offset: 0x93401, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView didPlayerCurrentTimeChanged:]', symObjAddr: 0x4002, symBinAddr: 0xDFBA, symSize: 0x1FF }
+  - { offset: 0x934D8, size: 0x8, addend: 0x0, symName: '___54-[BDRichVideoContentView didPlayerCurrentTimeChanged:]_block_invoke', symObjAddr: 0x4201, symBinAddr: 0xE1B9, symSize: 0x6 }
+  - { offset: 0x9351B, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView storeOpened]', symObjAddr: 0x4207, symBinAddr: 0xE1BF, symSize: 0x42 }
+  - { offset: 0x93569, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView storeClosed]', symObjAddr: 0x4249, symBinAddr: 0xE201, symSize: 0x3F }
+  - { offset: 0x935B7, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView caulyVideoState]', symObjAddr: 0x4288, symBinAddr: 0xE240, symSize: 0x10 }
+  - { offset: 0x935EC, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView needPauseWhenReady]', symObjAddr: 0x4298, symBinAddr: 0xE250, symSize: 0x10 }
+  - { offset: 0x93621, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView setNeedPauseWhenReady:]', symObjAddr: 0x42A8, symBinAddr: 0xE260, symSize: 0x10 }
+  - { offset: 0x9365E, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView silence_loading]', symObjAddr: 0x42B8, symBinAddr: 0xE270, symSize: 0x10 }
+  - { offset: 0x93693, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView setSilence_loading:]', symObjAddr: 0x42C8, symBinAddr: 0xE280, symSize: 0x10 }
+  - { offset: 0x936D0, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView silent_start]', symObjAddr: 0x42D8, symBinAddr: 0xE290, symSize: 0x10 }
+  - { offset: 0x93705, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView setSilent_start:]', symObjAddr: 0x42E8, symBinAddr: 0xE2A0, symSize: 0x10 }
+  - { offset: 0x93742, size: 0x8, addend: 0x0, symName: '-[BDRichVideoContentView .cxx_destruct]', symObjAddr: 0x42F8, symBinAddr: 0xE2B0, symSize: 0x97 }
+  - { offset: 0x93BBE, size: 0x8, addend: 0x0, symName: '+[BDColor colorWithRGBHex:]', symObjAddr: 0x0, symBinAddr: 0xE347, symSize: 0x5E }
+  - { offset: 0x93BE4, size: 0x8, addend: 0x0, symName: '+[BDColor colorWithRGBHex:]', symObjAddr: 0x0, symBinAddr: 0xE347, symSize: 0x5E }
+  - { offset: 0x93C65, size: 0x8, addend: 0x0, symName: '+[BDColor colorFromHexString:]', symObjAddr: 0x5E, symBinAddr: 0xE3A5, symSize: 0xCE }
+  - { offset: 0x93D04, size: 0x8, addend: 0x0, symName: '+[BDColor colorWithName:]', symObjAddr: 0x12C, symBinAddr: 0xE473, symSize: 0x11A }
+  - { offset: 0x93F13, size: 0x8, addend: 0x0, symName: _sdk_btn_r_off_png, symObjAddr: 0x0, symBinAddr: 0x5CC30, symSize: 0x0 }
+  - { offset: 0x93F44, size: 0x8, addend: 0x0, symName: _sdk_btn_r_off_png_len, symObjAddr: 0x564, symBinAddr: 0x5D194, symSize: 0x0 }
+  - { offset: 0x93F83, size: 0x8, addend: 0x0, symName: '+[BDAdinfoJSONParser parseJSON:error:]', symObjAddr: 0x0, symBinAddr: 0xE58D, symSize: 0x84B }
+  - { offset: 0x93F91, size: 0x8, addend: 0x0, symName: '+[BDAdinfoJSONParser parseJSON:error:]', symObjAddr: 0x0, symBinAddr: 0xE58D, symSize: 0x84B }
+  - { offset: 0x943F6, size: 0x8, addend: 0x0, symName: '+[BDAdinfoJSONParser parseCaulyAdData:withJSONObject:]', symObjAddr: 0x84B, symBinAddr: 0xEDD8, symSize: 0xC40 }
+  - { offset: 0x952CE, size: 0x8, addend: 0x0, symName: _exit_gps_png, symObjAddr: 0x0, symBinAddr: 0x5D1A0, symSize: 0x0 }
+  - { offset: 0x95300, size: 0x8, addend: 0x0, symName: _exit_gps_png_len, symObjAddr: 0x1868, symBinAddr: 0x5EA08, symSize: 0x0 }
+  - { offset: 0x9533F, size: 0x8, addend: 0x0, symName: '-[BDSiteLandingViewController viewDidLoad]', symObjAddr: 0x0, symBinAddr: 0xFA18, symSize: 0x1BC }
+  - { offset: 0x96061, size: 0x8, addend: 0x0, symName: '-[BDSiteLandingViewController viewDidLoad]', symObjAddr: 0x0, symBinAddr: 0xFA18, symSize: 0x1BC }
+  - { offset: 0x96175, size: 0x8, addend: 0x0, symName: '-[BDSiteLandingViewController freeResources]', symObjAddr: 0x1BC, symBinAddr: 0xFBD4, symSize: 0x4B }
+  - { offset: 0x961CE, size: 0x8, addend: 0x0, symName: '-[BDSiteLandingViewController dealloc]', symObjAddr: 0x207, symBinAddr: 0xFC1F, symSize: 0x72 }
+  - { offset: 0x96227, size: 0x8, addend: 0x0, symName: '-[BDSiteLandingViewController presentModalViewController]', symObjAddr: 0x279, symBinAddr: 0xFC91, symSize: 0x49 }
+  - { offset: 0x96268, size: 0x8, addend: 0x0, symName: '-[BDSiteLandingViewController closeViewController]', symObjAddr: 0x2C2, symBinAddr: 0xFCDA, symSize: 0x46 }
+  - { offset: 0x962A9, size: 0x8, addend: 0x0, symName: '-[BDSiteLandingViewController didControlLoadFinished]', symObjAddr: 0x308, symBinAddr: 0xFD20, symSize: 0x18 }
+  - { offset: 0x962E6, size: 0x8, addend: 0x0, symName: '-[BDSiteLandingViewController didControlLoadFailed]', symObjAddr: 0x320, symBinAddr: 0xFD38, symSize: 0x18 }
+  - { offset: 0x96323, size: 0x8, addend: 0x0, symName: '-[BDSiteLandingViewController didControlClickedLink:]', symObjAddr: 0x338, symBinAddr: 0xFD50, symSize: 0x18 }
+  - { offset: 0x9636C, size: 0x8, addend: 0x0, symName: '-[BDSiteLandingViewController didControlClosed]', symObjAddr: 0x350, symBinAddr: 0xFD68, symSize: 0x32 }
+  - { offset: 0x963B9, size: 0x8, addend: 0x0, symName: '-[BDSiteLandingViewController didUrlChanged:]', symObjAddr: 0x382, symBinAddr: 0xFD9A, symSize: 0x11F }
+  - { offset: 0x9648E, size: 0x8, addend: 0x0, symName: '-[BDSiteLandingViewController .cxx_destruct]', symObjAddr: 0x4A1, symBinAddr: 0xFEB9, symSize: 0x13 }
+  - { offset: 0x96544, size: 0x8, addend: 0x0, symName: _btn_map_png, symObjAddr: 0x0, symBinAddr: 0x5EA70, symSize: 0x0 }
+  - { offset: 0x96576, size: 0x8, addend: 0x0, symName: _btn_map_png_len, symObjAddr: 0x16FC, symBinAddr: 0x6016C, symSize: 0x0 }
+  - { offset: 0x965C3, size: 0x8, addend: 0x0, symName: _btn_video_png, symObjAddr: 0x0, symBinAddr: 0x60170, symSize: 0x0 }
+  - { offset: 0x965F5, size: 0x8, addend: 0x0, symName: _btn_video_png_len, symObjAddr: 0xFA4, symBinAddr: 0x61114, symSize: 0x0 }
+  - { offset: 0x96634, size: 0x8, addend: 0x0, symName: '-[BDContentView dealloc]', symObjAddr: 0x0, symBinAddr: 0xFECC, symSize: 0x44 }
+  - { offset: 0x971A8, size: 0x8, addend: 0x0, symName: '-[BDContentView dealloc]', symObjAddr: 0x0, symBinAddr: 0xFECC, symSize: 0x44 }
+  - { offset: 0x97208, size: 0x8, addend: 0x0, symName: '+[BDContentView contentViewForAdItem:adController:]', symObjAddr: 0x44, symBinAddr: 0xFF10, symSize: 0x2AE }
+  - { offset: 0x9744F, size: 0x8, addend: 0x0, symName: '-[BDContentView initWithAdItem:adController:]', symObjAddr: 0x2F2, symBinAddr: 0x101BE, symSize: 0xDD }
+  - { offset: 0x97550, size: 0x8, addend: 0x0, symName: '-[BDContentView startLoad]', symObjAddr: 0x3CF, symBinAddr: 0x1029B, symSize: 0x18 }
+  - { offset: 0x9758D, size: 0x8, addend: 0x0, symName: '-[BDContentView stopLoad]', symObjAddr: 0x3E7, symBinAddr: 0x102B3, symSize: 0x18 }
+  - { offset: 0x975CA, size: 0x8, addend: 0x0, symName: '-[BDContentView hasCloseButton]', symObjAddr: 0x3FF, symBinAddr: 0x102CB, symSize: 0x1B }
+  - { offset: 0x9760B, size: 0x8, addend: 0x0, symName: '-[BDContentView needUserInteraction]', symObjAddr: 0x41A, symBinAddr: 0x102E6, symSize: 0x1B }
+  - { offset: 0x9764C, size: 0x8, addend: 0x0, symName: '-[BDContentView setLandscapeMode:]', symObjAddr: 0x435, symBinAddr: 0x10301, symSize: 0x2F }
+  - { offset: 0x97699, size: 0x8, addend: 0x0, symName: '-[BDContentView pauseContent]', symObjAddr: 0x464, symBinAddr: 0x10330, symSize: 0x18 }
+  - { offset: 0x976D6, size: 0x8, addend: 0x0, symName: '-[BDContentView resumeContent]', symObjAddr: 0x47C, symBinAddr: 0x10348, symSize: 0x18 }
+  - { offset: 0x97713, size: 0x8, addend: 0x0, symName: '-[BDContentView delegate]', symObjAddr: 0x494, symBinAddr: 0x10360, symSize: 0x19 }
+  - { offset: 0x9774A, size: 0x8, addend: 0x0, symName: '-[BDContentView setDelegate:]', symObjAddr: 0x4AD, symBinAddr: 0x10379, symSize: 0x14 }
+  - { offset: 0x9778B, size: 0x8, addend: 0x0, symName: '-[BDContentView adItem]', symObjAddr: 0x4C1, symBinAddr: 0x1038D, symSize: 0x11 }
+  - { offset: 0x977C0, size: 0x8, addend: 0x0, symName: '-[BDContentView parentViewController]', symObjAddr: 0x4D2, symBinAddr: 0x1039E, symSize: 0x19 }
+  - { offset: 0x977F7, size: 0x8, addend: 0x0, symName: '-[BDContentView setParentViewController:]', symObjAddr: 0x4EB, symBinAddr: 0x103B7, symSize: 0x14 }
+  - { offset: 0x97838, size: 0x8, addend: 0x0, symName: '-[BDContentView .cxx_destruct]', symObjAddr: 0x4FF, symBinAddr: 0x103CB, symSize: 0x4F }
+  - { offset: 0x978FC, size: 0x8, addend: 0x0, symName: '-[BDCustomContentView initWithAdItem:adController:]', symObjAddr: 0x0, symBinAddr: 0x1041A, symSize: 0x142 }
+  - { offset: 0x985B2, size: 0x8, addend: 0x0, symName: '-[BDCustomContentView initWithAdItem:adController:]', symObjAddr: 0x0, symBinAddr: 0x1041A, symSize: 0x142 }
+  - { offset: 0x986AE, size: 0x8, addend: 0x0, symName: '-[BDCustomContentView startLoad]', symObjAddr: 0x142, symBinAddr: 0x1055C, symSize: 0x75 }
+  - { offset: 0x98723, size: 0x8, addend: 0x0, symName: '-[BDCustomContentView needUserInteraction]', symObjAddr: 0x1B7, symBinAddr: 0x105D1, symSize: 0xE1 }
+  - { offset: 0x987BC, size: 0x8, addend: 0x0, symName: '-[BDCustomContentView stopLoad]', symObjAddr: 0x298, symBinAddr: 0x106B2, symSize: 0x3A }
+  - { offset: 0x98809, size: 0x8, addend: 0x0, symName: '-[BDCustomContentView didLoadFinished]', symObjAddr: 0x2D2, symBinAddr: 0x106EC, symSize: 0x68 }
+  - { offset: 0x98862, size: 0x8, addend: 0x0, symName: '-[BDCustomContentView didLoadFailed]', symObjAddr: 0x33A, symBinAddr: 0x10754, symSize: 0x68 }
+  - { offset: 0x988BB, size: 0x8, addend: 0x0, symName: '-[BDCustomContentView didClickedLink:]', symObjAddr: 0x3A2, symBinAddr: 0x107BC, symSize: 0x53A }
+  - { offset: 0x98BEB, size: 0x8, addend: 0x0, symName: '-[BDCustomContentView didClosed]', symObjAddr: 0x8DC, symBinAddr: 0x10CF6, symSize: 0x18 }
+  - { offset: 0x98C28, size: 0x8, addend: 0x0, symName: '-[BDCustomContentView didUrlChanged:]', symObjAddr: 0x8F4, symBinAddr: 0x10D0E, symSize: 0x11B }
+  - { offset: 0x98CFD, size: 0x8, addend: 0x0, symName: '-[BDCustomContentView storeOpened]', symObjAddr: 0xA0F, symBinAddr: 0x10E29, symSize: 0x42 }
+  - { offset: 0x98D4A, size: 0x8, addend: 0x0, symName: '-[BDCustomContentView storeClosed]', symObjAddr: 0xA51, symBinAddr: 0x10E6B, symSize: 0x3F }
+  - { offset: 0x98D97, size: 0x8, addend: 0x0, symName: '-[BDCustomContentView .cxx_destruct]', symObjAddr: 0xA90, symBinAddr: 0x10EAA, symSize: 0x13 }
+  - { offset: 0x98ECC, size: 0x8, addend: 0x0, symName: _video_pause_btn_png_len, symObjAddr: 0x0, symBinAddr: 0x61120, symSize: 0x0 }
+  - { offset: 0x98EE9, size: 0x8, addend: 0x0, symName: _video_pause_btn_png, symObjAddr: 0x10, symBinAddr: 0x61130, symSize: 0x0 }
+  - { offset: 0x98F3C, size: 0x8, addend: 0x0, symName: '-[BDMultiAdItem adCount]', symObjAddr: 0x0, symBinAddr: 0x10EBD, symSize: 0x9 }
+  - { offset: 0x9906B, size: 0x8, addend: 0x0, symName: '-[BDMultiAdItem adCount]', symObjAddr: 0x0, symBinAddr: 0x10EBD, symSize: 0x9 }
+  - { offset: 0x990A0, size: 0x8, addend: 0x0, symName: '-[BDMultiAdItem setAdCount:]', symObjAddr: 0x9, symBinAddr: 0x10EC6, symSize: 0x9 }
+  - { offset: 0x990DD, size: 0x8, addend: 0x0, symName: '-[BDMultiAdItem retCode]', symObjAddr: 0x12, symBinAddr: 0x10ECF, symSize: 0x9 }
+  - { offset: 0x99112, size: 0x8, addend: 0x0, symName: '-[BDMultiAdItem setRetCode:]', symObjAddr: 0x1B, symBinAddr: 0x10ED8, symSize: 0x9 }
+  - { offset: 0x9914F, size: 0x8, addend: 0x0, symName: '-[BDMultiAdItem retMsg]', symObjAddr: 0x24, symBinAddr: 0x10EE1, symSize: 0x14 }
+  - { offset: 0x99186, size: 0x8, addend: 0x0, symName: '-[BDMultiAdItem setRetMsg:]', symObjAddr: 0x38, symBinAddr: 0x10EF5, symSize: 0xF }
+  - { offset: 0x991C5, size: 0x8, addend: 0x0, symName: '-[BDMultiAdItem isFired]', symObjAddr: 0x47, symBinAddr: 0x10F04, symSize: 0xB }
+  - { offset: 0x991FA, size: 0x8, addend: 0x0, symName: '-[BDMultiAdItem setIsFired:]', symObjAddr: 0x52, symBinAddr: 0x10F0F, symSize: 0x9 }
+  - { offset: 0x99237, size: 0x8, addend: 0x0, symName: '-[BDMultiAdItem isAdItemSucceeded]', symObjAddr: 0x5B, symBinAddr: 0x10F18, symSize: 0xB }
+  - { offset: 0x9926C, size: 0x8, addend: 0x0, symName: '-[BDMultiAdItem setIsAdItemSucceeded:]', symObjAddr: 0x66, symBinAddr: 0x10F23, symSize: 0x9 }
+  - { offset: 0x992A9, size: 0x8, addend: 0x0, symName: '-[BDMultiAdItem customParams]', symObjAddr: 0x6F, symBinAddr: 0x10F2C, symSize: 0x14 }
+  - { offset: 0x992E0, size: 0x8, addend: 0x0, symName: '-[BDMultiAdItem setCustomParams:]', symObjAddr: 0x83, symBinAddr: 0x10F40, symSize: 0xF }
+  - { offset: 0x9931F, size: 0x8, addend: 0x0, symName: '-[BDMultiAdItem adItemList]', symObjAddr: 0x92, symBinAddr: 0x10F4F, symSize: 0x14 }
+  - { offset: 0x99356, size: 0x8, addend: 0x0, symName: '-[BDMultiAdItem setAdItemList:]', symObjAddr: 0xA6, symBinAddr: 0x10F63, symSize: 0xF }
+  - { offset: 0x99395, size: 0x8, addend: 0x0, symName: '-[BDMultiAdItem adItemJSONStrList]', symObjAddr: 0xB5, symBinAddr: 0x10F72, symSize: 0x14 }
+  - { offset: 0x993CC, size: 0x8, addend: 0x0, symName: '-[BDMultiAdItem setAdItemJSONStrList:]', symObjAddr: 0xC9, symBinAddr: 0x10F86, symSize: 0xF }
+  - { offset: 0x9940B, size: 0x8, addend: 0x0, symName: '-[BDMultiAdItem .cxx_destruct]', symObjAddr: 0xD8, symBinAddr: 0x10F95, symSize: 0x3E }
+  - { offset: 0x99489, size: 0x8, addend: 0x0, symName: '-[BDReportImpressionCommand url]', symObjAddr: 0x0, symBinAddr: 0x10FD3, symSize: 0x5BF }
+  - { offset: 0x9A235, size: 0x8, addend: 0x0, symName: '-[BDReportImpressionCommand url]', symObjAddr: 0x0, symBinAddr: 0x10FD3, symSize: 0x5BF }
+  - { offset: 0x9A601, size: 0x8, addend: 0x0, symName: '-[BDReportImpressionCommand handleResultData]', symObjAddr: 0x5BF, symBinAddr: 0x11592, symSize: 0x18 }
+  - { offset: 0x9A63E, size: 0x8, addend: 0x0, symName: '-[BDReportImpressionCommand checkVisible]', symObjAddr: 0x5D7, symBinAddr: 0x115AA, symSize: 0x23F }
+  - { offset: 0x9A74F, size: 0x8, addend: 0x0, symName: '-[BDReportImpressionCommand execute]', symObjAddr: 0x816, symBinAddr: 0x117E9, symSize: 0x156 }
+  - { offset: 0x9A802, size: 0x8, addend: 0x0, symName: '-[BDReportImpressionCommand cancel]', symObjAddr: 0x96C, symBinAddr: 0x1193F, symSize: 0x65 }
+  - { offset: 0x9A84F, size: 0x8, addend: 0x0, symName: '-[BDReportImpressionCommand internalExecute]', symObjAddr: 0x9D1, symBinAddr: 0x119A4, symSize: 0x44 }
+  - { offset: 0x9A890, size: 0x8, addend: 0x0, symName: '-[BDReportImpressionCommand contentView]', symObjAddr: 0xA15, symBinAddr: 0x119E8, symSize: 0x11 }
+  - { offset: 0x9A8C5, size: 0x8, addend: 0x0, symName: '-[BDReportImpressionCommand setContentView:]', symObjAddr: 0xA26, symBinAddr: 0x119F9, symSize: 0x38 }
+  - { offset: 0x9A91E, size: 0x8, addend: 0x0, symName: '-[BDReportImpressionCommand informType]', symObjAddr: 0xA5E, symBinAddr: 0x11A31, symSize: 0x11 }
+  - { offset: 0x9A953, size: 0x8, addend: 0x0, symName: '-[BDReportImpressionCommand setInformType:]', symObjAddr: 0xA6F, symBinAddr: 0x11A42, symSize: 0x38 }
+  - { offset: 0x9A9AC, size: 0x8, addend: 0x0, symName: '-[BDReportImpressionCommand adItem]', symObjAddr: 0xAA7, symBinAddr: 0x11A7A, symSize: 0x11 }
+  - { offset: 0x9A9E1, size: 0x8, addend: 0x0, symName: '-[BDReportImpressionCommand setAdItem:]', symObjAddr: 0xAB8, symBinAddr: 0x11A8B, symSize: 0x38 }
+  - { offset: 0x9AA3A, size: 0x8, addend: 0x0, symName: '-[BDReportImpressionCommand .cxx_destruct]', symObjAddr: 0xAF0, symBinAddr: 0x11AC3, symSize: 0x42 }
+  - { offset: 0x9ACB3, size: 0x8, addend: 0x0, symName: _icon_bg_png, symObjAddr: 0x0, symBinAddr: 0x61CC0, symSize: 0x0 }
+  - { offset: 0x9ACE4, size: 0x8, addend: 0x0, symName: _icon_bg_png_len, symObjAddr: 0xB70, symBinAddr: 0x62830, symSize: 0x0 }
+  - { offset: 0x9AD31, size: 0x8, addend: 0x0, symName: _btn_itunes_png, symObjAddr: 0x0, symBinAddr: 0x62840, symSize: 0x0 }
+  - { offset: 0x9AD63, size: 0x8, addend: 0x0, symName: _btn_itunes_png_len, symObjAddr: 0x1BCC, symBinAddr: 0x6440C, symSize: 0x0 }
+  - { offset: 0x9ADA2, size: 0x8, addend: 0x0, symName: '-[BDWebControlView initWithFrame:]', symObjAddr: 0x0, symBinAddr: 0x11B05, symSize: 0x1B1 }
+  - { offset: 0x9BA89, size: 0x8, addend: 0x0, symName: '-[BDWebControlView initWithFrame:]', symObjAddr: 0x0, symBinAddr: 0x11B05, symSize: 0x1B1 }
+  - { offset: 0x9BBAC, size: 0x8, addend: 0x0, symName: '-[BDWebControlView setToolbarBackImage]', symObjAddr: 0x1B1, symBinAddr: 0x11CB6, symSize: 0x241 }
+  - { offset: 0x9BCBB, size: 0x8, addend: 0x0, symName: '-[BDWebControlView setBottomBarButton]', symObjAddr: 0x3F2, symBinAddr: 0x11EF7, symSize: 0x72D }
+  - { offset: 0x9C072, size: 0x8, addend: 0x0, symName: '-[BDWebControlView loadUrl:]', symObjAddr: 0xB1F, symBinAddr: 0x12624, symSize: 0x1D }
+  - { offset: 0x9C0BF, size: 0x8, addend: 0x0, symName: '-[BDWebControlView stopLoad]', symObjAddr: 0xB3C, symBinAddr: 0x12641, symSize: 0x1D }
+  - { offset: 0x9C0FE, size: 0x8, addend: 0x0, symName: '-[BDWebControlView didLoadFinished]', symObjAddr: 0xB59, symBinAddr: 0x1265E, symSize: 0xE9 }
+  - { offset: 0x9C1B5, size: 0x8, addend: 0x0, symName: '-[BDWebControlView didLoadFailed]', symObjAddr: 0xC42, symBinAddr: 0x12747, symSize: 0xE9 }
+  - { offset: 0x9C26C, size: 0x8, addend: 0x0, symName: '-[BDWebControlView didClickedLink:]', symObjAddr: 0xD2B, symBinAddr: 0x12830, symSize: 0x69 }
+  - { offset: 0x9C2EB, size: 0x8, addend: 0x0, symName: '-[BDWebControlView didClosed]', symObjAddr: 0xD94, symBinAddr: 0x12899, symSize: 0x71 }
+  - { offset: 0x9C34E, size: 0x8, addend: 0x0, symName: '-[BDWebControlView didUrlChanged:]', symObjAddr: 0xE05, symBinAddr: 0x1290A, symSize: 0x69 }
+  - { offset: 0x9C3CD, size: 0x8, addend: 0x0, symName: '-[BDWebControlView backButtonAction:]', symObjAddr: 0xE6E, symBinAddr: 0x12973, symSize: 0x50 }
+  - { offset: 0x9C430, size: 0x8, addend: 0x0, symName: '-[BDWebControlView forwardButtonAction:]', symObjAddr: 0xEBE, symBinAddr: 0x129C3, symSize: 0x50 }
+  - { offset: 0x9C493, size: 0x8, addend: 0x0, symName: '-[BDWebControlView reloadButtonAction:]', symObjAddr: 0xF0E, symBinAddr: 0x12A13, symSize: 0x50 }
+  - { offset: 0x9C4F6, size: 0x8, addend: 0x0, symName: '-[BDWebControlView delegate]', symObjAddr: 0xF5E, symBinAddr: 0x12A63, symSize: 0x11 }
+  - { offset: 0x9C52B, size: 0x8, addend: 0x0, symName: '-[BDWebControlView setDelegate:]', symObjAddr: 0xF6F, symBinAddr: 0x12A74, symSize: 0x11 }
+  - { offset: 0x9C568, size: 0x8, addend: 0x0, symName: '-[BDWebControlView launchUrl]', symObjAddr: 0xF80, symBinAddr: 0x12A85, symSize: 0x11 }
+  - { offset: 0x9C59D, size: 0x8, addend: 0x0, symName: '-[BDWebControlView setLaunchUrl:]', symObjAddr: 0xF91, symBinAddr: 0x12A96, symSize: 0x38 }
+  - { offset: 0x9C5F6, size: 0x8, addend: 0x0, symName: '-[BDWebControlView autoClose]', symObjAddr: 0xFC9, symBinAddr: 0x12ACE, symSize: 0x10 }
+  - { offset: 0x9C62B, size: 0x8, addend: 0x0, symName: '-[BDWebControlView setAutoClose:]', symObjAddr: 0xFD9, symBinAddr: 0x12ADE, symSize: 0x10 }
+  - { offset: 0x9C668, size: 0x8, addend: 0x0, symName: '-[BDWebControlView .cxx_destruct]', symObjAddr: 0xFE9, symBinAddr: 0x12AEE, symSize: 0x86 }
+  - { offset: 0x9C71A, size: 0x8, addend: 0x0, symName: '+[BDAdRequestState canRequestPopupAd]', symObjAddr: 0x0, symBinAddr: 0x12B74, symSize: 0xBE }
+  - { offset: 0x9C734, size: 0x8, addend: 0x0, symName: __lastIntersitalRequestTime, symObjAddr: 0x8530, symBinAddr: 0x78EC8, symSize: 0x0 }
+  - { offset: 0x9C771, size: 0x8, addend: 0x0, symName: __blockRequest, symObjAddr: 0x8538, symBinAddr: 0x78E42, symSize: 0x0 }
+  - { offset: 0x9C83A, size: 0x8, addend: 0x0, symName: '+[BDAdRequestState canRequestPopupAd]', symObjAddr: 0x0, symBinAddr: 0x12B74, symSize: 0xBE }
+  - { offset: 0x9C8F9, size: 0x8, addend: 0x0, symName: '+[BDAdRequestState blockRequest:]', symObjAddr: 0xBE, symBinAddr: 0x12C32, symSize: 0xC }
+  - { offset: 0x9C936, size: 0x8, addend: 0x0, symName: '+[BDAdRequestState isBlockRequest]', symObjAddr: 0xCA, symBinAddr: 0x12C3E, symSize: 0xC }
+  - { offset: 0x9C969, size: 0x8, addend: 0x0, symName: '-[BDAdRequestState isVisible]', symObjAddr: 0xD6, symBinAddr: 0x12C4A, symSize: 0x9 }
+  - { offset: 0x9C99E, size: 0x8, addend: 0x0, symName: '-[BDAdRequestState setIsVisible:]', symObjAddr: 0xDF, symBinAddr: 0x12C53, symSize: 0x9 }
+  - { offset: 0x9C9DB, size: 0x8, addend: 0x0, symName: '-[BDAdRequestState reuseSeq]', symObjAddr: 0xE8, symBinAddr: 0x12C5C, symSize: 0x9 }
+  - { offset: 0x9CA10, size: 0x8, addend: 0x0, symName: '-[BDAdRequestState setReuseSeq:]', symObjAddr: 0xF1, symBinAddr: 0x12C65, symSize: 0x9 }
+  - { offset: 0x9CA4D, size: 0x8, addend: 0x0, symName: '-[BDAdRequestState requestSeq]', symObjAddr: 0xFA, symBinAddr: 0x12C6E, symSize: 0x9 }
+  - { offset: 0x9CA82, size: 0x8, addend: 0x0, symName: '-[BDAdRequestState setRequestSeq:]', symObjAddr: 0x103, symBinAddr: 0x12C77, symSize: 0x9 }
+  - { offset: 0x9CABF, size: 0x8, addend: 0x0, symName: '-[BDAdRequestState defaultReason]', symObjAddr: 0x10C, symBinAddr: 0x12C80, symSize: 0xA }
+  - { offset: 0x9CAF4, size: 0x8, addend: 0x0, symName: '-[BDAdRequestState setDefaultReason:]', symObjAddr: 0x116, symBinAddr: 0x12C8A, symSize: 0x28 }
+  - { offset: 0x9CB4D, size: 0x8, addend: 0x0, symName: '-[BDAdRequestState isCaulyRetry]', symObjAddr: 0x13E, symBinAddr: 0x12CB2, symSize: 0x9 }
+  - { offset: 0x9CB82, size: 0x8, addend: 0x0, symName: '-[BDAdRequestState setIsCaulyRetry:]', symObjAddr: 0x147, symBinAddr: 0x12CBB, symSize: 0x9 }
+  - { offset: 0x9CBBF, size: 0x8, addend: 0x0, symName: '-[BDAdRequestState .cxx_destruct]', symObjAddr: 0x150, symBinAddr: 0x12CC4, symSize: 0x10 }
+  - { offset: 0x9CC76, size: 0x8, addend: 0x0, symName: _btn_image_png, symObjAddr: 0x0, symBinAddr: 0x64410, symSize: 0x0 }
+  - { offset: 0x9CCA8, size: 0x8, addend: 0x0, symName: _btn_image_png_len, symObjAddr: 0x138C, symBinAddr: 0x6579C, symSize: 0x0 }
+  - { offset: 0x9CCE7, size: 0x8, addend: 0x0, symName: '+[BDAdItemManager shareInstance]', symObjAddr: 0x0, symBinAddr: 0x12CD4, symSize: 0x63 }
+  - { offset: 0x9CD01, size: 0x8, addend: 0x0, symName: __instance, symObjAddr: 0x11EE0, symBinAddr: 0x78E48, symSize: 0x0 }
+  - { offset: 0x9D3FD, size: 0x8, addend: 0x0, symName: '+[BDAdItemManager shareInstance]', symObjAddr: 0x0, symBinAddr: 0x12CD4, symSize: 0x63 }
+  - { offset: 0x9D475, size: 0x8, addend: 0x0, symName: '-[BDAdItemManager init]', symObjAddr: 0x63, symBinAddr: 0x12D37, symSize: 0x69 }
+  - { offset: 0x9D4C6, size: 0x8, addend: 0x0, symName: '-[BDAdItemManager removeAdView:]', symObjAddr: 0xCC, symBinAddr: 0x12DA0, symSize: 0xBF }
+  - { offset: 0x9D58E, size: 0x8, addend: 0x0, symName: '-[BDAdItemManager addAdView:adItem:]', symObjAddr: 0x18B, symBinAddr: 0x12E5F, symSize: 0xDA }
+  - { offset: 0x9D67E, size: 0x8, addend: 0x0, symName: '-[BDAdItemManager printAdItemManager]', symObjAddr: 0x265, symBinAddr: 0x12F39, symSize: 0x1DD }
+  - { offset: 0x9D763, size: 0x8, addend: 0x0, symName: '-[BDAdItemManager convertKey:]', symObjAddr: 0x442, symBinAddr: 0x13116, symSize: 0x5D }
+  - { offset: 0x9D7D8, size: 0x8, addend: 0x0, symName: '-[BDAdItemManager convertObject:]', symObjAddr: 0x49F, symBinAddr: 0x13173, symSize: 0x56 }
+  - { offset: 0x9D84D, size: 0x8, addend: 0x0, symName: '-[BDAdItemManager allowAdPosition:expandDirection:]', symObjAddr: 0x4F5, symBinAddr: 0x131C9, symSize: 0x156 }
+  - { offset: 0x9D982, size: 0x8, addend: 0x0, symName: '-[BDAdItemManager isConflicted:adItem:]', symObjAddr: 0x64B, symBinAddr: 0x1331F, symSize: 0xB7 }
+  - { offset: 0x9DA31, size: 0x8, addend: 0x0, symName: '-[BDAdItemManager isInterstitialShowing:]', symObjAddr: 0x702, symBinAddr: 0x133D6, symSize: 0x31C }
+  - { offset: 0x9DBD0, size: 0x8, addend: 0x0, symName: '-[BDAdItemManager dict]', symObjAddr: 0xA1E, symBinAddr: 0x136F2, symSize: 0xA }
+  - { offset: 0x9DC05, size: 0x8, addend: 0x0, symName: '-[BDAdItemManager setDict:]', symObjAddr: 0xA28, symBinAddr: 0x136FC, symSize: 0x28 }
+  - { offset: 0x9DC5E, size: 0x8, addend: 0x0, symName: '-[BDAdItemManager .cxx_destruct]', symObjAddr: 0xA50, symBinAddr: 0x13724, symSize: 0x28 }
+  - { offset: 0x9E4FC, size: 0x8, addend: 0x0, symName: '-[BDReportClickCommnad makeAdSn]', symObjAddr: 0x0, symBinAddr: 0x1374C, symSize: 0x3B6 }
+  - { offset: 0x9F2A7, size: 0x8, addend: 0x0, symName: '-[BDReportClickCommnad makeAdSn]', symObjAddr: 0x0, symBinAddr: 0x1374C, symSize: 0x3B6 }
+  - { offset: 0x9F61C, size: 0x8, addend: 0x0, symName: '-[BDReportClickCommnad url]', symObjAddr: 0x3B6, symBinAddr: 0x13B02, symSize: 0x8BA }
+  - { offset: 0x9FB95, size: 0x8, addend: 0x0, symName: '-[BDReportClickCommnad handleResultData]', symObjAddr: 0xC70, symBinAddr: 0x143BC, symSize: 0x18 }
+  - { offset: 0x9FBD2, size: 0x8, addend: 0x0, symName: '+[BDReportClickCommnad reportVideoState:controller:adItem:]', symObjAddr: 0xC88, symBinAddr: 0x143D4, symSize: 0x12D }
+  - { offset: 0x9FCEB, size: 0x8, addend: 0x0, symName: '-[BDReportClickCommnad clickItem]', symObjAddr: 0xDB5, symBinAddr: 0x14501, symSize: 0x11 }
+  - { offset: 0x9FD20, size: 0x8, addend: 0x0, symName: '-[BDReportClickCommnad setClickItem:]', symObjAddr: 0xDC6, symBinAddr: 0x14512, symSize: 0x38 }
+  - { offset: 0x9FD79, size: 0x8, addend: 0x0, symName: '-[BDReportClickCommnad clickAction]', symObjAddr: 0xDFE, symBinAddr: 0x1454A, symSize: 0x11 }
+  - { offset: 0x9FDAE, size: 0x8, addend: 0x0, symName: '-[BDReportClickCommnad setClickAction:]', symObjAddr: 0xE0F, symBinAddr: 0x1455B, symSize: 0x38 }
+  - { offset: 0x9FE07, size: 0x8, addend: 0x0, symName: '-[BDReportClickCommnad clickActionParam]', symObjAddr: 0xE47, symBinAddr: 0x14593, symSize: 0x11 }
+  - { offset: 0x9FE3C, size: 0x8, addend: 0x0, symName: '-[BDReportClickCommnad setClickActionParam:]', symObjAddr: 0xE58, symBinAddr: 0x145A4, symSize: 0x38 }
+  - { offset: 0x9FE95, size: 0x8, addend: 0x0, symName: '-[BDReportClickCommnad extraParam]', symObjAddr: 0xE90, symBinAddr: 0x145DC, symSize: 0x11 }
+  - { offset: 0x9FECA, size: 0x8, addend: 0x0, symName: '-[BDReportClickCommnad setExtraParam:]', symObjAddr: 0xEA1, symBinAddr: 0x145ED, symSize: 0x38 }
+  - { offset: 0x9FF23, size: 0x8, addend: 0x0, symName: '-[BDReportClickCommnad clickLevel]', symObjAddr: 0xED9, symBinAddr: 0x14625, symSize: 0x10 }
+  - { offset: 0x9FF58, size: 0x8, addend: 0x0, symName: '-[BDReportClickCommnad setClickLevel:]', symObjAddr: 0xEE9, symBinAddr: 0x14635, symSize: 0x10 }
+  - { offset: 0x9FF95, size: 0x8, addend: 0x0, symName: '-[BDReportClickCommnad .cxx_destruct]', symObjAddr: 0xEF9, symBinAddr: 0x14645, symSize: 0x53 }
+  - { offset: 0xA0222, size: 0x8, addend: 0x0, symName: '-[BDWebView initWithFrame:]', symObjAddr: 0x0, symBinAddr: 0x14698, symSize: 0x1CA }
+  - { offset: 0xA0276, size: 0x8, addend: 0x0, symName: _CLOSE_BTN_HEIGHT, symObjAddr: 0x2DA0, symBinAddr: 0x3B580, symSize: 0x0 }
+  - { offset: 0xA02A6, size: 0x8, addend: 0x0, symName: _CLOSE_BTN_HEIGHT, symObjAddr: 0x2DA0, symBinAddr: 0x3B580, symSize: 0x0 }
+  - { offset: 0xA0E98, size: 0x8, addend: 0x0, symName: '-[BDWebView initWithFrame:]', symObjAddr: 0x0, symBinAddr: 0x14698, symSize: 0x1CA }
+  - { offset: 0xA0FCB, size: 0x8, addend: 0x0, symName: '-[BDWebView loadUrl:]', symObjAddr: 0x1CA, symBinAddr: 0x14862, symSize: 0xF3 }
+  - { offset: 0xA1088, size: 0x8, addend: 0x0, symName: '-[BDWebView loadHtml:]', symObjAddr: 0x2BD, symBinAddr: 0x14955, symSize: 0x9A }
+  - { offset: 0xA1115, size: 0x8, addend: 0x0, symName: '-[BDWebView setHasCloseButton:]', symObjAddr: 0x357, symBinAddr: 0x149EF, symSize: 0x1E1 }
+  - { offset: 0xA1269, size: 0x8, addend: 0x0, symName: '-[BDWebView stopLoad]', symObjAddr: 0x538, symBinAddr: 0x14BD0, symSize: 0x157 }
+  - { offset: 0xA137C, size: 0x8, addend: 0x0, symName: '-[BDWebView webView:createWebViewWithConfiguration:forNavigationAction:windowFeatures:]', symObjAddr: 0x68F, symBinAddr: 0x14D27, symSize: 0x41A }
+  - { offset: 0xA161D, size: 0x8, addend: 0x0, symName: '-[BDWebView webViewDidClose:]', symObjAddr: 0xAA9, symBinAddr: 0x15141, symSize: 0x18 }
+  - { offset: 0xA1666, size: 0x8, addend: 0x0, symName: '-[BDWebView webView:decidePolicyForNavigationAction:decisionHandler:]', symObjAddr: 0xAC1, symBinAddr: 0x15159, symSize: 0x653 }
+  - { offset: 0xA19E9, size: 0x8, addend: 0x0, symName: '-[BDWebView webView:didReceiveServerRedirectForProvisionalNavigation:]', symObjAddr: 0x1114, symBinAddr: 0x157AC, symSize: 0x37 }
+  - { offset: 0xA1A51, size: 0x8, addend: 0x0, symName: '-[BDWebView webView:didStartProvisionalNavigation:]', symObjAddr: 0x114B, symBinAddr: 0x157E3, symSize: 0x37 }
+  - { offset: 0xA1AB9, size: 0x8, addend: 0x0, symName: '-[BDWebView webView:didFinishNavigation:]', symObjAddr: 0x1182, symBinAddr: 0x1581A, symSize: 0xB1 }
+  - { offset: 0xA1B5D, size: 0x8, addend: 0x0, symName: '-[BDWebView webView:didFailNavigation:withError:]', symObjAddr: 0x1233, symBinAddr: 0x158CB, symSize: 0x5F }
+  - { offset: 0xA1BEA, size: 0x8, addend: 0x0, symName: '-[BDWebView showIndicator:]', symObjAddr: 0x1292, symBinAddr: 0x1592A, symSize: 0x148 }
+  - { offset: 0xA1C9D, size: 0x8, addend: 0x0, symName: '-[BDWebView closeButtonAction:]', symObjAddr: 0x13DA, symBinAddr: 0x15A72, symSize: 0x5D }
+  - { offset: 0xA1D10, size: 0x8, addend: 0x0, symName: '-[BDWebView delegate]', symObjAddr: 0x1437, symBinAddr: 0x15ACF, symSize: 0x19 }
+  - { offset: 0xA1D47, size: 0x8, addend: 0x0, symName: '-[BDWebView setDelegate:]', symObjAddr: 0x1450, symBinAddr: 0x15AE8, symSize: 0x14 }
+  - { offset: 0xA1D88, size: 0x8, addend: 0x0, symName: '-[BDWebView scalesPageToFit]', symObjAddr: 0x1464, symBinAddr: 0x15AFC, symSize: 0x10 }
+  - { offset: 0xA1DBD, size: 0x8, addend: 0x0, symName: '-[BDWebView setScalesPageToFit:]', symObjAddr: 0x1474, symBinAddr: 0x15B0C, symSize: 0x10 }
+  - { offset: 0xA1DFA, size: 0x8, addend: 0x0, symName: '-[BDWebView webView]', symObjAddr: 0x1484, symBinAddr: 0x15B1C, symSize: 0x11 }
+  - { offset: 0xA1E2F, size: 0x8, addend: 0x0, symName: '-[BDWebView hasCloseButton]', symObjAddr: 0x1495, symBinAddr: 0x15B2D, symSize: 0x10 }
+  - { offset: 0xA1E64, size: 0x8, addend: 0x0, symName: '-[BDWebView adItem]', symObjAddr: 0x14A5, symBinAddr: 0x15B3D, symSize: 0x11 }
+  - { offset: 0xA1E99, size: 0x8, addend: 0x0, symName: '-[BDWebView setAdItem:]', symObjAddr: 0x14B6, symBinAddr: 0x15B4E, symSize: 0x38 }
+  - { offset: 0xA1EF2, size: 0x8, addend: 0x0, symName: '-[BDWebView controller]', symObjAddr: 0x14EE, symBinAddr: 0x15B86, symSize: 0x11 }
+  - { offset: 0xA1F27, size: 0x8, addend: 0x0, symName: '-[BDWebView setController:]', symObjAddr: 0x14FF, symBinAddr: 0x15B97, symSize: 0x38 }
+  - { offset: 0xA1F80, size: 0x8, addend: 0x0, symName: '-[BDWebView .cxx_destruct]', symObjAddr: 0x1537, symBinAddr: 0x15BCF, symSize: 0x84 }
+  - { offset: 0xA20CA, size: 0x8, addend: 0x0, symName: '-[BDPopupAdContainer initWithController:]', symObjAddr: 0x0, symBinAddr: 0x15C53, symSize: 0x252 }
+  - { offset: 0xA20E4, size: 0x8, addend: 0x0, symName: _CLOSE_BTN_HEIGHT, symObjAddr: 0xEF0, symBinAddr: 0x3B58C, symSize: 0x0 }
+  - { offset: 0xA2114, size: 0x8, addend: 0x0, symName: _CLOSE_BTN_HEIGHT, symObjAddr: 0xEF0, symBinAddr: 0x3B58C, symSize: 0x0 }
+  - { offset: 0xA2D97, size: 0x8, addend: 0x0, symName: '-[BDPopupAdContainer initWithController:]', symObjAddr: 0x0, symBinAddr: 0x15C53, symSize: 0x252 }
+  - { offset: 0xA2F1A, size: 0x8, addend: 0x0, symName: '-[BDPopupAdContainer pushAdItem:]', symObjAddr: 0x252, symBinAddr: 0x15EA5, symSize: 0x91 }
+  - { offset: 0xA2FAB, size: 0x8, addend: 0x0, symName: '-[BDPopupAdContainer hiddenCloseBtn:]', symObjAddr: 0x2E3, symBinAddr: 0x15F36, symSize: 0x3D }
+  - { offset: 0xA3008, size: 0x8, addend: 0x0, symName: '-[BDPopupAdContainer closeAd:]', symObjAddr: 0x320, symBinAddr: 0x15F73, symSize: 0xC1 }
+  - { offset: 0xA30BF, size: 0x8, addend: 0x0, symName: '-[BDPopupAdContainer didContentLoaded]', symObjAddr: 0x3E1, symBinAddr: 0x16034, symSize: 0xCC }
+  - { offset: 0xA315C, size: 0x8, addend: 0x0, symName: '-[BDPopupAdContainer shouldAutorotate]', symObjAddr: 0x4AD, symBinAddr: 0x16100, symSize: 0x9C }
+  - { offset: 0xA31DD, size: 0x8, addend: 0x0, symName: '-[BDPopupAdContainer supportedInterfaceOrientations]', symObjAddr: 0x549, symBinAddr: 0x1619C, symSize: 0xD2 }
+  - { offset: 0xA326A, size: 0x8, addend: 0x0, symName: '-[BDPopupAdContainer viewWillTransitionToSize:withTransitionCoordinator:]', symObjAddr: 0x61B, symBinAddr: 0x1626E, symSize: 0x4D }
+  - { offset: 0xA32E7, size: 0x8, addend: 0x0, symName: '___73-[BDPopupAdContainer viewWillTransitionToSize:withTransitionCoordinator:]_block_invoke', symObjAddr: 0x668, symBinAddr: 0x162BB, symSize: 0x6 }
+  - { offset: 0xA3334, size: 0x8, addend: 0x0, symName: '-[BDPopupAdContainer willRotateToInterfaceOrientation:duration:]', symObjAddr: 0x66E, symBinAddr: 0x162C1, symSize: 0x4C }
+  - { offset: 0xA33CD, size: 0x8, addend: 0x0, symName: '-[BDPopupAdContainer closeButtonAction:]', symObjAddr: 0x6BA, symBinAddr: 0x1630D, symSize: 0x37 }
+  - { offset: 0xA3426, size: 0x8, addend: 0x0, symName: '-[BDPopupAdContainer isShowing]', symObjAddr: 0x6F1, symBinAddr: 0x16344, symSize: 0x10 }
+  - { offset: 0xA345B, size: 0x8, addend: 0x0, symName: '-[BDPopupAdContainer setIsShowing:]', symObjAddr: 0x701, symBinAddr: 0x16354, symSize: 0x10 }
+  - { offset: 0xA3498, size: 0x8, addend: 0x0, symName: '-[BDPopupAdContainer .cxx_destruct]', symObjAddr: 0x711, symBinAddr: 0x16364, symSize: 0x13 }
+  - { offset: 0xA37F4, size: 0x8, addend: 0x0, symName: '-[BDRequestServerConfigCommand init]', symObjAddr: 0x0, symBinAddr: 0x16377, symSize: 0x56 }
+  - { offset: 0xA3AFD, size: 0x8, addend: 0x0, symName: '-[BDRequestServerConfigCommand init]', symObjAddr: 0x0, symBinAddr: 0x16377, symSize: 0x56 }
+  - { offset: 0xA3B40, size: 0x8, addend: 0x0, symName: '-[BDRequestServerConfigCommand dealloc]', symObjAddr: 0x56, symBinAddr: 0x163CD, symSize: 0x6F }
+  - { offset: 0xA3BA3, size: 0x8, addend: 0x0, symName: '-[BDRequestServerConfigCommand execute]', symObjAddr: 0xC5, symBinAddr: 0x1643C, symSize: 0x264 }
+  - { offset: 0xA3D77, size: 0x8, addend: 0x0, symName: '-[BDRequestServerConfigCommand responseByStatusCode:receivedData:error:]', symObjAddr: 0x329, symBinAddr: 0x166A0, symSize: 0x16A }
+  - { offset: 0xA3EB8, size: 0x8, addend: 0x0, symName: '-[BDRequestServerConfigCommand delegate]', symObjAddr: 0x493, symBinAddr: 0x1680A, symSize: 0xA }
+  - { offset: 0xA3EED, size: 0x8, addend: 0x0, symName: '-[BDRequestServerConfigCommand setDelegate:]', symObjAddr: 0x49D, symBinAddr: 0x16814, symSize: 0x28 }
+  - { offset: 0xA3F46, size: 0x8, addend: 0x0, symName: '-[BDRequestServerConfigCommand appCode]', symObjAddr: 0x4C5, symBinAddr: 0x1683C, symSize: 0xA }
+  - { offset: 0xA3F7B, size: 0x8, addend: 0x0, symName: '-[BDRequestServerConfigCommand setAppCode:]', symObjAddr: 0x4CF, symBinAddr: 0x16846, symSize: 0x28 }
+  - { offset: 0xA3FD4, size: 0x8, addend: 0x0, symName: '-[BDRequestServerConfigCommand .cxx_destruct]', symObjAddr: 0x4F7, symBinAddr: 0x1686E, symSize: 0x3E }
+  - { offset: 0xA4078, size: 0x8, addend: 0x0, symName: _btn_freecall_png, symObjAddr: 0x0, symBinAddr: 0x65800, symSize: 0x0 }
+  - { offset: 0xA40AA, size: 0x8, addend: 0x0, symName: _btn_freecall_png_len, symObjAddr: 0x146C, symBinAddr: 0x66C6C, symSize: 0x0 }
+  - { offset: 0xA40E9, size: 0x8, addend: 0x0, symName: '-[BDBannerContentView dealloc]', symObjAddr: 0x0, symBinAddr: 0x168AC, symSize: 0x54 }
+  - { offset: 0xA4D0E, size: 0x8, addend: 0x0, symName: '-[BDBannerContentView dealloc]', symObjAddr: 0x0, symBinAddr: 0x168AC, symSize: 0x54 }
+  - { offset: 0xA4D7A, size: 0x8, addend: 0x0, symName: '-[BDBannerContentView startLoad]', symObjAddr: 0x54, symBinAddr: 0x16900, symSize: 0x13B }
+  - { offset: 0xA4E76, size: 0x8, addend: 0x0, symName: '-[BDBannerContentView stopLoad]', symObjAddr: 0x18F, symBinAddr: 0x16A3B, symSize: 0x32 }
+  - { offset: 0xA4F1A, size: 0x8, addend: 0x0, symName: '-[BDBannerContentView drawRect:]', symObjAddr: 0x1C1, symBinAddr: 0x16A6D, symSize: 0x2E5 }
+  - { offset: 0xA50CC, size: 0x8, addend: 0x0, symName: '-[BDBannerContentView hasCloseButton]', symObjAddr: 0x4A6, symBinAddr: 0x16D52, symSize: 0x44 }
+  - { offset: 0xA511D, size: 0x8, addend: 0x0, symName: '-[BDBannerContentView needUserInteraction]', symObjAddr: 0x4EA, symBinAddr: 0x16D96, symSize: 0x44 }
+  - { offset: 0xA516E, size: 0x8, addend: 0x0, symName: '-[BDBannerContentView onCompletedBDCommand:]', symObjAddr: 0x52E, symBinAddr: 0x16DDA, symSize: 0x156 }
+  - { offset: 0xA5283, size: 0x8, addend: 0x0, symName: '-[BDBannerContentView clearCommand]', symObjAddr: 0x684, symBinAddr: 0x16F30, symSize: 0x55 }
+  - { offset: 0xA52DC, size: 0x8, addend: 0x0, symName: '-[BDBannerContentView touchesEnded:withEvent:]', symObjAddr: 0x6D9, symBinAddr: 0x16F85, symSize: 0xD5 }
+  - { offset: 0xA5391, size: 0x8, addend: 0x0, symName: '-[BDBannerContentView .cxx_destruct]', symObjAddr: 0x7AE, symBinAddr: 0x1705A, symSize: 0x31 }
+  - { offset: 0xA5590, size: 0x8, addend: 0x0, symName: _logo_left_png, symObjAddr: 0x0, symBinAddr: 0x66CD0, symSize: 0x0 }
+  - { offset: 0xA55C2, size: 0x8, addend: 0x0, symName: _logo_left_png_len, symObjAddr: 0x1EE8, symBinAddr: 0x68BB8, symSize: 0x0 }
+  - { offset: 0xA5601, size: 0x8, addend: 0x0, symName: '+[BDDate dateWithDevString:]', symObjAddr: 0x0, symBinAddr: 0x1708B, symSize: 0x4D }
+  - { offset: 0xA5632, size: 0x8, addend: 0x0, symName: '+[BDDate dateWithDevString:]', symObjAddr: 0x0, symBinAddr: 0x1708B, symSize: 0x4D }
+  - { offset: 0xA56A9, size: 0x8, addend: 0x0, symName: '+[BDDate dateWithNSDate:]', symObjAddr: 0x4D, symBinAddr: 0x170D8, symSize: 0x4D }
+  - { offset: 0xA5720, size: 0x8, addend: 0x0, symName: '+[BDDate now]', symObjAddr: 0x9A, symBinAddr: 0x17125, symSize: 0x6D }
+  - { offset: 0xA5787, size: 0x8, addend: 0x0, symName: '-[BDDate initWithDevString:]', symObjAddr: 0x107, symBinAddr: 0x17192, symSize: 0x150 }
+  - { offset: 0xA58B6, size: 0x8, addend: 0x0, symName: '-[BDDate initWithNSDate:]', symObjAddr: 0x257, symBinAddr: 0x172E2, symSize: 0x6C }
+  - { offset: 0xA592D, size: 0x8, addend: 0x0, symName: '-[BDDate date]', symObjAddr: 0x2C3, symBinAddr: 0x1734E, symSize: 0x21 }
+  - { offset: 0xA5970, size: 0x8, addend: 0x0, symName: '-[BDDate timeInterval]', symObjAddr: 0x2E4, symBinAddr: 0x1736F, symSize: 0x16 }
+  - { offset: 0xA59B3, size: 0x8, addend: 0x0, symName: '-[BDDate devString]', symObjAddr: 0x2FA, symBinAddr: 0x17385, symSize: 0x6E }
+  - { offset: 0xA5A2E, size: 0x8, addend: 0x0, symName: '-[BDDate gmDate]', symObjAddr: 0x368, symBinAddr: 0x173F3, symSize: 0xC9 }
+  - { offset: 0xA5AF9, size: 0x8, addend: 0x0, symName: '-[BDDate localDate]', symObjAddr: 0x431, symBinAddr: 0x174BC, symSize: 0xC9 }
+  - { offset: 0xA5BC4, size: 0x8, addend: 0x0, symName: '-[BDDate intValueFromFormat:]', symObjAddr: 0x4FA, symBinAddr: 0x17585, symSize: 0x9D }
+  - { offset: 0xA5C7F, size: 0x8, addend: 0x0, symName: '-[BDDate year]', symObjAddr: 0x597, symBinAddr: 0x17622, symSize: 0x19 }
+  - { offset: 0xA5CC0, size: 0x8, addend: 0x0, symName: '-[BDDate month]', symObjAddr: 0x5B0, symBinAddr: 0x1763B, symSize: 0x19 }
+  - { offset: 0xA5D01, size: 0x8, addend: 0x0, symName: '-[BDDate day]', symObjAddr: 0x5C9, symBinAddr: 0x17654, symSize: 0x19 }
+  - { offset: 0xA5D42, size: 0x8, addend: 0x0, symName: '-[BDDate hour]', symObjAddr: 0x5E2, symBinAddr: 0x1766D, symSize: 0x19 }
+  - { offset: 0xA5D83, size: 0x8, addend: 0x0, symName: '-[BDDate minute]', symObjAddr: 0x5FB, symBinAddr: 0x17686, symSize: 0x19 }
+  - { offset: 0xA5DC4, size: 0x8, addend: 0x0, symName: '-[BDDate second]', symObjAddr: 0x614, symBinAddr: 0x1769F, symSize: 0x19 }
+  - { offset: 0xA5E05, size: 0x8, addend: 0x0, symName: '-[BDDate millisecond]', symObjAddr: 0x62D, symBinAddr: 0x176B8, symSize: 0x19 }
+  - { offset: 0xA5E46, size: 0x8, addend: 0x0, symName: '-[BDDate addTime:]', symObjAddr: 0x646, symBinAddr: 0x176D1, symSize: 0x6A }
+  - { offset: 0xA5EB9, size: 0x8, addend: 0x0, symName: '-[BDDate diffTimeWithDate:]', symObjAddr: 0x6B0, symBinAddr: 0x1773B, symSize: 0x68 }
+  - { offset: 0xA5F30, size: 0x8, addend: 0x0, symName: '-[BDDate .cxx_destruct]', symObjAddr: 0x718, symBinAddr: 0x177A3, symSize: 0x10 }
+  - { offset: 0xA6004, size: 0x8, addend: 0x0, symName: '-[BDThreadCommand dealloc]', symObjAddr: 0x0, symBinAddr: 0x177B3, symSize: 0x3E }
+  - { offset: 0xA611C, size: 0x8, addend: 0x0, symName: '-[BDThreadCommand dealloc]', symObjAddr: 0x0, symBinAddr: 0x177B3, symSize: 0x3E }
+  - { offset: 0xA615B, size: 0x8, addend: 0x0, symName: '-[BDThreadCommand threadProc]', symObjAddr: 0x3E, symBinAddr: 0x177F1, symSize: 0x3B }
+  - { offset: 0xA61A6, size: 0x8, addend: 0x0, symName: '-[BDThreadCommand clearOperation]', symObjAddr: 0x79, symBinAddr: 0x1782C, symSize: 0x52 }
+  - { offset: 0xA61F1, size: 0x8, addend: 0x0, symName: '-[BDThreadCommand execute]', symObjAddr: 0xCB, symBinAddr: 0x1787E, symSize: 0xB9 }
+  - { offset: 0xA6254, size: 0x8, addend: 0x0, symName: '-[BDThreadCommand cancel]', symObjAddr: 0x184, symBinAddr: 0x17937, symSize: 0x71 }
+  - { offset: 0xA629F, size: 0x8, addend: 0x0, symName: '-[BDThreadCommand internalExecute]', symObjAddr: 0x1F5, symBinAddr: 0x179A8, symSize: 0x6 }
+  - { offset: 0xA62CE, size: 0x8, addend: 0x0, symName: '-[BDThreadCommand commandCompleted:]', symObjAddr: 0x1FB, symBinAddr: 0x179AE, symSize: 0x3F }
+  - { offset: 0xA6325, size: 0x8, addend: 0x0, symName: '-[BDThreadCommand operationQueue]', symObjAddr: 0x23A, symBinAddr: 0x179ED, symSize: 0x11 }
+  - { offset: 0xA635A, size: 0x8, addend: 0x0, symName: '-[BDThreadCommand setOperationQueue:]', symObjAddr: 0x24B, symBinAddr: 0x179FE, symSize: 0x38 }
+  - { offset: 0xA63B3, size: 0x8, addend: 0x0, symName: '-[BDThreadCommand .cxx_destruct]', symObjAddr: 0x283, symBinAddr: 0x17A36, symSize: 0x31 }
+  - { offset: 0xA643F, size: 0x8, addend: 0x0, symName: _sdk_bl_png, symObjAddr: 0x0, symBinAddr: 0x68BC0, symSize: 0x0 }
+  - { offset: 0xA6471, size: 0x8, addend: 0x0, symName: _sdk_bl_png_len, symObjAddr: 0x10C8, symBinAddr: 0x69C88, symSize: 0x0 }
+  - { offset: 0xA64BE, size: 0x8, addend: 0x0, symName: _pop_btn_x_png, symObjAddr: 0x0, symBinAddr: 0x69C90, symSize: 0x0 }
+  - { offset: 0xA64EF, size: 0x8, addend: 0x0, symName: _pop_btn_x_png_len, symObjAddr: 0x64C, symBinAddr: 0x6A2DC, symSize: 0x0 }
+  - { offset: 0xA653C, size: 0x8, addend: 0x0, symName: _video_play_btn_png_len, symObjAddr: 0x0, symBinAddr: 0x6A2E0, symSize: 0x0 }
+  - { offset: 0xA6559, size: 0x8, addend: 0x0, symName: _video_play_btn_png, symObjAddr: 0x10, symBinAddr: 0x6A2F0, symSize: 0x0 }
+  - { offset: 0xA65BA, size: 0x8, addend: 0x0, symName: _sdk_btn_l_png, symObjAddr: 0x0, symBinAddr: 0x6B220, symSize: 0x0 }
+  - { offset: 0xA65EB, size: 0x8, addend: 0x0, symName: _sdk_btn_l_png_len, symObjAddr: 0x6A8, symBinAddr: 0x6B8C8, symSize: 0x0 }
+  - { offset: 0xA662A, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAd init]', symObjAddr: 0x0, symBinAddr: 0x17A67, symSize: 0x63 }
+  - { offset: 0xA6644, size: 0x8, addend: 0x0, symName: _baseView, symObjAddr: 0x13D08, symBinAddr: 0x78E50, symSize: 0x0 }
+  - { offset: 0xA7575, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAd init]', symObjAddr: 0x0, symBinAddr: 0x17A67, symSize: 0x63 }
+  - { offset: 0xA75E5, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAd dealloc]', symObjAddr: 0x63, symBinAddr: 0x17ACA, symSize: 0x5C }
+  - { offset: 0xA7632, size: 0x8, addend: 0x0, symName: '+[CaulyNativeAd caulyNativeAdWithController:]', symObjAddr: 0xBF, symBinAddr: 0x17B26, symSize: 0x9 }
+  - { offset: 0xA7675, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAd initWithParentViewController:]', symObjAddr: 0xC8, symBinAddr: 0x17B2F, symSize: 0x64 }
+  - { offset: 0xA76D4, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAd startNativeAdRequest:nativeAdComponentType:imageSize:]', symObjAddr: 0x12C, symBinAddr: 0x17B93, symSize: 0x290 }
+  - { offset: 0xA7883, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAd nativeAdItemAt:]', symObjAddr: 0x3BC, symBinAddr: 0x17E23, symSize: 0x19 }
+  - { offset: 0xA78D0, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAd nativeAdItemList]', symObjAddr: 0x3D5, symBinAddr: 0x17E3C, symSize: 0x19 }
+  - { offset: 0xA790F, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAd sendInform:]', symObjAddr: 0x3EE, symBinAddr: 0x17E55, symSize: 0x57 }
+  - { offset: 0xA7982, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAd sendInform:anchor:]', symObjAddr: 0x445, symBinAddr: 0x17EAC, symSize: 0xFB }
+  - { offset: 0xA7A65, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAd click:]', symObjAddr: 0x540, symBinAddr: 0x17FA7, symSize: 0x57 }
+  - { offset: 0xA7AD8, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAd sendToOptOutLinkUrl:]', symObjAddr: 0x597, symBinAddr: 0x17FFE, symSize: 0x57 }
+  - { offset: 0xA7B4B, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAd stopAdRequest]', symObjAddr: 0x5EE, symBinAddr: 0x18055, symSize: 0x22 }
+  - { offset: 0xA7B86, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAd localSetting]', symObjAddr: 0x610, symBinAddr: 0x18077, symSize: 0x8E }
+  - { offset: 0xA7BF9, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAd errorMsg]', symObjAddr: 0x69E, symBinAddr: 0x18105, symSize: 0x19 }
+  - { offset: 0xA7C38, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAd parentController]', symObjAddr: 0x6B7, symBinAddr: 0x1811E, symSize: 0x16 }
+  - { offset: 0xA7C6F, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAd setParentController:]', symObjAddr: 0x6CD, symBinAddr: 0x18134, symSize: 0x11 }
+  - { offset: 0xA7CB0, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAd delegate]', symObjAddr: 0x6DE, symBinAddr: 0x18145, symSize: 0x16 }
+  - { offset: 0xA7CE7, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAd setDelegate:]', symObjAddr: 0x6F4, symBinAddr: 0x1815B, symSize: 0x11 }
+  - { offset: 0xA7D28, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAd setLocalSetting:]', symObjAddr: 0x705, symBinAddr: 0x1816C, symSize: 0x28 }
+  - { offset: 0xA7D81, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAd data]', symObjAddr: 0x72D, symBinAddr: 0x18194, symSize: 0xA }
+  - { offset: 0xA7DB6, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAd setData:]', symObjAddr: 0x737, symBinAddr: 0x1819E, symSize: 0x28 }
+  - { offset: 0xA7E0F, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAd .cxx_destruct]', symObjAddr: 0x75F, symBinAddr: 0x181C6, symSize: 0x3A }
+  - { offset: 0xA7EFD, size: 0x8, addend: 0x0, symName: _btn_cart_png, symObjAddr: 0x0, symBinAddr: 0x6B8D0, symSize: 0x0 }
+  - { offset: 0xA7F2F, size: 0x8, addend: 0x0, symName: _btn_cart_png_len, symObjAddr: 0x119C, symBinAddr: 0x6CA6C, symSize: 0x0 }
+  - { offset: 0xA7F6E, size: 0x8, addend: 0x0, symName: '+[BDUtil decodeXMLEntity:]', symObjAddr: 0x0, symBinAddr: 0x18200, symSize: 0xFB }
+  - { offset: 0xA7FC3, size: 0x8, addend: 0x0, symName: _bgTask, symObjAddr: 0x24968, symBinAddr: 0x78ED0, symSize: 0x0 }
+  - { offset: 0xA8058, size: 0x8, addend: 0x0, symName: '+[BDUtil decodeXMLEntity:]', symObjAddr: 0x0, symBinAddr: 0x18200, symSize: 0xFB }
+  - { offset: 0xA8107, size: 0x8, addend: 0x0, symName: '+[BDUtil getTextFromXMLElementName:parentElement:defaultString:]', symObjAddr: 0xFB, symBinAddr: 0x182FB, symSize: 0xB6 }
+  - { offset: 0xA81DE, size: 0x8, addend: 0x0, symName: '+[BDUtil getArrayFromXMLElement:]', symObjAddr: 0x1B1, symBinAddr: 0x183B1, symSize: 0x189 }
+  - { offset: 0xA8326, size: 0x8, addend: 0x0, symName: '+[BDUtil isVisibleView:]', symObjAddr: 0x33A, symBinAddr: 0x1853A, symSize: 0x12C }
+  - { offset: 0xA8425, size: 0x8, addend: 0x0, symName: '+[BDUtil resolvedWindowForViewController:]', symObjAddr: 0x466, symBinAddr: 0x18666, symSize: 0x44F }
+  - { offset: 0xA863D, size: 0x8, addend: 0x0, symName: '+[BDUtil isCoveredRect:parentView:targetView:]', symObjAddr: 0x8B5, symBinAddr: 0x18AB5, symSize: 0x5B0 }
+  - { offset: 0xA8998, size: 0x8, addend: 0x0, symName: '+[BDUtil isViewCovered:]', symObjAddr: 0xE65, symBinAddr: 0x19065, symSize: 0x1C7 }
+  - { offset: 0xA8AA3, size: 0x8, addend: 0x0, symName: '+[BDUtil stringForError:]', symObjAddr: 0x102C, symBinAddr: 0x1922C, symSize: 0x79 }
+  - { offset: 0xA8AF4, size: 0x8, addend: 0x0, symName: '+[BDUtil stringForPayType:]', symObjAddr: 0x10A5, symBinAddr: 0x192A5, symSize: 0x1A }
+  - { offset: 0xA8B37, size: 0x8, addend: 0x0, symName: '+[BDUtil stringForAdForm:]', symObjAddr: 0x10BF, symBinAddr: 0x192BF, symSize: 0x1C }
+  - { offset: 0xA8B7A, size: 0x8, addend: 0x0, symName: '+[BDUtil timeIntervalFromReloadTime:]', symObjAddr: 0x10DB, symBinAddr: 0x192DB, symSize: 0x22 }
+  - { offset: 0xA8BBD, size: 0x8, addend: 0x0, symName: '+[BDUtil orientationControl:orientation:]', symObjAddr: 0x10FD, symBinAddr: 0x192FD, symSize: 0xD1 }
+  - { offset: 0xA8C73, size: 0x8, addend: 0x0, symName: '+[BDUtil orientationControl:]', symObjAddr: 0x11CE, symBinAddr: 0x193CE, symSize: 0x51 }
+  - { offset: 0xA8CEA, size: 0x8, addend: 0x0, symName: '+[BDUtil supportedInterfaceOrientations:]', symObjAddr: 0x121F, symBinAddr: 0x1941F, symSize: 0x88 }
+  - { offset: 0xA8D6D, size: 0x8, addend: 0x0, symName: '+[BDUtil runBgTask]', symObjAddr: 0x12A7, symBinAddr: 0x194A7, symSize: 0x10D }
+  - { offset: 0xA8E62, size: 0x8, addend: 0x0, symName: '___19+[BDUtil runBgTask]_block_invoke', symObjAddr: 0x13B4, symBinAddr: 0x195B4, symSize: 0x2F }
+  - { offset: 0xA8EAC, size: 0x8, addend: 0x0, symName: '___19+[BDUtil runBgTask]_block_invoke.133', symObjAddr: 0x1401, symBinAddr: 0x195E3, symSize: 0x43 }
+  - { offset: 0xA8F1B, size: 0x8, addend: 0x0, symName: '+[BDUtil possibleMultitasking]', symObjAddr: 0x1444, symBinAddr: 0x19626, symSize: 0x61 }
+  - { offset: 0xA8F95, size: 0x8, addend: 0x0, symName: '+[BDUtil openScheme:]', symObjAddr: 0x14A5, symBinAddr: 0x19687, symSize: 0xD7 }
+  - { offset: 0xA9054, size: 0x8, addend: 0x0, symName: '+[BDUtil openURL:]', symObjAddr: 0x157C, symBinAddr: 0x1975E, symSize: 0x1E }
+  - { offset: 0xA909F, size: 0x8, addend: 0x0, symName: '+[BDUtil openURL:isDefaultBrowser:]', symObjAddr: 0x159A, symBinAddr: 0x1977C, symSize: 0x1E }
+  - { offset: 0xA90FB, size: 0x8, addend: 0x0, symName: '+[BDUtil openURL:alternateURL:isDefaultBrowser:]', symObjAddr: 0x15B8, symBinAddr: 0x1979A, symSize: 0x1B6 }
+  - { offset: 0xA9274, size: 0x8, addend: 0x0, symName: '___48+[BDUtil openURL:alternateURL:isDefaultBrowser:]_block_invoke', symObjAddr: 0x176E, symBinAddr: 0x19950, symSize: 0x139 }
+  - { offset: 0xA9358, size: 0x8, addend: 0x0, symName: '___48+[BDUtil openURL:alternateURL:isDefaultBrowser:]_block_invoke_2', symObjAddr: 0x18A7, symBinAddr: 0x19A89, symSize: 0x2B }
+  - { offset: 0xA93B5, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s, symObjAddr: 0x18D2, symBinAddr: 0x19AB4, symSize: 0x25 }
+  - { offset: 0xA93F6, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40s, symObjAddr: 0x18F7, symBinAddr: 0x19AD9, symSize: 0x25 }
+  - { offset: 0xA942D, size: 0x8, addend: 0x0, symName: '+[BDUtil canOpenUrlNaver:]', symObjAddr: 0x191C, symBinAddr: 0x19AFE, symSize: 0x9B }
+  - { offset: 0xA94ED, size: 0x8, addend: 0x0, symName: '+[BDUtil openURLToNaver:]', symObjAddr: 0x19B7, symBinAddr: 0x19B99, symSize: 0x19E }
+  - { offset: 0xA9661, size: 0x8, addend: 0x0, symName: '+[BDUtil urlencodeString:]', symObjAddr: 0x1B55, symBinAddr: 0x19D37, symSize: 0x5E }
+  - { offset: 0xA972A, size: 0x8, addend: 0x0, symName: '+[BDUtil adViewLocation:]', symObjAddr: 0x1BB3, symBinAddr: 0x19D95, symSize: 0x39D }
+  - { offset: 0xA9882, size: 0x8, addend: 0x0, symName: '+[BDUtil getDeviceSystemVersion]', symObjAddr: 0x1F50, symBinAddr: 0x1A132, symSize: 0x7A }
+  - { offset: 0xA98F2, size: 0x8, addend: 0x0, symName: '+[BDUtil isExecuteSafariUrl:]', symObjAddr: 0x1FCA, symBinAddr: 0x1A1AC, symSize: 0xA2 }
+  - { offset: 0xA997F, size: 0x8, addend: 0x0, symName: '+[BDUtil optOutLanding:]', symObjAddr: 0x206C, symBinAddr: 0x1A24E, symSize: 0x1F9 }
+  - { offset: 0xAA4C7, size: 0x8, addend: 0x0, symName: '-[BDBannerAdContainer initWithController:parentViewController:]', symObjAddr: 0x0, symBinAddr: 0x1A447, symSize: 0xCC }
+  - { offset: 0xAB123, size: 0x8, addend: 0x0, symName: '-[BDBannerAdContainer initWithController:parentViewController:]', symObjAddr: 0x0, symBinAddr: 0x1A447, symSize: 0xCC }
+  - { offset: 0xAB251, size: 0x8, addend: 0x0, symName: '+[BDDeviceUtil idfv]', symObjAddr: 0x0, symBinAddr: 0x1A513, symSize: 0x81 }
+  - { offset: 0xAB2B6, size: 0x8, addend: 0x0, symName: '+[BDDeviceUtil idfv]', symObjAddr: 0x0, symBinAddr: 0x1A513, symSize: 0x81 }
+  - { offset: 0xAB325, size: 0x8, addend: 0x0, symName: '+[BDDeviceUtil idfa]', symObjAddr: 0x81, symBinAddr: 0x1A594, symSize: 0x2AB }
+  - { offset: 0xAB491, size: 0x8, addend: 0x0, symName: ___Block_byref_object_copy_, symObjAddr: 0x32C, symBinAddr: 0x1A83F, symSize: 0x16 }
+  - { offset: 0xAB4B6, size: 0x8, addend: 0x0, symName: ___Block_byref_object_dispose_, symObjAddr: 0x342, symBinAddr: 0x1A855, symSize: 0xF }
+  - { offset: 0xAB4E1, size: 0x8, addend: 0x0, symName: '___20+[BDDeviceUtil idfa]_block_invoke', symObjAddr: 0x351, symBinAddr: 0x1A864, symSize: 0xEE }
+  - { offset: 0xAB590, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32r, symObjAddr: 0x43F, symBinAddr: 0x1A952, symSize: 0x17 }
+  - { offset: 0xAB5B9, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32r, symObjAddr: 0x456, symBinAddr: 0x1A969, symSize: 0x13 }
+  - { offset: 0xAB5D8, size: 0x8, addend: 0x0, symName: '+[BDDeviceUtil getSysInfoByName:]', symObjAddr: 0x469, symBinAddr: 0x1A97C, symSize: 0x82 }
+  - { offset: 0xAB6F3, size: 0x8, addend: 0x0, symName: '+[BDDeviceUtil platform]', symObjAddr: 0x4EB, symBinAddr: 0x1A9FE, symSize: 0xD }
+  - { offset: 0xAB726, size: 0x8, addend: 0x0, symName: '+[BDDeviceUtil model]', symObjAddr: 0x4F8, symBinAddr: 0x1AA0B, symSize: 0x88 }
+  - { offset: 0xAB7A9, size: 0x8, addend: 0x0, symName: '+[BDDeviceUtil version]', symObjAddr: 0x580, symBinAddr: 0x1AA93, symSize: 0x57 }
+  - { offset: 0xAB810, size: 0x8, addend: 0x0, symName: '+[BDDeviceUtil isIPad]', symObjAddr: 0x5D7, symBinAddr: 0x1AAEA, symSize: 0x98 }
+  - { offset: 0xAB87F, size: 0x8, addend: 0x0, symName: '+[BDDeviceUtil screenSizeType]', symObjAddr: 0x66F, symBinAddr: 0x1AB82, symSize: 0xA6 }
+  - { offset: 0xAB8F1, size: 0x8, addend: 0x0, symName: '+[BDDeviceUtil screenSize]', symObjAddr: 0x715, symBinAddr: 0x1AC28, symSize: 0x91 }
+  - { offset: 0xAB93C, size: 0x8, addend: 0x0, symName: '+[BDDeviceUtil isSupportOrientationPortrait]', symObjAddr: 0x7A6, symBinAddr: 0x1ACB9, symSize: 0x11D }
+  - { offset: 0xABA22, size: 0x8, addend: 0x0, symName: '+[BDDeviceUtil skAdNetworkSourceId]', symObjAddr: 0x8C3, symBinAddr: 0x1ADD6, symSize: 0x2C8 }
+  - { offset: 0xABC10, size: 0x8, addend: 0x0, symName: '___35+[BDDeviceUtil skAdNetworkSourceId]_block_invoke', symObjAddr: 0xB8B, symBinAddr: 0x1B09E, symSize: 0x1B2 }
+  - { offset: 0xABDA4, size: 0x8, addend: 0x0, symName: '+[BDDeviceUtil skAdNetworkVersions]', symObjAddr: 0xD3D, symBinAddr: 0x1B250, symSize: 0x24 }
+  - { offset: 0xABDEF, size: 0x8, addend: 0x0, symName: '+[BDDeviceUtil skAdNetworkIds]', symObjAddr: 0xD61, symBinAddr: 0x1B274, symSize: 0x226 }
+  - { offset: 0xABECD, size: 0x8, addend: 0x0, symName: '+[BDDeviceUtil isTrackingUsageDescription]', symObjAddr: 0xF87, symBinAddr: 0x1B49A, symSize: 0x72 }
+  - { offset: 0xAC1F9, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView initWithFrameAndURL::]', symObjAddr: 0x0, symBinAddr: 0x1B50C, symSize: 0x18D }
+  - { offset: 0xAC213, size: 0x8, addend: 0x0, symName: _AVPlayerPlaybackViewControllerStatusObservationContext, symObjAddr: 0x4278, symBinAddr: 0x6CA70, symSize: 0x0 }
+  - { offset: 0xAC22A, size: 0x8, addend: 0x0, symName: _AVPlayerPlaybackViewControllerCurrentItemObservationContext, symObjAddr: 0x4280, symBinAddr: 0x6CA78, symSize: 0x0 }
+  - { offset: 0xAC240, size: 0x8, addend: 0x0, symName: _AVPlayerPlaybackViewControllerRateObservationContext, symObjAddr: 0x4288, symBinAddr: 0x6CA80, symSize: 0x0 }
+  - { offset: 0xAC41C, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView initWithFrameAndURL::]', symObjAddr: 0x0, symBinAddr: 0x1B50C, symSize: 0x18D }
+  - { offset: 0xAC53D, size: 0x8, addend: 0x0, symName: '___47-[BDAVPlayerPlaybackView initWithFrameAndURL::]_block_invoke', symObjAddr: 0x18D, symBinAddr: 0x1B699, symSize: 0xA8 }
+  - { offset: 0xAC619, size: 0x8, addend: 0x0, symName: '___47-[BDAVPlayerPlaybackView initWithFrameAndURL::]_block_invoke_2', symObjAddr: 0x235, symBinAddr: 0x1B741, symSize: 0x21 }
+  - { offset: 0xAC684, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s48s, symObjAddr: 0x256, symBinAddr: 0x1B762, symSize: 0x2C }
+  - { offset: 0xAC6D1, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40s48s, symObjAddr: 0x282, symBinAddr: 0x1B78E, symSize: 0x2C }
+  - { offset: 0xAC714, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView stopLoad]', symObjAddr: 0x2AE, symBinAddr: 0x1B7BA, symSize: 0xAB }
+  - { offset: 0xAC79B, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView dealloc]', symObjAddr: 0x359, symBinAddr: 0x1B865, symSize: 0x44 }
+  - { offset: 0xAC800, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView play:]', symObjAddr: 0x39D, symBinAddr: 0x1B8A9, symSize: 0xB5 }
+  - { offset: 0xAC87B, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView pause:]', symObjAddr: 0x452, symBinAddr: 0x1B95E, symSize: 0x6F }
+  - { offset: 0xAC8EA, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView rewind:]', symObjAddr: 0x4C1, symBinAddr: 0x1B9CD, symSize: 0x126 }
+  - { offset: 0xAC9BD, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView forward:]', symObjAddr: 0x5E7, symBinAddr: 0x1BAF3, symSize: 0x126 }
+  - { offset: 0xACA67, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView showController:]', symObjAddr: 0x70D, symBinAddr: 0x1BC19, symSize: 0x135 }
+  - { offset: 0xACAE2, size: 0x8, addend: 0x0, symName: '___41-[BDAVPlayerPlaybackView showController:]_block_invoke', symObjAddr: 0x842, symBinAddr: 0x1BD4E, symSize: 0x24 }
+  - { offset: 0xACB2D, size: 0x8, addend: 0x0, symName: '___41-[BDAVPlayerPlaybackView showController:]_block_invoke.50', symObjAddr: 0x884, symBinAddr: 0x1BD72, symSize: 0x26 }
+  - { offset: 0xACB84, size: 0x8, addend: 0x0, symName: '___41-[BDAVPlayerPlaybackView showController:]_block_invoke.56', symObjAddr: 0x8AA, symBinAddr: 0x1BD98, symSize: 0x29 }
+  - { offset: 0xACBCF, size: 0x8, addend: 0x0, symName: '___41-[BDAVPlayerPlaybackView showController:]_block_invoke_2', symObjAddr: 0x8D3, symBinAddr: 0x1BDC1, symSize: 0x6 }
+  - { offset: 0xACC02, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView hideController:]', symObjAddr: 0x8D9, symBinAddr: 0x1BDC7, symSize: 0x27 }
+  - { offset: 0xACC57, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView setVolume:]', symObjAddr: 0x900, symBinAddr: 0x1BDEE, symSize: 0x47 }
+  - { offset: 0xACCB4, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView showPauseButton]', symObjAddr: 0x947, symBinAddr: 0x1BE35, symSize: 0x50 }
+  - { offset: 0xACCFF, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView showPlayButton]', symObjAddr: 0x997, symBinAddr: 0x1BE85, symSize: 0x50 }
+  - { offset: 0xACD4A, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView syncPlayPauseButtons]', symObjAddr: 0x9E7, symBinAddr: 0x1BED5, symSize: 0x3E }
+  - { offset: 0xACD95, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView enablePlayerButtons]', symObjAddr: 0xA25, symBinAddr: 0x1BF13, symSize: 0x53 }
+  - { offset: 0xACDE0, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView disablePlayerButtons]', symObjAddr: 0xA78, symBinAddr: 0x1BF66, symSize: 0x4D }
+  - { offset: 0xACE45, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView initScrubberTimer]', symObjAddr: 0xAC5, symBinAddr: 0x1BFB3, symSize: 0x1C2 }
+  - { offset: 0xACF49, size: 0x8, addend: 0x0, symName: '___43-[BDAVPlayerPlaybackView initScrubberTimer]_block_invoke', symObjAddr: 0xC87, symBinAddr: 0x1C175, symSize: 0x31 }
+  - { offset: 0xACFAB, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32w, symObjAddr: 0xCB8, symBinAddr: 0x1C1A6, symSize: 0x12 }
+  - { offset: 0xACFD4, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32w, symObjAddr: 0xCCA, symBinAddr: 0x1C1B8, symSize: 0xE }
+  - { offset: 0xACFF3, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView syncScrubber]', symObjAddr: 0xCD8, symBinAddr: 0x1C1C6, symSize: 0x1CA }
+  - { offset: 0xAD115, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView beginScrubbing:]', symObjAddr: 0xEA2, symBinAddr: 0x1C390, symSize: 0x5F }
+  - { offset: 0xAD17A, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView scrub:]', symObjAddr: 0xF01, symBinAddr: 0x1C3EF, symSize: 0x1B7 }
+  - { offset: 0xAD2EF, size: 0x8, addend: 0x0, symName: '___32-[BDAVPlayerPlaybackView scrub:]_block_invoke', symObjAddr: 0x10B8, symBinAddr: 0x1C5A6, symSize: 0x4F }
+  - { offset: 0xAD34C, size: 0x8, addend: 0x0, symName: '___32-[BDAVPlayerPlaybackView scrub:]_block_invoke_2', symObjAddr: 0x1107, symBinAddr: 0x1C5F5, symSize: 0x15 }
+  - { offset: 0xAD38E, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView endScrubbing:]', symObjAddr: 0x111C, symBinAddr: 0x1C60A, symSize: 0x21C }
+  - { offset: 0xAD4BB, size: 0x8, addend: 0x0, symName: '___39-[BDAVPlayerPlaybackView endScrubbing:]_block_invoke', symObjAddr: 0x1338, symBinAddr: 0x1C826, symSize: 0x31 }
+  - { offset: 0xAD521, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView isScrubbing]', symObjAddr: 0x1369, symBinAddr: 0x1C857, symSize: 0x1D }
+  - { offset: 0xAD557, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView enableScrubber]', symObjAddr: 0x1386, symBinAddr: 0x1C874, symSize: 0x22 }
+  - { offset: 0xAD597, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView disableScrubber]', symObjAddr: 0x13A8, symBinAddr: 0x1C896, symSize: 0x1F }
+  - { offset: 0xAD5D7, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView delegate]', symObjAddr: 0x13C7, symBinAddr: 0x1C8B5, symSize: 0x19 }
+  - { offset: 0xAD60E, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView setDelegate:]', symObjAddr: 0x13E0, symBinAddr: 0x1C8CE, symSize: 0x14 }
+  - { offset: 0xAD64F, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView .cxx_destruct]', symObjAddr: 0x13F4, symBinAddr: 0x1C8E2, symSize: 0xC8 }
+  - { offset: 0xAD682, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView(Player) isPlaying]', symObjAddr: 0x14BC, symBinAddr: 0x1C9AA, symSize: 0x46 }
+  - { offset: 0xAD6C6, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView(Player) playerItemDidReachEnd:]', symObjAddr: 0x1502, symBinAddr: 0x1C9F0, symSize: 0x44 }
+  - { offset: 0xAD71F, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView(Player) playerItemDuration]', symObjAddr: 0x1546, symBinAddr: 0x1CA34, symSize: 0x9C }
+  - { offset: 0xAD78C, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView(Player) removePlayerTimeObserver]', symObjAddr: 0x15E2, symBinAddr: 0x1CAD0, symSize: 0x4D }
+  - { offset: 0xAD7D8, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView(Player) assetFailedToPrepareForPlayback:]', symObjAddr: 0x162F, symBinAddr: 0x1CB1D, symSize: 0x105 }
+  - { offset: 0xAD91A, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView(Player) prepareToPlayAsset:withKeys:]', symObjAddr: 0x1734, symBinAddr: 0x1CC22, symSize: 0x100C }
+  - { offset: 0xAE03B, size: 0x8, addend: 0x0, symName: '-[BDAVPlayerPlaybackView(Player) observeValueForKeyPath:ofObject:change:context:]', symObjAddr: 0x2740, symBinAddr: 0x1DC2E, symSize: 0x282 }
+  - { offset: 0xAE765, size: 0x8, addend: 0x0, symName: _btn_appstore_png, symObjAddr: 0x0, symBinAddr: 0x6CA90, symSize: 0x0 }
+  - { offset: 0xAE797, size: 0x8, addend: 0x0, symName: _btn_appstore_png_len, symObjAddr: 0x1D34, symBinAddr: 0x6E7C4, symSize: 0x0 }
+  - { offset: 0xAE7E4, size: 0x8, addend: 0x0, symName: _logo_png, symObjAddr: 0x0, symBinAddr: 0x6E7D0, symSize: 0x0 }
+  - { offset: 0xAE816, size: 0x8, addend: 0x0, symName: _logo_png_len, symObjAddr: 0xF2C, symBinAddr: 0x6F6FC, symSize: 0x0 }
+  - { offset: 0xAE855, size: 0x8, addend: 0x0, symName: '-[BDNativeAdContainer dealloc]', symObjAddr: 0x0, symBinAddr: 0x1DEB0, symSize: 0x47 }
+  - { offset: 0xAF4E2, size: 0x8, addend: 0x0, symName: '-[BDNativeAdContainer dealloc]', symObjAddr: 0x0, symBinAddr: 0x1DEB0, symSize: 0x47 }
+  - { offset: 0xAF542, size: 0x8, addend: 0x0, symName: '-[BDNativeAdContainer initWithController:]', symObjAddr: 0x47, symBinAddr: 0x1DEF7, symSize: 0x90 }
+  - { offset: 0xAF5C7, size: 0x8, addend: 0x0, symName: '-[BDNativeAdContainer pushMultiAdItem:]', symObjAddr: 0xD7, symBinAddr: 0x1DF87, symSize: 0x2F }
+  - { offset: 0xAF622, size: 0x8, addend: 0x0, symName: '-[BDNativeAdContainer getAdItem:]', symObjAddr: 0x106, symBinAddr: 0x1DFB6, symSize: 0x69 }
+  - { offset: 0xAF68D, size: 0x8, addend: 0x0, symName: '-[BDNativeAdContainer getAdItemJSONString:]', symObjAddr: 0x16F, symBinAddr: 0x1E01F, symSize: 0xFD }
+  - { offset: 0xAF760, size: 0x8, addend: 0x0, symName: '-[BDNativeAdContainer getAllAdItemJSONArray]', symObjAddr: 0x26C, symBinAddr: 0x1E11C, symSize: 0x280 }
+  - { offset: 0xAF88D, size: 0x8, addend: 0x0, symName: '-[BDNativeAdContainer test]', symObjAddr: 0x4EC, symBinAddr: 0x1E39C, symSize: 0x11 }
+  - { offset: 0xAF8C2, size: 0x8, addend: 0x0, symName: '-[BDNativeAdContainer setTest:]', symObjAddr: 0x4FD, symBinAddr: 0x1E3AD, symSize: 0x38 }
+  - { offset: 0xAF91B, size: 0x8, addend: 0x0, symName: '-[BDNativeAdContainer .cxx_destruct]', symObjAddr: 0x535, symBinAddr: 0x1E3E5, symSize: 0x31 }
+  - { offset: 0xAF9C4, size: 0x8, addend: 0x0, symName: '-[BDPopupAdViewController initWithContainerView:needStatusBar:]', symObjAddr: 0x0, symBinAddr: 0x1E416, symSize: 0x9C }
+  - { offset: 0xB068B, size: 0x8, addend: 0x0, symName: '-[BDPopupAdViewController initWithContainerView:needStatusBar:]', symObjAddr: 0x0, symBinAddr: 0x1E416, symSize: 0x9C }
+  - { offset: 0xB073F, size: 0x8, addend: 0x0, symName: '-[BDPopupAdViewController hideCloseBtn:]', symObjAddr: 0x9C, symBinAddr: 0x1E4B2, symSize: 0x4D }
+  - { offset: 0xB079C, size: 0x8, addend: 0x0, symName: '-[BDPopupAdViewController viewDidLoad]', symObjAddr: 0xE9, symBinAddr: 0x1E4FF, symSize: 0x375 }
+  - { offset: 0xB098E, size: 0x8, addend: 0x0, symName: '-[BDPopupAdViewController dismissViewControllerAnimated:completion:]', symObjAddr: 0x45E, symBinAddr: 0x1E874, symSize: 0xCB }
+  - { offset: 0xB0A2B, size: 0x8, addend: 0x0, symName: '-[BDPopupAdViewController shouldAutorotate]', symObjAddr: 0x529, symBinAddr: 0x1E93F, symSize: 0x3A }
+  - { offset: 0xB0A7C, size: 0x8, addend: 0x0, symName: '-[BDPopupAdViewController supportedInterfaceOrientations]', symObjAddr: 0x563, symBinAddr: 0x1E979, symSize: 0x3A }
+  - { offset: 0xB0ACD, size: 0x8, addend: 0x0, symName: '-[BDPopupAdViewController viewWillTransitionToSize:withTransitionCoordinator:]', symObjAddr: 0x59D, symBinAddr: 0x1E9B3, symSize: 0xC9 }
+  - { offset: 0xB0B6A, size: 0x8, addend: 0x0, symName: '___78-[BDPopupAdViewController viewWillTransitionToSize:withTransitionCoordinator:]_block_invoke', symObjAddr: 0x666, symBinAddr: 0x1EA7C, symSize: 0x32 }
+  - { offset: 0xB0BE1, size: 0x8, addend: 0x0, symName: '-[BDPopupAdViewController prefersStatusBarHidden]', symObjAddr: 0x6E2, symBinAddr: 0x1EAAE, symSize: 0x1B }
+  - { offset: 0xB0C22, size: 0x8, addend: 0x0, symName: '-[BDPopupAdViewController .cxx_destruct]', symObjAddr: 0x6FD, symBinAddr: 0x1EAC9, symSize: 0x13 }
+  - { offset: 0xB0DF5, size: 0x8, addend: 0x0, symName: '-[BDURLCommand init]', symObjAddr: 0x0, symBinAddr: 0x1EADC, symSize: 0xC3 }
+  - { offset: 0xB0E0F, size: 0x8, addend: 0x0, symName: _defaultTimeout, symObjAddr: 0xD30, symBinAddr: 0x3B6B0, symSize: 0x0 }
+  - { offset: 0xB0EFE, size: 0x8, addend: 0x0, symName: '-[BDURLCommand init]', symObjAddr: 0x0, symBinAddr: 0x1EADC, symSize: 0xC3 }
+  - { offset: 0xB0F7D, size: 0x8, addend: 0x0, symName: '-[BDURLCommand dealloc]', symObjAddr: 0xC3, symBinAddr: 0x1EB9F, symSize: 0x77 }
+  - { offset: 0xB0FD4, size: 0x8, addend: 0x0, symName: '-[BDURLCommand getUrl:delegate:]', symObjAddr: 0x13A, symBinAddr: 0x1EC16, symSize: 0x1A }
+  - { offset: 0xB102D, size: 0x8, addend: 0x0, symName: '-[BDURLCommand getUrl:timeout:delegate:]', symObjAddr: 0x154, symBinAddr: 0x1EC30, symSize: 0x20 }
+  - { offset: 0xB1098, size: 0x8, addend: 0x0, symName: '-[BDURLCommand postUrl:delegate:]', symObjAddr: 0x174, symBinAddr: 0x1EC50, symSize: 0x1F }
+  - { offset: 0xB10F3, size: 0x8, addend: 0x0, symName: '-[BDURLCommand postUrl:httpBody:delegate:]', symObjAddr: 0x193, symBinAddr: 0x1EC6F, symSize: 0x1A }
+  - { offset: 0xB115A, size: 0x8, addend: 0x0, symName: '-[BDURLCommand postUrl:timeout:httpBody:delegate:]', symObjAddr: 0x1AD, symBinAddr: 0x1EC89, symSize: 0x23 }
+  - { offset: 0xB11D5, size: 0x8, addend: 0x0, symName: '-[BDURLCommand execute:url:timeout:httpBody:delegate:]', symObjAddr: 0x1D0, symBinAddr: 0x1ECAC, symSize: 0x19F }
+  - { offset: 0xB1368, size: 0x8, addend: 0x0, symName: '-[BDURLCommand URLSession:didBecomeInvalidWithError:]', symObjAddr: 0x36F, symBinAddr: 0x1EE4B, symSize: 0xAF }
+  - { offset: 0xB143D, size: 0x8, addend: 0x0, symName: '-[BDURLCommand URLSessionDidFinishEventsForBackgroundURLSession:]', symObjAddr: 0x41E, symBinAddr: 0x1EEFA, symSize: 0x18 }
+  - { offset: 0xB1486, size: 0x8, addend: 0x0, symName: '-[BDURLCommand URLSession:didReceiveChallenge:completionHandler:]', symObjAddr: 0x436, symBinAddr: 0x1EF12, symSize: 0x41 }
+  - { offset: 0xB150F, size: 0x8, addend: 0x0, symName: '-[BDURLCommand URLSession:task:didCompleteWithError:]', symObjAddr: 0x477, symBinAddr: 0x1EF53, symSize: 0x190 }
+  - { offset: 0xB167C, size: 0x8, addend: 0x0, symName: '-[BDURLCommand URLSession:task:willPerformHTTPRedirection:newRequest:completionHandler:]', symObjAddr: 0x607, symBinAddr: 0x1F0E3, symSize: 0xF9 }
+  - { offset: 0xB17A8, size: 0x8, addend: 0x0, symName: '-[BDURLCommand URLSession:taskIsWaitingForConnectivity:]', symObjAddr: 0x700, symBinAddr: 0x1F1DC, symSize: 0xC4 }
+  - { offset: 0xB186D, size: 0x8, addend: 0x0, symName: '-[BDURLCommand URLSession:task:didFinishCollectingMetrics:]', symObjAddr: 0x7C4, symBinAddr: 0x1F2A0, symSize: 0x140 }
+  - { offset: 0xB1998, size: 0x8, addend: 0x0, symName: '-[BDURLCommand URLSession:dataTask:didReceiveResponse:completionHandler:]', symObjAddr: 0x904, symBinAddr: 0x1F3E0, symSize: 0x1F1 }
+  - { offset: 0xB1B11, size: 0x8, addend: 0x0, symName: '-[BDURLCommand URLSession:dataTask:didReceiveData:]', symObjAddr: 0xAF5, symBinAddr: 0x1F5D1, symSize: 0xF8 }
+  - { offset: 0xB1C12, size: 0x8, addend: 0x0, symName: '-[BDURLCommand URLSession:dataTask:willCacheResponse:completionHandler:]', symObjAddr: 0xBED, symBinAddr: 0x1F6C9, symSize: 0xE1 }
+  - { offset: 0xB1D1C, size: 0x8, addend: 0x0, symName: '-[BDURLCommand .cxx_destruct]', symObjAddr: 0xCCE, symBinAddr: 0x1F7AA, symSize: 0x3C }
+  - { offset: 0xB1F3F, size: 0x8, addend: 0x0, symName: '+[BDImageUtil makeRoundCornerImage:withCornerWidth:withCornerHeight:]', symObjAddr: 0x0, symBinAddr: 0x1F7E6, symSize: 0x384 }
+  - { offset: 0xB1FFE, size: 0x8, addend: 0x0, symName: '+[BDImageUtil makeRoundCornerImage:withCornerWidth:withCornerHeight:]', symObjAddr: 0x0, symBinAddr: 0x1F7E6, symSize: 0x384 }
+  - { offset: 0xB24F5, size: 0x8, addend: 0x0, symName: '+[BDImageUtil pixelColorInImage:atX:atY:]', symObjAddr: 0x384, symBinAddr: 0x1FB6A, symSize: 0x125 }
+  - { offset: 0xB26F4, size: 0x8, addend: 0x0, symName: _initLog, symObjAddr: 0x0, symBinAddr: 0x1FC8F, symSize: 0x31 }
+  - { offset: 0xB270E, size: 0x8, addend: 0x0, symName: __lock, symObjAddr: 0x5D80, symBinAddr: 0x78E58, symSize: 0x0 }
+  - { offset: 0xB2737, size: 0x8, addend: 0x0, symName: __logLevel, symObjAddr: 0x5D88, symBinAddr: 0x78E60, symSize: 0x0 }
+  - { offset: 0xB2774, size: 0x8, addend: 0x0, symName: _initLog, symObjAddr: 0x0, symBinAddr: 0x1FC8F, symSize: 0x31 }
+  - { offset: 0xB2797, size: 0x8, addend: 0x0, symName: _setLogLevel, symObjAddr: 0x31, symBinAddr: 0x1FCC0, symSize: 0xC }
+  - { offset: 0xB27BC, size: 0x8, addend: 0x0, symName: _getLogLevel, symObjAddr: 0x3D, symBinAddr: 0x1FCCC, symSize: 0xC }
+  - { offset: 0xB27D6, size: 0x8, addend: 0x0, symName: _canLog, symObjAddr: 0x49, symBinAddr: 0x1FCD8, symSize: 0xF }
+  - { offset: 0xB2814, size: 0x8, addend: 0x0, symName: _BD_LOG, symObjAddr: 0x58, symBinAddr: 0x1FCE7, symSize: 0x21C }
+  - { offset: 0xB2961, size: 0x8, addend: 0x0, symName: _BD_TEST_LOG, symObjAddr: 0x274, symBinAddr: 0x1FF03, symSize: 0x6 }
+  - { offset: 0xB29E0, size: 0x8, addend: 0x0, symName: '-[CaulyInterstitialAd dealloc]', symObjAddr: 0x0, symBinAddr: 0x1FF09, symSize: 0x7F }
+  - { offset: 0xB29FA, size: 0x8, addend: 0x0, symName: __objMap, symObjAddr: 0x13FE8, symBinAddr: 0x78E68, symSize: 0x0 }
+  - { offset: 0xB2C7D, size: 0x8, addend: 0x0, symName: '-[CaulyInterstitialAd dealloc]', symObjAddr: 0x0, symBinAddr: 0x1FF09, symSize: 0x7F }
+  - { offset: 0xB2CE4, size: 0x8, addend: 0x0, symName: '-[CaulyInterstitialAd init]', symObjAddr: 0x7F, symBinAddr: 0x1FF88, symSize: 0x50 }
+  - { offset: 0xB2D27, size: 0x8, addend: 0x0, symName: '-[CaulyInterstitialAd initWithParentViewController:]', symObjAddr: 0xCF, symBinAddr: 0x1FFD8, symSize: 0x68 }
+  - { offset: 0xB2D92, size: 0x8, addend: 0x0, symName: '+[CaulyInterstitialAd caulyAdWithController:]', symObjAddr: 0x137, symBinAddr: 0x20040, symSize: 0x4D }
+  - { offset: 0xB2E09, size: 0x8, addend: 0x0, symName: '-[CaulyInterstitialAd earnType]', symObjAddr: 0x184, symBinAddr: 0x2008D, symSize: 0x57 }
+  - { offset: 0xB2E74, size: 0x8, addend: 0x0, symName: '-[CaulyInterstitialAd price]', symObjAddr: 0x1DB, symBinAddr: 0x200E4, symSize: 0x82 }
+  - { offset: 0xB2EEB, size: 0x8, addend: 0x0, symName: '-[CaulyInterstitialAd startInterstitialAdRequest]', symObjAddr: 0x25D, symBinAddr: 0x20166, symSize: 0x1AD }
+  - { offset: 0xB3027, size: 0x8, addend: 0x0, symName: '-[CaulyInterstitialAd stopAdRequest]', symObjAddr: 0x40A, symBinAddr: 0x20313, symSize: 0x4E }
+  - { offset: 0xB308E, size: 0x8, addend: 0x0, symName: '-[CaulyInterstitialAd show]', symObjAddr: 0x458, symBinAddr: 0x20361, symSize: 0x4C }
+  - { offset: 0xB30F5, size: 0x8, addend: 0x0, symName: '-[CaulyInterstitialAd showWithParentViewController:]', symObjAddr: 0x4A4, symBinAddr: 0x203AD, symSize: 0x85 }
+  - { offset: 0xB3192, size: 0x8, addend: 0x0, symName: '-[CaulyInterstitialAd close]', symObjAddr: 0x529, symBinAddr: 0x20432, symSize: 0x4C }
+  - { offset: 0xB31F9, size: 0x8, addend: 0x0, symName: '-[CaulyInterstitialAd localSetting]', symObjAddr: 0x575, symBinAddr: 0x2047E, symSize: 0x8E }
+  - { offset: 0xB326C, size: 0x8, addend: 0x0, symName: '-[CaulyInterstitialAd errorMsg]', symObjAddr: 0x603, symBinAddr: 0x2050C, symSize: 0x5A }
+  - { offset: 0xB32D7, size: 0x8, addend: 0x0, symName: '+[CaulyInterstitialAd adViewForInterstitialAd:]', symObjAddr: 0x65D, symBinAddr: 0x20566, symSize: 0x76 }
+  - { offset: 0xB335E, size: 0x8, addend: 0x0, symName: '+[CaulyInterstitialAd addAdView:forInterstitialAd:]', symObjAddr: 0x6D3, symBinAddr: 0x205DC, symSize: 0xB7 }
+  - { offset: 0xB341D, size: 0x8, addend: 0x0, symName: '+[CaulyInterstitialAd removeView:forInterstitialAd:]', symObjAddr: 0x78A, symBinAddr: 0x20693, symSize: 0x54 }
+  - { offset: 0xB349C, size: 0x8, addend: 0x0, symName: '-[CaulyInterstitialAd data]', symObjAddr: 0x7DE, symBinAddr: 0x206E7, symSize: 0xA }
+  - { offset: 0xB34D1, size: 0x8, addend: 0x0, symName: '-[CaulyInterstitialAd setData:]', symObjAddr: 0x7E8, symBinAddr: 0x206F1, symSize: 0x28 }
+  - { offset: 0xB352A, size: 0x8, addend: 0x0, symName: '-[CaulyInterstitialAd delegate]', symObjAddr: 0x810, symBinAddr: 0x20719, symSize: 0x16 }
+  - { offset: 0xB3561, size: 0x8, addend: 0x0, symName: '-[CaulyInterstitialAd setDelegate:]', symObjAddr: 0x826, symBinAddr: 0x2072F, symSize: 0x11 }
+  - { offset: 0xB35A2, size: 0x8, addend: 0x0, symName: '-[CaulyInterstitialAd setLocalSetting:]', symObjAddr: 0x837, symBinAddr: 0x20740, symSize: 0x28 }
+  - { offset: 0xB35FB, size: 0x8, addend: 0x0, symName: '-[CaulyInterstitialAd parentController]', symObjAddr: 0x85F, symBinAddr: 0x20768, symSize: 0x16 }
+  - { offset: 0xB3632, size: 0x8, addend: 0x0, symName: '-[CaulyInterstitialAd setParentController:]', symObjAddr: 0x875, symBinAddr: 0x2077E, symSize: 0x11 }
+  - { offset: 0xB3673, size: 0x8, addend: 0x0, symName: '-[CaulyInterstitialAd .cxx_destruct]', symObjAddr: 0x886, symBinAddr: 0x2078F, symSize: 0x3A }
+  - { offset: 0xB43D0, size: 0x8, addend: 0x0, symName: '-[BDRichVideoLandingViewController viewDidLoad]', symObjAddr: 0x0, symBinAddr: 0x207C9, symSize: 0x1FB }
+  - { offset: 0xB5286, size: 0x8, addend: 0x0, symName: '-[BDRichVideoLandingViewController viewDidLoad]', symObjAddr: 0x0, symBinAddr: 0x207C9, symSize: 0x1FB }
+  - { offset: 0xB53D4, size: 0x8, addend: 0x0, symName: '-[BDRichVideoLandingViewController dealloc]', symObjAddr: 0x1FB, symBinAddr: 0x209C4, symSize: 0x72 }
+  - { offset: 0xB542D, size: 0x8, addend: 0x0, symName: '-[BDRichVideoLandingViewController closeViewController]', symObjAddr: 0x26D, symBinAddr: 0x20A36, symSize: 0x74 }
+  - { offset: 0xB5486, size: 0x8, addend: 0x0, symName: '-[BDRichVideoLandingViewController didReceiveMemoryWarning]', symObjAddr: 0x2E1, symBinAddr: 0x20AAA, symSize: 0x44 }
+  - { offset: 0xB54C7, size: 0x8, addend: 0x0, symName: '-[BDRichVideoLandingViewController touchesBegan:withEvent:]', symObjAddr: 0x325, symBinAddr: 0x20AEE, symSize: 0x82 }
+  - { offset: 0xB5558, size: 0x8, addend: 0x0, symName: '-[BDRichVideoLandingViewController touchesEnded:withEvent:]', symObjAddr: 0x3A7, symBinAddr: 0x20B70, symSize: 0x82 }
+  - { offset: 0xB55E9, size: 0x8, addend: 0x0, symName: '-[BDRichVideoLandingViewController didContentLoaded]', symObjAddr: 0x429, symBinAddr: 0x20BF2, symSize: 0x18 }
+  - { offset: 0xB5626, size: 0x8, addend: 0x0, symName: '-[BDRichVideoLandingViewController didFailToLoad]', symObjAddr: 0x441, symBinAddr: 0x20C0A, symSize: 0xC4 }
+  - { offset: 0xB56AF, size: 0x8, addend: 0x0, symName: '-[BDRichVideoLandingViewController needClosePopup:]', symObjAddr: 0x505, symBinAddr: 0x20CCE, symSize: 0x35 }
+  - { offset: 0xB570C, size: 0x8, addend: 0x0, symName: '-[BDRichVideoLandingViewController hiddenCloseBtn:]', symObjAddr: 0x53A, symBinAddr: 0x20D03, symSize: 0x18 }
+  - { offset: 0xB5755, size: 0x8, addend: 0x0, symName: '-[BDRichVideoLandingViewController shouldAutorotate]', symObjAddr: 0x552, symBinAddr: 0x20D1B, symSize: 0x1B }
+  - { offset: 0xB5796, size: 0x8, addend: 0x0, symName: '-[BDRichVideoLandingViewController supportedInterfaceOrientations]', symObjAddr: 0x56D, symBinAddr: 0x20D36, symSize: 0x1E }
+  - { offset: 0xB57D7, size: 0x8, addend: 0x0, symName: '-[BDRichVideoLandingViewController .cxx_destruct]', symObjAddr: 0x58B, symBinAddr: 0x20D54, symSize: 0x13 }
+  - { offset: 0xB5897, size: 0x8, addend: 0x0, symName: '-[InternalAdSetting init]', symObjAddr: 0x0, symBinAddr: 0x20D67, symSize: 0x2F }
+  - { offset: 0xB58B1, size: 0x8, addend: 0x0, symName: _instance, symObjAddr: 0x8BC0, symBinAddr: 0x78E70, symSize: 0x0 }
+  - { offset: 0xB59CE, size: 0x8, addend: 0x0, symName: '-[InternalAdSetting init]', symObjAddr: 0x0, symBinAddr: 0x20D67, symSize: 0x2F }
+  - { offset: 0xB5A05, size: 0x8, addend: 0x0, symName: '+[InternalAdSetting singletonInstance]', symObjAddr: 0x2F, symBinAddr: 0x20D96, symSize: 0x50 }
+  - { offset: 0xB5A50, size: 0x8, addend: 0x0, symName: '-[InternalAdSetting originScode]', symObjAddr: 0x7F, symBinAddr: 0x20DE6, symSize: 0x14 }
+  - { offset: 0xB5A87, size: 0x8, addend: 0x0, symName: '-[InternalAdSetting setOriginScode:]', symObjAddr: 0x93, symBinAddr: 0x20DFA, symSize: 0xF }
+  - { offset: 0xB5AC6, size: 0x8, addend: 0x0, symName: '-[InternalAdSetting customScode]', symObjAddr: 0xA2, symBinAddr: 0x20E09, symSize: 0x14 }
+  - { offset: 0xB5AFD, size: 0x8, addend: 0x0, symName: '-[InternalAdSetting setCustomScode:]', symObjAddr: 0xB6, symBinAddr: 0x20E1D, symSize: 0xF }
+  - { offset: 0xB5B3C, size: 0x8, addend: 0x0, symName: '-[InternalAdSetting customXconfAddr]', symObjAddr: 0xC5, symBinAddr: 0x20E2C, symSize: 0x14 }
+  - { offset: 0xB5B73, size: 0x8, addend: 0x0, symName: '-[InternalAdSetting setCustomXconfAddr:]', symObjAddr: 0xD9, symBinAddr: 0x20E40, symSize: 0xF }
+  - { offset: 0xB5BB2, size: 0x8, addend: 0x0, symName: '-[InternalAdSetting customXconfPort]', symObjAddr: 0xE8, symBinAddr: 0x20E4F, symSize: 0x14 }
+  - { offset: 0xB5BE9, size: 0x8, addend: 0x0, symName: '-[InternalAdSetting setCustomXconfPort:]', symObjAddr: 0xFC, symBinAddr: 0x20E63, symSize: 0xF }
+  - { offset: 0xB5C28, size: 0x8, addend: 0x0, symName: '-[InternalAdSetting customImpressAddr]', symObjAddr: 0x10B, symBinAddr: 0x20E72, symSize: 0x14 }
+  - { offset: 0xB5C5F, size: 0x8, addend: 0x0, symName: '-[InternalAdSetting setCustomImpressAddr:]', symObjAddr: 0x11F, symBinAddr: 0x20E86, symSize: 0xF }
+  - { offset: 0xB5C9E, size: 0x8, addend: 0x0, symName: '-[InternalAdSetting customImpressPort]', symObjAddr: 0x12E, symBinAddr: 0x20E95, symSize: 0x14 }
+  - { offset: 0xB5CD5, size: 0x8, addend: 0x0, symName: '-[InternalAdSetting setCustomImpressPort:]', symObjAddr: 0x142, symBinAddr: 0x20EA9, symSize: 0xF }
+  - { offset: 0xB5D14, size: 0x8, addend: 0x0, symName: '-[InternalAdSetting customClickAddr]', symObjAddr: 0x151, symBinAddr: 0x20EB8, symSize: 0x14 }
+  - { offset: 0xB5D4B, size: 0x8, addend: 0x0, symName: '-[InternalAdSetting setCustomClickAddr:]', symObjAddr: 0x165, symBinAddr: 0x20ECC, symSize: 0xF }
+  - { offset: 0xB5D8A, size: 0x8, addend: 0x0, symName: '-[InternalAdSetting customClickPort]', symObjAddr: 0x174, symBinAddr: 0x20EDB, symSize: 0x14 }
+  - { offset: 0xB5DC1, size: 0x8, addend: 0x0, symName: '-[InternalAdSetting setCustomClickPort:]', symObjAddr: 0x188, symBinAddr: 0x20EEF, symSize: 0xF }
+  - { offset: 0xB5E00, size: 0x8, addend: 0x0, symName: '-[InternalAdSetting .cxx_destruct]', symObjAddr: 0x197, symBinAddr: 0x20EFE, symSize: 0x6A }
+  - { offset: 0xB5E98, size: 0x8, addend: 0x0, symName: '-[BDAdController init]', symObjAddr: 0x0, symBinAddr: 0x20F68, symSize: 0x88 }
+  - { offset: 0xB6A29, size: 0x8, addend: 0x0, symName: '-[BDAdController init]', symObjAddr: 0x0, symBinAddr: 0x20F68, symSize: 0x88 }
+  - { offset: 0xB6AA5, size: 0x8, addend: 0x0, symName: '-[BDAdController dealloc]', symObjAddr: 0x88, symBinAddr: 0x20FF0, symSize: 0x44 }
+  - { offset: 0xB6AE6, size: 0x8, addend: 0x0, symName: '-[BDAdController start]', symObjAddr: 0xCC, symBinAddr: 0x21034, symSize: 0xA0 }
+  - { offset: 0xB6B7D, size: 0x8, addend: 0x0, symName: '-[BDAdController stop]', symObjAddr: 0x16C, symBinAddr: 0x210D4, symSize: 0x94 }
+  - { offset: 0xB6BFC, size: 0x8, addend: 0x0, symName: '-[BDAdController restart]', symObjAddr: 0x200, symBinAddr: 0x21168, symSize: 0x68 }
+  - { offset: 0xB6C61, size: 0x8, addend: 0x0, symName: '-[BDAdController notifyNeedClose:]', symObjAddr: 0x268, symBinAddr: 0x211D0, symSize: 0x4D }
+  - { offset: 0xB6CCA, size: 0x8, addend: 0x0, symName: '-[BDAdController notifyAdClick:clickLevel:]', symObjAddr: 0x2B5, symBinAddr: 0x2121D, symSize: 0x97 }
+  - { offset: 0xB6D67, size: 0x8, addend: 0x0, symName: '-[BDAdController checkVisibilityForContentView:]', symObjAddr: 0x34C, symBinAddr: 0x212B4, symSize: 0xA1 }
+  - { offset: 0xB6E10, size: 0x8, addend: 0x0, symName: '-[BDAdController notifyAdError:adItem:]', symObjAddr: 0x3ED, symBinAddr: 0x21355, symSize: 0x17B }
+  - { offset: 0xB6F0F, size: 0x8, addend: 0x0, symName: '-[BDAdController notifyMultiAdError:adItem:]', symObjAddr: 0x568, symBinAddr: 0x214D0, symSize: 0x17B }
+  - { offset: 0xB700E, size: 0x8, addend: 0x0, symName: '-[BDAdController notifyContentLoadResult:adItem:]', symObjAddr: 0x6E3, symBinAddr: 0x2164B, symSize: 0xAD }
+  - { offset: 0xB70C6, size: 0x8, addend: 0x0, symName: '-[BDAdController sendClickAdInfo:clickAction:withLevel:withParam:]', symObjAddr: 0x790, symBinAddr: 0x216F8, symSize: 0x23 }
+  - { offset: 0xB714A, size: 0x8, addend: 0x0, symName: '-[BDAdController sendClickAdInfo:clickAction:withLevel:withParam:extraParam:]', symObjAddr: 0x7B3, symBinAddr: 0x2171B, symSize: 0x12B }
+  - { offset: 0xB72BD, size: 0x8, addend: 0x0, symName: '-[BDAdController sendImpressInformWithType:contentView:]', symObjAddr: 0x8DE, symBinAddr: 0x21846, symSize: 0xE1 }
+  - { offset: 0xB73AA, size: 0x8, addend: 0x0, symName: '-[BDAdController sendImpressInformWithAdItem:]', symObjAddr: 0x9BF, symBinAddr: 0x21927, symSize: 0xAA }
+  - { offset: 0xB7462, size: 0x8, addend: 0x0, symName: '-[BDAdController checkFirstRun]', symObjAddr: 0xA69, symBinAddr: 0x219D1, symSize: 0x11C }
+  - { offset: 0xB7522, size: 0x8, addend: 0x0, symName: '-[BDAdController readServerConfig]', symObjAddr: 0xB85, symBinAddr: 0x21AED, symSize: 0xEF }
+  - { offset: 0xB75D2, size: 0x8, addend: 0x0, symName: '-[BDAdController serverConfigReady:]', symObjAddr: 0xC74, symBinAddr: 0x21BDC, symSize: 0xA9 }
+  - { offset: 0xB766D, size: 0x8, addend: 0x0, symName: '-[BDAdController startRequestAdInfo]', symObjAddr: 0xD1D, symBinAddr: 0x21C85, symSize: 0x143 }
+  - { offset: 0xB7736, size: 0x8, addend: 0x0, symName: '-[BDAdController canRequestBannerAd]', symObjAddr: 0xE60, symBinAddr: 0x21DC8, symSize: 0x126 }
+  - { offset: 0xB7835, size: 0x8, addend: 0x0, symName: '-[BDAdController loadAdRequest]', symObjAddr: 0xF86, symBinAddr: 0x21EEE, symSize: 0x26A }
+  - { offset: 0xB79DF, size: 0x8, addend: 0x0, symName: '-[BDAdController startReloadTimerCommand]', symObjAddr: 0x11F0, symBinAddr: 0x22158, symSize: 0x127 }
+  - { offset: 0xB7ADD, size: 0x8, addend: 0x0, symName: '-[BDAdController executeCommand:tag:clearSameTag:]', symObjAddr: 0x1317, symBinAddr: 0x2227F, symSize: 0x200 }
+  - { offset: 0xB7C0E, size: 0x8, addend: 0x0, symName: '-[BDAdController clearAllCommands]', symObjAddr: 0x1517, symBinAddr: 0x2247F, symSize: 0x161 }
+  - { offset: 0xB7CB8, size: 0x8, addend: 0x0, symName: '-[BDAdController showDefaultAd]', symObjAddr: 0x1678, symBinAddr: 0x225E0, symSize: 0xF3 }
+  - { offset: 0xB7D72, size: 0x8, addend: 0x0, symName: '-[BDAdController onCompletedBDCommand:]', symObjAddr: 0x176B, symBinAddr: 0x226D3, symSize: 0x9B }
+  - { offset: 0xB7E20, size: 0x8, addend: 0x0, symName: '-[BDAdController onAdRequestCompleteWithAdItem:multiAdItem:error:]', symObjAddr: 0x1806, symBinAddr: 0x2276E, symSize: 0x666 }
+  - { offset: 0xB8256, size: 0x8, addend: 0x0, symName: '-[BDAdController delegate]', symObjAddr: 0x1E6C, symBinAddr: 0x22DD4, symSize: 0x16 }
+  - { offset: 0xB828D, size: 0x8, addend: 0x0, symName: '-[BDAdController setDelegate:]', symObjAddr: 0x1E82, symBinAddr: 0x22DEA, symSize: 0x11 }
+  - { offset: 0xB82CE, size: 0x8, addend: 0x0, symName: '-[BDAdController adSetting]', symObjAddr: 0x1E93, symBinAddr: 0x22DFB, symSize: 0xA }
+  - { offset: 0xB8303, size: 0x8, addend: 0x0, symName: '-[BDAdController setAdSetting:]', symObjAddr: 0x1E9D, symBinAddr: 0x22E05, symSize: 0x28 }
+  - { offset: 0xB835C, size: 0x8, addend: 0x0, symName: '-[BDAdController adItem]', symObjAddr: 0x1EC5, symBinAddr: 0x22E2D, symSize: 0xA }
+  - { offset: 0xB8391, size: 0x8, addend: 0x0, symName: '-[BDAdController setAdItem:]', symObjAddr: 0x1ECF, symBinAddr: 0x22E37, symSize: 0x28 }
+  - { offset: 0xB83EA, size: 0x8, addend: 0x0, symName: '-[BDAdController multiAdItem]', symObjAddr: 0x1EF7, symBinAddr: 0x22E5F, symSize: 0xA }
+  - { offset: 0xB841F, size: 0x8, addend: 0x0, symName: '-[BDAdController setMultiAdItem:]', symObjAddr: 0x1F01, symBinAddr: 0x22E69, symSize: 0x28 }
+  - { offset: 0xB8478, size: 0x8, addend: 0x0, symName: '-[BDAdController adView]', symObjAddr: 0x1F29, symBinAddr: 0x22E91, symSize: 0x16 }
+  - { offset: 0xB84AF, size: 0x8, addend: 0x0, symName: '-[BDAdController setAdView:]', symObjAddr: 0x1F3F, symBinAddr: 0x22EA7, symSize: 0x11 }
+  - { offset: 0xB84F0, size: 0x8, addend: 0x0, symName: '-[BDAdController requestState]', symObjAddr: 0x1F50, symBinAddr: 0x22EB8, symSize: 0xA }
+  - { offset: 0xB8525, size: 0x8, addend: 0x0, symName: '-[BDAdController setRequestState:]', symObjAddr: 0x1F5A, symBinAddr: 0x22EC2, symSize: 0x28 }
+  - { offset: 0xB857E, size: 0x8, addend: 0x0, symName: '-[BDAdController adForm]', symObjAddr: 0x1F82, symBinAddr: 0x22EEA, symSize: 0x9 }
+  - { offset: 0xB85B3, size: 0x8, addend: 0x0, symName: '-[BDAdController setAdForm:]', symObjAddr: 0x1F8B, symBinAddr: 0x22EF3, symSize: 0x9 }
+  - { offset: 0xB85F0, size: 0x8, addend: 0x0, symName: '-[BDAdController errorMsg]', symObjAddr: 0x1F94, symBinAddr: 0x22EFC, symSize: 0xA }
+  - { offset: 0xB8625, size: 0x8, addend: 0x0, symName: '-[BDAdController setErrorMsg:]', symObjAddr: 0x1F9E, symBinAddr: 0x22F06, symSize: 0x28 }
+  - { offset: 0xB867E, size: 0x8, addend: 0x0, symName: '-[BDAdController adListSize]', symObjAddr: 0x1FC6, symBinAddr: 0x22F2E, symSize: 0x9 }
+  - { offset: 0xB86B3, size: 0x8, addend: 0x0, symName: '-[BDAdController setAdListSize:]', symObjAddr: 0x1FCF, symBinAddr: 0x22F37, symSize: 0x9 }
+  - { offset: 0xB86F0, size: 0x8, addend: 0x0, symName: '-[BDAdController nativeAdComponentType]', symObjAddr: 0x1FD8, symBinAddr: 0x22F40, symSize: 0x9 }
+  - { offset: 0xB8725, size: 0x8, addend: 0x0, symName: '-[BDAdController setNativeAdComponentType:]', symObjAddr: 0x1FE1, symBinAddr: 0x22F49, symSize: 0x9 }
+  - { offset: 0xB8762, size: 0x8, addend: 0x0, symName: '-[BDAdController adRatio]', symObjAddr: 0x1FEA, symBinAddr: 0x22F52, symSize: 0xA }
+  - { offset: 0xB8797, size: 0x8, addend: 0x0, symName: '-[BDAdController setAdRatio:]', symObjAddr: 0x1FF4, symBinAddr: 0x22F5C, symSize: 0x28 }
+  - { offset: 0xB87F0, size: 0x8, addend: 0x0, symName: '-[BDAdController parentViewController]', symObjAddr: 0x201C, symBinAddr: 0x22F84, symSize: 0x16 }
+  - { offset: 0xB8827, size: 0x8, addend: 0x0, symName: '-[BDAdController setParentViewController:]', symObjAddr: 0x2032, symBinAddr: 0x22F9A, symSize: 0x11 }
+  - { offset: 0xB8868, size: 0x8, addend: 0x0, symName: '-[BDAdController isShowStoreProductView]', symObjAddr: 0x2043, symBinAddr: 0x22FAB, symSize: 0x9 }
+  - { offset: 0xB889D, size: 0x8, addend: 0x0, symName: '-[BDAdController setIsShowStoreProductView:]', symObjAddr: 0x204C, symBinAddr: 0x22FB4, symSize: 0x9 }
+  - { offset: 0xB88DA, size: 0x8, addend: 0x0, symName: '-[BDAdController .cxx_destruct]', symObjAddr: 0x2055, symBinAddr: 0x22FBD, symSize: 0x93 }
+  - { offset: 0xB8EC0, size: 0x8, addend: 0x0, symName: _sdk_btn_r_png, symObjAddr: 0x0, symBinAddr: 0x6F8E0, symSize: 0x0 }
+  - { offset: 0xB8EF1, size: 0x8, addend: 0x0, symName: _sdk_btn_r_png_len, symObjAddr: 0x684, symBinAddr: 0x6FF64, symSize: 0x0 }
+  - { offset: 0xB8F3E, size: 0x8, addend: 0x0, symName: _cauly_watermark_png, symObjAddr: 0x0, symBinAddr: 0x6FF70, symSize: 0x0 }
+  - { offset: 0xB8F70, size: 0x8, addend: 0x0, symName: _cauly_watermark_png_len, symObjAddr: 0x1334, symBinAddr: 0x712A4, symSize: 0x0 }
+  - { offset: 0xB8FAF, size: 0x8, addend: 0x0, symName: '-[BDAdContainer dealloc]', symObjAddr: 0x0, symBinAddr: 0x23050, symSize: 0x54 }
+  - { offset: 0xB9C20, size: 0x8, addend: 0x0, symName: '-[BDAdContainer dealloc]', symObjAddr: 0x0, symBinAddr: 0x23050, symSize: 0x54 }
+  - { offset: 0xB9C8C, size: 0x8, addend: 0x0, symName: '-[BDAdContainer initWithController:]', symObjAddr: 0x54, symBinAddr: 0x230A4, symSize: 0x96 }
+  - { offset: 0xB9D11, size: 0x8, addend: 0x0, symName: '-[BDAdContainer adItem]', symObjAddr: 0xEA, symBinAddr: 0x2313A, symSize: 0x63 }
+  - { offset: 0xB9D62, size: 0x8, addend: 0x0, symName: '-[BDAdContainer clearContentView]', symObjAddr: 0x14D, symBinAddr: 0x2319D, symSize: 0xA0 }
+  - { offset: 0xB9DDF, size: 0x8, addend: 0x0, symName: '-[BDAdContainer pushAdItem:]', symObjAddr: 0x1ED, symBinAddr: 0x2323D, symSize: 0x1E2 }
+  - { offset: 0xB9F14, size: 0x8, addend: 0x0, symName: '-[BDAdContainer touchesBegan:withEvent:]', symObjAddr: 0x3CF, symBinAddr: 0x2341F, symSize: 0x2A1 }
+  - { offset: 0xBA0EB, size: 0x8, addend: 0x0, symName: '-[BDAdContainer touchesEnded:withEvent:]', symObjAddr: 0x670, symBinAddr: 0x236C0, symSize: 0x2AC }
+  - { offset: 0xBA2AA, size: 0x8, addend: 0x0, symName: '-[BDAdContainer closeAd:]', symObjAddr: 0x91C, symBinAddr: 0x2396C, symSize: 0x3D }
+  - { offset: 0xBA307, size: 0x8, addend: 0x0, symName: '-[BDAdContainer setParentViewController:]', symObjAddr: 0x959, symBinAddr: 0x239A9, symSize: 0x51 }
+  - { offset: 0xBA37C, size: 0x8, addend: 0x0, symName: '-[BDAdContainer createOptoutButton]', symObjAddr: 0x9AA, symBinAddr: 0x239FA, symSize: 0x3A4 }
+  - { offset: 0xBA561, size: 0x8, addend: 0x0, symName: '-[BDAdContainer didContentLoaded]', symObjAddr: 0xD4E, symBinAddr: 0x23D9E, symSize: 0x61B }
+  - { offset: 0xBA8EE, size: 0x8, addend: 0x0, symName: '-[BDAdContainer didFailToLoad]', symObjAddr: 0x1369, symBinAddr: 0x243B9, symSize: 0xC1 }
+  - { offset: 0xBA978, size: 0x8, addend: 0x0, symName: '-[BDAdContainer needClosePopup:]', symObjAddr: 0x142A, symBinAddr: 0x2447A, symSize: 0x35 }
+  - { offset: 0xBA9D7, size: 0x8, addend: 0x0, symName: '-[BDAdContainer hiddenCloseBtn:]', symObjAddr: 0x145F, symBinAddr: 0x244AF, symSize: 0x18 }
+  - { offset: 0xBAA22, size: 0x8, addend: 0x0, symName: '-[BDAdContainer handleOptOutTab:]', symObjAddr: 0x1477, symBinAddr: 0x244C7, symSize: 0xF5 }
+  - { offset: 0xBAAA1, size: 0x8, addend: 0x0, symName: '___33-[BDAdContainer handleOptOutTab:]_block_invoke', symObjAddr: 0x156C, symBinAddr: 0x245BC, symSize: 0x1BD }
+  - { offset: 0xBAB64, size: 0x8, addend: 0x0, symName: '___33-[BDAdContainer handleOptOutTab:]_block_invoke.193', symObjAddr: 0x1747, symBinAddr: 0x24779, symSize: 0x26 }
+  - { offset: 0xBABBF, size: 0x8, addend: 0x0, symName: '-[BDAdContainer pauseContent]', symObjAddr: 0x176D, symBinAddr: 0x2479F, symSize: 0x3A }
+  - { offset: 0xBAC0D, size: 0x8, addend: 0x0, symName: '-[BDAdContainer resumeContent]', symObjAddr: 0x17A7, symBinAddr: 0x247D9, symSize: 0xB3 }
+  - { offset: 0xBAC97, size: 0x8, addend: 0x0, symName: '-[BDAdContainer adAnimationTransition]', symObjAddr: 0x185A, symBinAddr: 0x2488C, symSize: 0x84 }
+  - { offset: 0xBAD01, size: 0x8, addend: 0x0, symName: '-[BDAdContainer contentView]', symObjAddr: 0x18DE, symBinAddr: 0x24910, symSize: 0x11 }
+  - { offset: 0xBAD36, size: 0x8, addend: 0x0, symName: '-[BDAdContainer parentViewController]', symObjAddr: 0x18EF, symBinAddr: 0x24921, symSize: 0x19 }
+  - { offset: 0xBAD6D, size: 0x8, addend: 0x0, symName: '-[BDAdContainer .cxx_destruct]', symObjAddr: 0x1908, symBinAddr: 0x2493A, symSize: 0x62 }
+  - { offset: 0xBB1D5, size: 0x8, addend: 0x0, symName: _sdk_btn_f_png, symObjAddr: 0x0, symBinAddr: 0x712B0, symSize: 0x0 }
+  - { offset: 0xBB206, size: 0x8, addend: 0x0, symName: _sdk_btn_f_png_len, symObjAddr: 0x9B0, symBinAddr: 0x71C60, symSize: 0x0 }
+  - { offset: 0xBB245, size: 0x8, addend: 0x0, symName: '-[BDFullSiteLandingViewController viewDidLoad]', symObjAddr: 0x0, symBinAddr: 0x2499C, symSize: 0x35B }
+  - { offset: 0xBB299, size: 0x8, addend: 0x0, symName: _CLOSE_BTN_HEIGHT, symObjAddr: 0xC60, symBinAddr: 0x3B750, symSize: 0x0 }
+  - { offset: 0xBB2C9, size: 0x8, addend: 0x0, symName: _CLOSE_BTN_HEIGHT, symObjAddr: 0xC60, symBinAddr: 0x3B750, symSize: 0x0 }
+  - { offset: 0xBBF12, size: 0x8, addend: 0x0, symName: '-[BDFullSiteLandingViewController viewDidLoad]', symObjAddr: 0x0, symBinAddr: 0x2499C, symSize: 0x35B }
+  - { offset: 0xBC126, size: 0x8, addend: 0x0, symName: '-[BDFullSiteLandingViewController freeResources]', symObjAddr: 0x35B, symBinAddr: 0x24CF7, symSize: 0x4B }
+  - { offset: 0xBC17F, size: 0x8, addend: 0x0, symName: '-[BDFullSiteLandingViewController dealloc]', symObjAddr: 0x3A6, symBinAddr: 0x24D42, symSize: 0x72 }
+  - { offset: 0xBC1D8, size: 0x8, addend: 0x0, symName: '-[BDFullSiteLandingViewController didLoadFinished]', symObjAddr: 0x418, symBinAddr: 0x24DB4, symSize: 0x18 }
+  - { offset: 0xBC215, size: 0x8, addend: 0x0, symName: '-[BDFullSiteLandingViewController didLoadFailed]', symObjAddr: 0x430, symBinAddr: 0x24DCC, symSize: 0x18 }
+  - { offset: 0xBC252, size: 0x8, addend: 0x0, symName: '-[BDFullSiteLandingViewController didClickedLink:]', symObjAddr: 0x448, symBinAddr: 0x24DE4, symSize: 0x18 }
+  - { offset: 0xBC29B, size: 0x8, addend: 0x0, symName: '-[BDFullSiteLandingViewController didClosed]', symObjAddr: 0x460, symBinAddr: 0x24DFC, symSize: 0x18 }
+  - { offset: 0xBC2D8, size: 0x8, addend: 0x0, symName: '-[BDFullSiteLandingViewController didUrlChanged:]', symObjAddr: 0x478, symBinAddr: 0x24E14, symSize: 0x124 }
+  - { offset: 0xBC3AD, size: 0x8, addend: 0x0, symName: '-[BDFullSiteLandingViewController .cxx_destruct]', symObjAddr: 0x59C, symBinAddr: 0x24F38, symSize: 0x13 }
+  - { offset: 0xBC45F, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig init]', symObjAddr: 0x0, symBinAddr: 0x24F4B, symSize: 0x9F }
+  - { offset: 0xBC479, size: 0x8, addend: 0x0, symName: __instance, symObjAddr: 0x16DF8, symBinAddr: 0x78E78, symSize: 0x0 }
+  - { offset: 0xBC6A8, size: 0x8, addend: 0x0, symName: __command, symObjAddr: 0x16E10, symBinAddr: 0x78E90, symSize: 0x0 }
+  - { offset: 0xBC7B7, size: 0x8, addend: 0x0, symName: __isStarted, symObjAddr: 0x16E02, symBinAddr: 0x78E82, symSize: 0x0 }
+  - { offset: 0xBC7D4, size: 0x8, addend: 0x0, symName: __appCode, symObjAddr: 0x16E08, symBinAddr: 0x78E88, symSize: 0x0 }
+  - { offset: 0xBC7EA, size: 0x8, addend: 0x0, symName: __hasServerConfig, symObjAddr: 0x16E00, symBinAddr: 0x78E80, symSize: 0x0 }
+  - { offset: 0xBC800, size: 0x8, addend: 0x0, symName: __serverConfigChecked, symObjAddr: 0x16E01, symBinAddr: 0x78E81, symSize: 0x0 }
+  - { offset: 0xBC839, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig init]', symObjAddr: 0x0, symBinAddr: 0x24F4B, symSize: 0x9F }
+  - { offset: 0xBC8B5, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig initWithCoder:]', symObjAddr: 0x9F, symBinAddr: 0x24FEA, symSize: 0x1E2 }
+  - { offset: 0xBC9EE, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig encodeWithCoder:]', symObjAddr: 0x281, symBinAddr: 0x251CC, symSize: 0x18F }
+  - { offset: 0xBCB0B, size: 0x8, addend: 0x0, symName: '+[BDAdServerConfig sharedInstance]', symObjAddr: 0x410, symBinAddr: 0x2535B, symSize: 0xDD }
+  - { offset: 0xBCB94, size: 0x8, addend: 0x0, symName: '+[BDAdServerConfig hasServerConfig]', symObjAddr: 0x4ED, symBinAddr: 0x25438, symSize: 0x9D }
+  - { offset: 0xBCC24, size: 0x8, addend: 0x0, symName: '+[BDAdServerConfig updateServerConfig:]', symObjAddr: 0x58A, symBinAddr: 0x254D5, symSize: 0xAF }
+  - { offset: 0xBCCC5, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig startWithAppCode:]', symObjAddr: 0x639, symBinAddr: 0x25584, symSize: 0xD4 }
+  - { offset: 0xBCDA6, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig reloadServerConfig]', symObjAddr: 0x70D, symBinAddr: 0x25658, symSize: 0x7B }
+  - { offset: 0xBCE0D, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig startRequest]', symObjAddr: 0x788, symBinAddr: 0x256D3, symSize: 0x94 }
+  - { offset: 0xBCE8A, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig cancelRequest]', symObjAddr: 0x81C, symBinAddr: 0x25767, symSize: 0x37 }
+  - { offset: 0xBCED3, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig notifyEvents]', symObjAddr: 0x853, symBinAddr: 0x2579E, symSize: 0xAA }
+  - { offset: 0xBCF5A, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig onCompletedBDCommand]', symObjAddr: 0x8FD, symBinAddr: 0x25848, symSize: 0x44 }
+  - { offset: 0xBCFB4, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig ssl]', symObjAddr: 0x941, symBinAddr: 0x2588C, symSize: 0x9 }
+  - { offset: 0xBCFE9, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig setSsl:]', symObjAddr: 0x94A, symBinAddr: 0x25895, symSize: 0x9 }
+  - { offset: 0xBD026, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig report_ack]', symObjAddr: 0x953, symBinAddr: 0x2589E, symSize: 0x9 }
+  - { offset: 0xBD05B, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig setReport_ack:]', symObjAddr: 0x95C, symBinAddr: 0x258A7, symSize: 0x9 }
+  - { offset: 0xBD098, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig gender]', symObjAddr: 0x965, symBinAddr: 0x258B0, symSize: 0x9 }
+  - { offset: 0xBD0CD, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig setGender:]', symObjAddr: 0x96E, symBinAddr: 0x258B9, symSize: 0x9 }
+  - { offset: 0xBD10A, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig age]', symObjAddr: 0x977, symBinAddr: 0x258C2, symSize: 0x9 }
+  - { offset: 0xBD13F, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig setAge:]', symObjAddr: 0x980, symBinAddr: 0x258CB, symSize: 0x9 }
+  - { offset: 0xBD17C, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig model]', symObjAddr: 0x989, symBinAddr: 0x258D4, symSize: 0x9 }
+  - { offset: 0xBD1B1, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig setModel:]', symObjAddr: 0x992, symBinAddr: 0x258DD, symSize: 0x9 }
+  - { offset: 0xBD1EE, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig lang]', symObjAddr: 0x99B, symBinAddr: 0x258E6, symSize: 0x9 }
+  - { offset: 0xBD223, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig setLang:]', symObjAddr: 0x9A4, symBinAddr: 0x258EF, symSize: 0x9 }
+  - { offset: 0xBD260, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig reuse_seq]', symObjAddr: 0x9AD, symBinAddr: 0x258F8, symSize: 0x9 }
+  - { offset: 0xBD295, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig setReuse_seq:]', symObjAddr: 0x9B6, symBinAddr: 0x25901, symSize: 0x9 }
+  - { offset: 0xBD2D2, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig request_seq]', symObjAddr: 0x9BF, symBinAddr: 0x2590A, symSize: 0x9 }
+  - { offset: 0xBD307, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig setRequest_seq:]', symObjAddr: 0x9C8, symBinAddr: 0x25913, symSize: 0x9 }
+  - { offset: 0xBD344, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig gps_info]', symObjAddr: 0x9D1, symBinAddr: 0x2591C, symSize: 0x9 }
+  - { offset: 0xBD379, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig setGps_info:]', symObjAddr: 0x9DA, symBinAddr: 0x25925, symSize: 0x9 }
+  - { offset: 0xBD3B6, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig network]', symObjAddr: 0x9E3, symBinAddr: 0x2592E, symSize: 0x9 }
+  - { offset: 0xBD3EB, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig setNetwork:]', symObjAddr: 0x9EC, symBinAddr: 0x25937, symSize: 0x9 }
+  - { offset: 0xBD428, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig alt_cpc_ad]', symObjAddr: 0x9F5, symBinAddr: 0x25940, symSize: 0xA }
+  - { offset: 0xBD45D, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig setAlt_cpc_ad:]', symObjAddr: 0x9FF, symBinAddr: 0x2594A, symSize: 0x28 }
+  - { offset: 0xBD4B6, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig alt_cpm_ad]', symObjAddr: 0xA27, symBinAddr: 0x25972, symSize: 0xA }
+  - { offset: 0xBD4EB, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig setAlt_cpm_ad:]', symObjAddr: 0xA31, symBinAddr: 0x2597C, symSize: 0x28 }
+  - { offset: 0xBD544, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig unique_app_id]', symObjAddr: 0xA59, symBinAddr: 0x259A4, symSize: 0x9 }
+  - { offset: 0xBD579, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig setUnique_app_id:]', symObjAddr: 0xA62, symBinAddr: 0x259AD, symSize: 0x9 }
+  - { offset: 0xBD5B6, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig inform_check]', symObjAddr: 0xA6B, symBinAddr: 0x259B6, symSize: 0x9 }
+  - { offset: 0xBD5EB, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig setInform_check:]', symObjAddr: 0xA74, symBinAddr: 0x259BF, symSize: 0x9 }
+  - { offset: 0xBD628, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig refresh_period]', symObjAddr: 0xA7D, symBinAddr: 0x259C8, symSize: 0x9 }
+  - { offset: 0xBD65D, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig setRefresh_period:]', symObjAddr: 0xA86, symBinAddr: 0x259D1, symSize: 0x9 }
+  - { offset: 0xBD69A, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig banner_check_except_width]', symObjAddr: 0xA8F, symBinAddr: 0x259DA, symSize: 0x9 }
+  - { offset: 0xBD6CF, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig setBanner_check_except_width:]', symObjAddr: 0xA98, symBinAddr: 0x259E3, symSize: 0x9 }
+  - { offset: 0xBD70C, size: 0x8, addend: 0x0, symName: '-[BDAdServerConfig .cxx_destruct]', symObjAddr: 0xAA1, symBinAddr: 0x259EC, symSize: 0x28 }
+  - { offset: 0xBD7B4, size: 0x8, addend: 0x0, symName: _btn_twitter_png, symObjAddr: 0x0, symBinAddr: 0x71CD0, symSize: 0x0 }
+  - { offset: 0xBD7E6, size: 0x8, addend: 0x0, symName: _btn_twitter_png_len, symObjAddr: 0x15A4, symBinAddr: 0x73274, symSize: 0x0 }
+  - { offset: 0xBD825, size: 0x8, addend: 0x0, symName: '+[BDSKAdNetwork sharedInstance]', symObjAddr: 0x0, symBinAddr: 0x25A14, symSize: 0x50 }
+  - { offset: 0xBD83F, size: 0x8, addend: 0x0, symName: __instance, symObjAddr: 0x11308, symBinAddr: 0x78E98, symSize: 0x0 }
+  - { offset: 0xBD92A, size: 0x8, addend: 0x0, symName: '+[BDSKAdNetwork sharedInstance]', symObjAddr: 0x0, symBinAddr: 0x25A14, symSize: 0x50 }
+  - { offset: 0xBD975, size: 0x8, addend: 0x0, symName: '-[BDSKAdNetwork init]', symObjAddr: 0x50, symBinAddr: 0x25A64, symSize: 0x4C }
+  - { offset: 0xBD9B8, size: 0x8, addend: 0x0, symName: '-[BDSKAdNetwork reload]', symObjAddr: 0x9C, symBinAddr: 0x25AB0, symSize: 0x29 }
+  - { offset: 0xBD9F7, size: 0x8, addend: 0x0, symName: '-[BDSKAdNetwork start:]', symObjAddr: 0xC5, symBinAddr: 0x25AD9, symSize: 0x213 }
+  - { offset: 0xBDB7E, size: 0x8, addend: 0x0, symName: '___23-[BDSKAdNetwork start:]_block_invoke', symObjAddr: 0x2D8, symBinAddr: 0x25CEC, symSize: 0x64 }
+  - { offset: 0xBDC0D, size: 0x8, addend: 0x0, symName: '-[BDSKAdNetwork end]', symObjAddr: 0x33C, symBinAddr: 0x25D50, symSize: 0x8A }
+  - { offset: 0xBDC64, size: 0x8, addend: 0x0, symName: '___20-[BDSKAdNetwork end]_block_invoke', symObjAddr: 0x3C6, symBinAddr: 0x25DDA, symSize: 0xCF }
+  - { offset: 0xBDD2F, size: 0x8, addend: 0x0, symName: '-[BDSKAdNetwork show:dictionary:]', symObjAddr: 0x4B3, symBinAddr: 0x25EA9, symSize: 0x136 }
+  - { offset: 0xBDE38, size: 0x8, addend: 0x0, symName: '___33-[BDSKAdNetwork show:dictionary:]_block_invoke', symObjAddr: 0x5E9, symBinAddr: 0x25FDF, symSize: 0x64 }
+  - { offset: 0xBDEAF, size: 0x8, addend: 0x0, symName: '___33-[BDSKAdNetwork show:dictionary:]_block_invoke_2', symObjAddr: 0x64D, symBinAddr: 0x26043, symSize: 0x5A }
+  - { offset: 0xBDF12, size: 0x8, addend: 0x0, symName: '-[BDSKAdNetwork productViewControllerDidFinish:]', symObjAddr: 0x6A7, symBinAddr: 0x2609D, symSize: 0x85 }
+  - { offset: 0xBDF87, size: 0x8, addend: 0x0, symName: '___48-[BDSKAdNetwork productViewControllerDidFinish:]_block_invoke', symObjAddr: 0x72C, symBinAddr: 0x26122, symSize: 0x5A }
+  - { offset: 0xBDFEA, size: 0x8, addend: 0x0, symName: '-[BDSKAdNetwork skadImpression]', symObjAddr: 0x786, symBinAddr: 0x2617C, symSize: 0xA }
+  - { offset: 0xBE01F, size: 0x8, addend: 0x0, symName: '-[BDSKAdNetwork skstoreProductViewController]', symObjAddr: 0x790, symBinAddr: 0x26186, symSize: 0xA }
+  - { offset: 0xBE054, size: 0x8, addend: 0x0, symName: '-[BDSKAdNetwork delegate]', symObjAddr: 0x79A, symBinAddr: 0x26190, symSize: 0x16 }
+  - { offset: 0xBE08B, size: 0x8, addend: 0x0, symName: '-[BDSKAdNetwork setDelegate:]', symObjAddr: 0x7B0, symBinAddr: 0x261A6, symSize: 0x11 }
+  - { offset: 0xBE0CC, size: 0x8, addend: 0x0, symName: '-[BDSKAdNetwork .cxx_destruct]', symObjAddr: 0x7C1, symBinAddr: 0x261B7, symSize: 0x3C }
+  - { offset: 0xBE3E2, size: 0x8, addend: 0x0, symName: _sdk_btn_l_off_png, symObjAddr: 0x0, symBinAddr: 0x732E0, symSize: 0x0 }
+  - { offset: 0xBE413, size: 0x8, addend: 0x0, symName: _sdk_btn_l_off_png_len, symObjAddr: 0x590, symBinAddr: 0x73870, symSize: 0x0 }
+  - { offset: 0xBE452, size: 0x8, addend: 0x0, symName: '-[BDHttpCommand dealloc]', symObjAddr: 0x0, symBinAddr: 0x261F3, symSize: 0x44 }
+  - { offset: 0xBE627, size: 0x8, addend: 0x0, symName: '-[BDHttpCommand dealloc]', symObjAddr: 0x0, symBinAddr: 0x261F3, symSize: 0x44 }
+  - { offset: 0xBE687, size: 0x8, addend: 0x0, symName: '-[BDHttpCommand url]', symObjAddr: 0x44, symBinAddr: 0x26237, symSize: 0x8 }
+  - { offset: 0xBE6BA, size: 0x8, addend: 0x0, symName: '-[BDHttpCommand handleResultData]', symObjAddr: 0x4C, symBinAddr: 0x2623F, symSize: 0x6 }
+  - { offset: 0xBE6E9, size: 0x8, addend: 0x0, symName: '-[BDHttpCommand handleConnectionFailed]', symObjAddr: 0x52, symBinAddr: 0x26245, symSize: 0x6 }
+  - { offset: 0xBE718, size: 0x8, addend: 0x0, symName: '-[BDHttpCommand logResultData]', symObjAddr: 0x58, symBinAddr: 0x2624B, symSize: 0x11F }
+  - { offset: 0xBE806, size: 0x8, addend: 0x0, symName: '-[BDHttpCommand checkCancel]', symObjAddr: 0x177, symBinAddr: 0x2636A, symSize: 0x64 }
+  - { offset: 0xBE845, size: 0x8, addend: 0x0, symName: '-[BDHttpCommand execute]', symObjAddr: 0x1DB, symBinAddr: 0x263CE, symSize: 0x8C }
+  - { offset: 0xBE8AC, size: 0x8, addend: 0x0, symName: '-[BDHttpCommand cancel]', symObjAddr: 0x267, symBinAddr: 0x2645A, symSize: 0x54 }
+  - { offset: 0xBE8ED, size: 0x8, addend: 0x0, symName: '-[BDHttpCommand internalExecute]', symObjAddr: 0x2BB, symBinAddr: 0x264AE, symSize: 0x6F1 }
+  - { offset: 0xBEDCF, size: 0x8, addend: 0x0, symName: '-[BDHttpCommand validatesSSLCertificateChain]', symObjAddr: 0x9AC, symBinAddr: 0x26B9F, symSize: 0x10 }
+  - { offset: 0xBEE04, size: 0x8, addend: 0x0, symName: '-[BDHttpCommand setValidatesSSLCertificateChain:]', symObjAddr: 0x9BC, symBinAddr: 0x26BAF, symSize: 0x10 }
+  - { offset: 0xBEE41, size: 0x8, addend: 0x0, symName: '-[BDHttpCommand timeout]', symObjAddr: 0x9CC, symBinAddr: 0x26BBF, symSize: 0x12 }
+  - { offset: 0xBEE76, size: 0x8, addend: 0x0, symName: '-[BDHttpCommand setTimeout:]', symObjAddr: 0x9DE, symBinAddr: 0x26BD1, symSize: 0x12 }
+  - { offset: 0xBEEB3, size: 0x8, addend: 0x0, symName: '-[BDHttpCommand .cxx_destruct]', symObjAddr: 0x9F0, symBinAddr: 0x26BE3, symSize: 0x42 }
+  - { offset: 0xBEF62, size: 0x8, addend: 0x0, symName: '-[BDAdRequestService execute:adSetting:requestState:delegate:]', symObjAddr: 0x0, symBinAddr: 0x26C25, symSize: 0x76C }
+  - { offset: 0xBEF7C, size: 0x8, addend: 0x0, symName: _BDTimeOut, symObjAddr: 0xCD0, symBinAddr: 0x3B780, symSize: 0x0 }
+  - { offset: 0xBEF9E, size: 0x8, addend: 0x0, symName: _BDUrl, symObjAddr: 0x13F0, symBinAddr: 0x73878, symSize: 0x0 }
+  - { offset: 0xBEFB2, size: 0x8, addend: 0x0, symName: '-[BDAdRequestService stringForAdSize:adForm:]', symObjAddr: 0x788, symBinAddr: 0x273AD, symSize: 0x162 }
+  - { offset: 0xBEFDC, size: 0x8, addend: 0x0, symName: '_stringForAdSize:adForm:.BANNERAD_WIDTH', symObjAddr: 0xCE0, symBinAddr: 0x3B790, symSize: 0x0 }
+  - { offset: 0xBEFF2, size: 0x8, addend: 0x0, symName: '_stringForAdSize:adForm:.BANNERAD_HEIGHT', symObjAddr: 0xD00, symBinAddr: 0x3B7B0, symSize: 0x0 }
+  - { offset: 0xBF2E1, size: 0x8, addend: 0x0, symName: '-[BDAdRequestService execute:adSetting:requestState:delegate:]', symObjAddr: 0x0, symBinAddr: 0x26C25, symSize: 0x76C }
+  - { offset: 0xBF7C1, size: 0x8, addend: 0x0, symName: '-[BDAdRequestService stringForAdForm:]', symObjAddr: 0x76C, symBinAddr: 0x27391, symSize: 0x1C }
+  - { offset: 0xBF802, size: 0x8, addend: 0x0, symName: '-[BDAdRequestService responseByStatusCode:receivedData:error:]', symObjAddr: 0x8EA, symBinAddr: 0x2750F, symSize: 0x35D }
+  - { offset: 0xBFA35, size: 0x8, addend: 0x0, symName: '-[BDAdRequestService adListSize]', symObjAddr: 0xC47, symBinAddr: 0x2786C, symSize: 0xA }
+  - { offset: 0xBFA6A, size: 0x8, addend: 0x0, symName: '-[BDAdRequestService setAdListSize:]', symObjAddr: 0xC51, symBinAddr: 0x27876, symSize: 0xA }
+  - { offset: 0xBFAA7, size: 0x8, addend: 0x0, symName: '-[BDAdRequestService nativeAdComponentType]', symObjAddr: 0xC5B, symBinAddr: 0x27880, symSize: 0x9 }
+  - { offset: 0xBFADC, size: 0x8, addend: 0x0, symName: '-[BDAdRequestService setNativeAdComponentType:]', symObjAddr: 0xC64, symBinAddr: 0x27889, symSize: 0x9 }
+  - { offset: 0xBFB19, size: 0x8, addend: 0x0, symName: '-[BDAdRequestService adRatio]', symObjAddr: 0xC6D, symBinAddr: 0x27892, symSize: 0xA }
+  - { offset: 0xBFB4E, size: 0x8, addend: 0x0, symName: '-[BDAdRequestService setAdRatio:]', symObjAddr: 0xC77, symBinAddr: 0x2789C, symSize: 0x28 }
+  - { offset: 0xBFBA7, size: 0x8, addend: 0x0, symName: '-[BDAdRequestService .cxx_destruct]', symObjAddr: 0xC9F, symBinAddr: 0x278C4, symSize: 0x26 }
+  - { offset: 0xC0612, size: 0x8, addend: 0x0, symName: _control_custom_btn_png, symObjAddr: 0x0, symBinAddr: 0x73880, symSize: 0x0 }
+  - { offset: 0xC0644, size: 0x8, addend: 0x0, symName: _control_custom_btn_png_len, symObjAddr: 0xC6C, symBinAddr: 0x744EC, symSize: 0x0 }
+  - { offset: 0xC0691, size: 0x8, addend: 0x0, symName: _video_rewind_btn_png_len, symObjAddr: 0x0, symBinAddr: 0x744F0, symSize: 0x0 }
+  - { offset: 0xC06AE, size: 0x8, addend: 0x0, symName: _video_rewind_btn_png, symObjAddr: 0x10, symBinAddr: 0x74500, symSize: 0x0 }
+  - { offset: 0xC0701, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAdItem nativeAdJSONString]', symObjAddr: 0x0, symBinAddr: 0x278EA, symSize: 0x14 }
+  - { offset: 0xC076A, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAdItem nativeAdJSONString]', symObjAddr: 0x0, symBinAddr: 0x278EA, symSize: 0x14 }
+  - { offset: 0xC07A1, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAdItem setNativeAdJSONString:]', symObjAddr: 0x14, symBinAddr: 0x278FE, symSize: 0xF }
+  - { offset: 0xC07E0, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAdItem index]', symObjAddr: 0x23, symBinAddr: 0x2790D, symSize: 0x9 }
+  - { offset: 0xC0815, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAdItem setIndex:]', symObjAddr: 0x2C, symBinAddr: 0x27916, symSize: 0x9 }
+  - { offset: 0xC0852, size: 0x8, addend: 0x0, symName: '-[CaulyNativeAdItem .cxx_destruct]', symObjAddr: 0x35, symBinAddr: 0x2791F, symSize: 0x10 }
+  - { offset: 0xC08D0, size: 0x8, addend: 0x0, symName: '-[BDAdItem ads_cd]', symObjAddr: 0x0, symBinAddr: 0x2792F, symSize: 0xA }
+  - { offset: 0xC0FDC, size: 0x8, addend: 0x0, symName: '-[BDAdItem ads_cd]', symObjAddr: 0x0, symBinAddr: 0x2792F, symSize: 0xA }
+  - { offset: 0xC1011, size: 0x8, addend: 0x0, symName: '-[BDAdItem setAds_cd:]', symObjAddr: 0xA, symBinAddr: 0x27939, symSize: 0x28 }
+  - { offset: 0xC106A, size: 0x8, addend: 0x0, symName: '-[BDAdItem title]', symObjAddr: 0x32, symBinAddr: 0x27961, symSize: 0xA }
+  - { offset: 0xC109F, size: 0x8, addend: 0x0, symName: '-[BDAdItem setTitle:]', symObjAddr: 0x3C, symBinAddr: 0x2796B, symSize: 0x28 }
+  - { offset: 0xC10F8, size: 0x8, addend: 0x0, symName: '-[BDAdItem text]', symObjAddr: 0x64, symBinAddr: 0x27993, symSize: 0xA }
+  - { offset: 0xC112D, size: 0x8, addend: 0x0, symName: '-[BDAdItem setText:]', symObjAddr: 0x6E, symBinAddr: 0x2799D, symSize: 0x28 }
+  - { offset: 0xC1186, size: 0x8, addend: 0x0, symName: '-[BDAdItem img_url]', symObjAddr: 0x96, symBinAddr: 0x279C5, symSize: 0xA }
+  - { offset: 0xC11BB, size: 0x8, addend: 0x0, symName: '-[BDAdItem setImg_url:]', symObjAddr: 0xA0, symBinAddr: 0x279CF, symSize: 0x28 }
+  - { offset: 0xC1214, size: 0x8, addend: 0x0, symName: '-[BDAdItem ads_type]', symObjAddr: 0xC8, symBinAddr: 0x279F7, symSize: 0xA }
+  - { offset: 0xC1249, size: 0x8, addend: 0x0, symName: '-[BDAdItem setAds_type:]', symObjAddr: 0xD2, symBinAddr: 0x27A01, symSize: 0x28 }
+  - { offset: 0xC12A2, size: 0x8, addend: 0x0, symName: '-[BDAdItem ads_url]', symObjAddr: 0xFA, symBinAddr: 0x27A29, symSize: 0xA }
+  - { offset: 0xC12D7, size: 0x8, addend: 0x0, symName: '-[BDAdItem setAds_url:]', symObjAddr: 0x104, symBinAddr: 0x27A33, symSize: 0x28 }
+  - { offset: 0xC1330, size: 0x8, addend: 0x0, symName: '-[BDAdItem color]', symObjAddr: 0x12C, symBinAddr: 0x27A5B, symSize: 0xA }
+  - { offset: 0xC1365, size: 0x8, addend: 0x0, symName: '-[BDAdItem setColor:]', symObjAddr: 0x136, symBinAddr: 0x27A65, symSize: 0x28 }
+  - { offset: 0xC13BE, size: 0x8, addend: 0x0, symName: '-[BDAdItem pay_type]', symObjAddr: 0x15E, symBinAddr: 0x27A8D, symSize: 0xA }
+  - { offset: 0xC13F3, size: 0x8, addend: 0x0, symName: '-[BDAdItem setPay_type:]', symObjAddr: 0x168, symBinAddr: 0x27A97, symSize: 0x28 }
+  - { offset: 0xC144C, size: 0x8, addend: 0x0, symName: '-[BDAdItem iserial]', symObjAddr: 0x190, symBinAddr: 0x27ABF, symSize: 0xA }
+  - { offset: 0xC1481, size: 0x8, addend: 0x0, symName: '-[BDAdItem setIserial:]', symObjAddr: 0x19A, symBinAddr: 0x27AC9, symSize: 0x28 }
+  - { offset: 0xC14DA, size: 0x8, addend: 0x0, symName: '-[BDAdItem ad_shape]', symObjAddr: 0x1C2, symBinAddr: 0x27AF1, symSize: 0xA }
+  - { offset: 0xC150F, size: 0x8, addend: 0x0, symName: '-[BDAdItem setAd_shape:]', symObjAddr: 0x1CC, symBinAddr: 0x27AFB, symSize: 0x28 }
+  - { offset: 0xC1568, size: 0x8, addend: 0x0, symName: '-[BDAdItem sub_ad_shape]', symObjAddr: 0x1F4, symBinAddr: 0x27B23, symSize: 0xA }
+  - { offset: 0xC159D, size: 0x8, addend: 0x0, symName: '-[BDAdItem setSub_ad_shape:]', symObjAddr: 0x1FE, symBinAddr: 0x27B2D, symSize: 0x28 }
+  - { offset: 0xC15F6, size: 0x8, addend: 0x0, symName: '-[BDAdItem shape_info]', symObjAddr: 0x226, symBinAddr: 0x27B55, symSize: 0xA }
+  - { offset: 0xC162B, size: 0x8, addend: 0x0, symName: '-[BDAdItem setShape_info:]', symObjAddr: 0x230, symBinAddr: 0x27B5F, symSize: 0x28 }
+  - { offset: 0xC1684, size: 0x8, addend: 0x0, symName: '-[BDAdItem event]', symObjAddr: 0x258, symBinAddr: 0x27B87, symSize: 0xA }
+  - { offset: 0xC16B9, size: 0x8, addend: 0x0, symName: '-[BDAdItem setEvent:]', symObjAddr: 0x262, symBinAddr: 0x27B91, symSize: 0x28 }
+  - { offset: 0xC1712, size: 0x8, addend: 0x0, symName: '-[BDAdItem retMsg]', symObjAddr: 0x28A, symBinAddr: 0x27BB9, symSize: 0xA }
+  - { offset: 0xC1747, size: 0x8, addend: 0x0, symName: '-[BDAdItem setRetMsg:]', symObjAddr: 0x294, symBinAddr: 0x27BC3, symSize: 0x28 }
+  - { offset: 0xC17A0, size: 0x8, addend: 0x0, symName: '-[BDAdItem retCode]', symObjAddr: 0x2BC, symBinAddr: 0x27BEB, symSize: 0xC }
+  - { offset: 0xC17D5, size: 0x8, addend: 0x0, symName: '-[BDAdItem setRetCode:]', symObjAddr: 0x2C8, symBinAddr: 0x27BF7, symSize: 0xC }
+  - { offset: 0xC1812, size: 0x8, addend: 0x0, symName: '-[BDAdItem strictLevel]', symObjAddr: 0x2D4, symBinAddr: 0x27C03, symSize: 0xC }
+  - { offset: 0xC1847, size: 0x8, addend: 0x0, symName: '-[BDAdItem setStrictLevel:]', symObjAddr: 0x2E0, symBinAddr: 0x27C0F, symSize: 0xC }
+  - { offset: 0xC1884, size: 0x8, addend: 0x0, symName: '-[BDAdItem sendInform]', symObjAddr: 0x2EC, symBinAddr: 0x27C1B, symSize: 0xC }
+  - { offset: 0xC18B9, size: 0x8, addend: 0x0, symName: '-[BDAdItem setSendInform:]', symObjAddr: 0x2F8, symBinAddr: 0x27C27, symSize: 0xC }
+  - { offset: 0xC18F6, size: 0x8, addend: 0x0, symName: '-[BDAdItem cycle]', symObjAddr: 0x304, symBinAddr: 0x27C33, symSize: 0xC }
+  - { offset: 0xC192B, size: 0x8, addend: 0x0, symName: '-[BDAdItem setCycle:]', symObjAddr: 0x310, symBinAddr: 0x27C3F, symSize: 0xC }
+  - { offset: 0xC1968, size: 0x8, addend: 0x0, symName: '-[BDAdItem swipeRatio]', symObjAddr: 0x31C, symBinAddr: 0x27C4B, symSize: 0xC }
+  - { offset: 0xC199D, size: 0x8, addend: 0x0, symName: '-[BDAdItem setSwipeRatio:]', symObjAddr: 0x328, symBinAddr: 0x27C57, symSize: 0xC }
+  - { offset: 0xC19DA, size: 0x8, addend: 0x0, symName: '-[BDAdItem landingEffect]', symObjAddr: 0x334, symBinAddr: 0x27C63, symSize: 0xD }
+  - { offset: 0xC1A0F, size: 0x8, addend: 0x0, symName: '-[BDAdItem setLandingEffect:]', symObjAddr: 0x341, symBinAddr: 0x27C70, symSize: 0x2E }
+  - { offset: 0xC1A68, size: 0x8, addend: 0x0, symName: '-[BDAdItem paramButtons]', symObjAddr: 0x36F, symBinAddr: 0x27C9E, symSize: 0xD }
+  - { offset: 0xC1A9D, size: 0x8, addend: 0x0, symName: '-[BDAdItem setParamButtons:]', symObjAddr: 0x37C, symBinAddr: 0x27CAB, symSize: 0x2E }
+  - { offset: 0xC1AF6, size: 0x8, addend: 0x0, symName: '-[BDAdItem paramBackground]', symObjAddr: 0x3AA, symBinAddr: 0x27CD9, symSize: 0xD }
+  - { offset: 0xC1B2B, size: 0x8, addend: 0x0, symName: '-[BDAdItem setParamBackground:]', symObjAddr: 0x3B7, symBinAddr: 0x27CE6, symSize: 0x2E }
+  - { offset: 0xC1B84, size: 0x8, addend: 0x0, symName: '-[BDAdItem loading_logo]', symObjAddr: 0x3E5, symBinAddr: 0x27D14, symSize: 0xD }
+  - { offset: 0xC1BB9, size: 0x8, addend: 0x0, symName: '-[BDAdItem setLoading_logo:]', symObjAddr: 0x3F2, symBinAddr: 0x27D21, symSize: 0x2E }
+  - { offset: 0xC1C12, size: 0x8, addend: 0x0, symName: '-[BDAdItem url_scheme]', symObjAddr: 0x420, symBinAddr: 0x27D4F, symSize: 0xD }
+  - { offset: 0xC1C47, size: 0x8, addend: 0x0, symName: '-[BDAdItem setUrl_scheme:]', symObjAddr: 0x42D, symBinAddr: 0x27D5C, symSize: 0x2E }
+  - { offset: 0xC1CA0, size: 0x8, addend: 0x0, symName: '-[BDAdItem fit_to_screen]', symObjAddr: 0x45B, symBinAddr: 0x27D8A, symSize: 0xD }
+  - { offset: 0xC1CD5, size: 0x8, addend: 0x0, symName: '-[BDAdItem setFit_to_screen:]', symObjAddr: 0x468, symBinAddr: 0x27D97, symSize: 0x2E }
+  - { offset: 0xC1D2E, size: 0x8, addend: 0x0, symName: '-[BDAdItem default_browser]', symObjAddr: 0x496, symBinAddr: 0x27DC5, symSize: 0xD }
+  - { offset: 0xC1D63, size: 0x8, addend: 0x0, symName: '-[BDAdItem setDefault_browser:]', symObjAddr: 0x4A3, symBinAddr: 0x27DD2, symSize: 0x2E }
+  - { offset: 0xC1DBC, size: 0x8, addend: 0x0, symName: '-[BDAdItem isDefault]', symObjAddr: 0x4D1, symBinAddr: 0x27E00, symSize: 0xC }
+  - { offset: 0xC1DF1, size: 0x8, addend: 0x0, symName: '-[BDAdItem setIsDefault:]', symObjAddr: 0x4DD, symBinAddr: 0x27E0C, symSize: 0xC }
+  - { offset: 0xC1E2E, size: 0x8, addend: 0x0, symName: '-[BDAdItem adnetwork]', symObjAddr: 0x4E9, symBinAddr: 0x27E18, symSize: 0xA }
+  - { offset: 0xC1E63, size: 0x8, addend: 0x0, symName: '-[BDAdItem setAdnetwork:]', symObjAddr: 0x4F3, symBinAddr: 0x27E22, symSize: 0x28 }
+  - { offset: 0xC1EBC, size: 0x8, addend: 0x0, symName: '-[BDAdItem adnetwork_url]', symObjAddr: 0x51B, symBinAddr: 0x27E4A, symSize: 0xD }
+  - { offset: 0xC1EF1, size: 0x8, addend: 0x0, symName: '-[BDAdItem setAdnetwork_url:]', symObjAddr: 0x528, symBinAddr: 0x27E57, symSize: 0x2E }
+  - { offset: 0xC1F4A, size: 0x8, addend: 0x0, symName: '-[BDAdItem adnetwork_app_code]', symObjAddr: 0x556, symBinAddr: 0x27E85, symSize: 0xD }
+  - { offset: 0xC1F7F, size: 0x8, addend: 0x0, symName: '-[BDAdItem setAdnetwork_app_code:]', symObjAddr: 0x563, symBinAddr: 0x27E92, symSize: 0x2E }
+  - { offset: 0xC1FD8, size: 0x8, addend: 0x0, symName: '-[BDAdItem isFired]', symObjAddr: 0x591, symBinAddr: 0x27EC0, symSize: 0xC }
+  - { offset: 0xC200D, size: 0x8, addend: 0x0, symName: '-[BDAdItem setIsFired:]', symObjAddr: 0x59D, symBinAddr: 0x27ECC, symSize: 0xC }
+  - { offset: 0xC204A, size: 0x8, addend: 0x0, symName: '-[BDAdItem isAdItemSucceeded]', symObjAddr: 0x5A9, symBinAddr: 0x27ED8, symSize: 0xC }
+  - { offset: 0xC207F, size: 0x8, addend: 0x0, symName: '-[BDAdItem setIsAdItemSucceeded:]', symObjAddr: 0x5B5, symBinAddr: 0x27EE4, symSize: 0xC }
+  - { offset: 0xC20BC, size: 0x8, addend: 0x0, symName: '-[BDAdItem orientation_control]', symObjAddr: 0x5C1, symBinAddr: 0x27EF0, symSize: 0xD }
+  - { offset: 0xC20F1, size: 0x8, addend: 0x0, symName: '-[BDAdItem setOrientation_control:]', symObjAddr: 0x5CE, symBinAddr: 0x27EFD, symSize: 0x2E }
+  - { offset: 0xC214A, size: 0x8, addend: 0x0, symName: '-[BDAdItem silent_start]', symObjAddr: 0x5FC, symBinAddr: 0x27F2B, symSize: 0xC }
+  - { offset: 0xC217F, size: 0x8, addend: 0x0, symName: '-[BDAdItem setSilent_start:]', symObjAddr: 0x608, symBinAddr: 0x27F37, symSize: 0xC }
+  - { offset: 0xC21BC, size: 0x8, addend: 0x0, symName: '-[BDAdItem silence_loading]', symObjAddr: 0x614, symBinAddr: 0x27F43, symSize: 0xC }
+  - { offset: 0xC21F1, size: 0x8, addend: 0x0, symName: '-[BDAdItem setSilence_loading:]', symObjAddr: 0x620, symBinAddr: 0x27F4F, symSize: 0xC }
+  - { offset: 0xC222E, size: 0x8, addend: 0x0, symName: '-[BDAdItem isNotifyContentLoadResult]', symObjAddr: 0x62C, symBinAddr: 0x27F5B, symSize: 0xC }
+  - { offset: 0xC2263, size: 0x8, addend: 0x0, symName: '-[BDAdItem setIsNotifyContentLoadResult:]', symObjAddr: 0x638, symBinAddr: 0x27F67, symSize: 0xC }
+  - { offset: 0xC22A0, size: 0x8, addend: 0x0, symName: '-[BDAdItem expand_direction]', symObjAddr: 0x644, symBinAddr: 0x27F73, symSize: 0xD }
+  - { offset: 0xC22D5, size: 0x8, addend: 0x0, symName: '-[BDAdItem setExpand_direction:]', symObjAddr: 0x651, symBinAddr: 0x27F80, symSize: 0x2E }
+  - { offset: 0xC232E, size: 0x8, addend: 0x0, symName: '-[BDAdItem ad_height]', symObjAddr: 0x67F, symBinAddr: 0x27FAE, symSize: 0xE }
+  - { offset: 0xC2363, size: 0x8, addend: 0x0, symName: '-[BDAdItem setAd_height:]', symObjAddr: 0x68D, symBinAddr: 0x27FBC, symSize: 0xE }
+  - { offset: 0xC23A0, size: 0x8, addend: 0x0, symName: '-[BDAdItem ad_width]', symObjAddr: 0x69B, symBinAddr: 0x27FCA, symSize: 0xE }
+  - { offset: 0xC23D5, size: 0x8, addend: 0x0, symName: '-[BDAdItem setAd_width:]', symObjAddr: 0x6A9, symBinAddr: 0x27FD8, symSize: 0xE }
+  - { offset: 0xC2412, size: 0x8, addend: 0x0, symName: '-[BDAdItem isPopupShowing]', symObjAddr: 0x6B7, symBinAddr: 0x27FE6, symSize: 0xC }
+  - { offset: 0xC2447, size: 0x8, addend: 0x0, symName: '-[BDAdItem setIsPopupShowing:]', symObjAddr: 0x6C3, symBinAddr: 0x27FF2, symSize: 0xC }
+  - { offset: 0xC2484, size: 0x8, addend: 0x0, symName: '-[BDAdItem border_click_level]', symObjAddr: 0x6CF, symBinAddr: 0x27FFE, symSize: 0xC }
+  - { offset: 0xC24B9, size: 0x8, addend: 0x0, symName: '-[BDAdItem setBorder_click_level:]', symObjAddr: 0x6DB, symBinAddr: 0x2800A, symSize: 0xC }
+  - { offset: 0xC24F6, size: 0x8, addend: 0x0, symName: '-[BDAdItem earnType]', symObjAddr: 0x6E7, symBinAddr: 0x28016, symSize: 0xC }
+  - { offset: 0xC252B, size: 0x8, addend: 0x0, symName: '-[BDAdItem setEarnType:]', symObjAddr: 0x6F3, symBinAddr: 0x28022, symSize: 0xC }
+  - { offset: 0xC2568, size: 0x8, addend: 0x0, symName: '-[BDAdItem price]', symObjAddr: 0x6FF, symBinAddr: 0x2802E, symSize: 0xE }
+  - { offset: 0xC259D, size: 0x8, addend: 0x0, symName: '-[BDAdItem setPrice:]', symObjAddr: 0x70D, symBinAddr: 0x2803C, symSize: 0xE }
+  - { offset: 0xC25DA, size: 0x8, addend: 0x0, symName: '-[BDAdItem skadnVersion]', symObjAddr: 0x71B, symBinAddr: 0x2804A, symSize: 0xD }
+  - { offset: 0xC260F, size: 0x8, addend: 0x0, symName: '-[BDAdItem setSkadnVersion:]', symObjAddr: 0x728, symBinAddr: 0x28057, symSize: 0x2E }
+  - { offset: 0xC2668, size: 0x8, addend: 0x0, symName: '-[BDAdItem skadnAdNetworkId]', symObjAddr: 0x756, symBinAddr: 0x28085, symSize: 0xD }
+  - { offset: 0xC269D, size: 0x8, addend: 0x0, symName: '-[BDAdItem setSkadnAdNetworkId:]', symObjAddr: 0x763, symBinAddr: 0x28092, symSize: 0x2E }
+  - { offset: 0xC26F6, size: 0x8, addend: 0x0, symName: '-[BDAdItem skadnCampaignId]', symObjAddr: 0x791, symBinAddr: 0x280C0, symSize: 0xD }
+  - { offset: 0xC272B, size: 0x8, addend: 0x0, symName: '-[BDAdItem setSkadnCampaignId:]', symObjAddr: 0x79E, symBinAddr: 0x280CD, symSize: 0x2E }
+  - { offset: 0xC2784, size: 0x8, addend: 0x0, symName: '-[BDAdItem skadnItunesItemId]', symObjAddr: 0x7CC, symBinAddr: 0x280FB, symSize: 0xD }
+  - { offset: 0xC27B9, size: 0x8, addend: 0x0, symName: '-[BDAdItem setSkadnItunesItemId:]', symObjAddr: 0x7D9, symBinAddr: 0x28108, symSize: 0x2E }
+  - { offset: 0xC2812, size: 0x8, addend: 0x0, symName: '-[BDAdItem skadnSourceAppId]', symObjAddr: 0x807, symBinAddr: 0x28136, symSize: 0xD }
+  - { offset: 0xC2847, size: 0x8, addend: 0x0, symName: '-[BDAdItem setSkadnSourceAppId:]', symObjAddr: 0x814, symBinAddr: 0x28143, symSize: 0x2E }
+  - { offset: 0xC28A0, size: 0x8, addend: 0x0, symName: '-[BDAdItem skadnFidelityType0Nonce]', symObjAddr: 0x842, symBinAddr: 0x28171, symSize: 0xD }
+  - { offset: 0xC28D5, size: 0x8, addend: 0x0, symName: '-[BDAdItem setSkadnFidelityType0Nonce:]', symObjAddr: 0x84F, symBinAddr: 0x2817E, symSize: 0x2E }
+  - { offset: 0xC292E, size: 0x8, addend: 0x0, symName: '-[BDAdItem skadnFidelityType0Timestamp]', symObjAddr: 0x87D, symBinAddr: 0x281AC, symSize: 0xD }
+  - { offset: 0xC2963, size: 0x8, addend: 0x0, symName: '-[BDAdItem setSkadnFidelityType0Timestamp:]', symObjAddr: 0x88A, symBinAddr: 0x281B9, symSize: 0x2E }
+  - { offset: 0xC29BC, size: 0x8, addend: 0x0, symName: '-[BDAdItem skadnFidelityType0Signature]', symObjAddr: 0x8B8, symBinAddr: 0x281E7, symSize: 0xD }
+  - { offset: 0xC29F1, size: 0x8, addend: 0x0, symName: '-[BDAdItem setSkadnFidelityType0Signature:]', symObjAddr: 0x8C5, symBinAddr: 0x281F4, symSize: 0x2E }
+  - { offset: 0xC2A4A, size: 0x8, addend: 0x0, symName: '-[BDAdItem skadnFidelityType1Nonce]', symObjAddr: 0x8F3, symBinAddr: 0x28222, symSize: 0xD }
+  - { offset: 0xC2A7F, size: 0x8, addend: 0x0, symName: '-[BDAdItem setSkadnFidelityType1Nonce:]', symObjAddr: 0x900, symBinAddr: 0x2822F, symSize: 0x2E }
+  - { offset: 0xC2AD8, size: 0x8, addend: 0x0, symName: '-[BDAdItem skadnFidelityType1Timestamp]', symObjAddr: 0x92E, symBinAddr: 0x2825D, symSize: 0xD }
+  - { offset: 0xC2B0D, size: 0x8, addend: 0x0, symName: '-[BDAdItem setSkadnFidelityType1Timestamp:]', symObjAddr: 0x93B, symBinAddr: 0x2826A, symSize: 0x2E }
+  - { offset: 0xC2B66, size: 0x8, addend: 0x0, symName: '-[BDAdItem skadnFidelityType1Signature]', symObjAddr: 0x969, symBinAddr: 0x28298, symSize: 0xD }
+  - { offset: 0xC2B9B, size: 0x8, addend: 0x0, symName: '-[BDAdItem setSkadnFidelityType1Signature:]', symObjAddr: 0x976, symBinAddr: 0x282A5, symSize: 0x2E }
+  - { offset: 0xC2BF4, size: 0x8, addend: 0x0, symName: '-[BDAdItem isOptOutShow]', symObjAddr: 0x9A4, symBinAddr: 0x282D3, symSize: 0xC }
+  - { offset: 0xC2C29, size: 0x8, addend: 0x0, symName: '-[BDAdItem setIsOptOutShow:]', symObjAddr: 0x9B0, symBinAddr: 0x282DF, symSize: 0xC }
+  - { offset: 0xC2C66, size: 0x8, addend: 0x0, symName: '-[BDAdItem .cxx_destruct]', symObjAddr: 0x9BC, symBinAddr: 0x282EB, symSize: 0x1EB }
+  - { offset: 0xC2CE4, size: 0x8, addend: 0x0, symName: '+[C_TBXML newTBXMLWithXMLString:]', symObjAddr: 0x0, symBinAddr: 0x284D8, symSize: 0x49 }
+  - { offset: 0xC2EDD, size: 0x8, addend: 0x0, symName: '+[C_TBXML newTBXMLWithXMLString:]', symObjAddr: 0x0, symBinAddr: 0x284D8, symSize: 0x49 }
+  - { offset: 0xC2F44, size: 0x8, addend: 0x0, symName: '+[C_TBXML newTBXMLWithXMLString:error:]', symObjAddr: 0x49, symBinAddr: 0x28521, symSize: 0x58 }
+  - { offset: 0xC2FBB, size: 0x8, addend: 0x0, symName: '+[C_TBXML newTBXMLWithXMLData:]', symObjAddr: 0xA1, symBinAddr: 0x28579, symSize: 0x49 }
+  - { offset: 0xC3022, size: 0x8, addend: 0x0, symName: '+[C_TBXML newTBXMLWithXMLData:error:]', symObjAddr: 0xEA, symBinAddr: 0x285C2, symSize: 0x58 }
+  - { offset: 0xC3099, size: 0x8, addend: 0x0, symName: '+[C_TBXML newTBXMLWithXMLFile:]', symObjAddr: 0x142, symBinAddr: 0x2861A, symSize: 0x49 }
+  - { offset: 0xC3100, size: 0x8, addend: 0x0, symName: '+[C_TBXML newTBXMLWithXMLFile:error:]', symObjAddr: 0x18B, symBinAddr: 0x28663, symSize: 0x58 }
+  - { offset: 0xC3177, size: 0x8, addend: 0x0, symName: '+[C_TBXML newTBXMLWithXMLFile:fileExtension:]', symObjAddr: 0x1E3, symBinAddr: 0x286BB, symSize: 0x6B }
+  - { offset: 0xC3206, size: 0x8, addend: 0x0, symName: '+[C_TBXML newTBXMLWithXMLFile:fileExtension:error:]', symObjAddr: 0x24E, symBinAddr: 0x28726, symSize: 0x7A }
+  - { offset: 0xC32A5, size: 0x8, addend: 0x0, symName: '-[C_TBXML init]', symObjAddr: 0x2C8, symBinAddr: 0x287A0, symSize: 0x4B }
+  - { offset: 0xC32DC, size: 0x8, addend: 0x0, symName: '-[C_TBXML initWithXMLString:]', symObjAddr: 0x313, symBinAddr: 0x287EB, symSize: 0x26 }
+  - { offset: 0xC333F, size: 0x8, addend: 0x0, symName: '-[C_TBXML initWithXMLString:error:]', symObjAddr: 0x339, symBinAddr: 0x28811, symSize: 0x131 }
+  - { offset: 0xC3419, size: 0x8, addend: 0x0, symName: '-[C_TBXML initWithXMLData:]', symObjAddr: 0x46A, symBinAddr: 0x28942, symSize: 0x26 }
+  - { offset: 0xC347C, size: 0x8, addend: 0x0, symName: '-[C_TBXML initWithXMLData:error:]', symObjAddr: 0x490, symBinAddr: 0x28968, symSize: 0x61 }
+  - { offset: 0xC3503, size: 0x8, addend: 0x0, symName: '-[C_TBXML initWithXMLFile:]', symObjAddr: 0x4F1, symBinAddr: 0x289C9, symSize: 0x26 }
+  - { offset: 0xC3566, size: 0x8, addend: 0x0, symName: '-[C_TBXML initWithXMLFile:error:]', symObjAddr: 0x517, symBinAddr: 0x289EF, symSize: 0xA2 }
+  - { offset: 0xC3631, size: 0x8, addend: 0x0, symName: '-[C_TBXML initWithXMLFile:fileExtension:]', symObjAddr: 0x5B9, symBinAddr: 0x28A91, symSize: 0x26 }
+  - { offset: 0xC36A4, size: 0x8, addend: 0x0, symName: '-[C_TBXML initWithXMLFile:fileExtension:error:]', symObjAddr: 0x5DF, symBinAddr: 0x28AB7, symSize: 0x2A6 }
+  - { offset: 0xC3891, size: 0x8, addend: 0x0, symName: '-[C_TBXML decodeData:]', symObjAddr: 0x885, symBinAddr: 0x28D5D, symSize: 0x26 }
+  - { offset: 0xC38F4, size: 0x8, addend: 0x0, symName: '-[C_TBXML decodeData:withError:]', symObjAddr: 0x8AB, symBinAddr: 0x28D83, symSize: 0x1CB }
+  - { offset: 0xC3A73, size: 0x8, addend: 0x0, symName: '-[C_TBXML rootXMLElement]', symObjAddr: 0xA76, symBinAddr: 0x28F4E, symSize: 0xA }
+  - { offset: 0xC3AA8, size: 0x8, addend: 0x0, symName: '+[C_TBXML(StaticFunctions) elementName:]', symObjAddr: 0xA80, symBinAddr: 0x28F58, symSize: 0x42 }
+  - { offset: 0xC3AF9, size: 0x8, addend: 0x0, symName: '+[C_TBXML(StaticFunctions) elementName:error:]', symObjAddr: 0xAC2, symBinAddr: 0x28F9A, symSize: 0xB3 }
+  - { offset: 0xC3B67, size: 0x8, addend: 0x0, symName: '+[C_TBXML(StaticFunctions) attributeName:]', symObjAddr: 0xB75, symBinAddr: 0x2904D, symSize: 0x42 }
+  - { offset: 0xC3BB8, size: 0x8, addend: 0x0, symName: '+[C_TBXML(StaticFunctions) attributeName:error:]', symObjAddr: 0xBB7, symBinAddr: 0x2908F, symSize: 0xAE }
+  - { offset: 0xC3C26, size: 0x8, addend: 0x0, symName: '+[C_TBXML(StaticFunctions) attributeValue:]', symObjAddr: 0xC65, symBinAddr: 0x2913D, symSize: 0x43 }
+  - { offset: 0xC3C77, size: 0x8, addend: 0x0, symName: '+[C_TBXML(StaticFunctions) attributeValue:error:]', symObjAddr: 0xCA8, symBinAddr: 0x29180, symSize: 0x89 }
+  - { offset: 0xC3CE5, size: 0x8, addend: 0x0, symName: '+[C_TBXML(StaticFunctions) textForElement:]', symObjAddr: 0xD31, symBinAddr: 0x29209, symSize: 0x43 }
+  - { offset: 0xC3D36, size: 0x8, addend: 0x0, symName: '+[C_TBXML(StaticFunctions) textForElement:error:]', symObjAddr: 0xD74, symBinAddr: 0x2924C, symSize: 0xB4 }
+  - { offset: 0xC3DA4, size: 0x8, addend: 0x0, symName: '+[C_TBXML(StaticFunctions) valueOfAttributeNamed:forElement:]', symObjAddr: 0xE28, symBinAddr: 0x29300, symSize: 0xBA }
+  - { offset: 0xC3EB4, size: 0x8, addend: 0x0, symName: '+[C_TBXML(StaticFunctions) valueOfAttributeNamed:forElement:error:]', symObjAddr: 0xEE2, symBinAddr: 0x293BA, symSize: 0x132 }
+  - { offset: 0xC3FB4, size: 0x8, addend: 0x0, symName: '+[C_TBXML(StaticFunctions) childElementNamed:parentElement:]', symObjAddr: 0x1014, symBinAddr: 0x294EC, symSize: 0x7B }
+  - { offset: 0xC4062, size: 0x8, addend: 0x0, symName: '+[C_TBXML(StaticFunctions) childElementNamed:parentElement:error:]', symObjAddr: 0x108F, symBinAddr: 0x29567, symSize: 0xF2 }
+  - { offset: 0xC4145, size: 0x8, addend: 0x0, symName: '+[C_TBXML(StaticFunctions) nextSiblingNamed:searchFromElement:]', symObjAddr: 0x1181, symBinAddr: 0x29659, symSize: 0x7B }
+  - { offset: 0xC41F3, size: 0x8, addend: 0x0, symName: '+[C_TBXML(StaticFunctions) nextSiblingNamed:searchFromElement:error:]', symObjAddr: 0x11FC, symBinAddr: 0x296D4, symSize: 0xF2 }
+  - { offset: 0xC42D6, size: 0x8, addend: 0x0, symName: '+[C_TBXML(StaticFunctions) iterateElementsForQuery:fromElement:withBlock:]', symObjAddr: 0x12EE, symBinAddr: 0x297C6, symSize: 0x29A }
+  - { offset: 0xC44D7, size: 0x8, addend: 0x0, symName: '+[C_TBXML(StaticFunctions) iterateAttributesOfElement:withBlock:]', symObjAddr: 0x1588, symBinAddr: 0x29A60, symSize: 0xB5 }
+  - { offset: 0xC458E, size: 0x8, addend: 0x0, symName: '+[C_TBXML(Private) errorTextForCode:]', symObjAddr: 0x163D, symBinAddr: 0x29B15, symSize: 0x23 }
+  - { offset: 0xC45E4, size: 0x8, addend: 0x0, symName: '+[C_TBXML(Private) errorWithCode:]', symObjAddr: 0x1660, symBinAddr: 0x29B38, symSize: 0xB6 }
+  - { offset: 0xC4676, size: 0x8, addend: 0x0, symName: '+[C_TBXML(Private) errorWithCode:userInfo:]', symObjAddr: 0x1716, symBinAddr: 0x29BEE, symSize: 0xC2 }
+  - { offset: 0xC4725, size: 0x8, addend: 0x0, symName: '-[C_TBXML(Private) allocateBytesOfLength:error:]', symObjAddr: 0x17D8, symBinAddr: 0x29CB0, symSize: 0xCD }
+  - { offset: 0xC482E, size: 0x8, addend: 0x0, symName: '-[C_TBXML(Private) decodeBytes]', symObjAddr: 0x18A5, symBinAddr: 0x29D7D, symSize: 0x67B }
+  - { offset: 0xC4D22, size: 0x8, addend: 0x0, symName: '-[C_TBXML(Private) dealloc]', symObjAddr: 0x1F20, symBinAddr: 0x2A3F8, symSize: 0xCF }
+  - { offset: 0xC4DC6, size: 0x8, addend: 0x0, symName: '-[C_TBXML(Private) nextAvailableElement]', symObjAddr: 0x1FEF, symBinAddr: 0x2A4C7, symSize: 0xB1 }
+  - { offset: 0xC4E4D, size: 0x8, addend: 0x0, symName: '-[C_TBXML(Private) nextAvailableAttribute]', symObjAddr: 0x20A0, symBinAddr: 0x2A578, symSize: 0x8E }
+  - { offset: 0xC5024, size: 0x8, addend: 0x0, symName: _btn_safari_png, symObjAddr: 0x0, symBinAddr: 0x755B0, symSize: 0x0 }
+  - { offset: 0xC5056, size: 0x8, addend: 0x0, symName: _btn_safari_png_len, symObjAddr: 0x1BF4, symBinAddr: 0x771A4, symSize: 0x0 }
+  - { offset: 0xC50A3, size: 0x8, addend: 0x0, symName: _video_sound_on_btn_png, symObjAddr: 0x0, symBinAddr: 0x771B0, symSize: 0x0 }
+  - { offset: 0xC50D4, size: 0x8, addend: 0x0, symName: _video_sound_on_btn_png_len, symObjAddr: 0x7D0, symBinAddr: 0x77980, symSize: 0x0 }
+  - { offset: 0xC5121, size: 0x8, addend: 0x0, symName: _ipad_png, symObjAddr: 0x0, symBinAddr: 0x77990, symSize: 0x0 }
+  - { offset: 0xC5152, size: 0x8, addend: 0x0, symName: _ipad_png_len, symObjAddr: 0x7E0, symBinAddr: 0x78170, symSize: 0x0 }
+  - { offset: 0xC5191, size: 0x8, addend: 0x0, symName: '+[BDAdError errorWithCode:message:]', symObjAddr: 0x0, symBinAddr: 0x2A606, symSize: 0x5C }
+  - { offset: 0xC51C9, size: 0x8, addend: 0x0, symName: '+[BDAdError errorWithCode:message:]', symObjAddr: 0x0, symBinAddr: 0x2A606, symSize: 0x5C }
+  - { offset: 0xC5250, size: 0x8, addend: 0x0, symName: '-[BDAdError initWithCode:message:]', symObjAddr: 0x5C, symBinAddr: 0x2A662, symSize: 0x87 }
+  - { offset: 0xC52D7, size: 0x8, addend: 0x0, symName: '-[BDAdError description]', symObjAddr: 0xE3, symBinAddr: 0x2A6E9, symSize: 0x56 }
+  - { offset: 0xC5332, size: 0x8, addend: 0x0, symName: '-[BDAdError .cxx_destruct]', symObjAddr: 0x139, symBinAddr: 0x2A73F, symSize: 0x13 }
+  - { offset: 0xC53EE, size: 0x8, addend: 0x0, symName: '+[BDServerConfigXMLParser parseXML:error:]', symObjAddr: 0x0, symBinAddr: 0x2A752, symSize: 0x6DE }
+  - { offset: 0xC53FC, size: 0x8, addend: 0x0, symName: '+[BDServerConfigXMLParser parseXML:error:]', symObjAddr: 0x0, symBinAddr: 0x2A752, symSize: 0x6DE }
+  - { offset: 0xC5C7C, size: 0x8, addend: 0x0, symName: _optout_btn_png_len, symObjAddr: 0x0, symBinAddr: 0x78180, symSize: 0x0 }
+  - { offset: 0xC5C99, size: 0x8, addend: 0x0, symName: _optout_btn_png, symObjAddr: 0x10, symBinAddr: 0x78190, symSize: 0x0 }
+...

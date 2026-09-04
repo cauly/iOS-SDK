@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1980D17F9E6B0D4A933ABDD0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1980DB29532E1F338523B1AD /* CoreGraphics.framework */; };
-		1980D2FD78A1337F01DC6733 /* libCauly-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1980D43D58322661F4B952B9 /* libCauly-universal.a */; };
 		1980D458C693D154CAA9734B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1980D2D70AB5E4E88F3B48E7 /* CFNetwork.framework */; };
 		1980D5E80006DAE11A7BD2B6 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1980DE835AEF56A61FA6A9A6 /* AdSupport.framework */; };
 		1980D663E20CFCD6390F0DE6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1980D1A5CC14CDC8AD477F0B /* UIKit.framework */; };
@@ -24,6 +23,8 @@
 		1980DC9A5D7D558AB5A1BC40 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1980D354DD36A10B0741F852 /* MediaPlayer.framework */; };
 		1980DD43586377670F268C63 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1980D385738C465D4ADB85AB /* SystemConfiguration.framework */; };
 		1980DF3BD12B5E9EEA8FCB89 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1980DE7EA6D6C7D32A9CC344 /* MessageUI.framework */; };
+		73AD9743304AACA400AB425E /* CaulySDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73AD9741304AAC9D00AB425E /* CaulySDK.xcframework */; };
+		73AD9744304AACA400AB425E /* CaulySDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73AD9741304AAC9D00AB425E /* CaulySDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73E7A9252F04E0E900901EE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E7A9242F04E0E900901EE2 /* ViewController.swift */; };
 		73E7A9292F04E10100901EE2 /* NativeAdViewViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E7A9272F04E10100901EE2 /* NativeAdViewViewViewController.swift */; };
 		73E7A92A2F04E10100901EE2 /* NativeAdViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73E7A9262F04E10100901EE2 /* NativeAdViewViewController.xib */; };
@@ -46,38 +47,44 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		73AD9745304AACA400AB425E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				73AD9744304AACA400AB425E /* CaulySDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		1980D00E02EAA60E80345E06 /* CaulyNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyNativeAd.h; sourceTree = "<group>"; };
-		1980D02018358ABD42BF1A1A /* Cauly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cauly.h; sourceTree = "<group>"; };
 		1980D06263AEC556F46C7834 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		1980D08737BF74BDEC5AB3C5 /* CaulySample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaulySample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1980D1A5CC14CDC8AD477F0B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1980D206DE8FA7F919159925 /* CaulySampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaulySampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1980D23F0ED5BAD5C4225DC7 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		1980D256D8F0A067C2D57C71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
-		1980D2C476A0D5E4E1404BFF /* CaulyNativeAdItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyNativeAdItem.h; sourceTree = "<group>"; };
 		1980D2D70AB5E4E88F3B48E7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		1980D354DD36A10B0741F852 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		1980D385738C465D4ADB85AB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1980D43909188222A6C5CB9E /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
-		1980D43D58322661F4B952B9 /* libCauly-universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCauly-universal.a"; path = "/Users/ios/Documents/iOS/CaulySample/CaulySample/cauly/libCauly-universal.a"; sourceTree = "<absolute>"; };
 		1980D533493097AE84D80E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1980D5C1711AE9F10F5AE285 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1980D6E7221C84E94A3005B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1980D881523A94C732878B0A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1980D8E1B69021C704C76526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
-		1980D9AD79F44099B16318CD /* CaulyAdSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyAdSetting.h; sourceTree = "<group>"; };
 		1980DB29532E1F338523B1AD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		1980DB3757A09BAAF5217DBC /* libCauly-universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCauly-universal.a"; sourceTree = "<group>"; };
-		1980DB9BB39243AB44090F8A /* CaulyInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyInterstitialAd.h; sourceTree = "<group>"; };
 		1980DCAC92D4ABD96EA641B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1980DCC1A099BC2C91C2C64B /* CaulyAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaulyAdView.h; sourceTree = "<group>"; };
 		1980DE27D4B37733306D2473 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1980DE4DB66912EA72704F9A /* CaulySampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaulySampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1980DE7EA6D6C7D32A9CC344 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		1980DE835AEF56A61FA6A9A6 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		1980DFBC88F248003DA2A3B4 /* CaulySampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaulySampleTests.swift; sourceTree = "<group>"; };
-		1980DFDD48C0C3F035C2F4EB /* CaulySDK-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CaulySDK-Bridging-Header.h"; sourceTree = "<group>"; };
+		73AD9741304AAC9D00AB425E /* CaulySDK.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:55644VM79V:FSN Co., Ltd."; lastKnownFileType = wrapper.xcframework; path = CaulySDK.xcframework; sourceTree = "<group>"; };
 		73E7A9242F04E0E900901EE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		73E7A9262F04E10100901EE2 /* NativeAdViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeAdViewViewController.xib; sourceTree = "<group>"; };
 		73E7A9272F04E10100901EE2 /* NativeAdViewViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdViewViewViewController.swift; sourceTree = "<group>"; };
@@ -109,11 +116,11 @@
 				1980D458C693D154CAA9734B /* CFNetwork.framework in Frameworks */,
 				1980DF3BD12B5E9EEA8FCB89 /* MessageUI.framework in Frameworks */,
 				1980D81D8160143496C44772 /* Foundation.framework in Frameworks */,
+				73AD9743304AACA400AB425E /* CaulySDK.xcframework in Frameworks */,
 				1980DC24FED09E051A19D43F /* QuartzCore.framework in Frameworks */,
 				1980DC9A5D7D558AB5A1BC40 /* MediaPlayer.framework in Frameworks */,
 				1980D17F9E6B0D4A933ABDD0 /* CoreGraphics.framework in Frameworks */,
 				1980DD43586377670F268C63 /* SystemConfiguration.framework in Frameworks */,
-				1980D2FD78A1337F01DC6733 /* libCauly-universal.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,8 +137,6 @@
 				73E7A9242F04E0E900901EE2 /* ViewController.swift */,
 				1980DB99262325B1F4A7F279 /* Main.storyboard */,
 				73E7A9282F04E10100901EE2 /* View */,
-				1980DFDD48C0C3F035C2F4EB /* CaulySDK-Bridging-Header.h */,
-				1980D8F725A2B4B2A0BF6643 /* cauly */,
 			);
 			path = CaulySample;
 			sourceTree = "<group>";
@@ -160,23 +165,9 @@
 				1980D354DD36A10B0741F852 /* MediaPlayer.framework */,
 				1980DB29532E1F338523B1AD /* CoreGraphics.framework */,
 				1980D385738C465D4ADB85AB /* SystemConfiguration.framework */,
-				1980D43D58322661F4B952B9 /* libCauly-universal.a */,
+				73AD9741304AAC9D00AB425E /* CaulySDK.xcframework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1980D8F725A2B4B2A0BF6643 /* cauly */ = {
-			isa = PBXGroup;
-			children = (
-				1980DB3757A09BAAF5217DBC /* libCauly-universal.a */,
-				1980D00E02EAA60E80345E06 /* CaulyNativeAd.h */,
-				1980D9AD79F44099B16318CD /* CaulyAdSetting.h */,
-				1980D2C476A0D5E4E1404BFF /* CaulyNativeAdItem.h */,
-				1980DB9BB39243AB44090F8A /* CaulyInterstitialAd.h */,
-				1980D02018358ABD42BF1A1A /* Cauly.h */,
-				1980DCC1A099BC2C91C2C64B /* CaulyAdView.h */,
-			);
-			path = cauly;
 			sourceTree = "<group>";
 		};
 		1980D90D22BEF06FEE98F704 /* CaulySampleTests */ = {
@@ -244,6 +235,7 @@
 				1980D2EC572F9FB9C0BE7389 /* Sources */,
 				1980DDAA2BCE1FC73702D033 /* Frameworks */,
 				1980D5C11688904C5DBF2FFA /* Resources */,
+				73AD9745304AACA400AB425E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -405,12 +397,15 @@
 				HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/CaulySample/cauly\"";
 				INFOPLIST_FILE = CaulySample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = "\"${PROJECT_DIR}/CaulySample/cauly\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fsn.cauly.ios.CaulySample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "CaulySample/CaulySDK-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -484,7 +479,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CaulySample.app/CaulySample";
 				INFOPLIST_FILE = CaulySampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fsn.cauly.ios.CaulySampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -498,7 +497,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CaulySample.app/CaulySample";
 				INFOPLIST_FILE = CaulySampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fsn.cauly.ios.CaulySampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -517,12 +520,15 @@
 				HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/CaulySample/cauly\"";
 				INFOPLIST_FILE = CaulySample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = "\"${PROJECT_DIR}/CaulySample/cauly\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fsn.cauly.ios.CaulySample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "CaulySample/CaulySDK-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -579,7 +585,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -588,7 +595,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = CaulySampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fsn.cauly.ios.CaulySampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -601,7 +612,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = CaulySampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fsn.cauly.ios.CaulySampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

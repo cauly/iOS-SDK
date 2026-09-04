@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CaulyNativeAd.h"
+@import CaulySDK;
 
 @interface NativeAdViewViewController : UIViewController
 
