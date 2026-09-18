@@ -29,6 +29,8 @@
 
 @property (nonatomic) CaulyReloadTime reloadTime;
 @property (nonatomic) CaulyAdSize adSize;
+// 배너 광고 뷰의 가로 폭(pt). 0이면 디바이스 전체 폭을 쓴다(기본값).
+@property (nonatomic) CGFloat bannerWidth;
 @property (nonatomic) CaulyAnim animType;
 @property (nonatomic) BOOL useDynamicReloadTime;
 @property (nonatomic) BOOL closeOnLanding;

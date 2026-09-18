@@ -6,15 +6,15 @@
 	<dict>
 		<key>ios-arm64/CaulySDK.framework/CaulySDK</key>
 		<data>
-		W9PewOwcK0VAUQ44LgLZeXVETFo=
+		rPc66Whv9G7Rw6Ni13e/FWiRaWs=
 		</data>
 		<key>ios-arm64/CaulySDK.framework/Headers/Cauly.h</key>
 		<data>
-		3WU0ZOe3jXulW2XTdJ3e+pRguAE=
+		hzZQq+azbm/auZBLshmEnzhyqgE=
 		</data>
 		<key>ios-arm64/CaulySDK.framework/Headers/CaulyAdSetting.h</key>
 		<data>
-		oV3akHAphWdwE3fEHPffR0LG0gk=
+		aZKD6IswSAFeuBYyIt/qQ9iLEWk=
 		</data>
 		<key>ios-arm64/CaulySDK.framework/Headers/CaulyAdView.h</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>ios-arm64/CaulySDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		Fx269atd7K9K2FYOn9X0FU41III=
+		OjJFxqDuxrceWPJizzM7sfeKxqI=
 		</data>
 		<key>ios-arm64/dSYMs/CaulySDK.framework.dSYM/Contents/Info.plist</key>
 		<data>
@@ -58,23 +58,23 @@
 		</data>
 		<key>ios-arm64/dSYMs/CaulySDK.framework.dSYM/Contents/Resources/DWARF/CaulySDK</key>
 		<data>
-		x44t/jEPaPVcYmc8BWK+TM+WZhY=
+		61CfWTn+5OW1vzhp8BETxNOGAJc=
 		</data>
 		<key>ios-arm64/dSYMs/CaulySDK.framework.dSYM/Contents/Resources/Relocations/aarch64/CaulySDK.yml</key>
 		<data>
-		5HqM5T0OU9u/zqcf8FBV3dibo6Q=
+		Qf82uH5xaNXldGyRG9/wfX8wOsQ=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CaulySDK.framework/CaulySDK</key>
 		<data>
-		ROJ92pB1Ew+CL2VA/dOjEHuDAdU=
+		LQHyWNEOnW8a9bIpWaeGnaTuXGk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CaulySDK.framework/Headers/Cauly.h</key>
 		<data>
-		3WU0ZOe3jXulW2XTdJ3e+pRguAE=
+		hzZQq+azbm/auZBLshmEnzhyqgE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CaulySDK.framework/Headers/CaulyAdSetting.h</key>
 		<data>
-		oV3akHAphWdwE3fEHPffR0LG0gk=
+		aZKD6IswSAFeuBYyIt/qQ9iLEWk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CaulySDK.framework/Headers/CaulyAdView.h</key>
 		<data>
@@ -110,7 +110,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/CaulySDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		nJSuu/mZUDkKDzxsT2CGjCOSZ+c=
+		7KSiifcZvH2hKqUhGe85MsQOPaQ=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/CaulySDK.framework.dSYM/Contents/Info.plist</key>
 		<data>
@@ -118,15 +118,15 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/CaulySDK.framework.dSYM/Contents/Resources/DWARF/CaulySDK</key>
 		<data>
-		YZF4iM9YGRPUQzF0ofEWM/ZqQJI=
+		Z5RdXPPaCOktwrKLtIWXWe57W6k=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/CaulySDK.framework.dSYM/Contents/Resources/Relocations/aarch64/CaulySDK.yml</key>
 		<data>
-		41/1Vzs2iLNudF39dF78hm6/Oi4=
+		X0MnfRXLegGLs5cLsCQ302hD/Y4=
 		</data>
 		<key>ios-arm64_x86_64-simulator/dSYMs/CaulySDK.framework.dSYM/Contents/Resources/Relocations/x86_64/CaulySDK.yml</key>
 		<data>
-		wAqkySctbNvfvFDDmDNfCf5zbIA=
+		rDl4isoV9XkZ3QEw5K5mgKQrTSM=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -135,21 +135,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IUHdElf6+XWN95/PymToMgZqCkLEgXOEyhB5Zg8Fp0w=
+			fjpiuuA7n/pCQJKj1tbebc/jBN4JB7UetTlqiSYA3EM=
 			</data>
 		</dict>
 		<key>ios-arm64/CaulySDK.framework/Headers/Cauly.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3HPYN+u4+b+AQ8J+kc7ttUZ7/LY4AEIEzW/gc0bFbYM=
+			o6fm5udI8MRvFdMq7sFtvJFit7QcAbbgK0Ewu2ocdVE=
 			</data>
 		</dict>
 		<key>ios-arm64/CaulySDK.framework/Headers/CaulyAdSetting.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CrVsSp/WZRcZ+xhQX0llxxnlTFf9ZlfX36un9GjIKRM=
+			Yzu7n0OfMmpGfarF9YsNcDNttSShOuUfsDfmy/zdwRM=
 			</data>
 		</dict>
 		<key>ios-arm64/CaulySDK.framework/Headers/CaulyAdView.h</key>
@@ -212,7 +212,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fitbc+4ntiwj0vB2DarK3wGCpB/2zCHO7jY9LERb5WY=
+			sLhxdxaPvq3MYYL/g1GUzd6AMPiJy9eFMiwqL6TZzXo=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/CaulySDK.framework.dSYM/Contents/Info.plist</key>
@@ -226,35 +226,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ne0za/T6V1uIgpFgobWqYL8OGz1Ewk/QUvczpfExQ3A=
+			PJMC4Q4iZR223mqx6ATPS0/+3y5/V8pjcnJAIcsaRNs=
 			</data>
 		</dict>
 		<key>ios-arm64/dSYMs/CaulySDK.framework.dSYM/Contents/Resources/Relocations/aarch64/CaulySDK.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SgzLEIwUi/5q7/IPXmJ3O7oPJOrLDbvug8tFg4SxZyY=
+			bWiADaVAqyeJ8yh6rtnecP+AoTzPrsXoAMsSG6X8qa0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CaulySDK.framework/CaulySDK</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kC+8NrFnz43/dYOfwIfTptvFrVnhGpZnkLRJsMgU5ww=
+			qRDWstcTlhycBVnAOmkbkwPMGdMTJvPUNVcHgmlZ/18=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CaulySDK.framework/Headers/Cauly.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3HPYN+u4+b+AQ8J+kc7ttUZ7/LY4AEIEzW/gc0bFbYM=
+			o6fm5udI8MRvFdMq7sFtvJFit7QcAbbgK0Ewu2ocdVE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CaulySDK.framework/Headers/CaulyAdSetting.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CrVsSp/WZRcZ+xhQX0llxxnlTFf9ZlfX36un9GjIKRM=
+			Yzu7n0OfMmpGfarF9YsNcDNttSShOuUfsDfmy/zdwRM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CaulySDK.framework/Headers/CaulyAdView.h</key>
@@ -317,7 +317,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z1X/xIN6hFlUu1deOqH8KNVBJICrtAR9wWslKwTZja0=
+			dKlIln2AlsU8aKKHza5Vb028D+GQbbVKR9QnUXAhshY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/CaulySDK.framework.dSYM/Contents/Info.plist</key>
@@ -331,21 +331,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZEkcZWtoJdo7gf81Aq/DQytGEn+K2WloemBlN+VnQrM=
+			sPlkSEcyaPqCt8JLzw5dOB/v2GiFv6GGe10eX9HphR8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/CaulySDK.framework.dSYM/Contents/Resources/Relocations/aarch64/CaulySDK.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JlLDc9KZ3R3DsVDYqiLWnvol0K8fVciFqJrTZhGjH4k=
+			oAaXb/I0gt4lg0ZQgqPSBeSWN0PFNGnj0CWCeYERPIA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/dSYMs/CaulySDK.framework.dSYM/Contents/Resources/Relocations/x86_64/CaulySDK.yml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ok7ujbH844+pixx0Gw3vqJ0+mFRRNZYZJULQJ6lu+jg=
+			KK+G1ivS/9FnibAADCDIlh8x8+YImoYUwGAks6fn9rg=
 			</data>
 		</dict>
 	</dict>
