@@ -38,6 +38,7 @@
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         adSetting.adSize                = CaulyAdSize_IPadSmall;       //  광고 크기
     }
+    // adSetting.bannerWidth        = 320;                      //  배너 가로 폭(pt). 0(기본값)이면 화면의 Safe Area 안쪽 폭
         
     adSetting.reloadTime            = CaulyReloadTime_120;       //  광고 갱신 시간
     adSetting.useDynamicReloadTime  = YES;                       //  동적 광고 갱신 허용 여부
@@ -80,6 +81,11 @@
 // 랜딩 화면이 닫혔을 때
 - (void)didCloseLandingView:(CaulyAdView *)adView {
     NSLog(@"didCloseLandingView");
+}
+
+// 광고 노출이 집계되었을 때
+- (void)didAdImpression:(CaulyAdView *)adView {
+    NSLog(@"didAdImpression");
 }
 
 /*

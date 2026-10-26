@@ -35,7 +35,8 @@
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         adSetting.adSize                = CaulyAdSize_IPadSmall;       //  광고 크기
     }
-    
+    // adSetting.bannerWidth        = 320;                      //  배너 가로 폭(pt). 0(기본값)이면 화면의 Safe Area 안쪽 폭
+
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         [_bannerViewHeightConstraint setConstant:50.0f];
     }
@@ -108,6 +109,11 @@
 // 랜딩 화면이 닫혔을 때
 - (void)didCloseLandingView:(CaulyAdView *)adView {
     NSLog(@"didCloseLandingView");
+}
+
+// 광고 노출이 집계되었을 때
+- (void)didAdImpression:(CaulyAdView *)adView {
+    NSLog(@"didAdImpression");
 }
 
 #pragma - CaulyInterstitialAd

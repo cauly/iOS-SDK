@@ -71,6 +71,8 @@ class ViewController: UIViewController, CaulyAdViewDelegate, CaulyInterstitialAd
         }
         
         
+        // adSetting?.bannerWidth = 320                     // 배너 가로 폭(pt). 0(기본값)이면 화면의 Safe Area 안쪽 폭
+
         adSetting?.reloadTime = CaulyReloadTime_30          // 광고 자동 갱신 시간 (기본값)
         adSetting?.useDynamicReloadTime = true;             // 광고 자동 갱신 사용 여부 (기본값)
         adSetting?.closeOnLanding = true;                   // 광고 랜딩 시 WebView 제거 여부
@@ -106,6 +108,11 @@ class ViewController: UIViewController, CaulyAdViewDelegate, CaulyInterstitialAd
     // 배너 광고 랜딩 화면 닫음
     func didCloseLanding(_ adView: CaulyAdView!) {
         NSLog("didCloseLandingView")
+    }
+
+    // 배너 광고 노출 집계
+    func didAdImpression(_ adView: CaulyAdView!) {
+        NSLog("didAdImpression")
     }
     
     // MARK: - CaulyInterstitialAd
